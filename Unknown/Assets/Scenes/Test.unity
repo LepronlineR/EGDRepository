@@ -1080,6 +1080,7 @@ GameObject:
   - component: {fileID: 2067053214}
   - component: {fileID: 2067053213}
   - component: {fileID: 2067053212}
+  - component: {fileID: 2067053216}
   m_Layer: 0
   m_Name: Person
   m_TagString: Untagged
@@ -1167,3 +1168,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2067053216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067053211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c748639c9019d542ad2a17242d9bab2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: {fileID: 11400000, guid: c5e48f64cd1bb174aa30588ea793049e, type: 2}
+  dialogueText: {fileID: 707081596}
+  choicePrefab: {fileID: 0}
+  buttonContainer: {fileID: 0}

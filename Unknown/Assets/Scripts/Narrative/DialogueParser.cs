@@ -7,6 +7,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class DialogueParser : MonoBehaviour {
+    /*
     [SerializeField] private DialogueContainer dialogue;
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private VoiceDetector detector;
@@ -38,4 +39,5 @@ public class DialogueParser : MonoBehaviour {
         }
         return text;
     }
+    */
 }
