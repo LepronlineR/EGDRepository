@@ -7,7 +7,8 @@ using TMPro;
 public class VoiceDetector : MonoBehaviour
 {
     private KeywordRecognizer keywordRecognizer;
-    private List<string> words = new List<string>();
+    public List<string> words = new List<string>();
+    public TMP_Text word_text;
 
     void Start() {
         keywordRecognizer = new KeywordRecognizer(words.ToArray());
@@ -16,6 +17,6 @@ public class VoiceDetector : MonoBehaviour
     }
 
     void RecognizedSpeech(PhraseRecognizedEventArgs speech){
-        Debug.Log(speech.text);
+        word_text.text = speech.text;
     }
 }
