@@ -25,11 +25,13 @@ public class PhotoCamera : MonoBehaviour {
     [SerializeField] GameObject cameraUI;
     [SerializeField] UnityEngine.UI.Image photoDisplayUI;
 
-    private Texture2D screencap;
+    [Header("Inventory Stuff")]
+    [SerializeField] GameObject imagePrefab;
+    [SerializeField] Transform imageHolder;
+
     private bool view;
 
     void Start(){
-        screencap = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, true);
         frame.SetActive(false);
     }
 
@@ -42,6 +44,8 @@ public class PhotoCamera : MonoBehaviour {
         }
     }
 
+
+
     private bool IsInView(GameObject origin, GameObject toCheck){
         Vector3 pointOnScreen = Camera.main.WorldToScreenPoint(toCheck.GetComponentInChildren<Renderer>().bounds.center);
  
@@ -51,7 +55,7 @@ public class PhotoCamera : MonoBehaviour {
             return false;
         }
  
-        //Is in FOV
+        //Is in the image FOV?
         if ((pointOnScreen.x < 0) || (pointOnScreen.x > Screen.width) || 
             (pointOnScreen.y < 0) || (pointOnScreen.y > Screen.height)){
             Debug.Log("OutOfBounds: " + toCheck.name);
@@ -93,6 +97,7 @@ public class PhotoCamera : MonoBehaviour {
 
         yield return new WaitForEndOfFrame();
 
+        Texture2D screencap = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, true);
         // get image
         screencap.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0, false);
         screencap.Apply();
@@ -116,5 +121,14 @@ public class PhotoCamera : MonoBehaviour {
         photoSound.Play();
 
         frame.SetActive(true);
+
+        // add image to the inventory
+        GameObject imageGO = (GameObject) Instantiate(imagePrefab, Vector3.zero, Quaternion.identity);
+        imageGO.GetComponent<InventoryImage>().SetImage(photoSprite);
+        imageGO.transform.SetParent(imageHolder);
+        imageGO.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+
+        
+
     }
 }
