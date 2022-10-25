@@ -7,8 +7,29 @@ public class DictationEngine : MonoBehaviour
     public TMP_Text word_text;
 
     protected DictationRecognizer dictationRecognizer;
+
+    bool started = false;
+
     void Start(){
         StartDictationEngine();
+    }
+    
+    
+    void Update(){
+        
+        if(Input.GetMouseButton(0)){
+            if(!started){
+                started = true;
+                dictationRecognizer.Start();
+            }
+        } else {
+            if(started){
+                started = false;
+                CloseDictationEngine();
+            }
+        }
+        //Debug.Log(started);
+        Debug.Log(Input.GetMouseButton(0));
     }
 
     private void DictationRecognizer_OnDictationHypothesis(string text){
@@ -25,7 +46,7 @@ public class DictationEngine : MonoBehaviour
             case DictationCompletionCause.Complete:
                 // Restart required
                 CloseDictationEngine();
-                StartDictationEngine();
+                //StartDictationEngine();
                 break;
             case DictationCompletionCause.UnknownError:
             case DictationCompletionCause.AudioQualityFailure:
@@ -40,11 +61,12 @@ public class DictationEngine : MonoBehaviour
     private void DictationRecognizer_OnDictationResult(string text, ConfidenceLevel confidence){
         // Debug.Log("Dictation result: " + text);
         word_text.text = text;
+        // write to file
     }
 
     private void DictationRecognizer_OnDictationError(string error, int hresult){
         // Debug.Log("Dictation error: " + error);
-        word_text.text   = error;
+        // word_text.text   = error;
     }
 
     private void OnApplicationQuit(){
@@ -57,7 +79,6 @@ public class DictationEngine : MonoBehaviour
         dictationRecognizer.DictationResult += DictationRecognizer_OnDictationResult;
         dictationRecognizer.DictationComplete += DictationRecognizer_OnDictationComplete;
         dictationRecognizer.DictationError += DictationRecognizer_OnDictationError;
-        dictationRecognizer.Start();
     }
 
     private void CloseDictationEngine(){
