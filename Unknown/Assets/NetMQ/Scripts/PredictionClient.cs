@@ -5,6 +5,18 @@ public class PredictionClient : MonoBehaviour
 {
     private PredictionRequester predictionRequester;
 
+    public static PredictionClient Instance { get; private set; }
+    
+    private void Awake() { 
+        // If there is an instance, and it's not me, delete myself.
+        
+        if (Instance != null && Instance != this) { 
+            Destroy(this); 
+        } else { 
+            Instance = this; 
+        } 
+    }
+
     private void Start() => InitializeServer();
 
     public void InitializeServer()

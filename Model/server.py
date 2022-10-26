@@ -7,6 +7,7 @@
 import tensorflow as tf
 import numpy as np
 from scipy.io.wavfile import read, write
+import scipy
 import os
 import librosa
 import librosa.display
@@ -46,15 +47,15 @@ def get_model():
     model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
     return model
 
-def convert_bytearray_to_wav_ndarray(input_bytearr: bytes, sampling_rate=16000):
+def convert_bytearray_to_wav_ndarray(input_bytearr: bytes, sampling_rate=44100):
     bytes_wav = bytes()
     byte_io = io.BytesIO(bytes_wav)
     write(byte_io, sampling_rate, np.frombuffer(input_bytearr, dtype=np.float32))
     output_wav = byte_io.read()
-    output, sample_r = sf.read(io.BytesIO(output_wav))
+    output, sample_r = scipy.io.wavfile.read(io.BytesIO(output_wav))
     return output
 
-def predict(model, bytes_wav, labels, sampling_rate = 16000, filename = "output.wav"):
+def predict(model, bytes_wav, labels, sampling_rate = 44100, filename = "output.wav"):
 
     output = convert_bytearray_to_wav_ndarray(bytes_wav, sampling_rate)
     scipy.io.wavfile.write(filename, sampling_rate, output)
@@ -78,11 +79,11 @@ model.load_weights('./cp.ckpt')
 context = zmq.Context()
 socket = context.socket(zmq.REP)
 socket.bind("tcp://*:5555")
-
+    
 while True:
     #  Wait for next request from client
     message = socket.recv()
-    # print("Received request: %s" % message)
+    print("Received request: %s" % message)
 
     pred = predict(model, message, list_labels)
 
