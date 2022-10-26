@@ -17,16 +17,48 @@ public class MainSystem : MonoBehaviour
 
     bool inventoryOn;
 
+    bool speechMode;
+
     [SerializeField] GameObject InventoryCanvas;
     [SerializeField] GameObject CameraCanvas;
     [SerializeField] PlayerAiming playerAim;
 
+    [Header("Main Canvases")]
+    [SerializeField] GameObject cameraModeObject;
+    [SerializeField] GameObject speechModeObject;
+
     void Start(){
         inventoryOn = false;
+        speechMode = true;
+        cameraModeObject.SetActive(!speechMode);
+        speechModeObject.SetActive(speechMode);
     }
 
     void Update() {
-        if(Input.GetKeyDown(KeyCode.Q)){
+        // turn on and off speech mode
+        if(Input.GetKeyDown(KeyCode.E)){
+            speechMode = !speechMode;
+            if(speechMode){
+                cameraModeObject.SetActive(!speechMode);
+                speechModeObject.SetActive(speechMode);
+                if(inventoryOn){ // get out of inventory
+                    playerAim.on = true;
+                    Cursor.visible = false; 
+                    Cursor.lockState = CursorLockMode.Locked;
+                }
+            } else {
+                cameraModeObject.SetActive(!speechMode);
+                speechModeObject.SetActive(speechMode);
+                if(inventoryOn){ // get in of inventory
+                    playerAim.on = true;
+                    Cursor.visible = true; 
+                    Cursor.lockState = CursorLockMode.None;
+                }
+            }
+        }
+
+        // inventory
+        if(!speechMode && Input.GetKeyDown(KeyCode.Q)){
             inventoryOn = !inventoryOn;
             if(inventoryOn){ // turn on inventory
                 playerAim.on = false;

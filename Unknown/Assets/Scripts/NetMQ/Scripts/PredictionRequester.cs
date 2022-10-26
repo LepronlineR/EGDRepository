@@ -4,7 +4,7 @@ using NetMQ;
 using NetMQ.Sockets;
 using UnityEngine;
 
-public class PredictionRequester : RunAbleThread {
+public class PredictionRequester {
 
     private RequestSocket client;
 
@@ -18,6 +18,7 @@ public class PredictionRequester : RunAbleThread {
          _messageCallback = messageCallback;
     }
 
+    /*
     protected override void Run() {
         ForceDotNet.Force(); // this line is needed to prevent unity freeze after one use, not sure why yet
         using (RequestSocket client = new RequestSocket()) {
@@ -44,20 +45,34 @@ public class PredictionRequester : RunAbleThread {
 
         NetMQConfig.Cleanup(); // this line is needed to prevent unity freeze after one use, not sure why yet
     }
+    */
 
-    public void SendInput(byte[] input)
-    {
-        try
-        {
-            //var byteArray = new byte[input.Length * 4];
-            //Buffer.BlockCopy(input, 0, byteArray, 0, byteArray.Length);
-            //client.SendFrame(byteArray);
-            client.SendFrame(input);
+    public void SendInput(){
+        ForceDotNet.Force(); // this line is needed to prevent unity freeze after one use, not sure why yet
+        using (RequestSocket client = new RequestSocket()) {
+            this.client = client;
+            client.Connect("tcp://localhost:5555");
+
+            var output = "";
+            bool gotMessage = false;
+            while (true){
+                try {
+                    Debug.Log("sent to server");
+                    gotMessage = client.TryReceiveFrameString(out output); // this returns true if it's successful
+                    if (gotMessage) break;
+                }
+                catch (Exception e){
+                    break;
+                }
+            }
+            if (gotMessage) {
+                //onOutputReceived?.Invoke(output);
+                //onEmotionPrediction?.Invoke(output);
+                _messageCallback(output);
+            }
         }
-        catch (Exception e)
-        {
-            // onFail(e);
-        }
+
+        NetMQConfig.Cleanup(); // this line is needed to prevent unity freeze after one use, not sure why yet
     }
 
     /*

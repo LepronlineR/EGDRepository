@@ -25,15 +25,14 @@ public class PredictionClient : MonoBehaviour
     public void InitializeServer()
     {
         predictionRequester = new PredictionRequester(HandleMessage);
-        predictionRequester.Start();
+        // predictionRequester.Start();
         // NetEventManager.Instance.onSendRequest.AddListener(OnClientRequest);
     }
 
-    public void Predict(byte[] input)
+    public void Predict()
     {
         // NetEventManager.Instance.onClientBusy.Invoke();
-        // predictionRequester.SetOnTextReceivedListener(onOutputReceived, fallback);
-        predictionRequester.SendInput(input);
+        predictionRequester.SendInput();
         // NetEventManager.Instance.onClientFree.Invoke();
     }
 
@@ -57,6 +56,6 @@ public class PredictionClient : MonoBehaviour
 
     private void OnDestroy()
     {
-        predictionRequester.Stop();
+        // predictionRequester.Stop();
     }
 }

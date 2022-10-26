@@ -78,7 +78,7 @@ public class DictationEngine : MonoBehaviour
                     Debug.Log("failed");
                 }
 
-                PredictionClient.Instance.Predict(null);
+                PredictionClient.Instance.Predict();
             }
         }
     }

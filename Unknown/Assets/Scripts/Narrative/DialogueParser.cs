@@ -18,11 +18,12 @@ public class DialogueParser : MonoBehaviour {
         ProceedToNarrative(narrativeData.TargetNodeGUID);
     }
 
+    /*
     void Update(){
         if(Input.GetMouseButtonDown(0)){ // process data
 
         }
-    }
+    }*/
 
 
 
