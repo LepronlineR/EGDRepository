@@ -147,6 +147,13 @@ public class DialogueGraphView : GraphView
         button.text = "Add";
         dialogueNode.titleContainer.Add(button);
 
+        var textField = new TextField(string.Empty);
+        textField.RegisterValueChangedCallback(evt => {
+            dialogueNode.DialogueText = evt.newValue;
+            dialogueNode.title = evt.newValue;
+        });
+        textField.SetValueWithoutNotify(dialogueNode.title);
+        dialogueNode.mainContainer.Add(textField);
 
         dialogueNode.RefreshExpandedState();
         dialogueNode.RefreshPorts();

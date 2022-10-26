@@ -6,7 +6,6 @@
 
 import tensorflow as tf
 import numpy as np
-from scipy.io.wavfile import read, write
 import scipy
 import os
 import librosa
@@ -20,6 +19,10 @@ from keras.layers import Dense, LSTM, Dropout, Conv1D, MaxPooling1D, Flatten
 import time
 import zmq
 import io
+import wave
+import scipy.io.wavfile
+import soundfile as sf
+from scipy.io.wavfile import write
 
 def extract_mfcc(filename, length):
     y, sr = librosa.load(filename, duration=length, offset=0.5)
@@ -52,13 +55,26 @@ def convert_bytearray_to_wav_ndarray(input_bytearr: bytes, sampling_rate=44100):
     byte_io = io.BytesIO(bytes_wav)
     write(byte_io, sampling_rate, np.frombuffer(input_bytearr, dtype=np.float32))
     output_wav = byte_io.read()
-    output, sample_r = scipy.io.wavfile.read(io.BytesIO(output_wav))
+    output, sample_r = sf.read(io.BytesIO(output_wav))
     return output
 
 def predict(model, bytes_wav, labels, sampling_rate = 44100, filename = "output.wav"):
 
     output = convert_bytearray_to_wav_ndarray(bytes_wav, sampling_rate)
     scipy.io.wavfile.write(filename, sampling_rate, output)
+
+    # transform
+    X = extract_mfcc(filename, librosa.get_duration(filename=filename))
+    # predict
+    pred = model.predict(tf.expand_dims(X, axis=0))
+    if len(pred[0]) > 1:
+        pred_class = labels[tf.argmax(pred[0])]
+    else:
+        pred_class = labels[int(tf.round(pred[0]))]
+    
+    return pred_class
+
+def predict_t(model, labels, filename = "output.wav"):
 
     # transform
     X = extract_mfcc(filename, librosa.get_duration(filename=filename))
@@ -83,11 +99,12 @@ socket.bind("tcp://*:5555")
 while True:
     #  Wait for next request from client
     message = socket.recv()
-    print("Received request: %s" % message)
+    # print("Received request: %s" % message)
 
-    pred = predict(model, message, list_labels)
+    # pred = predict(model, message, list_labels)
+    pred = predict_t(model, list_labels)
 
     #  Send reply back to client
     #  In the real world usage, after you finish your work, send your output here
-
-    socket.send(pred)
+    print(pred)
+    socket.send_string(pred)

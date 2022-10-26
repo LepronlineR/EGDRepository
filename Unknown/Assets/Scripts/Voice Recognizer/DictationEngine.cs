@@ -4,11 +4,14 @@ using TMPro;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.IO;
 
 public class DictationEngine : MonoBehaviour
 {
 
-    public TMP_Text word_text;
+    [SerializeField] TMP_Text word_text;
+    [SerializeField] TMP_Text emotion_text;
 
     protected DictationRecognizer dictationRecognizer;
 
@@ -16,6 +19,19 @@ public class DictationEngine : MonoBehaviour
 
     bool isRecording = true;
     private AudioSource audioSource;
+
+    /*
+    public void SendEmotionPrediction(string pred){
+        emotion_text.text = pred;
+    } 
+
+    private void OnEnable() {
+        PredictionRequester.onEmotionPrediction += SendEmotionPrediction;
+    }
+
+    private void OnDisable() {
+        PredictionRequester.onEmotionPrediction -= SendEmotionPrediction;
+    }*/
  
     //temporary audio vector we write to every second while recording is enabled..
     List<float> tempRecording = new List<float>();
@@ -27,67 +43,59 @@ public class DictationEngine : MonoBehaviour
         StartDictationEngine();
         audioSource = GetComponent<AudioSource>();
         //set up recording to last a max of 1 seconds and loop over and over
-        audioSource.clip = Microphone.Start(null, true, 1, 44100);
-        audioSource.Play();
+        //audioSource.clip = Microphone.Start(null, true, 1, 44100);
+        //audioSource.Play();
+        emotion_text.text = "";
     }
-
-    string prediction = "";
-    
     
     void Update(){
         
-        if(Input.GetMouseButton(0)){
+        if(Input.GetMouseButton(1)){
             if(!started){
+                Debug.Log("started recording");
+
                 started = true;
                 dictationRecognizer.Start();
+                emotion_text.text = "";
+                word_text.text = "";
                 // =============== begin recording ===============
                 
                 audioSource.Stop();
                 tempRecording.Clear();
                 Microphone.End(null);
-                audioSource.clip = Microphone.Start(null, true, 1, 44100);
-                Invoke("ResizeRecording", 1);
+                audioSource.clip = StartRecording();
+                // Invoke("ResizeRecording", 1);
             }
         } else {
             if(started){
+                Debug.Log("ended recording");
+
                 started = false;
-                CloseDictationEngine();
+                dictationRecognizer.Stop();
                 // =============== end recording ===============
-
-                //stop recording, get length, create a new array of samples
-                int length = Microphone.GetPosition(null);
-             
-                Microphone.End(null);
-                float[] clipData = new float[length];
-                audioSource.clip.GetData(clipData, 0);
-
-                float[] fullClip = new float[clipData.Length + tempRecording.Count];
-                for (int i = 0; i < fullClip.Length; i++)
-                {
-                    //write data all recorded data to fullCLip vector
-                    if (i < tempRecording.Count)
-                        fullClip[i] = tempRecording[i];
-                    else
-                        fullClip[i] = clipData[i - tempRecording.Count];
+                StopRecording();
+                if(!SavWav.Save("output.wav", audioSource.clip)){
+                    Debug.Log("failed");
                 }
 
-                PredictionClient.Instance.Predict(fullClip, output => {
-                    var outputMax = output.Max();
-                    var maxIndex = Array.IndexOf(output, outputMax);
-                    prediction = "Prediction: " + Convert.ToChar(64 + maxIndex);
-                }, error => {
-                    // hope no error exists
-                });
-
-                Debug.Log(prediction);
-               
-                //recordedClips.Add(fullClip);
-                //audioSource.clip = AudioClip.Create("recorded samples", fullClip.Length, 1, 44100, false);
-                //audioSource.clip.SetData(fullClip, 0);
+                PredictionClient.Instance.Predict(null);
             }
         }
     }
 
+    public AudioClip StartRecording(string deviceName = null){
+        var audioClip = UnityEngine.Microphone.Start(deviceName, true, 10, 44100);
+        while (UnityEngine.Microphone.GetPosition(deviceName) <= 0) ;
+        return audioClip;
+    }
+
+
+
+    public void StopRecording(string deviceName = null){
+        UnityEngine.Microphone.End(deviceName);
+    }
+
+    /*
     void ResizeRecording(){
         if (started){
             //add the next second of recorded audio to temp vector
@@ -99,7 +107,23 @@ public class DictationEngine : MonoBehaviour
         }
     }
 
+*/
+    public byte[] returnByteArrayForCurrentRecording(AudioClip audioClip) {
+        var samples = new float[audioClip.samples];
+        audioClip.GetData(samples, 0);
+        Int16[] intData = new Int16[samples.Length];
+        Byte[] bytesData = new Byte[samples.Length * 2];
+        int rescaleFactor = 32767;
+        for (int i = 0; i < samples.Length; i++){
+            intData[i] = (short)(samples[i] * rescaleFactor);
+            Byte[] byteArr = new Byte[2];
+            byteArr = BitConverter.GetBytes(intData[i]);
+            byteArr.CopyTo(bytesData, i * 2);
+        }
 
+        return bytesData;
+    }
+    
 
     private void DictationRecognizer_OnDictationHypothesis(string text){
         // Debug.Log("Dictation hypothesis: " + text);
@@ -115,7 +139,7 @@ public class DictationEngine : MonoBehaviour
             case DictationCompletionCause.Complete:
                 // Restart required
                 CloseDictationEngine();
-                //StartDictationEngine();
+                StartDictationEngine();
                 break;
             case DictationCompletionCause.UnknownError:
             case DictationCompletionCause.AudioQualityFailure:

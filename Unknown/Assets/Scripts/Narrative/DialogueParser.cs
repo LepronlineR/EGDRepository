@@ -18,6 +18,14 @@ public class DialogueParser : MonoBehaviour {
         ProceedToNarrative(narrativeData.TargetNodeGUID);
     }
 
+    void Update(){
+        if(Input.GetMouseButtonDown(0)){ // process data
+
+        }
+    }
+
+
+
     private void ProceedToNarrative(string narrativeDataGUID) {
         var text = dialogue.DialogueNodeData.Find(x => x.NodeGUID == narrativeDataGUID).DialogueText;
         IEnumerable<NodeLinkData> choices = dialogue.NodeLinks.Where(x => x.BaseNodeGUID == narrativeDataGUID);
