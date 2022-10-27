@@ -12,18 +12,19 @@ public class DialogueParser : MonoBehaviour {
     [SerializeField] private VoiceDetector detector;
     [SerializeField] Transform speechBubbleLoc;
     [SerializeField] GameObject prompts;
+    [SerializeField] Transform lookAtPlayer;
 
     private void Start() {
         var narrativeData = dialogue.NodeLinks.First(); //Entrypoint node
         ProceedToNarrative(narrativeData.TargetNodeGUID);
     }
 
-    /*
+    
     void Update(){
         if(Input.GetMouseButtonDown(0)){ // process data
 
         }
-    }*/
+    }
 
 
 

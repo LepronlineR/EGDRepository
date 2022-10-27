@@ -73,27 +73,51 @@ public class DictationEngine : MonoBehaviour
                 started = false;
                 dictationRecognizer.Stop();
                 // =============== end recording ===============
-                StopRecording();
-                if(!SavWav.Save("output.wav", audioSource.clip)){
-                    Debug.Log("failed");
-                }
+                AudioClip clip = StopRecording(audioSource, null);
+                //if(!SavWav.Save("output.wav", clip)){
+                //    Debug.Log("failed");
+                //}
 
-                PredictionClient.Instance.Predict();
+                byte[] bytes = SavWav.GetByteFromClip(clip);
+
+                PredictionClient.Instance.Predict(bytes);
             }
         }
     }
 
+    public AudioClip StopRecording(AudioSource audS, string deviceName) {
+        //Capture the current clip data
+        AudioClip recordedClip = audS.clip;
+        var position = Microphone.GetPosition(deviceName);
+        var soundData = new float[recordedClip.samples * recordedClip.channels];
+        recordedClip.GetData(soundData, 0);
+ 
+        //Create shortened array for the data that was used for recording
+        var newData = new float[position * recordedClip.channels];
+ 
+        //Copy the used samples to a new array
+        for (int i = 0; i < newData.Length; i++) {
+            newData[i] = soundData[i];
+        }
+ 
+        // we make a new one with the appropriate length
+        var newClip = AudioClip.Create(recordedClip.name, position, recordedClip.channels, recordedClip.frequency, false);
+        newClip.SetData(newData, 0);        //Give it the data from the old clip
+        return newClip;
+    }
+
+    
     public AudioClip StartRecording(string deviceName = null){
-        var audioClip = UnityEngine.Microphone.Start(deviceName, true, 10, 44100);
+        var audioClip = UnityEngine.Microphone.Start(deviceName, true, 20, 44100);
         while (UnityEngine.Microphone.GetPosition(deviceName) <= 0) ;
         return audioClip;
     }
 
 
-
+    /*
     public void StopRecording(string deviceName = null){
         UnityEngine.Microphone.End(deviceName);
-    }
+    }*/
 
     /*
     void ResizeRecording(){

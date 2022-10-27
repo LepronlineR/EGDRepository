@@ -53,7 +53,7 @@ def get_model():
 def convert_bytearray_to_wav_ndarray(input_bytearr: bytes, sampling_rate=44100):
     bytes_wav = bytes()
     byte_io = io.BytesIO(bytes_wav)
-    write(byte_io, sampling_rate, np.frombuffer(input_bytearr, dtype=np.float32))
+    write(byte_io, sampling_rate, np.frombuffer(input_bytearr, dtype=np.int32))
     output_wav = byte_io.read()
     output, sample_r = sf.read(io.BytesIO(output_wav))
     return output
@@ -101,8 +101,8 @@ while True:
     message = socket.recv()
     # print("Received request: %s" % message)
 
-    # pred = predict(model, message, list_labels)
-    pred = predict_t(model, list_labels)
+    pred = predict(model, message, list_labels)
+    # pred = predict_t(model, list_labels)
 
     #  Send reply back to client
     #  In the real world usage, after you finish your work, send your output here

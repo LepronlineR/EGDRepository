@@ -29,10 +29,13 @@ public class PredictionClient : MonoBehaviour
         // NetEventManager.Instance.onSendRequest.AddListener(OnClientRequest);
     }
 
-    public void Predict()
+    public void Predict(byte[] bytes)
     {
+        // send message
+
+        // request messa
         // NetEventManager.Instance.onClientBusy.Invoke();
-        predictionRequester.SendInput();
+        predictionRequester.RequestMessage(bytes);
         // NetEventManager.Instance.onClientFree.Invoke();
     }
 
