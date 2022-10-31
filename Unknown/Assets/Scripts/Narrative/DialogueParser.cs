@@ -7,15 +7,28 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class DialogueParser : MonoBehaviour {
+
     [SerializeField] private DialogueContainer dialogue;
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private VoiceDetector detector;
     [SerializeField] Transform speechBubbleLoc;
     [SerializeField] GameObject prompts;
 
+    private bool interactable;
+
     private void Start() {
+        interactable = false;
+
         var narrativeData = dialogue.NodeLinks.First(); //Entrypoint node
-        ProceedToNarrative(narrativeData.TargetNodeGUID);
+        //ProceedToNarrative(narrativeData.TargetNodeGUID);
+    }
+
+    public void MakeInteractable(){
+        interactable = true;
+    }
+
+    public void MakeUninteractable(){
+        interactable = false;
     }
 
     /*
