@@ -13,6 +13,7 @@ public class DialogueParser : MonoBehaviour {
     [SerializeField] private VoiceDetector detector;
     [SerializeField] Transform speechBubbleLoc;
     [SerializeField] GameObject prompts;
+    [SerializeField] Transform lookAtPlayer;
 
     private bool interactable;
 
@@ -31,12 +32,12 @@ public class DialogueParser : MonoBehaviour {
         interactable = false;
     }
 
-    /*
+    
     void Update(){
         if(Input.GetMouseButtonDown(0)){ // process data
 
         }
-    }*/
+    }
 
 
 

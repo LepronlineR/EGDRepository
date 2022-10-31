@@ -55,6 +55,17 @@ public static class SavWav {
 		return true; // TODO: return false if there's a failure saving the file
 	}
 
+	public static byte[] GetByteFromClip(AudioClip clip){
+		byte[] bytes_1 = ConvertAndWriteBytes(clip);
+		byte[] bytes_2 = WriteHeaderBytes(clip, bytes_1.Length);
+		byte[] result = new byte[bytes_1.Length + bytes_2.Length];
+
+		Array.Copy(bytes_2, result, bytes_2.Length);
+		Array.Copy(bytes_1, 0, result, bytes_2.Length, bytes_1.Length);
+
+		return result;
+	}
+
 	public static AudioClip TrimSilence(AudioClip clip, float min) {
 		var samples = new float[clip.samples];
 
@@ -105,6 +116,31 @@ public static class SavWav {
 		return fileStream;
 	}
 
+	static byte[] ConvertAndWriteBytes(AudioClip clip) {
+
+		var samples = new float[clip.samples];
+
+		clip.GetData(samples, 0);
+
+		Int16[] intData = new Int16[samples.Length];
+		//converting in 2 float[] steps to Int16[], //then Int16[] to Byte[]
+
+		Byte[] bytesData = new Byte[samples.Length * 2];
+		//bytesData array is twice the size of
+		//dataSource array because a float converted in Int16 is 2 bytes.
+
+		int rescaleFactor = 32767; //to convert float to Int16
+
+		for (int i = 0; i<samples.Length; i++) {
+			intData[i] = (short) (samples[i] * rescaleFactor);
+			Byte[] byteArr = new Byte[2];
+			byteArr = BitConverter.GetBytes(intData[i]);
+			byteArr.CopyTo(bytesData, i * 2);
+		}
+
+		return bytesData;
+	}
+
 	static void ConvertAndWrite(FileStream fileStream, AudioClip clip) {
 
 		var samples = new float[clip.samples];
@@ -128,6 +164,68 @@ public static class SavWav {
 		}
 
 		fileStream.Write(bytesData, 0, bytesData.Length);
+	}
+
+
+	/* Array.Copy(
+		a = source array
+		1 = start index in source array
+		b = destination array
+		0 = start index in destination array
+		3 = elements to copy)
+	*/
+	static byte[] WriteHeaderBytes(AudioClip clip, int sizeToWrite) {
+
+		byte[] bytes = new byte[44];
+
+		var hz = clip.frequency;
+		var channels = clip.channels;
+		var samples = clip.samples;
+
+		Byte[] riff = System.Text.Encoding.UTF8.GetBytes("RIFF");
+		Array.Copy(riff, 0, bytes, 0, 4);
+
+		Byte[] chunkSize = BitConverter.GetBytes(sizeToWrite + 36);
+		Array.Copy(chunkSize, 0, bytes, 4, 4);
+
+		Byte[] wave = System.Text.Encoding.UTF8.GetBytes("WAVE");
+		Array.Copy(wave, 0, bytes, 8, 4);
+
+		Byte[] fmt = System.Text.Encoding.UTF8.GetBytes("fmt ");
+		Array.Copy(fmt, 0, bytes, 12, 4);
+
+		Byte[] subChunk1 = BitConverter.GetBytes(16);
+		Array.Copy(subChunk1, 0, bytes, 16, 4);
+
+		UInt16 two = 2;
+		UInt16 one = 1;
+
+		Byte[] audioFormat = BitConverter.GetBytes(one);
+		Array.Copy(audioFormat, 0, bytes, 20, 2);
+
+		Byte[] numChannels = BitConverter.GetBytes(channels);
+		Array.Copy(numChannels, 0, bytes, 22, 2);
+
+		Byte[] sampleRate = BitConverter.GetBytes(hz);
+		Array.Copy(sampleRate, 0, bytes, 24, 4);
+		
+		Byte[] byteRate = BitConverter.GetBytes(hz * channels * 2); // sampleRate * bytesPerSample*number of channels, here 44100*2*2
+		Array.Copy(byteRate, 0, bytes, 28, 4);
+
+		UInt16 blockAlign = (ushort) (channels * 2);
+		Array.Copy(BitConverter.GetBytes(blockAlign), 0, bytes, 32, 2);
+
+		UInt16 bps = 16;
+		Byte[] bitsPerSample = BitConverter.GetBytes(bps);
+		Array.Copy(bitsPerSample, 0, bytes, 34, 2);
+
+		Byte[] datastring = System.Text.Encoding.UTF8.GetBytes("data");
+		Array.Copy(datastring, 0, bytes, 36, 4);
+
+		Byte[] subChunk2 = BitConverter.GetBytes(samples * channels * 2);
+		Array.Copy(subChunk2, 0, bytes, 40, 4);
+
+		return bytes;
 	}
 
 	static void WriteHeader(FileStream fileStream, AudioClip clip) {
