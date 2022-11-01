@@ -15,28 +15,22 @@ MonoBehaviour:
   NodeLinks:
   - BaseNodeGUID: eda28418-e2fc-416a-a4c1-83dc14ca4142
     PortName: Next
-    TargetNodeGUID: eda28418-e2fc-416a-a4c1-83dc14ca4142
-  - BaseNodeGUID: eda28418-e2fc-416a-a4c1-83dc14ca4142
-    PortName: Angry
-    TargetNodeGUID: aaee2c40-7a09-4167-810d-c911b6d64503
-  - BaseNodeGUID: eda28418-e2fc-416a-a4c1-83dc14ca4142
-    PortName: Disgust
-    TargetNodeGUID: 3ba1598a-6d22-4e8e-8406-3e74d6bdf66d
-  - BaseNodeGUID: eda28418-e2fc-416a-a4c1-83dc14ca4142
-    PortName: Neutral
-    TargetNodeGUID: f2c18a09-33ce-4507-9f7c-5f0db34b303c
+    TargetNodeGUID: 67d7c223-1297-4eab-a51b-6de424ef518d
+  - BaseNodeGUID: 67d7c223-1297-4eab-a51b-6de424ef518d
+    PortName: Option 1
+    TargetNodeGUID: b576e26e-56c2-4a6f-9602-9c1510df11c8
+  - BaseNodeGUID: b576e26e-56c2-4a6f-9602-9c1510df11c8
+    PortName: Option 1
+    TargetNodeGUID: 61d9ad85-cb7d-4d13-b591-dc45df1232c8
   DialogueNodeData:
-  - NodeGUID: 3ba1598a-6d22-4e8e-8406-3e74d6bdf66d
-    DialogueText: I am digusted
-    Position: {x: 461, y: 26}
-  - NodeGUID: aaee2c40-7a09-4167-810d-c911b6d64503
-    DialogueText: I am angry
-    Position: {x: 461, y: 129}
-  - NodeGUID: f2c18a09-33ce-4507-9f7c-5f0db34b303c
-    DialogueText: I am neutral
-    Position: {x: 460, y: 233}
-  - NodeGUID: eda28418-e2fc-416a-a4c1-83dc14ca4142
-    DialogueText: How are you today?
-    Position: {x: 213, y: 157}
+  - NodeGUID: 67d7c223-1297-4eab-a51b-6de424ef518d
+    DialogueText: Hello, How are you today?
+    Position: {x: 232, y: 200}
+  - NodeGUID: b576e26e-56c2-4a6f-9602-9c1510df11c8
+    DialogueText: I'm doing very well
+    Position: {x: 506, y: 200}
+  - NodeGUID: 61d9ad85-cb7d-4d13-b591-dc45df1232c8
+    DialogueText: This represents a single dialogue node
+    Position: {x: 757, y: 200}
   ExposedProperties: []
   CommentBlockData: []
