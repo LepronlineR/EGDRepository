@@ -7,6 +7,9 @@ using System.Threading;
 
 public class PredictionRequester {
 
+    private readonly Thread receiveThread;
+    private bool running;
+
     private RequestSocket client;
 
     //private Action<string> onOutputReceived;
@@ -20,6 +23,7 @@ public class PredictionRequester {
     public PredictionRequester(Action<string> messageCallback){
         _messageCallback = messageCallback;
         //_runnerThread = new Thread(RequestMessage);
+        //receiveThread = new Thread(() => RequestMessage());
     }
     
     public void RequestMessage(byte[] bytes) {

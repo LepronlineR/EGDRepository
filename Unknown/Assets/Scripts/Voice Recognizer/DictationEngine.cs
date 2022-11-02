@@ -13,6 +13,8 @@ public class DictationEngine : MonoBehaviour
     [SerializeField] TMP_Text word_text;
     [SerializeField] TMP_Text emotion_text;
 
+    [SerializeField] GameObject AudioObject;
+
     protected DictationRecognizer dictationRecognizer;
 
     bool started = false;
@@ -47,16 +49,18 @@ public class DictationEngine : MonoBehaviour
         StartDictationEngine();
         audioSource = GetComponent<AudioSource>();
         emotion_text.text = "";
+        AudioObject.SetActive(false);
     }
     
     void Update(){
         
         if(Input.GetMouseButton(1)){
             if(!started){
-                Debug.Log("started recording");
+                // Debug.Log("started recording");
 
                 started = true;
                 dictationRecognizer.Start();
+                AudioObject.SetActive(true);
                 emotion_text.text = "";
                 word_text.text = "";
                 // =============== begin recording ===============
@@ -68,10 +72,11 @@ public class DictationEngine : MonoBehaviour
             }
         } else {
             if(started){
-                Debug.Log("ended recording");
+                // Debug.Log("ended recording");
 
                 started = false;
                 dictationRecognizer.Stop();
+                AudioObject.SetActive(false);
                 // =============== end recording ===============
                 AudioClip clip = StopRecording(audioSource, null);
                 //if(!SavWav.Save("output.wav", clip)){
@@ -124,7 +129,7 @@ public class DictationEngine : MonoBehaviour
     }
 
     private void DictationRecognizer_OnDictationHypothesis(string text){
-        // Debug.Log("Dictation hypothesis: " + text);
+        Debug.Log("Dictation hypothesis: " + text);
         word_text.text = text;
     }
 
@@ -150,7 +155,7 @@ public class DictationEngine : MonoBehaviour
     }
 
     private void DictationRecognizer_OnDictationResult(string text, ConfidenceLevel confidence){
-        // Debug.Log("Dictation result: " + text);
+        Debug.Log("Dictation result: " + text);
         word_text.text = text;
         result = text;
         // write to file
