@@ -216,7 +216,20 @@ namespace Fragsurf.Movement {
 
         }
 
+        bool move = true;
+
+        public void StopMovement(){
+            move = false;
+        }
+
+        public void StartMovement(){
+            move = true;
+        }
+
         private void Update () {
+
+            if(!move) 
+                return;
 
             _colliderObject.transform.rotation = Quaternion.identity;
 

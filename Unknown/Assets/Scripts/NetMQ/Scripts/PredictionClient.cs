@@ -57,6 +57,14 @@ public class PredictionClient : MonoBehaviour
         }
     }
 
+    public bool SetEmotion(){
+        return setOnce;
+    }
+
+    public string GetEmotion(){
+        return setMessage;
+    }
+
     private void OnDestroy()
     {
         // predictionRequester.Stop();

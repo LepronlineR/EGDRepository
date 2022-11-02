@@ -29,6 +29,7 @@ public class DialogueParser : MonoBehaviour {
         speaking = false;
         narrativeData = dialogue.NodeLinks.First(); //Entrypoint node
         //ProceedToNarrative(narrativeData.TargetNodeGUID);
+        //StartCoroutine(Script());
     }
 
     public void MakeInteractable(){
@@ -39,44 +40,116 @@ public class DialogueParser : MonoBehaviour {
         interactable = false;
     }
 
+    bool progress = false;
+    bool said = false;
+    bool picture = false;
+
+    string r1 = "Hello, how are you doing?";
+    string r2 = "Today seems like a good day";
+    string r3 = "Can you say tree?";
+    string r4 = "That is wrong";
+    string r5 = "Good";
+    string r6 = "Can you give me a picture of a white paint bucket?";
+    string r7 = "That's not it";
+    string r8 = "Cool paint.";
+
+    int r = 1;
+
     
     void Update(){
         if(interactable && Input.GetMouseButtonDown(0)){ // process data
-            if(!speaking)
-                ProceedToNarrative(narrativeData.TargetNodeGUID);
+            if(!speaking){
+                Debug.Log("Clicked on " + this.gameObject.name);
+                Debug.Log(r);
+                if(said)
+                    DetermineSpeech();
+                if(picture)
+                    DetermineEvidence();
+                switch(r){
+                    case 1:
+                        StartCoroutine(Type(r1));
+                        r++;
+                        break;
+                    case 2:
+                        StartCoroutine(Type(r2));
+                        r++;
+                        break;
+                    case 3:
+                        StartCoroutine(Type(r3));
+                        said = true;
+                        break;
+                    case 4:
+                        StartCoroutine(Type(r4));
+                        said = false;
+                        r--;
+                        break;
+                    case 5:
+                        StartCoroutine(Type(r5));
+                        said = false;
+                        r++;
+                        break;
+                    case 6:
+                        StartCoroutine(Type(r6));
+                        picture = true;
+                        break;
+                    case 7:
+                        StartCoroutine(Type(r7));
+                        picture = false;
+                        r--;
+                        break;
+                    case 8:
+                        StartCoroutine(Type(r8));
+                        r++;
+                        break;
+                }
+            }
+            //ProceedToNarrative(narrativeData.TargetNodeGUID);
         }
     }
 
+    void DetermineSpeech(){
+        // get sentence from speech
+        if(DictationEngine.Instance.GetSentence().ToLower().Equals("tree")){ // success
+            said = false;
+            r = 5;
+        } else if(DictationEngine.Instance.GetSentence().Equals("")){
+            r = 4;
+        }
+    }
 
+    public GameObject evidence;
+
+    void DetermineEvidence(){
+        // get selected image
+        if(MainSystem.Instance.ImageContainsEvidence(evidence)){ // success
+            picture = false;
+            r = 8;
+        } else {
+            r = 7;
+        }
+    }
+
+    /*
+
+    private void DetermineNarrative(string narrativeDataGUID) {
+        IEnumerable<NodeLinkData> choices = dialogue.NodeLinks.Where(x => x.BaseNodeGUID == narrativeDataGUID);
+        if(choices.Count() > 1){ // process different choices (word)
+
+        } else if(choices.Count() > 1) {// process different choices (evidence)
+
+        } else { // default proceed
+            ProceedToNarrative(narrativeDataGUID);
+        }
+    }
 
     private void ProceedToNarrative(string narrativeDataGUID) {
         var text = dialogue.DialogueNodeData.Find(x => x.NodeGUID == narrativeDataGUID).DialogueText;
         IEnumerable<NodeLinkData> choices = dialogue.NodeLinks.Where(x => x.BaseNodeGUID == narrativeDataGUID);
         StartCoroutine(Type(ProcessProperties(text)));
         dialogueText.text = ProcessProperties(text);
-        if(choices.Count() > 1){
-            foreach (NodeLinkData choice in choices){
-                //var prompt = Instantiate(prompts, speechBubbleLoc);
-               // prompt.GetComponent<TMP_Text>().text = ProcessProperties(choice.PortName);
-            }
-        } else if(choices.Count() == 1){
-            foreach (NodeLinkData choice in choices){
-                narrativeData = choice;
-                //var prompt = Instantiate(prompts, speechBubbleLoc);
-               // prompt.GetComponent<TMP_Text>().text = ProcessProperties(choice.PortName);
-            }
+        foreach (NodeLinkData choice in choices){
+            narrativeData = choice;
         }
-        /*
-        var buttons = buttonContainer.GetComponentsInChildren<Button>();
-        for (int i = 0; i < buttons.Length; i++){
-            Destroy(buttons[i].gameObject);
-        }
-
-        foreach (var choice in choices){
-            var button = Instantiate(choicePrefab, buttonContainer);
-            button.GetComponentInChildren<Text>().text = ProcessProperties(choice.PortName);
-            button.onClick.AddListener(() => ProceedToNarrative(choice.TargetNodeGUID));
-        }*/
     }
 
     private string ProcessProperties(string text){
@@ -84,7 +157,7 @@ public class DialogueParser : MonoBehaviour {
             text = text.Replace($"[{exposedProperty.PropertyName}]", exposedProperty.PropertyValue);
         }
         return text;
-    }
+    }*/
 
     public IEnumerator Type(string word){
         dialogueText.text = word;

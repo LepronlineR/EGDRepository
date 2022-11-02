@@ -1,7 +1,6 @@
 #
-#   Hello World server in Python
+#   takes audio file and predicts
 #   Binds REP socket to tcp://*:5555
-#   Expects b"Hello" from client, replies with b"World"
 #
 
 import tensorflow as tf
@@ -60,8 +59,12 @@ def convert_bytearray_to_wav_ndarray(input_bytearr: bytes, sampling_rate=44100):
 
 def predict(model, bytes_wav, labels, sampling_rate = 44100, filename = "output.wav"):
 
-    output = convert_bytearray_to_wav_ndarray(bytes_wav, sampling_rate)
-    scipy.io.wavfile.write(filename, sampling_rate, output)
+    # output = convert_bytearray_to_wav_ndarray(bytes_wav, sampling_rate)
+    # scipy.io.wavfile.write(filename, sampling_rate, output)
+    if os.path.exists(filename):
+        os.remove(filename)
+    with open(filename, mode='bx') as f:
+        f.write(bytes_wav)
 
     # transform
     X = extract_mfcc(filename, librosa.get_duration(filename=filename))

@@ -141,6 +141,14 @@ public class DialogueGraphView : GraphView
         inputPort.portName = "Input";
         dialogueNode.inputContainer.Add(inputPort);
 
+        var responsePort = GeneratePort(dialogueNode, Direction.Input, Port.Capacity.Single);
+        responsePort.portName = "Response";
+        dialogueNode.inputContainer.Add(responsePort);
+
+        var evidencePort = GeneratePort(dialogueNode, Direction.Input, Port.Capacity.Single);
+        evidencePort.portName = "Evidence";
+        dialogueNode.inputContainer.Add(evidencePort);
+
         var button = new UnityEngine.UIElements.Button(()=> {
             AddChoicePort(dialogueNode);
         });
@@ -161,6 +169,12 @@ public class DialogueGraphView : GraphView
         
         return dialogueNode;
     }
+
+    
+
+    //public void AddResponsePort(DialogueNode nodeCahce, string overridenPortName = ""){
+    //    
+    //}
 
     public void AddChoicePort(DialogueNode nodeCache, string overriddenPortName = ""){
         var generatedPort = GeneratePort(nodeCache, Direction.Output);
@@ -200,5 +214,19 @@ public class DialogueGraphView : GraphView
         node.outputContainer.Remove(socket);
         node.RefreshPorts();
         node.RefreshExpandedState();
+    }
+
+    void OnDragUpdatedEvent(DragUpdatedEvent e){
+        if (DragAndDrop.GetGenericData("DragSelection") is List<ISelectable> selection && (selection.OfType<BlackboardField>().Count() >= 0)){
+            DragAndDrop.visualMode = e.actionKey ? DragAndDropVisualMode.Copy : DragAndDropVisualMode.Move;
+        }
+    }
+    
+    void OnDragPerformEvent(DragPerformEvent e){
+        var selection = DragAndDrop.GetGenericData("DragSelection") as List<ISelectable>;
+        IEnumerable<BlackboardField> fields = selection.OfType<BlackboardField>();
+        foreach (BlackboardField field in fields){
+            // Create a node
+        }
     }
 }

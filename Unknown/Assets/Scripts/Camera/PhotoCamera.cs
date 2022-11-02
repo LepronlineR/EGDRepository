@@ -28,6 +28,7 @@ public class PhotoCamera : MonoBehaviour {
     [Header("Inventory Stuff")]
     [SerializeField] GameObject imagePrefab;
     [SerializeField] Transform imageHolder;
+    [SerializeField] MainSystem mainSystem;
 
     private bool view;
 
@@ -109,8 +110,11 @@ public class PhotoCamera : MonoBehaviour {
 
         // is the evidence in view?
         List<GameObject> evidences = EvidenceContainer.Instance.evidences;
+        List<GameObject> inView = new List<GameObject>();
         foreach(GameObject evidence in evidences){
-            Debug.Log(IsInView(player, evidence));
+            if(IsInView(player, evidence)){
+                inView.Add(evidence);
+            }
         }
 
         // flash effect
@@ -124,7 +128,12 @@ public class PhotoCamera : MonoBehaviour {
 
         // add image to the inventory
         GameObject imageGO = (GameObject) Instantiate(imagePrefab, Vector3.zero, Quaternion.identity);
-        imageGO.GetComponent<InventoryImage>().SetImage(photoSprite);
+        InventoryImage invImg = imageGO.GetComponent<InventoryImage>();
+        invImg.SetImage(photoSprite);
+        invImg.SetImageText("IMG_" + imageHolder.childCount);
+        invImg.AddAllEvidences(inView);
+
+        // set img transform to inventory
         imageGO.transform.SetParent(imageHolder);
         imageGO.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
 

@@ -82,6 +82,36 @@ public class DialogueGraph : EditorWindow
     }
 
     private void GenerateBlackBoard() {
+        /*
+        VisualElement container = new VisualElement();
+        BlackboardField blackboardField = new BlackboardField {
+            text = newProperty.name
+        ,   typeText = "string"
+        };
+    
+        container.Add(blackboardField);
+    
+        TextField textPropertyValue = new TextField("Value") {
+            value = localPropertyValue
+        };
+    
+        textPropertyValue.RegisterValueChangedCallback(e => {
+            int changingPropertyIndex = exposedProperties.FindIndex(x => x.name == newProperty.name);
+            exposedProperties[changingPropertyIndex].value = e.newValue;
+        });
+    
+        var blackboardValueRow = new BlackboardRow(blackboardField, textPropertyValue);
+        container.Add(blackboardValueRow);
+    
+        StyleSheet st = Resources.Load<StyleSheet>("StyleSheets/Blackboard");
+        container.styleSheets.Add(st);
+    
+        blackboard.Add(container);
+        */
+
+        // ======================================================================================
+
+
         var blackboard = new Blackboard(_graphView);
         blackboard.Add(new BlackboardSection {title = "Exposed Variables"});
         blackboard.addItemRequested = _blackboard => {
@@ -98,8 +128,15 @@ public class DialogueGraph : EditorWindow
             _graphView.ExposedProperties[targetIndex].PropertyName = newValue;
             ((BlackboardField) element).text = newValue;
         };
+        //blackboard.RegisterCallback<ContextualMenuPopulateEvent>(MyMenuPopulateCB);
         blackboard.SetPosition(new Rect(10,30,200,300));
         _graphView.Add(blackboard);
         _graphView.Blackboard = blackboard;
     }
+
+    //void MyMenuPopulateCB(ContextualMenuPopulateEvent evt){
+    //    evt.menu.AppendAction("MyItem", MyAction, DropdownMenuAction.AlwaysEnabled);
+    //}
+
+    
 }

@@ -32,19 +32,20 @@ public class DictationEngine : MonoBehaviour
     private void OnDisable() {
         PredictionRequester.onEmotionPrediction -= SendEmotionPrediction;
     }*/
- 
-    //temporary audio vector we write to every second while recording is enabled..
-    List<float> tempRecording = new List<float>();
- 
-    //list of recorded clips...
-    // List<float[]> recordedClips = new List<float[]>();
+
+    public static DictationEngine Instance { get; private set; }
+    private void Awake() { 
+        // If there is an instance, and it's not me, delete myself.
+        if (Instance != null && Instance != this) { 
+            Destroy(this); 
+        } else { 
+            Instance = this; 
+        } 
+    }
 
     void Start(){
         StartDictationEngine();
         audioSource = GetComponent<AudioSource>();
-        //set up recording to last a max of 1 seconds and loop over and over
-        //audioSource.clip = Microphone.Start(null, true, 1, 44100);
-        //audioSource.Play();
         emotion_text.text = "";
     }
     
@@ -61,7 +62,6 @@ public class DictationEngine : MonoBehaviour
                 // =============== begin recording ===============
                 
                 audioSource.Stop();
-                tempRecording.Clear();
                 Microphone.End(null);
                 audioSource.clip = StartRecording();
                 // Invoke("ResizeRecording", 1);
@@ -83,6 +83,16 @@ public class DictationEngine : MonoBehaviour
                 PredictionClient.Instance.Predict(bytes);
             }
         }
+    }
+
+    string result = "";
+
+    public bool Started(){
+        return started;
+    }
+
+    public string GetSentence(){
+        return result;
     }
 
     public AudioClip StopRecording(AudioSource audS, string deviceName) {
@@ -113,42 +123,6 @@ public class DictationEngine : MonoBehaviour
         return audioClip;
     }
 
-
-    /*
-    public void StopRecording(string deviceName = null){
-        UnityEngine.Microphone.End(deviceName);
-    }*/
-
-    /*
-    void ResizeRecording(){
-        if (started){
-            //add the next second of recorded audio to temp vector
-            int length = 44100;
-            float[] clipData = new float[length];
-            audioSource.clip.GetData(clipData, 0);
-            tempRecording.AddRange(clipData);
-            Invoke("ResizeRecording", 1);
-        }
-    }
-
-*/
-    public byte[] returnByteArrayForCurrentRecording(AudioClip audioClip) {
-        var samples = new float[audioClip.samples];
-        audioClip.GetData(samples, 0);
-        Int16[] intData = new Int16[samples.Length];
-        Byte[] bytesData = new Byte[samples.Length * 2];
-        int rescaleFactor = 32767;
-        for (int i = 0; i < samples.Length; i++){
-            intData[i] = (short)(samples[i] * rescaleFactor);
-            Byte[] byteArr = new Byte[2];
-            byteArr = BitConverter.GetBytes(intData[i]);
-            byteArr.CopyTo(bytesData, i * 2);
-        }
-
-        return bytesData;
-    }
-    
-
     private void DictationRecognizer_OnDictationHypothesis(string text){
         // Debug.Log("Dictation hypothesis: " + text);
         word_text.text = text;
@@ -178,6 +152,7 @@ public class DictationEngine : MonoBehaviour
     private void DictationRecognizer_OnDictationResult(string text, ConfidenceLevel confidence){
         // Debug.Log("Dictation result: " + text);
         word_text.text = text;
+        result = text;
         // write to file
     }
 
