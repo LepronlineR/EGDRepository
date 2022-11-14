@@ -7,7 +7,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class DialogueParser : MonoBehaviour {
-
+    /*
     [SerializeField] private DialogueContainer dialogue;
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private VoiceDetector detector;
@@ -129,36 +129,6 @@ public class DialogueParser : MonoBehaviour {
         }
     }
 
-    /*
-
-    private void DetermineNarrative(string narrativeDataGUID) {
-        IEnumerable<NodeLinkData> choices = dialogue.NodeLinks.Where(x => x.BaseNodeGUID == narrativeDataGUID);
-        if(choices.Count() > 1){ // process different choices (word)
-
-        } else if(choices.Count() > 1) {// process different choices (evidence)
-
-        } else { // default proceed
-            ProceedToNarrative(narrativeDataGUID);
-        }
-    }
-
-    private void ProceedToNarrative(string narrativeDataGUID) {
-        var text = dialogue.DialogueNodeData.Find(x => x.NodeGUID == narrativeDataGUID).DialogueText;
-        IEnumerable<NodeLinkData> choices = dialogue.NodeLinks.Where(x => x.BaseNodeGUID == narrativeDataGUID);
-        StartCoroutine(Type(ProcessProperties(text)));
-        dialogueText.text = ProcessProperties(text);
-        foreach (NodeLinkData choice in choices){
-            narrativeData = choice;
-        }
-    }
-
-    private string ProcessProperties(string text){
-        foreach (var exposedProperty in dialogue.ExposedProperties){
-            text = text.Replace($"[{exposedProperty.PropertyName}]", exposedProperty.PropertyValue);
-        }
-        return text;
-    }*/
-
     public IEnumerator Type(string word){
         dialogueText.text = word;
         dialogueText.ForceMeshUpdate();
@@ -183,6 +153,6 @@ public class DialogueParser : MonoBehaviour {
         speaking = false;
         yield return new WaitForSeconds(0.6f);
     }
-
+    */
 
 }

@@ -26,11 +26,11 @@ public class CharacterBehavior : MonoBehaviour {
     
     private void OnMouseEnter() {
         Debug.Log("The cursor entered Mouse.");
-        parser.MakeInteractable();
+        // parser.MakeInteractable();
     }
 
     private void OnMouseExit() {
         Debug.Log("The cursor exited Mouse.");
-        parser.MakeUninteractable();
+        // parser.MakeUninteractable();
     }
 }
