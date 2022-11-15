@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum LanguageTypes
+public enum DialogueEmotionType
 {
-    English
+    Happy,
+    Sad,
+    Angry
 }
