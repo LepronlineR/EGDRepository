@@ -11,6 +11,7 @@ public class DialogueEditorWindow : EditorWindow {
 
     private DialogueContainerSO currentDialogueContainer;
     private DialogueGraphView graphView;
+    private DialogueSaveAndLoad saveAndLoad;
 
     private LanguageType languageType = LanguageType.English;
     private ToolbarMenu toolbarMenu;
@@ -49,6 +50,8 @@ public class DialogueEditorWindow : EditorWindow {
         graphView = new DialogueGraphView(this);
         graphView.StretchToParentSize();
         rootVisualElement.Add(graphView);
+
+        saveAndLoad = new DialogueSaveAndLoad(graphView);
     }
 
     private void GenerateToolbar() {
@@ -85,12 +88,15 @@ public class DialogueEditorWindow : EditorWindow {
 
     private void Load() {
         if(currentDialogueContainer != null){
+            Language(LanguageType.English, toolbarMenu);
             nameOfDialogueContainer.text = "Name: " + currentDialogueContainer.name;
+            saveAndLoad.Load(currentDialogueContainer);
         }
     }
 
     private void Save() {
-
+        if(currentDialogueContainer != null)
+            saveAndLoad.Save(currentDialogueContainer);
     }
 
     private void Language(LanguageType language, ToolbarMenu toolbarMenu){
