@@ -13,14 +13,20 @@ MonoBehaviour:
   m_Name: Test
   m_EditorClassIdentifier: 
   nodeLinkDatas:
-  - baseNodeGuid: eeac54ae-882e-4132-9418-e0dc3ce49ea6
-    targetNodeGuid: b9680c5c-5985-43ad-8e9c-80237b2f6713
+  - baseNodeGuid: 02e03715-dbcb-4ab7-99c9-904be8cd17df
+    basePortName: Output
+    targetNodeGuid: f3d3d0e9-8a27-497f-96ab-9345d5d18e56
+    targetPortName: Input
+  - baseNodeGuid: f3d3d0e9-8a27-497f-96ab-9345d5d18e56
+    basePortName: 
+    targetNodeGuid: 49217d9e-dbf7-4773-9699-c5f289202b50
+    targetPortName: Input
   dialogueNodeDatas:
-  - nodeGuid: b9680c5c-5985-43ad-8e9c-80237b2f6713
-    position: {x: 222, y: 250}
+  - nodeGuid: f3d3d0e9-8a27-497f-96ab-9345d5d18e56
+    position: {x: 92, y: 144}
     dialogueNodePorts:
-    - inputGuid: 
-      outputGuid: 
+    - inputGuid: 49217d9e-dbf7-4773-9699-c5f289202b50
+      outputGuid: f3d3d0e9-8a27-497f-96ab-9345d5d18e56
       textLanguages:
       - languageType: 0
         languageGenericType: Choice 1
@@ -29,30 +35,20 @@ MonoBehaviour:
       textLanguages:
       - languageType: 0
         languageGenericType: Choice 2
-    - inputGuid: 
-      outputGuid: 
-      textLanguages:
-      - languageType: 0
-        languageGenericType: Choice 3
-    - inputGuid: 
-      outputGuid: 
-      textLanguages:
-      - languageType: 0
-        languageGenericType: Choice 4
-    sprite: {fileID: 0}
-    dialogueEmotionType: 0
+    sprite: {fileID: 21300000, guid: f8506563bf3827446a0484275ce289ce, type: 3}
+    dialogueEmotionType: 3
     audioClips:
     - languageType: 0
       languageGenericType: {fileID: 0}
     name: John
     textType:
     - languageType: 0
-      languageGenericType: Texting!
+      languageGenericType: Hello world
   endNodeDatas:
-  - nodeGuid: 086a5479-0557-45b7-9d8f-371ad49e8264
-    position: {x: 451, y: 242}
-    endNodeType: 2
+  - nodeGuid: 49217d9e-dbf7-4773-9699-c5f289202b50
+    position: {x: 368, y: 35}
+    endNodeType: 0
   startNodeDatas:
-  - nodeGuid: eeac54ae-882e-4132-9418-e0dc3ce49ea6
-    position: {x: 114, y: 250}
+  - nodeGuid: 02e03715-dbcb-4ab7-99c9-904be8cd17df
+    position: {x: -87, y: 127}
   eventNodeDatas: []

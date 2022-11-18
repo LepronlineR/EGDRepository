@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-[RequireComponent(typeof(DialogueParser), typeof(BoxCollider2D))]
+[RequireComponent(typeof(BoxCollider2D))]
 public class CharacterBehavior : MonoBehaviour {
 
     [SerializeField] Transform player;
@@ -12,7 +12,7 @@ public class CharacterBehavior : MonoBehaviour {
     DialogueParser parser;
 
     void Start(){
-        parser = GetComponent<DialogueParser>();
+        // parser = GetComponent<DialogueParser>();
     }
 
     void Update(){

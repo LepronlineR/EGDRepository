@@ -28,7 +28,9 @@ public class DialogueContainerSO : ScriptableObject {
 [System.Serializable]
 public class NodeLinkData {
     public string baseNodeGuid;
+    public string basePortName;
     public string targetNodeGuid;
+    public string targetPortName;
 }
 
 [System.Serializable]
@@ -57,10 +59,25 @@ public class StartNodeData : BaseNodeData {
 
 }
 
+#region Event Node
 [System.Serializable]
 public class EventNodeData : BaseNodeData {
+    public List<EventStringIDData> eventStringIDDatas;
+    public List<EventScriptableObjectData> eventScriptableObjectDatas;
+}
+
+[System.Serializable]
+public class EventStringIDData {
+    public string stringEvent;
+    public int ID;
+}
+
+[System.Serializable]
+public class EventScriptableObjectData {
     public DialogueEventSO dialogueEventSO;
 }
+
+#endregion
 
 [System.Serializable]
 public class LanguageGeneric<T> {
@@ -70,8 +87,8 @@ public class LanguageGeneric<T> {
 
 [System.Serializable]
 public class DialogueNodePort {
-    public string inputGuid = string.Empty;
-    public string outputGuid = string.Empty;
+    public string inputGuid;
+    public string outputGuid;
     public Port myPort;
     public TextField textField;
     public List<LanguageGeneric<string>> textLanguages = new List<LanguageGeneric<string>>();

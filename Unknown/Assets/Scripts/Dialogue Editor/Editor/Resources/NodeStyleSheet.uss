@@ -11,3 +11,33 @@
     margin-left: 4px;
     font-size: 15px;
 }
+
+.PortName {
+    display:none;
+}
+
+.faceImagePreview {
+    height: 100px;
+    width: 100px;
+    margin: auto;
+}
+
+.EventBox {
+    flex-direction: row;
+}
+
+.EventText {
+    min-width:150px;
+}
+
+.EventInt {
+    min-width:40px;
+}
+
+.EventObject {
+    
+}
+
+.EventButton {
+
+}

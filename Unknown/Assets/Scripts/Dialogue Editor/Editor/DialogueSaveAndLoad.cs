@@ -27,7 +27,6 @@ public class DialogueSaveAndLoad {
     public void Load(DialogueContainerSO container){
         ClearGraph();
         GenerateNodes(container);
-        // PrintAllNodeTypes();
         ConnectNodes(container);
     }
 
@@ -41,7 +40,9 @@ public class DialogueSaveAndLoad {
 
             container.nodeLinkDatas.Add(new NodeLinkData {
                 baseNodeGuid = outputNode.NodeGuid,
-                targetNodeGuid = inputNode.NodeGuid
+                basePortName = connectedEdges[x].output.portName,
+                targetNodeGuid = inputNode.NodeGuid,
+                targetPortName = connectedEdges[x].input.portName
             });
         }
     }
@@ -80,7 +81,7 @@ public class DialogueSaveAndLoad {
             audioClips = node.AudioClips,
             dialogueEmotionType = node.FaceImageType,
             sprite = node.FaceImage,
-            dialogueNodePorts = node.DialogueNodePorts
+            dialogueNodePorts = new List<DialogueNodePort>(node.DialogueNodePorts)
         };
 
         foreach(DialogueNodePort nodePort in dialogueNodeData.dialogueNodePorts){
@@ -120,7 +121,8 @@ public class DialogueSaveAndLoad {
         EventNodeData nodeData =  new EventNodeData(){
             nodeGuid = node.NodeGuid,
             position = node.GetPosition().position,
-            dialogueEventSO = node.DialogueEvent
+            eventScriptableObjectDatas = node.EventScriptableObjectDatas,
+            eventStringIDDatas = node.EventStringIDDatas,
         };
 
         return nodeData;
@@ -155,7 +157,15 @@ public class DialogueSaveAndLoad {
         foreach(EventNodeData node in container.eventNodeDatas){
             EventNode temp = graphView.CreateEventNode(node.position);
             temp.NodeGuid = node.nodeGuid;
-            temp.DialogueEvent = node.dialogueEventSO;
+            
+            foreach(EventScriptableObjectData item in node.eventScriptableObjectDatas){
+                temp.AddScriptableEvent(item);
+            }
+
+            foreach(EventStringIDData item in node.eventStringIDDatas){
+                temp.AddStringEvent(item);
+            }
+
             temp.LoadValueIntoField();
             graphView.AddElement(temp);
         }
@@ -164,10 +174,16 @@ public class DialogueSaveAndLoad {
             DialogueNode temp = graphView.CreateDialogueNode(node.position);
             temp.NodeGuid = node.nodeGuid;
             temp.Name = node.name;
-            temp.Texts = node.textType;
             temp.FaceImage = node.sprite;
             temp.FaceImageType = node.dialogueEmotionType;
-            temp.AudioClips = node.audioClips;
+
+            foreach(LanguageGeneric<string> lG in node.textType){
+                temp.Texts.Find(language => language.languageType == lG.languageType).languageGenericType = lG.languageGenericType;
+            }
+
+            foreach(LanguageGeneric<AudioClip> lG in node.audioClips){
+                temp.AudioClips.Find(language => language.languageType == lG.languageType).languageGenericType = lG.languageGenericType;
+            }
 
             foreach(DialogueNodePort nodePort in node.dialogueNodePorts){
                 temp.AddChoicePort(temp, nodePort);
@@ -179,24 +195,28 @@ public class DialogueSaveAndLoad {
     }
 
     private void ConnectNodes(DialogueContainerSO container){
+        Debug.Log(nodes.Count());
         for(int x = 0; x < nodes.Count(); x++){
             List<NodeLinkData> connections = container.nodeLinkDatas.Where(edge => edge.baseNodeGuid == nodes[x].NodeGuid).ToList();
-            for(int y = 0; y < connections.Count(); y++){
-                string targetNodeGuid = connections[y].targetNodeGuid;
+            
+            List<Port> allOutputPorts = nodes[x].outputContainer.Children().Where(x => x is Port).Cast<Port>().ToList();
+            
+            foreach(Port item in allOutputPorts){
+                Debug.Log(item);
+            }
+
+            foreach(NodeLinkData connection in connections){
+                string targetNodeGuid = connection.targetNodeGuid;
                 BaseNode targetNode = nodes.First(n => n.NodeGuid == targetNodeGuid);
 
-                if(!(nodes[x] is DialogueNode)){
-                    LinkNodesTogether(nodes[x].outputContainer[y].Q<Port>(), (Port) targetNode.inputContainer[0]);
+                if(targetNode == null){
+                    continue;
                 }
-            }
-        }
 
-        List<DialogueNode> dialogueNodes = nodes.FindAll(n => n is DialogueNode).Cast<DialogueNode>().ToList();
-        foreach(DialogueNode dialogueNode in dialogueNodes){
-            foreach(DialogueNodePort nodePort in dialogueNode.DialogueNodePorts){
-                if(nodePort.inputGuid != string.Empty){
-                    BaseNode targetNode = nodes.First(n => n.NodeGuid == nodePort.inputGuid);
-                    LinkNodesTogether(nodePort.myPort, (Port) targetNode.inputContainer[0]);
+                foreach(Port item in allOutputPorts){
+                    if(item.portName == connection.basePortName){
+                        LinkNodesTogether(item, (Port) targetNode.inputContainer[0]);
+                    }
                 }
             }
         }
@@ -212,30 +232,5 @@ public class DialogueSaveAndLoad {
         graphView.Add(temp);
     }
 
-    #endregion
-
-    #region Testing Scripts
-
-    private void PrintAllNodeTypes(){
-        foreach(var item in nodes){
-            switch(item){
-                case StartNode startNode:
-                    Debug.Log("start node");
-                    break;
-                case EndNode endNode:
-                    Debug.Log("end node");
-                    Debug.Log(endNode.EndNodeType);
-                    break;
-                case EventNode eventNode:
-                    Debug.Log("event node");
-                    break;
-                case DialogueNode dialogueNode:
-                    Debug.Log("====== dialogue node with name: " + dialogueNode.name + "======");
-                    Debug.Log(dialogueNode.DialogueNodePorts[0].inputGuid);
-                    Debug.Log(dialogueNode.DialogueNodePorts[0].outputGuid);
-                    break;
-            }
-        }
-    }
     #endregion
 }

@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aac82a7c0dc8dd4e8e46749de3dddb3, type: 3}
+  m_Name: Test 2
+  m_EditorClassIdentifier: 
+  nodeLinkDatas:
+  - baseNodeGuid: f040ef88-8225-4ccc-a614-b144ed129fbd
+    targetNodeGuid: f3d3d0e9-8a27-497f-96ab-9345d5d18e56
+  - baseNodeGuid: c468a300-105d-4d6c-96e3-83ce1a84e7bf
+    targetNodeGuid: 3ca946f6-af23-499e-86f6-d1f2cd4a4dbf
+  - baseNodeGuid: f3d3d0e9-8a27-497f-96ab-9345d5d18e56
+    targetNodeGuid: b292266b-ef9f-430e-84d1-860321e56af4
+  - baseNodeGuid: f3d3d0e9-8a27-497f-96ab-9345d5d18e56
+    targetNodeGuid: c468a300-105d-4d6c-96e3-83ce1a84e7bf
+  dialogueNodeDatas:
+  - nodeGuid: f3d3d0e9-8a27-497f-96ab-9345d5d18e56
+    position: {x: 79, y: 92}
+    dialogueNodePorts:
+    - inputGuid: b292266b-ef9f-430e-84d1-860321e56af4
+      outputGuid: f3d3d0e9-8a27-497f-96ab-9345d5d18e56
+      textLanguages:
+      - languageType: 0
+        languageGenericType: Choice 1
+    - inputGuid: c468a300-105d-4d6c-96e3-83ce1a84e7bf
+      outputGuid: f3d3d0e9-8a27-497f-96ab-9345d5d18e56
+      textLanguages:
+      - languageType: 0
+        languageGenericType: Choice 2
+    - inputGuid: 
+      outputGuid: 
+      textLanguages:
+      - languageType: 0
+        languageGenericType: Choice 3
+    - inputGuid: 
+      outputGuid: 
+      textLanguages:
+      - languageType: 0
+        languageGenericType: Choice 4
+    sprite: {fileID: 0}
+    dialogueEmotionType: 0
+    audioClips:
+    - languageType: 0
+      languageGenericType: {fileID: 0}
+    name: John
+    textType:
+    - languageType: 0
+      languageGenericType: Hello world
+  endNodeDatas:
+  - nodeGuid: 3ca946f6-af23-499e-86f6-d1f2cd4a4dbf
+    position: {x: 548, y: 165}
+    endNodeType: 0
+  - nodeGuid: b292266b-ef9f-430e-84d1-860321e56af4
+    position: {x: 393, y: 26}
+    endNodeType: 0
+  startNodeDatas:
+  - nodeGuid: f040ef88-8225-4ccc-a614-b144ed129fbd
+    position: {x: -18, y: 108}
+  eventNodeDatas:
+  - nodeGuid: c468a300-105d-4d6c-96e3-83ce1a84e7bf
+    position: {x: 303, y: 236}
+    dialogueEventSO: {fileID: 0}

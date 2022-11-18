@@ -28,6 +28,7 @@ public class DialogueNode : BaseNode
     private TextField textsField;
     private ObjectField audioClipsField;
     private ObjectField faceImageField;
+    private Image faceImagePreview;
     private TextField nameField;
     private UnityEngine.UIElements.EnumField faceImageTypeField;
 
@@ -63,9 +64,17 @@ public class DialogueNode : BaseNode
             allowSceneObjects = false,
             value = faceImage
         };
+
+        faceImagePreview = new Image();
+        faceImagePreview.AddToClassList("faceImagePreview");
+
         faceImageField.RegisterValueChangedCallback(value => {
-            faceImage = value.newValue as Sprite;
+            Sprite tmp = value.newValue as Sprite;
+            faceImage = tmp;
+            faceImagePreview.image = (tmp != null ? tmp.texture : null);
         });
+
+        mainContainer.Add(faceImagePreview);
         mainContainer.Add(faceImageField);
         
         // FACE IMAGE TYPES
@@ -157,6 +166,10 @@ public class DialogueNode : BaseNode
         faceImageField.SetValueWithoutNotify(faceImage);
         faceImageTypeField.SetValueWithoutNotify(faceImageType);
         nameField.SetValueWithoutNotify(name);
+
+        if(faceImage != null){
+            faceImagePreview.image = ((Sprite)faceImageField.value).texture;
+        }
     }
 
     public Port AddChoicePort(BaseNode _baseNode, DialogueNodePort _dialoguePortNode = null) {
@@ -174,8 +187,8 @@ public class DialogueNode : BaseNode
         }
 
         if(_dialoguePortNode != null){
-            dialogueNodePort.inputGuid = dialogueNodePort.inputGuid;
-            dialogueNodePort.outputGuid = dialogueNodePort.outputGuid;
+            dialogueNodePort.inputGuid = _dialoguePortNode.inputGuid;
+            dialogueNodePort.outputGuid = _dialoguePortNode.outputGuid;
 
             foreach(LanguageGeneric<string> languageGeneric in _dialoguePortNode.textLanguages){
                 dialogueNodePort.textLanguages.Find(language => language.languageType == languageGeneric.languageType).languageGenericType = languageGeneric.languageGenericType;

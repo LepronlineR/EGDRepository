@@ -89,7 +89,7 @@ public class DialogueEditorWindow : EditorWindow {
     private void Load() {
         if(currentDialogueContainer != null){
             Language(LanguageType.English, toolbarMenu);
-            nameOfDialogueContainer.text = "Name: " + currentDialogueContainer.name;
+            nameOfDialogueContainer.text = "File Name: " + currentDialogueContainer.name;
             saveAndLoad.Load(currentDialogueContainer);
         }
     }
