@@ -5,7 +5,7 @@ using UnityEngine;
 public class DialogueGetData : MonoBehaviour
 {
     [SerializeField] public DialogueContainerSO dialogueContainerSO;
-
+    /*
     protected BaseNodeData GetNodeByGuid(string _targetNodeGuid){
         return dialogueContainerSO.allNodes.Find(node => node.nodeGuid == _targetNodeGuid);
     }
@@ -18,4 +18,5 @@ public class DialogueGetData : MonoBehaviour
         NodeLinkData nld = dialogueContainerSO.nodeLinkDatas.Find(edge => edge.baseNodeGuid == baseNodeData.nodeGuid);
         return GetNodeByGuid(nld.targetNodeGuid);
     }
+    */
 }

@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum EndNodeType
+[System.Serializable]
+public class StartData : BaseData
 {
-    End = 1
+    
 }

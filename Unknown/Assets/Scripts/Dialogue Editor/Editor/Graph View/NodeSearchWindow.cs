@@ -22,13 +22,14 @@ public class NodeSearchWindow : ScriptableObject, ISearchWindowProvider
 
     public List<SearchTreeEntry> CreateSearchTree(SearchWindowContext context){
         List<SearchTreeEntry> tree = new List<SearchTreeEntry> {
-            new SearchTreeGroupEntry(new GUIContent("Dialogue Node"), 0),
-            new SearchTreeGroupEntry(new GUIContent("Dialogue"), 1),
+            new SearchTreeGroupEntry(new GUIContent("Dialogue Editor"), 0),
+            new SearchTreeGroupEntry(new GUIContent("Dialogue Node"), 1),
 
-            AddNodeSearch("Start Node", new StartNode()),
-            AddNodeSearch("End Node", new EndNode()),
-            AddNodeSearch("Event Node", new EventNode()),
-            AddNodeSearch("Dialogue Node", new DialogueNode()),
+            AddNodeSearch("Start", new StartNode()),
+            AddNodeSearch("End", new EndNode()),
+            AddNodeSearch("Event", new EventNode()),
+            AddNodeSearch("Dialogue", new DialogueNode()),
+            AddNodeSearch("Branch", new BranchNode()),
         };
 
         return tree;
@@ -62,6 +63,9 @@ public class NodeSearchWindow : ScriptableObject, ISearchWindowProvider
                 return true;
             case EventNode node:
                 graphView.AddElement(graphView.CreateEventNode(pos));
+                return true;
+            case BranchNode node:
+                graphView.AddElement(graphView.CreateBranchNode(pos));
                 return true;
             default:
                 break;

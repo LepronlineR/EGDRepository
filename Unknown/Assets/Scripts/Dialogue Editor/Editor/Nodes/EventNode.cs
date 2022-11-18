@@ -9,12 +9,6 @@ using UnityEngine.UIElements;
 public class EventNode : BaseNode
 {
 
-    private List<EventStringIDData> eventStringIDDatas = new List<EventStringIDData>();
-    private List<EventScriptableObjectData> eventScriptableObjectDatas = new List<EventScriptableObjectData>();
-
-    public List<EventStringIDData> EventStringIDDatas { get => eventStringIDDatas; set => eventStringIDDatas = value; }
-    public List<EventScriptableObjectData> EventScriptableObjectDatas { get => eventScriptableObjectDatas; set => eventScriptableObjectDatas = value; }
-
     public EventNode() {}
 
     public EventNode(Vector2 _position, DialogueEditorWindow _editorWindow, DialogueGraphView _graphView){
@@ -27,13 +21,14 @@ public class EventNode : BaseNode
         nodeGuid = Guid.NewGuid().ToString();
 
         AddInputPort("Input", Port.Capacity.Multi);
-        AddOutputPort("Output", Port.Capacity.Multi);
-
-        TopButton();
-
-        RefreshExpandedState();
-        RefreshPorts();
+        AddOutputPort("Output", Port.Capacity.Single);
     }
+    /*
+    private List<EventStringIDData> eventStringIDDatas = new List<EventStringIDData>();
+    private List<EventScriptableObjectData> eventScriptableObjectDatas = new List<EventScriptableObjectData>();
+
+    public List<EventStringIDData> EventStringIDDatas { get => eventStringIDDatas; set => eventStringIDDatas = value; }
+    public List<EventScriptableObjectData> EventScriptableObjectDatas { get => eventScriptableObjectDatas; set => eventScriptableObjectDatas = value; }
 
     public override void LoadValueIntoField() {
 
@@ -134,6 +129,6 @@ public class EventNode : BaseNode
         mainContainer.Remove(boxContainer);
         RefreshExpandedState();
     }
-
+    */
 }
 

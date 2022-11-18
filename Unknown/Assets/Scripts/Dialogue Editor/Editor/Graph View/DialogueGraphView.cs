@@ -51,27 +51,27 @@ public class DialogueGraphView : GraphView
     public void LanguageReload() {
         List<DialogueNode> dialogueNodes = nodes.ToList().Where(node => node is DialogueNode).Cast<DialogueNode>().ToList();
         foreach(DialogueNode dialogueNode in dialogueNodes){
-            dialogueNode.ReloadLanguage();
+            // dialogueNode.ReloadLanguage();
         }
     }
 
     public StartNode CreateStartNode(Vector2 pos) {
-        StartNode node = new StartNode(pos, editorWindow, this);
-        return node;
+        return new StartNode(pos, editorWindow, this);
     }
 
     public EndNode CreateEndNode(Vector2 pos) {
-        EndNode node = new EndNode(pos, editorWindow, this);
-        return node;
+        return new EndNode(pos, editorWindow, this);
     }
 
     public DialogueNode CreateDialogueNode(Vector2 pos) {
-        DialogueNode node = new DialogueNode(pos, editorWindow, this);
-        return node;
+        return new DialogueNode(pos, editorWindow, this);
     }
 
     public EventNode CreateEventNode(Vector2 pos) {
-        EventNode node = new EventNode(pos, editorWindow, this);
-        return node;
+        return new EventNode(pos, editorWindow, this);
+    }
+
+    public BranchNode CreateBranchNode(Vector2 pos) {
+        return new BranchNode(pos, editorWindow, this);
     }
 }

@@ -7,7 +7,7 @@ using System.Linq;
 using UnityEngine.UIElements;
 
 public class DialogueSaveAndLoad {
-    
+    /*
     private DialogueGraphView graphView;
     private List<Edge> edges => graphView.edges.ToList();
     private List<BaseNode> nodes => graphView.nodes.ToList().Where(node => node is BaseNode).Cast<BaseNode>().ToList();
@@ -52,19 +52,23 @@ public class DialogueSaveAndLoad {
         container.eventNodeDatas.Clear();
         container.endNodeDatas.Clear();
         container.startNodeDatas.Clear();
+        container.branchNodeDatas.Clear();
         nodes.ForEach(node => {
             switch(node){
                 case DialogueNode dialogueNode:
-                container.dialogueNodeDatas.Add(SaveNodeData(dialogueNode));
+                    container.dialogueNodeDatas.Add(SaveNodeData(dialogueNode));
                     break;
                 case StartNode startNode:
-                container.startNodeDatas.Add(SaveNodeData(startNode));
+                    container.startNodeDatas.Add(SaveNodeData(startNode));
                     break;
                 case EndNode endNode:
-                container.endNodeDatas.Add(SaveNodeData(endNode));
+                    container.endNodeDatas.Add(SaveNodeData(endNode));
                     break;
                 case EventNode eventNode:
-                container.eventNodeDatas.Add(SaveNodeData(eventNode));
+                    container.eventNodeDatas.Add(SaveNodeData(eventNode));
+                    break;
+                case BranchNode branchNode:
+                    container.branchNodeDatas.Add(SaveNodeData(branchNode));
                     break;
                 default:
                     break;
@@ -76,24 +80,7 @@ public class DialogueSaveAndLoad {
         DialogueNodeData dialogueNodeData = new DialogueNodeData {
             nodeGuid = node.NodeGuid,
             position = node.GetPosition().position,
-            textType = node.Texts,
-            name = node.Name,
-            audioClips = node.AudioClips,
-            dialogueEmotionType = node.FaceImageType,
-            sprite = node.FaceImage,
-            dialogueNodePorts = new List<DialogueNodePort>(node.DialogueNodePorts)
         };
-
-        foreach(DialogueNodePort nodePort in dialogueNodeData.dialogueNodePorts){
-            nodePort.outputGuid = string.Empty;
-            nodePort.inputGuid = string.Empty;
-            foreach (Edge edge in edges){
-                if(edge.output == nodePort.myPort){
-                    nodePort.outputGuid = (edge.output.node as BaseNode).NodeGuid;
-                    nodePort.inputGuid = (edge.input.node as BaseNode).NodeGuid;
-                }
-            }
-        }
 
         return dialogueNodeData;
     }
@@ -110,8 +97,7 @@ public class DialogueSaveAndLoad {
     private EndNodeData SaveNodeData(EndNode node){
         EndNodeData nodeData =  new EndNodeData(){
             nodeGuid = node.NodeGuid,
-            position = node.GetPosition().position,
-            endNodeType = node.EndNodeType
+            position = node.GetPosition().position, 
         };
 
         return nodeData;
@@ -121,12 +107,24 @@ public class DialogueSaveAndLoad {
         EventNodeData nodeData =  new EventNodeData(){
             nodeGuid = node.NodeGuid,
             position = node.GetPosition().position,
-            eventScriptableObjectDatas = node.EventScriptableObjectDatas,
-            eventStringIDDatas = node.EventStringIDDatas,
         };
 
         return nodeData;
     }
+
+    private BranchNodeData SaveNodeData(BranchNode node){
+        List<Edge> tempEdges = edges.Where(x => x.output.node == node).Cast<Edge>().ToList();
+        Edge trueOutput = edges.FirstOrDefault(x => x.output.node == node && x.output.portName == "True");
+        Edge falseOutput = edges.FirstOrDefault(x => x.output.node == node && x.output.portName == "False");
+
+        BranchNodeData nodeData =  new BranchNodeData(){
+            nodeGuid = node.NodeGuid,
+            position = node.GetPosition().position,
+        };
+
+        return nodeData;
+    }
+
     #endregion
 
     #region Load Scripts
@@ -139,33 +137,39 @@ public class DialogueSaveAndLoad {
     }
 
     private void GenerateNodes(DialogueContainerSO container){
+
+        // Start Node
         foreach(StartNodeData node in container.startNodeDatas){
             StartNode temp = graphView.CreateStartNode(node.position);
             temp.NodeGuid = node.nodeGuid;
-            temp.LoadValueIntoField();
+
             graphView.AddElement(temp);
         }
 
+        // End Node
         foreach(EndNodeData node in container.endNodeDatas){
             EndNode temp = graphView.CreateEndNode(node.position);
             temp.NodeGuid = node.nodeGuid;
-            temp.EndNodeType = node.endNodeType;
+
             temp.LoadValueIntoField();
             graphView.AddElement(temp);
         }
 
+        // Event Node
         foreach(EventNodeData node in container.eventNodeDatas){
             EventNode temp = graphView.CreateEventNode(node.position);
             temp.NodeGuid = node.nodeGuid;
-            
-            foreach(EventScriptableObjectData item in node.eventScriptableObjectDatas){
-                temp.AddScriptableEvent(item);
-            }
 
-            foreach(EventStringIDData item in node.eventStringIDDatas){
-                temp.AddStringEvent(item);
-            }
+            temp.LoadValueIntoField();
+            graphView.AddElement(temp);
+        }
 
+        foreach(BranchNodeData node in container.branchNodeDatas){
+            BranchNode temp = graphView.CreateBranchNode(node.position);
+            temp.NodeGuid = node.nodeGuid;
+            foreach(BranchStringIDData item in node.branchStringIDDatas){
+                temp.AddCondition(item);
+            }
             temp.LoadValueIntoField();
             graphView.AddElement(temp);
         }
@@ -173,21 +177,6 @@ public class DialogueSaveAndLoad {
         foreach(DialogueNodeData node in container.dialogueNodeDatas){
             DialogueNode temp = graphView.CreateDialogueNode(node.position);
             temp.NodeGuid = node.nodeGuid;
-            temp.Name = node.name;
-            temp.FaceImage = node.sprite;
-            temp.FaceImageType = node.dialogueEmotionType;
-
-            foreach(LanguageGeneric<string> lG in node.textType){
-                temp.Texts.Find(language => language.languageType == lG.languageType).languageGenericType = lG.languageGenericType;
-            }
-
-            foreach(LanguageGeneric<AudioClip> lG in node.audioClips){
-                temp.AudioClips.Find(language => language.languageType == lG.languageType).languageGenericType = lG.languageGenericType;
-            }
-
-            foreach(DialogueNodePort nodePort in node.dialogueNodePorts){
-                temp.AddChoicePort(temp, nodePort);
-            }
             
             temp.LoadValueIntoField();
             graphView.AddElement(temp);
@@ -195,15 +184,10 @@ public class DialogueSaveAndLoad {
     }
 
     private void ConnectNodes(DialogueContainerSO container){
-        Debug.Log(nodes.Count());
         for(int x = 0; x < nodes.Count(); x++){
             List<NodeLinkData> connections = container.nodeLinkDatas.Where(edge => edge.baseNodeGuid == nodes[x].NodeGuid).ToList();
             
             List<Port> allOutputPorts = nodes[x].outputContainer.Children().Where(x => x is Port).Cast<Port>().ToList();
-            
-            foreach(Port item in allOutputPorts){
-                Debug.Log(item);
-            }
 
             foreach(NodeLinkData connection in connections){
                 string targetNodeGuid = connection.targetNodeGuid;
@@ -233,4 +217,14 @@ public class DialogueSaveAndLoad {
     }
 
     #endregion
+
+    private void PrintAllPorts(){
+        for(int x = 0; x < nodes.Count(); x++){
+            List<Port> allOutputPorts = nodes[x].outputContainer.Children().Where(x => x is Port).Cast<Port>().ToList();
+            foreach(Port item in allOutputPorts){
+                Debug.Log(item);
+            }
+        }
+    }
+    */
 }

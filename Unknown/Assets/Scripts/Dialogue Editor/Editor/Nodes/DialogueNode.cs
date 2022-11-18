@@ -10,6 +10,22 @@ using System.Linq;
 
 public class DialogueNode : BaseNode
 {
+
+    public DialogueNode() { }
+
+    public DialogueNode(Vector2 _position, DialogueEditorWindow _editorWindow, DialogueGraphView _graphView){
+        
+        editorWindow = _editorWindow;
+        graphView = _graphView;
+        
+        title = "Dialogue";
+        SetPosition(new Rect(_position, defaultNodeSize));
+        nodeGuid = Guid.NewGuid().ToString();
+
+        AddInputPort("Input", Port.Capacity.Multi);
+    }
+
+    /*
     private List<LanguageGeneric<string>> texts = new List<LanguageGeneric<string>>();
     private List<LanguageGeneric<AudioClip>> audioClips = new List<LanguageGeneric<AudioClip>>();
     private Sprite faceImage;
@@ -175,9 +191,10 @@ public class DialogueNode : BaseNode
     public Port AddChoicePort(BaseNode _baseNode, DialogueNodePort _dialoguePortNode = null) {
         Port port = GetPortInstance(Direction.Output);
         int outputPortCount = _baseNode.outputContainer.Query("connector").ToList().Count;
-        string outputPortName = $"Choice {outputPortCount + 1}";
+        string outputPortName = $"Continue";
 
         DialogueNodePort dialogueNodePort = new DialogueNodePort();
+        dialogueNodePort.portGuid = Guid.NewGuid().ToString();
 
         foreach(LanguageType language in (LanguageType[]) Enum.GetValues(typeof(LanguageType))){
             dialogueNodePort.textLanguages.Add(new LanguageGeneric<string>(){
@@ -189,6 +206,7 @@ public class DialogueNode : BaseNode
         if(_dialoguePortNode != null){
             dialogueNodePort.inputGuid = _dialoguePortNode.inputGuid;
             dialogueNodePort.outputGuid = _dialoguePortNode.outputGuid;
+            dialogueNodePort.portGuid = _dialoguePortNode.portGuid;
 
             foreach(LanguageGeneric<string> languageGeneric in _dialoguePortNode.textLanguages){
                 dialogueNodePort.textLanguages.Find(language => language.languageType == languageGeneric.languageType).languageGenericType = languageGeneric.languageGenericType;
@@ -207,8 +225,10 @@ public class DialogueNode : BaseNode
         Button delButton = new Button(() => DeletePort(_baseNode, port)) { text = "X" };
         port.contentContainer.Add(delButton);
 
-        dialogueNodePort.myPort = port;
-        port.portName = "";
+        // dialogueNodePort.myPort = port;
+        port.portName = dialogueNodePort.portGuid;
+        Label portNameLabel = port.contentContainer.Q<Label>("type");
+        portNameLabel.AddToClassList("PortName");
 
         dialogueNodePorts.Add(dialogueNodePort);
 
@@ -220,7 +240,7 @@ public class DialogueNode : BaseNode
     }
 
     private void DeletePort(BaseNode node, Port port) {
-        DialogueNodePort temp = dialogueNodePorts.Find(p => p.myPort == port);
+        DialogueNodePort temp = dialogueNodePorts.Find(p => p.portGuid == port.portName);
         dialogueNodePorts.Remove(temp);
         
         IEnumerable<Edge> portEdges = graphView.edges.ToList().Where(e => e.output == port);
@@ -237,4 +257,5 @@ public class DialogueNode : BaseNode
         node.RefreshPorts();
         node.RefreshExpandedState();
     }
+    */
 }

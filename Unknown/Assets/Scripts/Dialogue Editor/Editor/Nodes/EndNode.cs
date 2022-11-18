@@ -7,12 +7,12 @@ using UnityEditor.UIElements;
 using UnityEngine.UIElements;
 
 public class EndNode : BaseNode
-{
+{   /*
     private EndNodeType endNodeType = EndNodeType.End;
     private UnityEngine.UIElements.EnumField enumField;
 
     public EndNodeType EndNodeType { get => endNodeType; set => endNodeType = value; }
-
+    */
     public EndNode() {}
 
     public EndNode(Vector2 _position, DialogueEditorWindow _editorWindow, DialogueGraphView _graphView){
@@ -25,7 +25,7 @@ public class EndNode : BaseNode
         nodeGuid = Guid.NewGuid().ToString();
 
         AddInputPort("Input", Port.Capacity.Single);
-
+        /*
         enumField = new UnityEngine.UIElements.EnumField() {
             value = endNodeType
         };
@@ -39,10 +39,10 @@ public class EndNode : BaseNode
         mainContainer.Add(enumField);
 
         RefreshExpandedState();
-        RefreshPorts();
+        RefreshPorts();*/
     }
 
-    public override void LoadValueIntoField() {
-        enumField.SetValueWithoutNotify(endNodeType);
-    }
+    //public override void LoadValueIntoField() {
+    //    enumField.SetValueWithoutNotify(endNodeType);
+    //}
 }

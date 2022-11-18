@@ -8,19 +8,20 @@ public class DialogueTalk : DialogueGetData
     [SerializeField] private DialogueController dialogueController;
     [SerializeField] private AudioSource audioSource;
 
-    private DialogueNodeData currentNodeData;
-    private DialogueNodeData lastNodeData;
+    //private DialogueNodeData currentNodeData;
+    //private DialogueNodeData lastNodeData;
 
     void Awake() {
         
     }
 
     void StartDialogue() {
-        CheckNodeType(GetNextNode(dialogueContainerSO.startNodeDatas[0]));
-        dialogueController.ShowDialogue(true);
+        //CheckNodeType(GetNextNode(dialogueContainerSO.startNodeDatas[0]));
+        //dialogueController.ShowDialogue(true);
     }
 
-    private void CheckNodeType(BaseNodeData _baseNodeData){
+    //private void CheckNodeType(BaseNodeData _baseNodeData){
+        /*
         switch(_baseNodeData){
             case StartNodeData nodeData:
                 RunNode(nodeData);
@@ -37,8 +38,10 @@ public class DialogueTalk : DialogueGetData
             default:
                 break;
         }
-    }
+        */
+    //}
 
+    /*
     private void RunNode(StartNodeData nodeData){
         CheckNodeType(GetNextNode(dialogueContainerSO.startNodeDatas[0]));
     }
@@ -89,4 +92,5 @@ public class DialogueTalk : DialogueGetData
         }
         dialogueController.SetActions(texts, unityActions);
     }
+    */
 }

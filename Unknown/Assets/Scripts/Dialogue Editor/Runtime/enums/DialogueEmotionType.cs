@@ -4,5 +4,5 @@ using UnityEngine;
 
 public enum DialogueEmotionType
 {
-    Angry, Sad, Fear, Neutral, Happy
+    Angry = 1, Sad = 2, Fear = 3, Neutral = 4, Happy = 5
 }

@@ -14,7 +14,7 @@ public class DialogueEditorWindow : EditorWindow {
     private DialogueSaveAndLoad saveAndLoad;
 
     private LanguageType languageType = LanguageType.English;
-    private ToolbarMenu toolbarMenu;
+    private ToolbarMenu languagesDropdownMenu;
     private Label nameOfDialogueContainer;
 
     public LanguageType LanguageType { get => languageType; set => languageType = value; }
@@ -42,16 +42,12 @@ public class DialogueEditorWindow : EditorWindow {
         rootVisualElement.Remove(graphView);
     }
 
-    private void OnGUI() {
-        
-    }
-
     private void ConstructGraphView() {
         graphView = new DialogueGraphView(this);
         graphView.StretchToParentSize();
         rootVisualElement.Add(graphView);
 
-        saveAndLoad = new DialogueSaveAndLoad(graphView);
+       //  saveAndLoad = new DialogueSaveAndLoad(graphView);
     }
 
     private void GenerateToolbar() {
@@ -71,12 +67,12 @@ public class DialogueEditorWindow : EditorWindow {
         toolbar.Add(loadButton);
         
         // downdown menu
-        toolbarMenu = new ToolbarMenu();
+        languagesDropdownMenu = new ToolbarMenu();
         foreach(LanguageType language in (LanguageType[])Enum.GetValues(typeof(LanguageType))){
-            toolbarMenu.menu.AppendAction(language.ToString(), 
-                new Action<DropdownMenuAction>(x => Language(language, toolbarMenu)));
+            languagesDropdownMenu.menu.AppendAction(language.ToString(), 
+                new Action<DropdownMenuAction>(x => Language(language)));
         }
-        toolbar.Add(toolbarMenu);
+        toolbar.Add(languagesDropdownMenu);
 
         // name of current dialogue container you have open
         nameOfDialogueContainer = new Label("");
@@ -88,19 +84,19 @@ public class DialogueEditorWindow : EditorWindow {
 
     private void Load() {
         if(currentDialogueContainer != null){
-            Language(LanguageType.English, toolbarMenu);
+            Language(LanguageType.English);
             nameOfDialogueContainer.text = "File Name: " + currentDialogueContainer.name;
-            saveAndLoad.Load(currentDialogueContainer);
+            // saveAndLoad.Load(currentDialogueContainer);
         }
     }
 
     private void Save() {
-        if(currentDialogueContainer != null)
-            saveAndLoad.Save(currentDialogueContainer);
+        //if(currentDialogueContainer != null)
+            //saveAndLoad.Save(currentDialogueContainer);
     }
 
-    private void Language(LanguageType language, ToolbarMenu toolbarMenu){
-        toolbarMenu.text = "Language: " + language.ToString();
+    private void Language(LanguageType language){
+        languagesDropdownMenu.text = "Language: " + language.ToString();
         languageType = language;
         graphView.LanguageReload();
     }

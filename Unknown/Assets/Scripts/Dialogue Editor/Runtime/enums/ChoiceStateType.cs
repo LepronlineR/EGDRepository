@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum EndNodeType
+public enum ChoiceStateType
 {
-    End = 1
+    Hide = 1, GrayOut = 2,
 }

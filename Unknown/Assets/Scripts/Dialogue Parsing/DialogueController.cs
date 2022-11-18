@@ -7,6 +7,7 @@ using TMPro;
 
 public class DialogueController : MonoBehaviour
 {
+    /*
     [SerializeField] private GameObject dialogueUI;
 
     [Header("Text")]
@@ -101,4 +102,5 @@ public class DialogueController : MonoBehaviour
     public void SetActions(List<string> texts, List<UnityAction> actions){
 
     }
+    */
 }

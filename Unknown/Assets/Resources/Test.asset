@@ -13,42 +13,93 @@ MonoBehaviour:
   m_Name: Test
   m_EditorClassIdentifier: 
   nodeLinkDatas:
-  - baseNodeGuid: 02e03715-dbcb-4ab7-99c9-904be8cd17df
+  - baseNodeGuid: 48d345a6-eac9-4f2c-b698-c90711b94c9e
     basePortName: Output
-    targetNodeGuid: f3d3d0e9-8a27-497f-96ab-9345d5d18e56
+    targetNodeGuid: cada0d77-389e-46f7-bbfb-05914145a780
     targetPortName: Input
-  - baseNodeGuid: f3d3d0e9-8a27-497f-96ab-9345d5d18e56
-    basePortName: 
-    targetNodeGuid: 49217d9e-dbf7-4773-9699-c5f289202b50
+  - baseNodeGuid: cada0d77-389e-46f7-bbfb-05914145a780
+    basePortName: 95994fbe-5910-4515-bb7c-9a1e77c1fa79
+    targetNodeGuid: 4e5f56e9-a184-49f6-bbd9-f11677028d0e
+    targetPortName: Input
+  - baseNodeGuid: cada0d77-389e-46f7-bbfb-05914145a780
+    basePortName: 367584d2-57db-4e93-a96c-b0546db05490
+    targetNodeGuid: 799b2452-7830-4be4-88e5-62f75c2ffecc
+    targetPortName: Input
+  - baseNodeGuid: cada0d77-389e-46f7-bbfb-05914145a780
+    basePortName: 8ddba80a-26c5-4c8c-b6db-a4770101f595
+    targetNodeGuid: e0b91b27-bad8-4ec6-b24f-d1822be0bf11
+    targetPortName: Input
+  - baseNodeGuid: e0b91b27-bad8-4ec6-b24f-d1822be0bf11
+    basePortName: True
+    targetNodeGuid: d03ea180-f286-42b3-aa47-7e2e17047761
+    targetPortName: Input
+  - baseNodeGuid: e0b91b27-bad8-4ec6-b24f-d1822be0bf11
+    basePortName: False
+    targetNodeGuid: f5d23c04-f048-46b8-82ba-e901c28336b9
     targetPortName: Input
   dialogueNodeDatas:
-  - nodeGuid: f3d3d0e9-8a27-497f-96ab-9345d5d18e56
-    position: {x: 92, y: 144}
+  - nodeGuid: cada0d77-389e-46f7-bbfb-05914145a780
+    position: {x: -63, y: 160}
     dialogueNodePorts:
-    - inputGuid: 49217d9e-dbf7-4773-9699-c5f289202b50
-      outputGuid: f3d3d0e9-8a27-497f-96ab-9345d5d18e56
+    - portGuid: 8ddba80a-26c5-4c8c-b6db-a4770101f595
+      inputGuid: e0b91b27-bad8-4ec6-b24f-d1822be0bf11
+      outputGuid: cada0d77-389e-46f7-bbfb-05914145a780
       textLanguages:
       - languageType: 0
-        languageGenericType: Choice 1
-    - inputGuid: 
-      outputGuid: 
+        languageGenericType: Continue
+    - portGuid: 95994fbe-5910-4515-bb7c-9a1e77c1fa79
+      inputGuid: 4e5f56e9-a184-49f6-bbd9-f11677028d0e
+      outputGuid: cada0d77-389e-46f7-bbfb-05914145a780
       textLanguages:
       - languageType: 0
-        languageGenericType: Choice 2
-    sprite: {fileID: 21300000, guid: f8506563bf3827446a0484275ce289ce, type: 3}
-    dialogueEmotionType: 3
+        languageGenericType: Continue
+    - portGuid: 367584d2-57db-4e93-a96c-b0546db05490
+      inputGuid: 799b2452-7830-4be4-88e5-62f75c2ffecc
+      outputGuid: cada0d77-389e-46f7-bbfb-05914145a780
+      textLanguages:
+      - languageType: 0
+        languageGenericType: Continue
+    sprite: {fileID: 0}
+    dialogueEmotionType: 0
     audioClips:
     - languageType: 0
       languageGenericType: {fileID: 0}
-    name: John
+    name: 
     textType:
     - languageType: 0
-      languageGenericType: Hello world
+      languageGenericType: 
+  - nodeGuid: 4e5f56e9-a184-49f6-bbd9-f11677028d0e
+    position: {x: 509, y: 354}
+    dialogueNodePorts: []
+    sprite: {fileID: 0}
+    dialogueEmotionType: 0
+    audioClips:
+    - languageType: 0
+      languageGenericType: {fileID: 0}
+    name: 
+    textType:
+    - languageType: 0
+      languageGenericType: 
   endNodeDatas:
-  - nodeGuid: 49217d9e-dbf7-4773-9699-c5f289202b50
-    position: {x: 368, y: 35}
+  - nodeGuid: d03ea180-f286-42b3-aa47-7e2e17047761
+    position: {x: 502, y: 80}
     endNodeType: 0
+  - nodeGuid: f5d23c04-f048-46b8-82ba-e901c28336b9
+    position: {x: 501, y: 190}
+    endNodeType: 1
   startNodeDatas:
-  - nodeGuid: 02e03715-dbcb-4ab7-99c9-904be8cd17df
-    position: {x: -87, y: 127}
-  eventNodeDatas: []
+  - nodeGuid: 48d345a6-eac9-4f2c-b698-c90711b94c9e
+    position: {x: -172, y: 172}
+  eventNodeDatas:
+  - nodeGuid: 799b2452-7830-4be4-88e5-62f75c2ffecc
+    position: {x: 386, y: 624}
+    eventStringIDDatas: []
+    eventScriptableObjectDatas: []
+  branchNodeDatas:
+  - nodeGuid: e0b91b27-bad8-4ec6-b24f-d1822be0bf11
+    position: {x: 205, y: 123}
+    trueGuidNode: d03ea180-f286-42b3-aa47-7e2e17047761
+    falseGuidNode: f5d23c04-f048-46b8-82ba-e901c28336b9
+    branchStringIDDatas:
+    - stringEvent: Yes
+      ID: 2
