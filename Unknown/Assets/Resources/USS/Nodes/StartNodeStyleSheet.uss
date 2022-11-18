@@ -1,0 +1,11 @@
+.node #title {
+    background-color: rgb(0, 100, 0)
+}
+
+#node-border {
+    background-color: rgb(128, 128, 128)
+}
+
+.node #title #title-label {
+    color: white;
+}

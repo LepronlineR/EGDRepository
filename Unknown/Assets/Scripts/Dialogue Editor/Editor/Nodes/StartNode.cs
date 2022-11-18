@@ -1,22 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using System;
+using UnityEngine;
 using UnityEditor.Experimental.GraphView;
-using UnityEditor.UIElements;
 using UnityEngine.UIElements;
 
 public class StartNode : BaseNode {
     
 
-    public StartNode(){
-
-    }
+    public StartNode(){ }
 
     public StartNode(Vector2 _position, DialogueEditorWindow _editorWindow, DialogueGraphView _graphView){
         
         editorWindow = _editorWindow;
         graphView = _graphView;
+
+        StyleSheet styleSheet = Resources.Load<StyleSheet>("USS/Nodes/StartNodeStyleSheet");
+        styleSheets.Add(styleSheet);
         
         title = "Begin";
         SetPosition(new Rect(_position, defaultNodeSize));

@@ -16,12 +16,13 @@ public class DialogueEditorWindow : EditorWindow {
     private LanguageType languageType = LanguageType.English;
     private ToolbarMenu languagesDropdownMenu;
     private Label nameOfDialogueContainer;
+    private string graphViewStyleSheet = "USS/EditorWindow/EditorWindowStyleSheet";
 
     public LanguageType LanguageType { get => languageType; set => languageType = value; }
 
-    [OnOpenAsset(1)]
-    private static bool ShowWindow(int _instanceID, int line) {
-        UnityEngine.Object item = EditorUtility.InstanceIDToObject(_instanceID);
+    [OnOpenAsset(0)]
+    private static bool ShowWindow(int instanceID, int line) {
+        UnityEngine.Object item = EditorUtility.InstanceIDToObject(instanceID);
         if(item is DialogueContainerSO){
             DialogueEditorWindow window = (DialogueEditorWindow) GetWindow(typeof(DialogueEditorWindow));
             window.titleContent = new GUIContent("Dialogue Editor");
@@ -51,7 +52,8 @@ public class DialogueEditorWindow : EditorWindow {
     }
 
     private void GenerateToolbar() {
-        StyleSheet styleSheet = Resources.Load<StyleSheet>("GraphViewStyleSheet");
+
+        StyleSheet styleSheet = Resources.Load<StyleSheet>(graphViewStyleSheet);
         rootVisualElement.styleSheets.Add(styleSheet);
 
         Toolbar toolbar = new Toolbar();
@@ -98,6 +100,6 @@ public class DialogueEditorWindow : EditorWindow {
     private void Language(LanguageType language){
         languagesDropdownMenu.text = "Language: " + language.ToString();
         languageType = language;
-        graphView.LanguageReload();
+        graphView.ReloadLanguage();
     }
 }

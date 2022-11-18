@@ -7,7 +7,7 @@ using UnityEditor.UIElements;
 [System.Serializable]
 public class DialogueData : BaseData
 {
-    public List<DialogueDataBaseContainer> dialogueBaseContainer { get; set; } = new List<DialogueDataBaseContainer>();
+    public List<DialogueDataBaseContainer> dialogueBaseContainers { get; set; } = new List<DialogueDataBaseContainer>();
     public List<DialogueDataName> dialogueDataNames = new List<DialogueDataName>();
     public List<DialogueDataText> dialogueDataTexts = new List<DialogueDataText>();
     public List<DialogueDataImages> dialogueDataImagess = new List<DialogueDataImages>();

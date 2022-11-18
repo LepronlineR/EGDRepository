@@ -7,16 +7,18 @@ using System.Linq;
 
 public class DialogueGraphView : GraphView
 {
-    private string styleSheetsName = "GraphViewStyleSheet";
+    private string styleSheetsName = "USS/GraphView/GraphViewStyleSheet";
     private DialogueEditorWindow editorWindow;
     private NodeSearchWindow searchWindow;
 
-    public DialogueGraphView(DialogueEditorWindow _editorWindow){
-        editorWindow = _editorWindow;
+    public DialogueGraphView(DialogueEditorWindow editorWindow){
+        this.editorWindow = editorWindow;
+
+        // zoom exist
+        SetupZoom(ContentZoomer.DefaultMinScale, ContentZoomer.DefaultMaxScale);
+
         StyleSheet temp = Resources.Load<StyleSheet>(styleSheetsName);
         styleSheets.Add(temp);
-
-        SetupZoom(ContentZoomer.DefaultMinScale, ContentZoomer.DefaultMaxScale);
 
         this.AddManipulator(new ContentDragger());
         this.AddManipulator(new SelectionDragger());
@@ -48,10 +50,10 @@ public class DialogueGraphView : GraphView
         return compatiblePorts;
     }
 
-    public void LanguageReload() {
-        List<DialogueNode> dialogueNodes = nodes.ToList().Where(node => node is DialogueNode).Cast<DialogueNode>().ToList();
-        foreach(DialogueNode dialogueNode in dialogueNodes){
-            // dialogueNode.ReloadLanguage();
+    public void ReloadLanguage() {
+        List<BaseNode> allNodes = nodes.ToList().Where(node => node is BaseNode).Cast<BaseNode>().ToList();
+        foreach(BaseNode node in allNodes){
+            node.ReloadLanguage();
         }
     }
 
@@ -73,5 +75,9 @@ public class DialogueGraphView : GraphView
 
     public BranchNode CreateBranchNode(Vector2 pos) {
         return new BranchNode(pos, editorWindow, this);
+    }
+
+    public ChoiceNode CreateChoiceNode(Vector2 pos){
+        return new ChoiceNode(pos, editorWindow, this);
     }
 }

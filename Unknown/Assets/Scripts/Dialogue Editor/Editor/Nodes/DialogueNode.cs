@@ -11,251 +11,292 @@ using System.Linq;
 public class DialogueNode : BaseNode
 {
 
+    private DialogueData dialogueData = new DialogueData();
+    public DialogueData DialogueData { get => dialogueData; set => dialogueData = value; }
+
     public DialogueNode() { }
 
     public DialogueNode(Vector2 _position, DialogueEditorWindow _editorWindow, DialogueGraphView _graphView){
         
         editorWindow = _editorWindow;
         graphView = _graphView;
+
+        StyleSheet styleSheet = Resources.Load<StyleSheet>("USS/Nodes/DialogueNodeStyleSheet");
+        styleSheets.Add(styleSheet);
         
         title = "Dialogue";
         SetPosition(new Rect(_position, defaultNodeSize));
         nodeGuid = Guid.NewGuid().ToString();
 
         AddInputPort("Input", Port.Capacity.Multi);
+        AddOutputPort("Continue");
+
+        TopContainer();
     }
 
-    /*
-    private List<LanguageGeneric<string>> texts = new List<LanguageGeneric<string>>();
-    private List<LanguageGeneric<AudioClip>> audioClips = new List<LanguageGeneric<AudioClip>>();
-    private Sprite faceImage;
-    private string name = "";
-    private DialogueEmotionType faceImageType;
+    private void TopContainer(){
+        AddPortButton();
+        AddDropdownMenu();
+    }
 
-    private List<DialogueNodePort> dialogueNodePorts = new List<DialogueNodePort>();
-
-    public List<LanguageGeneric<string>> Texts { get => texts; set => texts = value; }
-    public List<LanguageGeneric<AudioClip>> AudioClips { get => audioClips; set => audioClips = value; }
-    public Sprite FaceImage { get => faceImage; set => faceImage = value; }
-    public string Name { get => name; set => name = value; }
-    public DialogueEmotionType FaceImageType { get => faceImageType; set => faceImageType = value; }
-    public List<DialogueNodePort> DialogueNodePorts { get => dialogueNodePorts; set => dialogueNodePorts = value; }
-
-    private TextField textsField;
-    private ObjectField audioClipsField;
-    private ObjectField faceImageField;
-    private Image faceImagePreview;
-    private TextField nameField;
-    private UnityEngine.UIElements.EnumField faceImageTypeField;
-
-    public DialogueNode() { }
-
-    public DialogueNode(Vector2 _position, DialogueEditorWindow _editorWindow, DialogueGraphView _graphView){
-        
-        editorWindow = _editorWindow;
-        graphView = _graphView;
-        
-        title = "Dialogue";
-
-        SetPosition(new Rect(_position, defaultNodeSize));
-        nodeGuid = Guid.NewGuid().ToString();
-
-        AddInputPort("Input", Port.Capacity.Multi);
-
-        foreach(LanguageType language in (LanguageType[])Enum.GetValues(typeof(LanguageType))){
-            texts.Add(new LanguageGeneric<string> {
-                languageType = language,
-                languageGenericType = ""
-            });
-
-            audioClips.Add(new LanguageGeneric<AudioClip>{
-                languageType = language,
-                languageGenericType = null
-            });
-        }
-
-        // FACE IMAGES
-        faceImageField = new ObjectField() {
-            objectType = typeof(Sprite),
-            allowSceneObjects = false,
-            value = faceImage
+    private void AddPortButton(){
+        Button btn = new Button() {
+            text = "Add Choice",
         };
+        btn.AddToClassList("TopButton");
 
-        faceImagePreview = new Image();
-        faceImagePreview.AddToClassList("faceImagePreview");
-
-        faceImageField.RegisterValueChangedCallback(value => {
-            Sprite tmp = value.newValue as Sprite;
-            faceImage = tmp;
-            faceImagePreview.image = (tmp != null ? tmp.texture : null);
-        });
-
-        mainContainer.Add(faceImagePreview);
-        mainContainer.Add(faceImageField);
-        
-        // FACE IMAGE TYPES
-        faceImageTypeField = new UnityEngine.UIElements.EnumField { value = faceImageType };
-        faceImageTypeField.Init(faceImageType);
-        faceImageTypeField.RegisterValueChangedCallback(value => {
-            faceImageType = (DialogueEmotionType) value.newValue;
-        });
-        mainContainer.Add(faceImageTypeField);
-
-        // AUDIO CLIPS
-        audioClipsField = new ObjectField() {
-            objectType = typeof(AudioClip),
-            allowSceneObjects = false,
-            value = audioClips.Find(audioClip => audioClip.languageType == editorWindow.LanguageType).languageGenericType
-        };
-        audioClipsField.RegisterValueChangedCallback(value => {
-            audioClips.Find(audioClip => audioClip.languageType == editorWindow.LanguageType).languageGenericType = value.newValue as AudioClip;
-        });
-        audioClipsField.SetValueWithoutNotify(audioClips.Find(audioClip => audioClip.languageType == editorWindow.LanguageType).languageGenericType);
-        mainContainer.Add(audioClipsField);
-
-        // NAME FIELD
-        Label labelName = new Label("Name");
-        labelName.AddToClassList("labelName");
-        labelName.AddToClassList("Label");
-        mainContainer.Add(labelName);
-
-        nameField = new TextField("");
-        nameField.RegisterValueChangedCallback(value => {
-            name = value.newValue;
-        });
-        nameField.SetValueWithoutNotify(name);
-        nameField.AddToClassList("TextName");
-        mainContainer.Add(nameField);
-
-        // TEXT FIELD
-        Label labelText = new Label("Text Box");
-        labelText.AddToClassList("labelText");
-        labelText.AddToClassList("Label");
-        mainContainer.Add(labelText);
-
-        textsField = new TextField("");
-        textsField.RegisterValueChangedCallback(value => {
-            texts.Find(text => text.languageType == editorWindow.LanguageType).languageGenericType = value.newValue; 
-        });
-        textsField.SetValueWithoutNotify(texts.Find(text => text.languageType == editorWindow.LanguageType).languageGenericType);
-        textsField.multiline = true;
-        textsField.AddToClassList("TextBox");
-        mainContainer.Add(textsField);
-
-        
-
-        Button button = new Button() {
-            text = "Add Options"
-        };
-        button.clicked += () => {
+        btn.clicked += () => {
             AddChoicePort(this);
         };
 
-        titleButtonContainer.Add(button);
-
-        RefreshExpandedState();
-        RefreshPorts();
+        titleButtonContainer.Add(btn);
     }
 
-    public void ReloadLanguage(){
-        textsField.RegisterValueChangedCallback(value => {
-            texts.Find(text => text.languageType == editorWindow.LanguageType).languageGenericType = value.newValue; 
-        });
-        textsField.SetValueWithoutNotify(texts.Find(text => text.languageType == editorWindow.LanguageType).languageGenericType);
+    private void AddDropdownMenu(){
+        ToolbarMenu menu = new ToolbarMenu();
+        menu.text = "Add Content";
 
-        audioClipsField.RegisterValueChangedCallback(value => {
-            audioClips.Find(audioClip => audioClip.languageType == editorWindow.LanguageType).languageGenericType = value.newValue as AudioClip;
-        });
-        audioClipsField.SetValueWithoutNotify(audioClips.Find(audioClip => audioClip.languageType == editorWindow.LanguageType).languageGenericType);
+        menu.menu.AppendAction("Text", new Action<DropdownMenuAction>(x => TextLine()));
+        menu.menu.AppendAction("Image", new Action<DropdownMenuAction>(x => ImagePic()));
+        menu.menu.AppendAction("Name", new Action<DropdownMenuAction>(x => CharacterName()));
 
-        foreach(DialogueNodePort nodePort in dialogueNodePorts){
-            nodePort.textField.RegisterValueChangedCallback(value => {
-                nodePort.textLanguages.Find(language => language.languageType == editorWindow.LanguageType).languageGenericType = value.newValue;
-            });
-            nodePort.textField.SetValueWithoutNotify(nodePort.textLanguages.Find(language => language.languageType == editorWindow.LanguageType).languageGenericType);
-        }
+        titleButtonContainer.Add(menu);
     }
 
-    public override void LoadValueIntoField(){
-        textsField.SetValueWithoutNotify(texts.Find(language => language.languageType == editorWindow.LanguageType).languageGenericType);
-        audioClipsField.SetValueWithoutNotify(audioClips.Find(language => language.languageType == editorWindow.LanguageType).languageGenericType);
-        faceImageField.SetValueWithoutNotify(faceImage);
-        faceImageTypeField.SetValueWithoutNotify(faceImageType);
-        nameField.SetValueWithoutNotify(name);
+    #region Port
 
-        if(faceImage != null){
-            faceImagePreview.image = ((Sprite)faceImageField.value).texture;
-        }
-    }
-
-    public Port AddChoicePort(BaseNode _baseNode, DialogueNodePort _dialoguePortNode = null) {
+    public Port AddChoicePort(BaseNode baseNode, DialogueDataPort dialoguePort = null){
         Port port = GetPortInstance(Direction.Output);
-        int outputPortCount = _baseNode.outputContainer.Query("connector").ToList().Count;
-        string outputPortName = $"Continue";
+        DialogueDataPort newDialoguePort = new DialogueDataPort();
 
-        DialogueNodePort dialogueNodePort = new DialogueNodePort();
-        dialogueNodePort.portGuid = Guid.NewGuid().ToString();
-
-        foreach(LanguageType language in (LanguageType[]) Enum.GetValues(typeof(LanguageType))){
-            dialogueNodePort.textLanguages.Add(new LanguageGeneric<string>(){
-                languageType = language,
-                languageGenericType = outputPortName
-            });
+        // Check if we load it in with values
+        if (dialoguePort != null){
+            newDialoguePort.inputGuid = dialoguePort.inputGuid;
+            newDialoguePort.outputGuid = dialoguePort.outputGuid;
+            newDialoguePort.portGuid = dialoguePort.portGuid;
+        } else {
+            newDialoguePort.portGuid = Guid.NewGuid().ToString();
         }
-
-        if(_dialoguePortNode != null){
-            dialogueNodePort.inputGuid = _dialoguePortNode.inputGuid;
-            dialogueNodePort.outputGuid = _dialoguePortNode.outputGuid;
-            dialogueNodePort.portGuid = _dialoguePortNode.portGuid;
-
-            foreach(LanguageGeneric<string> languageGeneric in _dialoguePortNode.textLanguages){
-                dialogueNodePort.textLanguages.Find(language => language.languageType == languageGeneric.languageType).languageGenericType = languageGeneric.languageGenericType;
-            }
-        }
-
-        // Port text
-        dialogueNodePort.textField = new TextField();
-        dialogueNodePort.textField.RegisterValueChangedCallback(value => {
-            dialogueNodePort.textLanguages.Find(language => language.languageType == editorWindow.LanguageType).languageGenericType = value.newValue;
-        });
-        dialogueNodePort.textField.SetValueWithoutNotify(dialogueNodePort.textLanguages.Find(language => language.languageType == editorWindow.LanguageType).languageGenericType); 
-        port.contentContainer.Add(dialogueNodePort.textField);
 
         // Delete button
-        Button delButton = new Button(() => DeletePort(_baseNode, port)) { text = "X" };
-        port.contentContainer.Add(delButton);
+        {
+            Button deleteButton = new Button(() => DeletePort(baseNode, port)) {
+                text = "X",
+            };
+            port.contentContainer.Add(deleteButton);
+        }
 
-        // dialogueNodePort.myPort = port;
-        port.portName = dialogueNodePort.portGuid;
-        Label portNameLabel = port.contentContainer.Q<Label>("type");
-        portNameLabel.AddToClassList("PortName");
+        port.portName = newDialoguePort.portGuid;                      // We use portName as port ID
+        Label portNameLabel = port.contentContainer.Q<Label>("type");   // Get Labal in port that is used to contain the port name.
+        portNameLabel.AddToClassList("PortName");                       // Here we add a uss class to it so we can hide it in the editor window.
 
-        dialogueNodePorts.Add(dialogueNodePort);
+        // Set color of the port.
+        port.portColor = Color.yellow;
 
-        // Refresh and return
-        _baseNode.outputContainer.Add(port);
-        _baseNode.RefreshPorts();
-        _baseNode.RefreshExpandedState();
+        dialogueData.dialogueDataPorts.Add(newDialoguePort);
+
+        baseNode.outputContainer.Add(port);
+
+        // Refresh
+        baseNode.RefreshPorts();
+        baseNode.RefreshExpandedState();
+
         return port;
     }
 
-    private void DeletePort(BaseNode node, Port port) {
-        DialogueNodePort temp = dialogueNodePorts.Find(p => p.portGuid == port.portName);
-        dialogueNodePorts.Remove(temp);
-        
-        IEnumerable<Edge> portEdges = graphView.edges.ToList().Where(e => e.output == port);
+    private void DeletePort(BaseNode node, Port port){
+        DialogueDataPort tmp = dialogueData.dialogueDataPorts.Find(findPort => findPort.portGuid == port.portName);
+        dialogueData.dialogueDataPorts.Remove(tmp);
 
-        if(portEdges.Any()){
-            Edge edge = portEdges.First();
+        IEnumerable<Edge> portEdge = graphView.edges.ToList().Where(edge => edge.output == port);
+
+        if (portEdge.Any()){
+            Edge edge = portEdge.First();
             edge.input.Disconnect(edge);
             edge.output.Disconnect(edge);
             graphView.RemoveElement(edge);
         }
 
         node.outputContainer.Remove(port);
-        
+
+        // Refresh
         node.RefreshPorts();
         node.RefreshExpandedState();
     }
-    */
+
+    #endregion
+
+    #region Menu Dropdown
+
+    public void TextLine(DialogueDataText data = null){
+        DialogueDataText newDialogueBaseContainerText = new DialogueDataText();
+        DialogueData.dialogueBaseContainers.Add(newDialogueBaseContainerText);
+
+        // Add Container Box
+        Box boxContainer = new Box();
+        boxContainer.AddToClassList("DialogueBox");
+
+        // Add Fields
+        AddLabelAndButton(newDialogueBaseContainerText, boxContainer, "Text", "TextColor");
+        AddTextField(newDialogueBaseContainerText, boxContainer);
+        AddAudioClips(newDialogueBaseContainerText, boxContainer);
+
+        // Load in data if it got any
+        if (data != null) {
+            // Guid ID
+             newDialogueBaseContainerText.GuidID = data.GuidID;
+
+            // Text
+            foreach (LanguageGeneric<string> data_text in data.texts){
+                foreach (LanguageGeneric<string> text in newDialogueBaseContainerText.text){
+                    if (text.languageType == data_text.languageType){
+                        text.languageGenericType = data_text.languageGenericType;
+                    }
+                }
+            }
+
+            // Audio
+            foreach (LanguageGeneric<AudioClip> data_audioclip in data.audioClips){
+                foreach (LanguageGeneric<AudioClip> audioclip in newDialogueBaseContainerText.audioClips){
+                    if (audioclip.languageType == data_audioclip.languageType){
+                        audioclip.languageGenericType = data_audioclip.languageGenericType;
+                    }
+                }
+            }
+        } else {
+            // Make New Guid ID
+            newDialogueBaseContainerText.GuidID.value = Guid.NewGuid().ToString();
+        }
+
+        // Reload the current selected language
+        ReloadLanguage();
+
+        mainContainer.Add(boxContainer);
+    }
+
+    public void ImagePic(DialogueDataImages data = null){
+        DialogueDataImages dialogueImages = new DialogueDataImages();
+        if (data != null){
+            dialogueImages.sprite.Value = data.sprite.Value;
+            dialogueImages.sprite.Value = data.sprite.Value;
+        }
+        
+        dialogueData.dialogueBaseContainers.Add(dialogueImages);
+
+        Box boxContainer = new Box();
+        boxContainer.AddToClassList("DialogueBox");
+
+        AddLabelAndButton(dialogueImages, boxContainer, "Image", "ImageColor");
+        AddImages(dialogueImages, boxContainer);
+
+        mainContainer.Add(boxContainer);
+    }
+
+    public void CharacterName(DialogueDataName data = null){
+        DialogueDataName dialogueName = new DialogueDataName();
+        if (data != null){
+            dialogueName.characterName.value = data.characterName.value;
+        }
+        
+        dialogueData.dialogueBaseContainers.Add(dialogueName);
+
+        Box boxContainer = new Box();
+        boxContainer.AddToClassList("CharacterNameBox");
+
+        AddLabelAndButton(dialogueName, boxContainer, "Name", "NameColor");
+        AddTextFieldCharacterName(dialogueName, boxContainer);
+
+        mainContainer.Add(boxContainer);
+    }
+
+    #endregion
+
+    #region Fields
+
+    private void AddLabelAndButton(DialogueData_BaseContainer container, Box boxContainer, string labelName, string uniqueUSS = "")
+        {
+            Box topBoxContainer = new Box();
+            topBoxContainer.AddToClassList("TopBox");
+
+            // Label Name
+            Label label_texts = GetNewLabel(labelName, "LabelText", uniqueUSS);
+
+            // Remove button.
+            Button btn = GetNewButton("X", "TextBtn");
+            btn.clicked += () =>
+            {
+                DeleteBox(boxContainer);
+                DialogueData.Dialogue_BaseContainers.Remove(container);
+            };
+
+            topBoxContainer.Add(label_texts);
+            topBoxContainer.Add(btn);
+
+            boxContainer.Add(topBoxContainer);
+        }
+
+        private void AddTextField_CharacterName(DialogueData_Name container, Box boxContainer)
+        {
+            TextField textField = GetNewTextField(container.CharacterName, "Name", "CharacterName");
+
+            boxContainer.Add(textField);
+        }
+
+        private void AddTextField(DialogueData_Text container, Box boxContainer)
+        {
+            TextField textField = GetNewTextField_TextLanguage(container.Text, "Text areans", "TextBox");
+
+            container.TextField = textField;
+
+            boxContainer.Add(textField);
+        }
+
+        private void AddAudioClips(DialogueData_Text container, Box boxContainer)
+        {
+            ObjectField objectField = GetNewObjectField_AudioClipsLanguage(container.AudioClips, "AudioClip");
+
+            container.ObjectField = objectField;
+
+            boxContainer.Add(objectField);
+        }
+
+        private void AddImages(DialogueData_Images container, Box boxContainer)
+        {
+            Box ImagePreviewBox = new Box();
+            Box ImagesBox = new Box();
+
+            ImagePreviewBox.AddToClassList("BoxRow");
+            ImagesBox.AddToClassList("BoxRow");
+
+            // Set up Image Preview.
+            Image leftImage = GetNewImage("ImagePreview", "ImagePreviewLeft");
+            Image rightImage = GetNewImage("ImagePreview", "ImagePreviewRight");
+
+            ImagePreviewBox.Add(leftImage);
+            ImagePreviewBox.Add(rightImage);
+
+            // Set up Sprite.
+            ObjectField objectField_Left = GetNewObjectField_Sprite(container.Sprite_Left, leftImage, "SpriteLeft");
+            ObjectField objectField_Right = GetNewObjectField_Sprite(container.Sprite_Right, rightImage, "SpriteRight");
+
+            ImagesBox.Add(objectField_Left);
+            ImagesBox.Add(objectField_Right);
+
+            // Add to box container.
+            boxContainer.Add(ImagePreviewBox);
+            boxContainer.Add(ImagesBox);
+        }
+
+    #endregion
+
+
+    #region Misc
+
+    public override void ReloadLanguage(){
+        base.ReloadLanguage();
+    }
+
+    public override void LoadValueInToField(){}
+
+    #endregion
 }

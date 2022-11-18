@@ -1,0 +1,37 @@
+.ChoiceLabel {
+	font-size: 15px;
+	padding-top:0px;
+	padding-left:1px;
+}
+
+.EventBox {
+    flex-direction: row
+}
+
+.StringEventBox {
+    flex-direction: row
+}
+
+.RemoveButton {
+    flex-direction: row
+}
+
+.BoxRow {
+    flex-direction: row;
+}
+
+.enumHide {
+	width: 90px;
+}
+
+.node #title {
+	background-color: rgb(60, 60, 0)
+}
+
+#node-border {
+    background-color: rgb(128, 128, 128)
+}
+
+.node #title #title-label {
+    color: white;
+}

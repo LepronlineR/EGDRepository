@@ -3134,6 +3134,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1443878544}
+  - component: {fileID: 1443878545}
   - component: {fileID: 1443878543}
   - component: {fileID: 1443878542}
   m_Layer: 0
@@ -3192,6 +3193,18 @@ Transform:
   m_Father: {fileID: 1093912838}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1443878545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1443878541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fea6b2065bb0acb43b7f744104150012, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1447959382
 GameObject:
   m_ObjectHideFlags: 0
@@ -4651,13 +4664,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58666764c76a48240bec0f015b5f88d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueUI: {fileID: 45495565}
-  textName: {fileID: 1049472881}
-  textBox: {fileID: 1060375281}
-  interval: 0
-  image: {fileID: 2067053217}
-  imageGO: {fileID: 2067053211}
-  characterSprites: []
 --- !u!1 &2109143983
 GameObject:
   m_ObjectHideFlags: 0

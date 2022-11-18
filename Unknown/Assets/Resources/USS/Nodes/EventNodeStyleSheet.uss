@@ -1,0 +1,23 @@
+.EventBox {
+    flex-direction: row
+}
+
+.StringEventBox {
+    flex-direction: row
+}
+
+.EventObject {
+
+}
+
+.node #title {
+    background-color: rgb(0, 64, 64)
+}
+
+#node-border {
+    background-color: rgb(128, 128, 128)
+}
+
+.node #title #title-label {
+    color: white;
+}

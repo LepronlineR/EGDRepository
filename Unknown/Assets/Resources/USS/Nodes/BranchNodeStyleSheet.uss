@@ -1,0 +1,15 @@
+.node #title{
+	background-color: #6A008C;
+}
+
+.node #title #title-label{
+	color: white;
+}
+
+.EventBox {
+    flex-direction: row
+}
+
+.StringEventBox {
+    flex-direction: row
+}

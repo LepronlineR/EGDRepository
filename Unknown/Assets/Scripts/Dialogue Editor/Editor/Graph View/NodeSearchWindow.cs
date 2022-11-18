@@ -30,6 +30,7 @@ public class NodeSearchWindow : ScriptableObject, ISearchWindowProvider
             AddNodeSearch("Event", new EventNode()),
             AddNodeSearch("Dialogue", new DialogueNode()),
             AddNodeSearch("Branch", new BranchNode()),
+            AddNodeSearch("Choice", new ChoiceNode()),
         };
 
         return tree;
@@ -66,6 +67,9 @@ public class NodeSearchWindow : ScriptableObject, ISearchWindowProvider
                 return true;
             case BranchNode node:
                 graphView.AddElement(graphView.CreateBranchNode(pos));
+                return true;
+            case ChoiceNode node:
+                graphView.AddElement(graphView.CreateChoiceNode(pos));
                 return true;
             default:
                 break;
