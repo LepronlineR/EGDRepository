@@ -36,6 +36,10 @@ public class ContainerSprite {
     public Sprite value;
 }
 
+[System.Serializable]
+public class ContainerObject {
+    public GameObject value;
+}
 
 // ================ ENUMS =========================
 
@@ -56,6 +60,14 @@ public class ContainerEndNodeType {
 }
 
 [System.Serializable]
+public class ContainerEmotionChoiceType {
+    #if UNITY_EDITOR
+    public UnityEngine.UIElements.EnumField enumField;
+    #endif
+    public DialogueEmotionType value = DialogueEmotionType.Neutral;
+}
+
+[System.Serializable]
 public class ContainerStringEventModifierType {
     #if UNITY_EDITOR
     public UnityEngine.UIElements.EnumField enumField;
@@ -69,6 +81,22 @@ public class ContainerStringEventConditionType {
     public UnityEngine.UIElements.EnumField enumField;
     #endif
     public StringEventConditionType value = StringEventConditionType.True;
+}
+
+[System.Serializable]
+public class ContainerObjectEventConditionType {
+    #if UNITY_EDITOR
+    public UnityEngine.UIElements.EnumField enumField;
+    #endif
+    public ObjectEventConditionType value = ObjectEventConditionType.NotEquals;
+}
+
+[System.Serializable]
+public class ContainerObjectEventModifierType {
+    #if UNITY_EDITOR
+    public UnityEngine.UIElements.EnumField enumField;
+    #endif
+    public ObjectEventModifierType value = ObjectEventModifierType.SetActive;
 }
 
 // ================ EVENTS =========================
@@ -87,4 +115,11 @@ public class EventDataStringCondition {
     public ContainerFloat number = new ContainerFloat();
 
     public ContainerStringEventConditionType stringEventConditionType = new ContainerStringEventConditionType();
+}
+
+[System.Serializable]
+public class EventDataGameObjectCondition {
+    public ContainerObject objectEvent = new ContainerObject();
+
+    public ContainerObjectEventConditionType objectEventConditionType = new ContainerObjectEventConditionType();
 }

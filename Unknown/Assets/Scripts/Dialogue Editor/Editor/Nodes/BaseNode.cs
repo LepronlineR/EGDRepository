@@ -132,6 +132,46 @@ public class BaseNode : Node {
         RefreshExpandedState();
     }
 
+    protected void AddObjectConditionEventBuild(List<EventDataGameObjectCondition> objectEventCondition, EventDataGameObjectCondition objectEvent = null){
+        EventDataGameObjectCondition temp = new EventDataGameObjectCondition();
+        if(objectEvent != null){
+            temp.objectEvent.value = objectEvent.objectEvent.value;
+            temp.objectEventConditionType.value = objectEvent.objectEventConditionType.value;
+        }
+
+        objectEventCondition.Add(temp);
+
+        Box boxContainer = new Box();
+        boxContainer.AddToClassList("StringEventBox");
+
+        // GameObject
+        ObjectField objectField = GetNewObjectFieldGameObject(temp.objectEvent, "String Event", "StringEventText");
+
+        UnityEngine.UIElements.EnumField enumField = null;
+
+        // String Event Modifier
+        Action tmp = () => ShowHideObjectEventConditionType(temp.objectEventConditionType.value, boxContainer);
+        // EnumField String Event Modifier
+        enumField = GetNewEnumFieldObjectEventConditionType(temp.objectEventConditionType, tmp, "StringEventEnum");
+        // Run the show and hide.
+        ShowHideObjectEventConditionType(temp.objectEventConditionType.value, boxContainer);
+
+        // Remove button.
+        Button btn = GetNewButton("X", "RemoveButton");
+        btn.clicked += () => {
+            objectEventCondition.Remove(temp);
+            DeleteBox(boxContainer);
+        };
+
+        // Add it to the box
+        boxContainer.Add(objectField);
+        boxContainer.Add(enumField);
+        boxContainer.Add(btn);
+
+        mainContainer.Add(boxContainer);
+        RefreshExpandedState();
+    }
+
     #endregion
 
     #region Ports
@@ -204,6 +244,24 @@ public class BaseNode : Node {
         floatField.AddToClassList(USS02);
 
         return floatField;
+    }
+
+    protected ObjectField GetNewObjectFieldGameObject(ContainerObject inputValue, string USS01 = "", string USS02 = ""){
+        ObjectField objectField = new ObjectField() {
+            objectType = typeof(GameObject),
+            allowSceneObjects = false,
+            value = inputValue.value
+        };
+
+        objectField.RegisterValueChangedCallback(value => {
+            inputValue.value = value.newValue as GameObject;
+        });
+        objectField.SetValueWithoutNotify(inputValue.value);
+
+        objectField.AddToClassList(USS01);
+        objectField.AddToClassList(USS02);
+
+        return objectField;
     }
 
     protected TextField GetNewTextField(ContainerString inputValue, string placeholderText, string USS01 = "", string USS02 = ""){
@@ -304,6 +362,24 @@ public class BaseNode : Node {
         return enumField;
     }
 
+    protected UnityEngine.UIElements.EnumField GetNewEnumFieldEmotionChoiceNodeType(ContainerEmotionChoiceType inputValue, string USS01 = "", string USS02 = ""){
+        UnityEngine.UIElements.EnumField enumField = new UnityEngine.UIElements.EnumField() {
+            value = inputValue.value
+        };
+        enumField.Init(enumField.value);
+
+        enumField.RegisterValueChangedCallback(value => {
+            inputValue.value = (DialogueEmotionType) value.newValue;
+        });
+        enumField.SetValueWithoutNotify(inputValue.value);
+
+        enumField.AddToClassList(USS01);
+        enumField.AddToClassList(USS02);
+
+        inputValue.enumField = enumField;
+        return enumField;
+    }
+
     protected UnityEngine.UIElements.EnumField GetNewEnumFieldStringEventModifierType(ContainerStringEventModifierType inputValue, Action action, string USS01 = "", string USS02 = ""){
         UnityEngine.UIElements.EnumField enumField = new UnityEngine.UIElements.EnumField() {
             value = inputValue.value
@@ -331,6 +407,25 @@ public class BaseNode : Node {
 
         enumField.RegisterValueChangedCallback(value => {
             inputValue.value = (StringEventConditionType) value.newValue;
+            action?.Invoke();
+        });
+        enumField.SetValueWithoutNotify(inputValue.value);
+
+        enumField.AddToClassList(USS01);
+        enumField.AddToClassList(USS02);
+
+        inputValue.enumField = enumField;
+        return enumField;
+    }
+
+    protected UnityEngine.UIElements.EnumField GetNewEnumFieldObjectEventConditionType(ContainerObjectEventConditionType inputValue, Action action, string USS01 = "", string USS02 = ""){
+        UnityEngine.UIElements.EnumField enumField = new UnityEngine.UIElements.EnumField() {
+            value = inputValue.value
+        };
+        enumField.Init(enumField.value);
+
+        enumField.RegisterValueChangedCallback(value => {
+            inputValue.value = (ObjectEventConditionType) value.newValue;
             action?.Invoke();
         });
         enumField.SetValueWithoutNotify(inputValue.value);
@@ -468,6 +563,14 @@ public class BaseNode : Node {
 
     private void ShowHideStringEventConditionType(StringEventConditionType value, Box boxContainer){
         if (value == StringEventConditionType.True || value == StringEventConditionType.False){
+            ShowHide(false, boxContainer);
+        } else {
+            ShowHide(true, boxContainer);
+        }
+    }
+
+    private void ShowHideObjectEventConditionType(ObjectEventConditionType value, Box boxContainer){
+        if (value == ObjectEventConditionType.Equals || value == ObjectEventConditionType.NotEquals){
             ShowHide(false, boxContainer);
         } else {
             ShowHide(true, boxContainer);

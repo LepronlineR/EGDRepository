@@ -148,7 +148,7 @@ public class DialogueNode : BaseNode
 
             // Text
             foreach (LanguageGeneric<string> data_text in data.texts){
-                foreach (LanguageGeneric<string> text in newDialogueBaseContainerText.text){
+                foreach (LanguageGeneric<string> text in newDialogueBaseContainerText.texts){
                     if (text.languageType == data_text.languageType){
                         text.languageGenericType = data_text.languageGenericType;
                     }
@@ -177,8 +177,8 @@ public class DialogueNode : BaseNode
     public void ImagePic(DialogueDataImages data = null){
         DialogueDataImages dialogueImages = new DialogueDataImages();
         if (data != null){
-            dialogueImages.sprite.Value = data.sprite.Value;
-            dialogueImages.sprite.Value = data.sprite.Value;
+            dialogueImages.sprite.value = data.sprite.value;
+            dialogueImages.sprite.value = data.sprite.value;
         }
         
         dialogueData.dialogueBaseContainers.Add(dialogueImages);
@@ -213,7 +213,7 @@ public class DialogueNode : BaseNode
 
     #region Fields
 
-    private void AddLabelAndButton(DialogueData_BaseContainer container, Box boxContainer, string labelName, string uniqueUSS = "")
+    private void AddLabelAndButton(DialogueDataBaseContainer container, Box boxContainer, string labelName, string uniqueUSS = "")
         {
             Box topBoxContainer = new Box();
             topBoxContainer.AddToClassList("TopBox");
@@ -226,7 +226,7 @@ public class DialogueNode : BaseNode
             btn.clicked += () =>
             {
                 DeleteBox(boxContainer);
-                DialogueData.Dialogue_BaseContainers.Remove(container);
+                dialogueData.dialogueBaseContainers.Remove(container);
             };
 
             topBoxContainer.Add(label_texts);
@@ -235,32 +235,32 @@ public class DialogueNode : BaseNode
             boxContainer.Add(topBoxContainer);
         }
 
-        private void AddTextField_CharacterName(DialogueData_Name container, Box boxContainer)
+        private void AddTextFieldCharacterName(DialogueDataName container, Box boxContainer)
         {
-            TextField textField = GetNewTextField(container.CharacterName, "Name", "CharacterName");
+            TextField textField = GetNewTextField(container.characterName, "Name", "CharacterName");
 
             boxContainer.Add(textField);
         }
 
-        private void AddTextField(DialogueData_Text container, Box boxContainer)
+        private void AddTextField(DialogueDataText container, Box boxContainer)
         {
-            TextField textField = GetNewTextField_TextLanguage(container.Text, "Text areans", "TextBox");
+            TextField textField = GetNewTextFieldTextLanguage(container.texts, "Text Areas", "TextBox");
 
-            container.TextField = textField;
+            container.textField = textField;
 
             boxContainer.Add(textField);
         }
 
-        private void AddAudioClips(DialogueData_Text container, Box boxContainer)
+        private void AddAudioClips(DialogueDataText container, Box boxContainer)
         {
-            ObjectField objectField = GetNewObjectField_AudioClipsLanguage(container.AudioClips, "AudioClip");
+            ObjectField objectField = GetNewObjectFieldAudioClipLanguage(container.audioClips, "AudioClip");
 
-            container.ObjectField = objectField;
+            container.objectField = objectField;
 
             boxContainer.Add(objectField);
         }
 
-        private void AddImages(DialogueData_Images container, Box boxContainer)
+        private void AddImages(DialogueDataImages container, Box boxContainer)
         {
             Box ImagePreviewBox = new Box();
             Box ImagesBox = new Box();
@@ -269,18 +269,14 @@ public class DialogueNode : BaseNode
             ImagesBox.AddToClassList("BoxRow");
 
             // Set up Image Preview.
-            Image leftImage = GetNewImage("ImagePreview", "ImagePreviewLeft");
-            Image rightImage = GetNewImage("ImagePreview", "ImagePreviewRight");
+            Image image = GetNewImage("ImagePreview", "ImagePreview");
 
-            ImagePreviewBox.Add(leftImage);
-            ImagePreviewBox.Add(rightImage);
+            ImagePreviewBox.Add(image);
 
             // Set up Sprite.
-            ObjectField objectField_Left = GetNewObjectField_Sprite(container.Sprite_Left, leftImage, "SpriteLeft");
-            ObjectField objectField_Right = GetNewObjectField_Sprite(container.Sprite_Right, rightImage, "SpriteRight");
+            ObjectField objectField = GetNewObjectFieldSprite(container.sprite, image, "Sprite");
 
-            ImagesBox.Add(objectField_Left);
-            ImagesBox.Add(objectField_Right);
+            ImagesBox.Add(objectField);
 
             // Add to box container.
             boxContainer.Add(ImagePreviewBox);
@@ -296,7 +292,7 @@ public class DialogueNode : BaseNode
         base.ReloadLanguage();
     }
 
-    public override void LoadValueInToField(){}
+    public override void LoadValueIntoField(){}
 
     #endregion
 }

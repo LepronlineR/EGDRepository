@@ -21,7 +21,7 @@ public class DialogueDataBaseContainer {
 }
 
 [System.Serializable]
-public class DialogueDataName {
+public class DialogueDataName : DialogueDataBaseContainer {
     public ContainerString characterName = new ContainerString();
 
 }

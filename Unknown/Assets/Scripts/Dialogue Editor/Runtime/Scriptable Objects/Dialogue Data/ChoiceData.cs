@@ -16,5 +16,5 @@ public class ChoiceData : BaseData
     public List<LanguageGeneric<string>> text = new List<LanguageGeneric<string>>();
     public List<LanguageGeneric<AudioClip>> audioClips = new List<LanguageGeneric<AudioClip>>();
     public List<EventDataStringCondition> eventDataStringConditions = new List<EventDataStringCondition>();
-
+    public List<EventDataGameObjectCondition> eventDataObjectConditions = new List<EventDataGameObjectCondition>();
 }

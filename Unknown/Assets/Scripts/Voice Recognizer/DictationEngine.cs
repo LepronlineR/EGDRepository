@@ -7,39 +7,17 @@ using System.Linq;
 using System.Text;
 using System.IO;
 
-public class DictationEngine : MonoBehaviour
-{
-
-    [SerializeField] TMP_Text word_text;
-    [SerializeField] TMP_Text emotion_text;
-
-    [SerializeField] GameObject AudioObject;
+public class DictationEngine : MonoBehaviour {
 
     protected DictationRecognizer dictationRecognizer;
 
-    bool started = false;
-
-    bool isRecording = true;
-    private AudioSource audioSource;
-
-    /*
-    public void SendEmotionPrediction(string pred){
-        emotion_text.text = pred;
-    } 
-
-    private void OnEnable() {
-        PredictionRequester.onEmotionPrediction += SendEmotionPrediction;
-    }
-
-    private void OnDisable() {
-        PredictionRequester.onEmotionPrediction -= SendEmotionPrediction;
-    }*/
+    [SerializeField] TMP_Text word_text;
 
     public static DictationEngine Instance { get; private set; }
     private void Awake() { 
         // If there is an instance, and it's not me, delete myself.
         if (Instance != null && Instance != this) { 
-            Destroy(this); 
+            Destroy(this);
         } else { 
             Instance = this; 
         } 
@@ -47,57 +25,20 @@ public class DictationEngine : MonoBehaviour
 
     void Start(){
         StartDictationEngine();
-        audioSource = GetComponent<AudioSource>();
-        emotion_text.text = "";
-        AudioObject.SetActive(false);
-    }
-    
-    void Update(){
-        
-        if(Input.GetMouseButton(1)){
-            if(!started){
-                // Debug.Log("started recording");
-
-                started = true;
-                dictationRecognizer.Start();
-                AudioObject.SetActive(true);
-                emotion_text.text = "";
-                word_text.text = "";
-                // =============== begin recording ===============
-                
-                audioSource.Stop();
-                Microphone.End(null);
-                audioSource.clip = StartRecording();
-                // Invoke("ResizeRecording", 1);
-            }
-        } else {
-            if(started){
-                // Debug.Log("ended recording");
-
-                started = false;
-                dictationRecognizer.Stop();
-                AudioObject.SetActive(false);
-                // =============== end recording ===============
-                AudioClip clip = StopRecording(audioSource, null);
-                //if(!SavWav.Save("output.wav", clip)){
-                //    Debug.Log("failed");
-                //}
-
-                byte[] bytes = SavWav.GetByteFromClip(clip);
-
-                PredictionClient.Instance.Predict(bytes);
-            }
-        }
     }
 
     string result = "";
 
-    public bool Started(){
-        return started;
-    }
-
     public string GetSentence(){
         return result;
+    }
+
+    public void StartDictation(){
+        dictationRecognizer.Start();
+    }
+
+    public void EndDictation(){
+        dictationRecognizer.Stop();
     }
 
     public AudioClip StopRecording(AudioSource audS, string deviceName) {
@@ -129,7 +70,6 @@ public class DictationEngine : MonoBehaviour
     }
 
     private void DictationRecognizer_OnDictationHypothesis(string text){
-        Debug.Log("Dictation hypothesis: " + text);
         word_text.text = text;
     }
 
@@ -155,15 +95,12 @@ public class DictationEngine : MonoBehaviour
     }
 
     private void DictationRecognizer_OnDictationResult(string text, ConfidenceLevel confidence){
-        Debug.Log("Dictation result: " + text);
-        word_text.text = text;
         result = text;
-        // write to file
+        word_text.text = text;
     }
 
     private void DictationRecognizer_OnDictationError(string error, int hresult){
-        // Debug.Log("Dictation error: " + error);
-        // word_text.text   = error;
+
     }
 
     private void OnApplicationQuit(){

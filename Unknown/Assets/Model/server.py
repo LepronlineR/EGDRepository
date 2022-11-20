@@ -75,6 +75,11 @@ def predict(model, bytes_wav, labels, sampling_rate = 44100, filename = "output.
     else:
         pred_class = labels[int(tf.round(pred[0]))]
     
+    # replace this later
+
+    if(pred_class == 'disgust' or pred_class == 'ps'):
+        pred_class = 'neutral'
+
     return pred_class
 
 def predict_t(model, labels, filename = "output.wav"):

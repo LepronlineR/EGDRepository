@@ -4,15 +4,13 @@ using TMPro;
 
 public class PredictionClient : MonoBehaviour
 {
+
     private PredictionRequester predictionRequester;
+    public static PredictionClient Instance { get; private set; }
 
     [SerializeField] TMP_Text emotion_text;
-
-    public static PredictionClient Instance { get; private set; }
     
     private void Awake() { 
-        // If there is an instance, and it's not me, delete myself.
-        
         if (Instance != null && Instance != this) { 
             Destroy(this); 
         } else { 
@@ -31,34 +29,17 @@ public class PredictionClient : MonoBehaviour
 
     public void Predict(byte[] bytes)
     {
-        // send message
-
-        // request messa
-        // NetEventManager.Instance.onClientBusy.Invoke();
+        // request message
         predictionRequester.RequestMessage(bytes);
-        // NetEventManager.Instance.onClientFree.Invoke();
     }
 
     private string setMessage = "";
-    bool setOnce = false;
 
     private void HandleMessage(string message){
-        //Debug.Log(message);
-        //emotion_text.text = message;
         setMessage = message;
-        setOnce = true;
-    }
-
-    // Update is called once per frame
-    void Update () {
-        if(setOnce){
-            emotion_text.text = setMessage;
-            setOnce = false;
-        }
-    }
-
-    public bool SetEmotion(){
-        return setOnce;
+        emotion_text.text = message;
+        // set this in the main system
+        MainSystem.Instance.PlayerEmotion = message;
     }
 
     public string GetEmotion(){

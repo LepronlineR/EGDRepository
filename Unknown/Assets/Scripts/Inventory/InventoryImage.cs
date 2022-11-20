@@ -8,6 +8,7 @@ public class InventoryImage : MonoBehaviour
 {
     [SerializeField] Image image;
     [SerializeField] TMP_InputField input;
+    [SerializeField] GameObject selectedImage;
 
     private List<GameObject> evidences;
 
@@ -33,7 +34,7 @@ public class InventoryImage : MonoBehaviour
 
     public void SetAsCurrentImage(){
         // highlight this
-        
+        selectedImage.SetActive(true);
         // set this
         MainSystem.Instance.SetCurrentImage(this);
     }

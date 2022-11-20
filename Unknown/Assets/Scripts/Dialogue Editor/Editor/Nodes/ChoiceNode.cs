@@ -44,13 +44,19 @@ public class ChoiceNode : BaseNode {
         ToolbarMenu menu = new ToolbarMenu();
         menu.text = "Add Condition";
 
-        menu.menu.AppendAction("String Event Condition", new Action<DropdownMenuAction>(x => AddCondition()));
+        menu.menu.AppendAction("String Event Condition", new Action<DropdownMenuAction>(x => AddCondition((EventDataStringCondition) null)));
+        menu.menu.AppendAction("Object Event Condition", new Action<DropdownMenuAction>(x => AddCondition((EventDataGameObjectCondition) null)));
 
         titleButtonContainer.Add(menu);
     }
 
     public void AddCondition(EventDataStringCondition stringEvent = null){
         AddStringConditionEventBuild(choiceData.eventDataStringConditions, stringEvent);
+        ShowHideChoiceEnum();
+    }
+
+    public void AddCondition(EventDataGameObjectCondition objectEvent = null){
+        AddObjectConditionEventBuild(choiceData.eventDataObjectConditions, objectEvent);
         ShowHideChoiceEnum();
     }
 

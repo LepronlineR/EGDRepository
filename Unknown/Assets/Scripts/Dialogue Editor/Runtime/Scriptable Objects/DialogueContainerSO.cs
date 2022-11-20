@@ -14,6 +14,7 @@ public class DialogueContainerSO : ScriptableObject {
     public List<EventData> eventDatas = new List<EventData>();
     public List<BranchData> branchDatas = new List<BranchData>();
     public List<ChoiceData> choiceDatas = new List<ChoiceData>();
+    public List<EmotionChoiceData> emotionChoiceDatas = new List<EmotionChoiceData>();
 
     public List<BaseData> allDatas {
         get {
@@ -24,6 +25,7 @@ public class DialogueContainerSO : ScriptableObject {
             temp.AddRange(eventDatas);
             temp.AddRange(branchDatas);
             temp.AddRange(choiceDatas);
+            temp.AddRange(emotionChoiceDatas);
             return temp;
         }
     }

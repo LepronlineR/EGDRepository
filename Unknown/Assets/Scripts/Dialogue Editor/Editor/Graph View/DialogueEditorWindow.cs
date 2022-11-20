@@ -48,12 +48,14 @@ public class DialogueEditorWindow : EditorWindow {
         graphView.StretchToParentSize();
         rootVisualElement.Add(graphView);
 
-       //  saveAndLoad = new DialogueSaveAndLoad(graphView);
+        saveAndLoad = new DialogueSaveAndLoad(graphView);
     }
 
     private void GenerateToolbar() {
 
+        // Find and load the styleSheet for graph view.
         StyleSheet styleSheet = Resources.Load<StyleSheet>(graphViewStyleSheet);
+        // Add the styleSheet for graph view.
         rootVisualElement.styleSheets.Add(styleSheet);
 
         Toolbar toolbar = new Toolbar();
@@ -88,13 +90,13 @@ public class DialogueEditorWindow : EditorWindow {
         if(currentDialogueContainer != null){
             Language(LanguageType.English);
             nameOfDialogueContainer.text = "File Name: " + currentDialogueContainer.name;
-            // saveAndLoad.Load(currentDialogueContainer);
+            saveAndLoad.Load(currentDialogueContainer);
         }
     }
 
     private void Save() {
-        //if(currentDialogueContainer != null)
-            //saveAndLoad.Save(currentDialogueContainer);
+        if(currentDialogueContainer != null)
+            saveAndLoad.Save(currentDialogueContainer);
     }
 
     private void Language(LanguageType language){
