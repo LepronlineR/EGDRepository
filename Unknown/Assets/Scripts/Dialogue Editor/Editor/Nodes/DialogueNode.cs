@@ -59,6 +59,7 @@ public class DialogueNode : BaseNode
         menu.menu.AppendAction("Text", new Action<DropdownMenuAction>(x => TextLine()));
         menu.menu.AppendAction("Image", new Action<DropdownMenuAction>(x => ImagePic()));
         menu.menu.AppendAction("Name", new Action<DropdownMenuAction>(x => CharacterName()));
+        menu.menu.AppendAction("Response", new Action<DropdownMenuAction>(x => ResponseText()));
 
         titleButtonContainer.Add(menu);
     }
@@ -209,6 +210,23 @@ public class DialogueNode : BaseNode
         mainContainer.Add(boxContainer);
     }
 
+    public void ResponseText(DialogueDataResponseText data = null){
+        DialogueDataResponseText resText = new DialogueDataResponseText();
+        if (data != null){
+            resText.responseText.value = data.responseText.value;
+        }
+        
+        dialogueData.dialogueBaseContainers.Add(resText);
+
+        Box boxContainer = new Box();
+        boxContainer.AddToClassList("CharacterNameBox");
+
+        AddLabelAndButton(resText, boxContainer, "Response Text", "NameColor");
+        AddTextFieldResponseText(resText, boxContainer);
+
+        mainContainer.Add(boxContainer);
+    }
+
     #endregion
 
     #region Fields
@@ -238,6 +256,13 @@ public class DialogueNode : BaseNode
         private void AddTextFieldCharacterName(DialogueDataName container, Box boxContainer)
         {
             TextField textField = GetNewTextField(container.characterName, "Name", "CharacterName");
+
+            boxContainer.Add(textField);
+        }
+
+        private void AddTextFieldResponseText(DialogueDataResponseText container, Box boxContainer)
+        {
+            TextField textField = GetNewTextField(container.responseText, "Response Text", "CharacterName");
 
             boxContainer.Add(textField);
         }

@@ -15,6 +15,11 @@ public class ContainerDialogueEventSO {
     public DialogueEventSO dialogueEventSO;
 }
 
+[System.Serializable]
+public class ContainerDialogueContainerSO {
+    public DialogueContainerSO dialogueContainerSO;
+}
+
 // ============== VALUES ======================
 [System.Serializable]
 public class ContainerString {
@@ -40,7 +45,6 @@ public class ContainerSprite {
 public class ContainerObject {
     public GameObject value;
 }
-
 // ================ ENUMS =========================
 
 [System.Serializable]

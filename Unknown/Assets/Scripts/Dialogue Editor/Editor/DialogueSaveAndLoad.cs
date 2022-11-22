@@ -59,6 +59,7 @@ public class DialogueSaveAndLoad {
         dialogueContainerSO.dialogueDatas.Clear();
         dialogueContainerSO.choiceDatas.Clear();
         dialogueContainerSO.emotionChoiceDatas.Clear();
+        dialogueContainerSO.objectChoiceDatas.Clear();
 
         nodes.ForEach(node => {
             switch (node) {
@@ -82,6 +83,9 @@ public class DialogueSaveAndLoad {
                     break;
                 case EmotionChoiceNode emotionChoiceNode:
                     dialogueContainerSO.emotionChoiceDatas.Add(SaveNodeData(emotionChoiceNode));
+                    break;
+                case ObjectChoiceNode objectChoiceNode:
+                    dialogueContainerSO.objectChoiceDatas.Add(SaveNodeData(objectChoiceNode));
                     break;
                 default:
                     break;
@@ -125,6 +129,17 @@ public class DialogueSaveAndLoad {
                 dialogueData.dialogueDataTexts.Add(tmpData);
             }
 
+            // Response Text
+            if (baseContainer is DialogueDataResponseText) {
+                DialogueDataResponseText tmp = (baseContainer as DialogueDataResponseText);
+                DialogueDataResponseText tmpData = new DialogueDataResponseText();
+
+                tmpData.ID.value = tmp.ID.value;
+                tmpData.responseText.value = tmp.responseText.value;
+
+                dialogueData.dialogueResponseTexts.Add(tmpData);
+            }
+
             // Images
             if (baseContainer is DialogueDataImages){
                 DialogueDataImages tmp = (baseContainer as DialogueDataImages);
@@ -162,6 +177,7 @@ public class DialogueSaveAndLoad {
         StartData nodeData = new StartData() {
             nodeGuid = node.NodeGuid,
             position = node.GetPosition().position,
+            text = node.StartData.text,
         };
 
         return nodeData;
@@ -171,6 +187,7 @@ public class DialogueSaveAndLoad {
         EndData nodeData = new EndData() {
             nodeGuid = node.NodeGuid,
             position = node.GetPosition().position,
+            endDialogueContainers = node.EndData.endDialogueContainers
         };
         
         nodeData.endNodeType.value = node.EndData.endNodeType.value;
@@ -269,6 +286,17 @@ public class DialogueSaveAndLoad {
         return nodeData;
     }
 
+    private ObjectChoiceData SaveNodeData(ObjectChoiceNode node) {
+        ObjectChoiceData nodeData = new ObjectChoiceData() {
+            nodeGuid = node.NodeGuid,
+            position = node.GetPosition().position
+        };
+        
+        nodeData.choiceObject.value = node.ObjectChoiceData.choiceObject.value;
+
+        return nodeData;
+    }
+
     #endregion
 
     #region Load
@@ -286,7 +314,16 @@ public class DialogueSaveAndLoad {
         foreach (StartData node in dialogueContainer.startDatas){
             StartNode tempNode = graphView.CreateStartNode(node.position);
             tempNode.NodeGuid = node.nodeGuid;
+            
+            foreach (LanguageGeneric<string> dataText in node.text){
+                foreach (LanguageGeneric<string> editorText in tempNode.StartData.text) {
+                    if (editorText.languageType == dataText.languageType){
+                        editorText.languageGenericType = dataText.languageGenericType;
+                    }
+                }
+            }
 
+            tempNode.LoadValueIntoField();
             graphView.AddElement(tempNode);
         }
 
@@ -295,6 +332,10 @@ public class DialogueSaveAndLoad {
             EndNode tempNode = graphView.CreateEndNode(node.position);
             tempNode.NodeGuid = node.nodeGuid;
             tempNode.EndData.endNodeType.value = node.endNodeType.value;
+
+            foreach (ContainerDialogueContainerSO item in node.endDialogueContainers) {
+                tempNode.AddScriptableEvent(item);
+            }
 
             tempNode.LoadValueIntoField();
             graphView.AddElement(tempNode);
@@ -376,6 +417,7 @@ public class DialogueSaveAndLoad {
             dataBaseContainer.AddRange(node.dialogueDataImagess);
             dataBaseContainer.AddRange(node.dialogueDataTexts);
             dataBaseContainer.AddRange(node.dialogueDataNames);
+            dataBaseContainer.AddRange(node.dialogueResponseTexts);
 
             dataBaseContainer.Sort(delegate (DialogueDataBaseContainer x, DialogueDataBaseContainer y){
                 return x.ID.value.CompareTo(y.ID.value);
@@ -391,6 +433,9 @@ public class DialogueSaveAndLoad {
                         break;
                     case DialogueDataImages image:
                         tempNode.ImagePic(image);
+                        break;
+                    case DialogueDataResponseText response:
+                        tempNode.ResponseText(response);
                         break;
                     default:
                         break;
@@ -411,6 +456,16 @@ public class DialogueSaveAndLoad {
             EmotionChoiceNode tempNode = graphView.CreateEmotionChoiceNode(node.position);
             tempNode.NodeGuid = node.nodeGuid;
             tempNode.EmotionChoiceData.choiceStateType.value = node.choiceStateType.value;
+
+            tempNode.LoadValueIntoField();
+            graphView.AddElement(tempNode);
+        }
+
+        // Object Choice Node 
+        foreach (ObjectChoiceData node in dialogueContainer.objectChoiceDatas) {
+            ObjectChoiceNode tempNode = graphView.CreateObjectChoiceNode(node.position);
+            tempNode.NodeGuid = node.nodeGuid;
+            tempNode.ObjectChoiceData.choiceObject.value = node.choiceObject.value;
 
             tempNode.LoadValueIntoField();
             graphView.AddElement(tempNode);

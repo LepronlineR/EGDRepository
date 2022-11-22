@@ -29,9 +29,10 @@ public class NodeSearchWindow : ScriptableObject, ISearchWindowProvider
             AddNodeSearch("End", new EndNode()),
             AddNodeSearch("Event", new EventNode()),
             AddNodeSearch("Dialogue", new DialogueNode()),
-            AddNodeSearch("Branch", new BranchNode()),
-            AddNodeSearch("Choice", new ChoiceNode()),
+            // AddNodeSearch("Branch", new BranchNode()),
+            // AddNodeSearch("Choice", new ChoiceNode()),
             AddNodeSearch("Emotion Choice", new EmotionChoiceNode()),
+            AddNodeSearch("Object Choice", new ObjectChoiceNode()),
         };
 
         return tree;
@@ -74,6 +75,9 @@ public class NodeSearchWindow : ScriptableObject, ISearchWindowProvider
                 return true;
             case EmotionChoiceNode node:
                 graphView.AddElement(graphView.CreateEmotionChoiceNode(pos));
+                return true;
+            case ObjectChoiceNode node:
+                graphView.AddElement(graphView.CreateObjectChoiceNode(pos));
                 return true;
             default:
                 break;

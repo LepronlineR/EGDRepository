@@ -40,13 +40,13 @@ public class MainSystem : MonoBehaviour
     [SerializeField] TMP_Text emotion_text;
 
     [Header("Gameplay")]
-    private string playerWord;
-    private List<GameObject> playerEvidence;
-    private string playerEmotion;
+    public string playerWord;
+    public List<GameObject> playerEvidence;
+    public DialogueEmotionType playerEmotion;
     //
     public string PlayerWord { get => playerWord; set => playerWord = value; }
     public List<GameObject> PlayerEvidence { get => playerEvidence; set => playerEvidence = value; }
-    public string PlayerEmotion { get => playerEmotion; set => playerEmotion = value; }
+    public DialogueEmotionType PlayerEmotion { get => playerEmotion; set => playerEmotion = value; }
 
     public void SetCurrentImage(InventoryImage img){
         selectedImage = img;
@@ -70,8 +70,38 @@ public class MainSystem : MonoBehaviour
         return playerWord;
     }
 
+    public void SetPlayerEmotion(string text){
+        if(text.ToLower().Equals("angry")){
+            playerEmotion = DialogueEmotionType.Angry;
+        } else if(text.ToLower().Equals("sad")){
+            playerEmotion = DialogueEmotionType.Sad;
+        } else if(text.ToLower().Equals("fear")){
+            playerEmotion = DialogueEmotionType.Fear;
+        } else if(text.ToLower().Equals("neutral")){
+            playerEmotion = DialogueEmotionType.Neutral;
+        } else if(text.ToLower().Equals("happy")){
+            playerEmotion = DialogueEmotionType.Happy;
+        } else {
+            playerEmotion = DialogueEmotionType.Otherwise;
+        }
+    }
+
     public string GetPlayerEmotion() {
-        return playerEmotion;
+        switch(playerEmotion){
+            case DialogueEmotionType.Angry:
+                return "angry";
+            case DialogueEmotionType.Sad:
+                return "sad";
+            case DialogueEmotionType.Fear:
+                return "fear";
+            case DialogueEmotionType.Neutral:
+                return "neutral";
+            case DialogueEmotionType.Happy:
+                return "happy";
+            case DialogueEmotionType.Otherwise:
+                return "";
+        }
+        return "";
     }
 
     void Update() {

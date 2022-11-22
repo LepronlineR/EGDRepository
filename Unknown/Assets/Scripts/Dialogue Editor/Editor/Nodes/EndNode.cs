@@ -27,9 +27,52 @@ public class EndNode : BaseNode
         SetPosition(new Rect(_position, defaultNodeSize));
         nodeGuid = Guid.NewGuid().ToString();
 
-        AddInputPort("Input", Port.Capacity.Single);
-
+        AddInputPort("Input", Port.Capacity.Multi);
+        
+        TopContainer();
         MakeMainContainer();
+    }
+
+    private void TopContainer(){
+        AddDropdownMenu();
+    }
+
+    private void AddDropdownMenu(){
+        ToolbarMenu menu = new ToolbarMenu();
+        menu.text = "Add Content";
+
+        menu.menu.AppendAction("Add More Trees to Character", new Action<DropdownMenuAction>(x => AddScriptableEvent()));
+
+        titleButtonContainer.Add(menu);
+    }
+
+    public void AddScriptableEvent(ContainerDialogueContainerSO container = null) {
+        ContainerDialogueContainerSO temp = new ContainerDialogueContainerSO();
+        if(container != null){
+            temp.dialogueContainerSO = container.dialogueContainerSO;
+        }
+        endData.endDialogueContainers.Add(temp);
+
+        // Container of all objects
+        Box boxContainer = new Box();
+        boxContainer.AddToClassList("EventBox");
+
+        // Scriptable Object Event
+        ObjectField objectField = GetNewObjectFieldDialogueContainer(temp, "EventObject");
+        
+        // Remove
+        Button btn = GetNewButton("X", "RemoveButton");
+        btn.clicked += () => {
+            DeleteBox(boxContainer);
+            endData.endDialogueContainers.Remove(temp);
+        };
+
+        // Add to box
+        boxContainer.Add(objectField);
+        boxContainer.Add(btn);
+
+        mainContainer.Add(boxContainer);
+        RefreshExpandedState();
     }
 
     private void MakeMainContainer() {

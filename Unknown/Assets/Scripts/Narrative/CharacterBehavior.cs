@@ -4,15 +4,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-[RequireComponent(typeof(BoxCollider2D))]
+[RequireComponent(typeof(BoxCollider), typeof(DialogueController))]
 public class CharacterBehavior : MonoBehaviour {
 
     [SerializeField] Transform player;
 
-    DialogueParser parser;
+    DialogueController parser;
 
     void Start(){
-        // parser = GetComponent<DialogueParser>();
+        parser = GetComponent<DialogueController>();
     }
 
     void Update(){
@@ -26,11 +26,18 @@ public class CharacterBehavior : MonoBehaviour {
     
     private void OnMouseEnter() {
         Debug.Log("The cursor entered Mouse.");
-        // parser.MakeInteractable();
+        parser.MakeInteractable(true);
+        if(parser.HasNotBegan()){
+            List<string> allTexts = parser.GetAllStartNodeTexts();
+            // TODO: make this appear as UI elements in front of the player
+        }
     }
 
     private void OnMouseExit() {
         Debug.Log("The cursor exited Mouse.");
-        // parser.MakeUninteractable();
+        parser.MakeInteractable(false);
+        if(parser.HasNotBegan()){
+            // TODO: fade this away and delete
+        }
     }
 }

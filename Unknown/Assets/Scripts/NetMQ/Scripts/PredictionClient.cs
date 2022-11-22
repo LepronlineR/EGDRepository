@@ -39,7 +39,7 @@ public class PredictionClient : MonoBehaviour
         setMessage = message;
         emotion_text.text = message;
         // set this in the main system
-        MainSystem.Instance.PlayerEmotion = message;
+        MainSystem.Instance.SetPlayerEmotion(message);
     }
 
     public string GetEmotion(){

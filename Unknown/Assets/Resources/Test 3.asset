@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8aac82a7c0dc8dd4e8e46749de3dddb3, type: 3}
-  m_Name: Test 2
+  m_Name: Test 3
   m_EditorClassIdentifier: 
   nodeLinkDatas:
   - baseNodeGuid: 39b2a4c6-2cd5-4c1b-a041-abe681321f8f
@@ -21,8 +21,7 @@ MonoBehaviour:
   endDatas:
   - nodeGuid: da0bb435-9e59-41e5-8144-4b4fc39f67f6
     position: {x: 242, y: 191}
-    endDialogueContainers:
-    - dialogueContainerSO: {fileID: 11400000, guid: cbd43a122b8c1fe48a7c2f2cc60f7bde, type: 2}
+    endDialogueContainers: []
     endNodeType:
       value: 1
   startDatas:
@@ -30,7 +29,7 @@ MonoBehaviour:
     position: {x: 124, y: 191}
     text:
     - languageType: 0
-      languageGenericType: two
+      languageGenericType: three
   eventDatas: []
   branchDatas: []
   choiceDatas: []

@@ -84,4 +84,8 @@ public class DialogueGraphView : GraphView
     public EmotionChoiceNode CreateEmotionChoiceNode(Vector2 pos){
         return new EmotionChoiceNode(pos, editorWindow, this);
     }
+
+    public ObjectChoiceNode CreateObjectChoiceNode(Vector2 pos){
+        return new ObjectChoiceNode(pos, editorWindow, this);
+    }
 }

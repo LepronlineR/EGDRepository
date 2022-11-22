@@ -326,6 +326,24 @@ public class BaseNode : Node {
         return objectField;
     }
 
+    protected ObjectField GetNewObjectFieldDialogueContainer(ContainerDialogueContainerSO inputValue, string USS01 = "", string USS02 = ""){
+        ObjectField objectField = new ObjectField() {
+            objectType = typeof(DialogueContainerSO),
+            allowSceneObjects = false,
+            value = inputValue.dialogueContainerSO
+        };
+
+        objectField.RegisterValueChangedCallback(value => {
+            inputValue.dialogueContainerSO = value.newValue as DialogueContainerSO;
+        });
+        objectField.SetValueWithoutNotify(inputValue.dialogueContainerSO);
+
+        objectField.AddToClassList(USS01);
+        objectField.AddToClassList(USS02);
+
+        return objectField;
+    }
+
     protected UnityEngine.UIElements.EnumField GetNewEnumFieldChoiceStateType(ContainerChoiceStateType inputValue, string USS01 = "", string USS02 = ""){
         UnityEngine.UIElements.EnumField enumField = new UnityEngine.UIElements.EnumField() {
             value = inputValue.value
