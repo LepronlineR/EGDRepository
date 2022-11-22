@@ -196,7 +196,7 @@ public class DialogueController : DialogueGetData {
             if(GameObject.ReferenceEquals(obj, data.choiceObject.value) ||
             data.choiceObject.value == null){
                 currentData = GetNextNode(data);
-            return true;
+                return true;
             }
         }
         return false;
