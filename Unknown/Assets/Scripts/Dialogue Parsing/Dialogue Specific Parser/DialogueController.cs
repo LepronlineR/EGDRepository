@@ -27,7 +27,7 @@ public class DialogueController : DialogueGetData {
 
     // flags
     private bool interactable = false;
-    private bool response = false;
+    private string response = string.Empty;
     private bool speaking = false;
     private bool skip = true; 
 
@@ -39,7 +39,7 @@ public class DialogueController : DialogueGetData {
         if(interactable && Input.GetMouseButtonDown(0)){ // process data
             if(!speaking){
                 // process current node
-                if(response){
+                if(!response.Equals(string.Empty)){
                     ProcessResponse();
                 } else if(currentIndex > 0) {
                     ParseDialogue();
@@ -149,7 +149,7 @@ public class DialogueController : DialogueGetData {
 
             if(baseContainers[x] is DialogueDataResponseText){
                 DialogueDataResponseText tmp = baseContainers[x] as DialogueDataResponseText;
-                response = true;
+                response = tmp.responseText.value;
                 SetResponse(tmp.responseText.value);
                 break;
             }
@@ -160,7 +160,7 @@ public class DialogueController : DialogueGetData {
         foreach (DialogueDataPort port in currentDialogueNodeData.dialogueDataPorts){
             if(ChoiceCheck(port.inputGuid)){
                 ProcessCurrentNode(currentData);
-                response = false;
+                response = string.Empty;
                 break;
             }
         }
@@ -180,9 +180,10 @@ public class DialogueController : DialogueGetData {
     }
 
     private bool RunChoice(EmotionChoiceData data){
-        // compare the emotion choice to the player emotion
-        if(MainSystem.Instance.PlayerEmotion.Equals(data.choiceStateType.value) || 
-        data.choiceStateType.value == DialogueEmotionType.Otherwise){
+        // compare the emotion choice to the player emotion and text
+        if((MainSystem.Instance.PlayerEmotion.Equals(data.choiceStateType.value) || 
+        data.choiceStateType.value == DialogueEmotionType.Otherwise) &&
+        (MainSystem.Instance.PlayerWord.ToLower().Equals(response.ToLower()))){
 
             currentData = GetNextNode(data);
             return true;
