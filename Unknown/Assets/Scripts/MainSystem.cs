@@ -39,6 +39,13 @@ public class MainSystem : MonoBehaviour
     [SerializeField] TMP_Text word_text;
     [SerializeField] TMP_Text emotion_text;
 
+    [Header("Dialogue")]
+    [SerializeField] GameObject leftBubble;
+    [SerializeField] GameObject rightBubble;
+    [SerializeField] Transform[] bubblePositions = new Transform[4];
+    private bool[] bubbleTakenPositions = new bool[4];
+    private List<GameObject> generatedBubbles = new List<GameObject>();
+
     [Header("Gameplay")]
     public string playerWord;
     public List<GameObject> playerEvidence;
@@ -64,6 +71,9 @@ public class MainSystem : MonoBehaviour
         cameraModeObject.SetActive(!speechMode);
         speechModeObject.SetActive(speechMode);
         audioSource = GetComponent<AudioSource>();
+        foreach(bool b in bubbleTakenPositions){
+            //b = false;
+        }
     }
 
     public string GetPlayerWord(){
@@ -102,6 +112,28 @@ public class MainSystem : MonoBehaviour
                 return "";
         }
         return "";
+    }
+
+    private int FindEmptyBubble(){
+        //for(int x = 0; x < bubbleTakenPositions.Count; x++){
+        //    if(bubbleTakenPositions[x])
+        //        return x;
+        //}
+        return -1;
+    }
+
+    public void GenerateBubbleText(){
+        int whereBubble = FindEmptyBubble();
+        if(whereBubble > 0){
+            //generatedBubbles.Add();
+        }
+        // error
+    }
+
+    public void RemoveAllBubbles(){
+        foreach(GameObject go in generatedBubbles){
+            //Destory(go);
+        }
     }
 
     void Update() {

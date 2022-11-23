@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: edca0aa846842374b8423cfb81853575
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Dalfitra
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 137b8a2b73b64604ca4b3235794a8f78, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
