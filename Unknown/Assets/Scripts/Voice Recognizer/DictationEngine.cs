@@ -70,6 +70,7 @@ public class DictationEngine : MonoBehaviour {
     }
 
     private void DictationRecognizer_OnDictationHypothesis(string text){
+        MainSystem.Instance.PlayerWord = text;
         word_text.text = text;
     }
 
@@ -95,7 +96,7 @@ public class DictationEngine : MonoBehaviour {
     }
 
     private void DictationRecognizer_OnDictationResult(string text, ConfidenceLevel confidence){
-        result = text;
+        MainSystem.Instance.PlayerWord = text;
         word_text.text = text;
     }
 

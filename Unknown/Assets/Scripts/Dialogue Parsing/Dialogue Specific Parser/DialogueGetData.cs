@@ -9,15 +9,20 @@ public class DialogueGetData : MonoBehaviour
     
     protected BaseData currentData;
 
-    protected void DetermineDialogueContainer(){
+    protected bool DetermineDialogueContainer(){
         foreach(DialogueContainerSO container in dialogueContainers){
             StartData nodeData = container.startDatas[0];
             if(MainSystem.Instance.PlayerWord.ToLower().Equals(
                 nodeData.text.Find(language => language.languageType == LanguageController.Instance.Language).languageGenericType.ToLower())){
+                    // Remove the thought bubbles
+                    MainSystem.Instance.RemoveAllBubbles();
+                    
                     currentDialogueContainer = container;
                     currentData = GetNextNode(currentDialogueContainer.startDatas[0]);
+                    return true;
             }
         }
+        return false;
     }
 
     public List<string> GetAllStartNodeTexts(){

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2105446329302609512}
   - component: {fileID: 2105446329302609514}
   - component: {fileID: 2105446329302609515}
+  - component: {fileID: 865598424931444416}
   m_Layer: 0
   m_Name: Thought Cloud Left
   m_TagString: Untagged
@@ -27,7 +28,7 @@ RectTransform:
   m_GameObject: {fileID: 2105446329302609513}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2105446330642425500}
@@ -37,7 +38,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 743, y: 631}
+  m_SizeDelta: {x: 450, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2105446329302609514
 CanvasRenderer:
@@ -77,6 +78,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &865598424931444416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2105446329302609513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a49c1ece97111140a6d688a95a1f118, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thoughtText: {fileID: 2105446330642425503}
 --- !u!1 &2105446330642425501
 GameObject:
   m_ObjectHideFlags: 0
@@ -112,8 +126,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.946, y: 49.482}
-  m_SizeDelta: {x: 542.876, y: 188.218}
+  m_AnchoredPosition: {x: -12.7413, y: 20.9937}
+  m_SizeDelta: {x: 283.2722, y: 105.8731}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2105446330642425502
 CanvasRenderer:
@@ -170,12 +184,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
+  m_fontSize: 30
   m_fontSizeBase: 52
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 50
-  m_fontSizeMax: 72
+  m_fontSizeMin: 30
+  m_fontSizeMax: 70
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256

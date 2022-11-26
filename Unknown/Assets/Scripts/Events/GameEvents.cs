@@ -17,13 +17,13 @@ public class GameEvents : MonoBehaviour
 
     public Action<int> DefaultAction { get => defaultAction; set => defaultAction = value; }
 
-    private void Awake(){
-        if(Instance == null){
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        } else {
-            Destroy(gameObject);
-        }
+    private void Awake() { 
+        // If there is an instance, and it's not me, delete myself.
+        if (Instance != null && Instance != this) { 
+            Destroy(this);
+        } else { 
+            Instance = this; 
+        } 
     }
 
     public void CallDefaultAction(int number){

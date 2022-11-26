@@ -25,19 +25,23 @@ public class CharacterBehavior : MonoBehaviour {
 
     
     private void OnMouseEnter() {
-        Debug.Log("The cursor entered Mouse.");
+        // Debug.Log("The cursor entered Mouse.");
         parser.MakeInteractable(true);
         if(parser.HasNotBegan()){
             List<string> allTexts = parser.GetAllStartNodeTexts();
             // TODO: make this appear as UI elements in front of the player
+            foreach(string texts in allTexts){
+                MainSystem.Instance.GenerateBubbleText(texts);
+            }
         }
     }
 
     private void OnMouseExit() {
-        Debug.Log("The cursor exited Mouse.");
+        // Debug.Log("The cursor exited Mouse.");
         parser.MakeInteractable(false);
         if(parser.HasNotBegan()){
             // TODO: fade this away and delete
+            MainSystem.Instance.RemoveAllBubbles();
         }
     }
 }

@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using Fragsurf.Movement;
 using TMPro;
+using UnityEngine.UI;
 
 public class MainSystem : MonoBehaviour
 {
     public static MainSystem Instance { get; private set; }
     private void Awake() { 
         // If there is an instance, and it's not me, delete myself.
-        
         if (Instance != null && Instance != this) { 
             Destroy(this); 
         } else { 
@@ -32,19 +32,29 @@ public class MainSystem : MonoBehaviour
 
     [Header("Inventory/Images")]
     private InventoryImage selectedImage;
+    [SerializeField] GameObject selectedImageHolder;
+    [SerializeField] TMP_Text selectedTextName;
+    [SerializeField] Image selectedForImage;
 
     [Header("Recording")]
     private AudioSource audioSource;
-    [SerializeField] GameObject audioImage;
+    private float timePassed = 0.0f;
     [SerializeField] TMP_Text word_text;
-    [SerializeField] TMP_Text emotion_text;
+    [SerializeField] Image recordingFillArea;
+    [SerializeField] TMP_Text recordingTime;
+    [SerializeField] Slider recordingSlider;
+    [SerializeField] [Range(0.0f, 5.0f)] float timeToStopRecording = 1.0f;
+    [SerializeField] [Range(4.0f, 10.0f)] float timeToEndRecording = 5.0f;
 
     [Header("Dialogue")]
     [SerializeField] GameObject leftBubble;
     [SerializeField] GameObject rightBubble;
-    [SerializeField] Transform[] bubblePositions = new Transform[4];
-    private bool[] bubbleTakenPositions = new bool[4];
+    [SerializeField] Transform[] bubblePositions = new Transform[6];
+    private bool[] bubbleTakenPositions = new bool[6];
     private List<GameObject> generatedBubbles = new List<GameObject>();
+
+    [Header("Emotion")]
+    [SerializeField] GameObject emotionDot;
 
     [Header("Gameplay")]
     public string playerWord;
@@ -55,7 +65,142 @@ public class MainSystem : MonoBehaviour
     public List<GameObject> PlayerEvidence { get => playerEvidence; set => playerEvidence = value; }
     public DialogueEmotionType PlayerEmotion { get => playerEmotion; set => playerEmotion = value; }
 
+    void Start(){
+        inventoryOn = false;
+        speechMode = true;
+        cameraModeObject.SetActive(!speechMode);
+        speechModeObject.SetActive(speechMode);
+        audioSource = GetComponent<AudioSource>();
+        recordingSlider.maxValue = timeToEndRecording;
+        selectedImageHolder.SetActive(false);
+
+        for(int x = 0; x < bubbleTakenPositions.Length; x++){
+            bubbleTakenPositions[x] = false;
+        }
+    }
+
+    #region Inventory Images    
+
+    public void RemoveImagePicture(){
+        selectedImageHolder.SetActive(false);
+    }
+
+    public void EnableImagePicture(){
+        selectedImageHolder.SetActive(true);
+    }
+
+    public void ChangeTextForSetCurrentImage(string text){
+        selectedTextName.text = text;
+    }
+
+    #endregion
+
+    #region Emotion
+
+    private Vector3 SadVector = new Vector3(0.0f, -75.0f, 0.0f);
+    private Vector3 AngryVector = new Vector3(75.0f, 0.0f, 0.0f);
+    private Vector3 FearVector = new Vector3(-75.0f, 0.0f, 0.0f);
+    private Vector3 HappyVector = new Vector3(0.0f, 75.0f, 0.0f);
+    private Vector3 NeutralVector = new Vector3(0.0f, 0.0f, 0.0f);
+
+    public void ChangeEmotion(){
+        //playerEmotion
+        switch(playerEmotion){
+            case DialogueEmotionType.Sad:
+                StartCoroutine(LerpPosition(emotionDot.transform, SadVector, 1));
+                break;
+            case DialogueEmotionType.Angry:
+                StartCoroutine(LerpPosition(emotionDot.transform, AngryVector, 1));
+                break;
+            case DialogueEmotionType.Fear:
+                StartCoroutine(LerpPosition(emotionDot.transform, FearVector, 1));
+                break;
+            case DialogueEmotionType.Happy:
+                StartCoroutine(LerpPosition(emotionDot.transform, HappyVector, 1));
+                break;
+            case DialogueEmotionType.Neutral:
+                StartCoroutine(LerpPosition(emotionDot.transform, NeutralVector, 1));
+                break;
+            default:
+                break;
+        }
+    }
+
+    IEnumerator LerpPosition(Transform objectToMove, Vector3 targetPosition, float duration) {
+        float time = 0;
+        Vector3 startPosition = objectToMove.localPosition;
+        while (time < duration)
+        {
+            objectToMove.localPosition = Vector3.Lerp(startPosition, targetPosition, time / duration);
+            time += Time.deltaTime;
+            yield return null;
+        }
+        objectToMove.localPosition = targetPosition;
+    }
+
+    #endregion
+
+    #region Voice Recording
+
+    void BeginRecordingVoice(){
+        // Reset processes
+        audioSource.Stop();
+        // word_text.text = "";
+        recordingSlider.value = 0.0f;
+        recordingFillArea.color = Color.red;
+        recordingTime.text = string.Format("{0:0}:{1:00}", 0, 0);
+        timePassed = 0.0f;
+
+        // Begin recording process
+        DictationEngine.Instance.StartDictation();
+        audioSource.clip = DictationEngine.Instance.StartRecording();
+
+        // 
+    }
+
+    void UpdateRecording(){
+        int min = Mathf.FloorToInt(timePassed / 60.0f);
+        int sec = Mathf.FloorToInt(timePassed - min * 60f);
+
+        recordingSlider.value = timePassed;
+        recordingTime.text = string.Format("{0:0}:{1:00}", min, sec);
+
+        // if a certain time is passed swap the color from red to green
+        if(timePassed >= timeToStopRecording){
+            recordingFillArea.color = Color.green;
+        }
+    }
+
+    void EndRecording(){
+        // End recording process
+        startedRecording = false;
+        DictationEngine.Instance.EndDictation();
+
+        AudioClip clip = DictationEngine.Instance.StopRecording(audioSource, null);
+        byte[] bytes = SavWav.GetByteFromClip(clip);
+
+        // Perform prediction
+        PredictionClient.Instance.Predict(bytes);
+
+        timePassed = 0.0f;
+    }
+
+    #endregion
+
+    #region Get/Setters
+
+    public bool CurrentImageIsSelectedImage(InventoryImage img){
+        return selectedImage == img;
+    }
+
     public void SetCurrentImage(InventoryImage img){
+        // deselect previous image
+        if(selectedImage != null)
+            selectedImage.DelectThisImage();
+        EnableImagePicture();
+        // select new img
+        selectedTextName.text = img.Input.text;
+        selectedForImage.sprite = img.Img.sprite;
         selectedImage = img;
     }
 
@@ -63,17 +208,6 @@ public class MainSystem : MonoBehaviour
         if(evidence == null || selectedImage == null)
             return false;
         return selectedImage.ContainsEvidence(evidence);
-    }
-
-    void Start(){
-        inventoryOn = false;
-        speechMode = true;
-        cameraModeObject.SetActive(!speechMode);
-        speechModeObject.SetActive(speechMode);
-        audioSource = GetComponent<AudioSource>();
-        foreach(bool b in bubbleTakenPositions){
-            //b = false;
-        }
     }
 
     public string GetPlayerWord(){
@@ -114,39 +248,67 @@ public class MainSystem : MonoBehaviour
         return "";
     }
 
+    #endregion
+
+    #region Thought Bubbles
+
     private int FindEmptyBubble(){
-        //for(int x = 0; x < bubbleTakenPositions.Count; x++){
-        //    if(bubbleTakenPositions[x])
-        //        return x;
-        //}
+        for(int x = 0; x < bubbleTakenPositions.Length; x++){
+            if(!bubbleTakenPositions[x])
+                return x;
+        }
         return -1;
     }
 
-    public void GenerateBubbleText(){
+    public void GenerateBubbleText(string text){
         int whereBubble = FindEmptyBubble();
-        if(whereBubble > 0){
-            //generatedBubbles.Add();
+        if(whereBubble < 0)
+            return;
+        bubbleTakenPositions[whereBubble] = true;
+        if(whereBubble >= 0){
+            if(whereBubble % 2 != 0){
+                GameObject bubble = (GameObject) Instantiate(leftBubble, bubblePositions[whereBubble].position, Quaternion.identity);
+                bubble.GetComponent<ThoughtBubble>().SetText(text);
+                bubble.transform.SetParent(bubblePositions[whereBubble]);
+                bubble.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+                generatedBubbles.Add(bubble);
+            } else {
+                GameObject bubble = (GameObject) Instantiate(rightBubble, bubblePositions[whereBubble].position, Quaternion.identity);
+                bubble.GetComponent<ThoughtBubble>().SetText(text);
+                bubble.transform.SetParent(bubblePositions[whereBubble]);
+                bubble.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+                generatedBubbles.Add(bubble);
+            }
         }
         // error
     }
 
     public void RemoveAllBubbles(){
         foreach(GameObject go in generatedBubbles){
-            //Destory(go);
+            Destroy(go);
+        }
+        for(int x = 0; x < bubbleTakenPositions.Length; x++){
+            bubbleTakenPositions[x] = false;
         }
     }
 
-    void Update() {
+    #endregion
+
+    void Update() { // usually note safe to do
 
         // turn on and off speech mode
         if(Input.GetKeyDown(KeyCode.Tab)){
+            if(startedRecording){ // turn off recording
+                startedRecording = false;
+                EndRecording();
+            }
             speechMode = !speechMode;
             if(speechMode){
                 cameraModeObject.SetActive(!speechMode);
                 speechModeObject.SetActive(speechMode);
                 if(inventoryOn){ // get out of inventory
                     playerMove.StartMovement();
-                    playerAim.on = true;
+                    playerAim.on = false;
                     Cursor.visible = false; 
                     Cursor.lockState = CursorLockMode.Locked;
                 }
@@ -162,53 +324,45 @@ public class MainSystem : MonoBehaviour
             }
         }
 
-        // recording 
-        if(speechMode && Input.GetKeyDown(KeyCode.E)){
-            if(!startedRecording){ // Begin recording
-                startedRecording = true;
+        if(speechMode){
 
-                // Begin recording process
-                DictationEngine.Instance.StartDictation();
-                audioImage.SetActive(true);
-                audioSource.Stop();
-                word_text.text = "";
-                emotion_text.text = "";
-                audioSource.clip = DictationEngine.Instance.StartRecording();
-            } else { // End recording
-                startedRecording = false;
-
-                // End recording process
-                DictationEngine.Instance.EndDictation();
-                audioImage.SetActive(false);
-
-                AudioClip clip = DictationEngine.Instance.StopRecording(audioSource, null);
-                byte[] bytes = SavWav.GetByteFromClip(clip);
-
-                // Perform prediction
-                PredictionClient.Instance.Predict(bytes);
-
-                // Resulting word
-                playerWord = DictationEngine.Instance.GetSentence();
+            if(Input.GetKeyDown(KeyCode.R)){
+                if(!startedRecording){
+                    startedRecording = true;
+                    BeginRecordingVoice();
+                } else if(timePassed >= timeToStopRecording){
+                    startedRecording = false;
+                    EndRecording();
+                }
             }
-        }
 
-        // inventory
-        if(!speechMode && Input.GetKeyDown(KeyCode.Q)){
-            inventoryOn = !inventoryOn;
-            if(inventoryOn){ // turn on inventory
-                playerMove.StopMovement();
-                playerAim.on = false;
-                InventoryCanvas.SetActive(true);
-                CameraCanvas.SetActive(false);
-                Cursor.lockState = CursorLockMode.None;
-                Cursor.visible = true; 
-            } else { // turn off inventory
-                playerMove.StartMovement();
-                playerAim.on = true;
-                InventoryCanvas.SetActive(false);
-                CameraCanvas.SetActive(true);
-                Cursor.visible = false; 
-                Cursor.lockState = CursorLockMode.Locked;
+            // Recording audio
+            if(startedRecording){
+                timePassed += Time.deltaTime;
+                UpdateRecording();
+            }
+
+            if(timePassed >= timeToEndRecording){ // End recording
+                EndRecording();
+            }
+        } else {
+            if(Input.GetKeyDown(KeyCode.Q)){
+                inventoryOn = !inventoryOn;
+                if(inventoryOn){ // turn on inventory
+                    playerMove.StopMovement();
+                    playerAim.on = false;
+                    InventoryCanvas.SetActive(true);
+                    CameraCanvas.SetActive(false);
+                    Cursor.lockState = CursorLockMode.None;
+                    Cursor.visible = true; 
+                } else { // turn off inventory
+                    playerMove.StartMovement();
+                    playerAim.on = true;
+                    InventoryCanvas.SetActive(false);
+                    CameraCanvas.SetActive(true);
+                    Cursor.visible = false; 
+                    Cursor.lockState = CursorLockMode.Locked;
+                }
             }
         }
     }

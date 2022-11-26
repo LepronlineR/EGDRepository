@@ -12,6 +12,10 @@ public class DialogueController : DialogueGetData {
     [SerializeField] private TMP_Text textBox;
     [SerializeField] [Range(0.0f, 1.0f)] float interval;
 
+
+    [SerializeField] private GameObject textBoxGO;
+    [SerializeField] private GameObject speechBubbleGO;
+
     [Header("Image")]
     [SerializeField] private Image image;
     [SerializeField] private GameObject imageGO;
@@ -32,16 +36,17 @@ public class DialogueController : DialogueGetData {
     private bool skip = true; 
 
     void Start() {
-        
+        HideDialogueText();
     }
 
     void Update() {
         if(interactable && Input.GetMouseButtonDown(0)){ // process data
             if(!speaking){
+                Debug.Log(currentIndex);
                 // process current node
                 if(!response.Equals(string.Empty)){
                     ProcessResponse();
-                } else if(currentIndex > 0) {
+                } else if(currentIndex > 0){
                     ParseDialogue();
                 } else {
                     ProcessCurrentNode(currentData);
@@ -57,7 +62,10 @@ public class DialogueController : DialogueGetData {
     private void ProcessCurrentNode(BaseData baseNodeData){
         switch (baseNodeData){
             case null: // havent chosen a node yet (Run as StartData)
-                DetermineDialogueContainer();
+                if(DetermineDialogueContainer()){
+                    ShowDialogueText();
+                    ProcessCurrentNode(currentData);
+                }
                 break;
             case DialogueData nodeData:
                 RunNode(nodeData);
@@ -103,9 +111,18 @@ public class DialogueController : DialogueGetData {
             default:
                 break;
         }
+        // hide dialogue box
+        HideDialogueText();
         // reset
         currentData = null;
         textBox.text = "";
+
+        MainSystem.Instance.RemoveAllBubbles();
+        // put back new thought bubbles
+        List<string> allTexts = GetAllStartNodeTexts();
+        foreach(string texts in allTexts){
+            MainSystem.Instance.GenerateBubbleText(texts);
+        }
     }
 
     private void RunNode(DialogueData nodeData){
@@ -144,16 +161,20 @@ public class DialogueController : DialogueGetData {
                 DialogueDataText tmp = baseContainers[x] as DialogueDataText;
                 SetText(tmp.texts.Find(t => t.languageType == LanguageController.Instance.Language).languageGenericType);
                 PlayAudio(tmp.audioClips.Find(ac => ac.languageType == LanguageController.Instance.Language).languageGenericType);
-                break;
+                return;
             }
 
             if(baseContainers[x] is DialogueDataResponseText){
                 DialogueDataResponseText tmp = baseContainers[x] as DialogueDataResponseText;
                 response = tmp.responseText.value;
                 SetResponse(tmp.responseText.value);
-                break;
+                return;
             }
         }
+
+        currentIndex = 0;
+        currentData = GetNextNode(currentData);
+        ProcessCurrentNode(currentData);
     }
 
     private void ProcessResponse(){
@@ -234,7 +255,8 @@ public class DialogueController : DialogueGetData {
     public void SetResponse(string text){
         audioSource.Stop();
         // TODO: make this appear as UI elements in front of the player
-        Debug.Log(text);
+
+        MainSystem.Instance.GenerateBubbleText(text);
     }
 
     public IEnumerator Type(string word){
@@ -268,15 +290,19 @@ public class DialogueController : DialogueGetData {
         }
     }
     
-    public void SetActions(List<string> texts, List<UnityAction> actions){
+    #endregion
 
+    #region Show/Hide dialogue texts
+    public void ShowDialogueText(){
+        // temp show
+        textBoxGO.SetActive(true);
+        speechBubbleGO.SetActive(true);
     }
 
-    public void SetContinue(UnityAction unityAction){
-        // buttonContinue.onClick = new Button.ButtonClickedEvent();
-        // buttonContinue.onClick.AddListener(unityAction);
-        // buttonContinue.gameObject.SetActive(true);
+    public void HideDialogueText(){
+        // temp hide
+        textBoxGO.SetActive(false);
+        speechBubbleGO.SetActive(false);
     }
-    
     #endregion
 }

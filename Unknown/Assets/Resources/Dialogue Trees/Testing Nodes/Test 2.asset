@@ -30,7 +30,7 @@ MonoBehaviour:
     position: {x: 124, y: 191}
     text:
     - languageType: 0
-      languageGenericType: two
+      languageGenericType: Take me home
   eventDatas: []
   branchDatas: []
   choiceDatas: []

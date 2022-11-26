@@ -7,8 +7,6 @@ public class PredictionClient : MonoBehaviour
 
     private PredictionRequester predictionRequester;
     public static PredictionClient Instance { get; private set; }
-
-    [SerializeField] TMP_Text emotion_text;
     
     private void Awake() { 
         if (Instance != null && Instance != this) { 
@@ -37,9 +35,9 @@ public class PredictionClient : MonoBehaviour
 
     private void HandleMessage(string message){
         setMessage = message;
-        emotion_text.text = message;
         // set this in the main system
         MainSystem.Instance.SetPlayerEmotion(message);
+        MainSystem.Instance.ChangeEmotion();
     }
 
     public string GetEmotion(){

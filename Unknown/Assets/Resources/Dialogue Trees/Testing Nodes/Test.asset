@@ -17,14 +17,6 @@ MonoBehaviour:
     basePortName: Output
     targetNodeGuid: 1960cc7f-14fd-4d14-bd99-7de2409ce314
     targetPortName: Input
-  - baseNodeGuid: 1960cc7f-14fd-4d14-bd99-7de2409ce314
-    basePortName: 3f325396-f07e-4f63-8681-5abb91a2da29
-    targetNodeGuid: ce171897-028a-4d72-884b-1734bf5ae37e
-    targetPortName: Input
-  - baseNodeGuid: 1960cc7f-14fd-4d14-bd99-7de2409ce314
-    basePortName: 5391871c-eb18-44ea-9edb-0b96e9b31cd5
-    targetNodeGuid: f6cac2f7-454c-4f94-87b6-ef977ee9fcf0
-    targetPortName: Input
   - baseNodeGuid: 3d34fefc-577a-4c8a-87b7-4c0751af2db3
     basePortName: cfa3973f-ea83-456d-84bb-796fe6f5f6ae
     targetNodeGuid: c8eff5b5-3af6-40f9-9644-d24460aae469
@@ -36,6 +28,14 @@ MonoBehaviour:
   - baseNodeGuid: e4c60dfe-9d42-4427-bcba-77e88f23c1ba
     basePortName: Continue
     targetNodeGuid: d361565f-1c5b-4ec7-b2af-23dbf1088012
+    targetPortName: Input
+  - baseNodeGuid: 1960cc7f-14fd-4d14-bd99-7de2409ce314
+    basePortName: 3f325396-f07e-4f63-8681-5abb91a2da29
+    targetNodeGuid: ce171897-028a-4d72-884b-1734bf5ae37e
+    targetPortName: Input
+  - baseNodeGuid: 1960cc7f-14fd-4d14-bd99-7de2409ce314
+    basePortName: 5391871c-eb18-44ea-9edb-0b96e9b31cd5
+    targetNodeGuid: f6cac2f7-454c-4f94-87b6-ef977ee9fcf0
     targetPortName: Input
   - baseNodeGuid: ce171897-028a-4d72-884b-1734bf5ae37e
     basePortName: Output
@@ -88,32 +88,7 @@ MonoBehaviour:
     - ID:
         value: 3
       responseText:
-        value: What do you want me to look at?
-  - nodeGuid: e4c60dfe-9d42-4427-bcba-77e88f23c1ba
-    position: {x: 478, y: 791}
-    dialogueDataNames:
-    - ID:
-        value: 0
-      characterName:
-        value: 
-    dialogueDataTexts:
-    - ID:
-        value: 2
-      GuidID:
-        value: 5e51745d-506a-46a9-88f9-bcaa2c6f3a0a
-      texts:
-      - languageType: 0
-        languageGenericType: 
-      audioClips:
-      - languageType: 0
-        languageGenericType: {fileID: 0}
-    dialogueDataImagess:
-    - ID:
-        value: 1
-      sprite:
-        value: {fileID: 21300000, guid: f8506563bf3827446a0484275ce289ce, type: 3}
-    dialogueDataPorts: []
-    dialogueResponseTexts: []
+        value: What do you want me to look at
   - nodeGuid: 1960cc7f-14fd-4d14-bd99-7de2409ce314
     position: {x: -96, y: 328}
     dialogueDataNames:
@@ -128,10 +103,7 @@ MonoBehaviour:
         value: 4aae545f-b744-4023-896b-1ed113040c87
       texts:
       - languageType: 0
-        languageGenericType: 'I am going to write a really long text sentence to
-          see how long
-
-          this text box can hold my texts'
+        languageGenericType: Who do you think I am?
       audioClips:
       - languageType: 0
         languageGenericType: {fileID: 0}
@@ -141,10 +113,10 @@ MonoBehaviour:
         value: 958930cb-1054-47eb-8af1-953df63421ee
       texts:
       - languageType: 0
-        languageGenericType: 'What is going on, since this is the tutorial, it is
-          good to find out
+        languageGenericType: 'Oh yeah, you''re new right? Sorry about that,
 
-          what kind of this we can work on'
+          I
+          don''t like to take it personal with newer people.'
       audioClips:
       - languageType: 0
         languageGenericType: {fileID: 0}
@@ -164,7 +136,32 @@ MonoBehaviour:
     - ID:
         value: 4
       responseText:
-        value: What is going on?
+        value: What is going on
+  - nodeGuid: e4c60dfe-9d42-4427-bcba-77e88f23c1ba
+    position: {x: 478, y: 791}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Tutorial Guy
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 5e51745d-506a-46a9-88f9-bcaa2c6f3a0a
+      texts:
+      - languageType: 0
+        languageGenericType: Nothing much.
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: f8506563bf3827446a0484275ce289ce, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
   endDatas:
   - nodeGuid: f8ba0de0-b30b-4d7f-88ae-02a75de61542
     position: {x: 1038, y: 90}
@@ -184,10 +181,10 @@ MonoBehaviour:
       value: 1
   startDatas:
   - nodeGuid: ebc01e45-712e-4bc8-983a-5c844a593a9e
-    position: {x: -226, y: 336}
+    position: {x: -264, y: 333}
     text:
     - languageType: 0
-      languageGenericType: one
+      languageGenericType: Who are you
   eventDatas: []
   branchDatas: []
   choiceDatas: []
