@@ -42,7 +42,6 @@ public class DialogueController : DialogueGetData {
     void Update() {
         if(interactable && Input.GetMouseButtonDown(0)){ // process data
             if(!speaking){
-                Debug.Log(currentIndex);
                 // process current node
                 if(!response.Equals(string.Empty)){
                     ProcessResponse();
