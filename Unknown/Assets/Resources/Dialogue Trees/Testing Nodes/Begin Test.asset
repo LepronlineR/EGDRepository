@@ -1,0 +1,258 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aac82a7c0dc8dd4e8e46749de3dddb3, type: 3}
+  m_Name: Begin Test
+  m_EditorClassIdentifier: 
+  nodeLinkDatas:
+  - baseNodeGuid: 96829a49-c475-49cc-850e-5bdc764a1057
+    basePortName: Output
+    targetNodeGuid: 9a2277af-6430-492b-9adc-dac14b15060b
+    targetPortName: Input
+  - baseNodeGuid: 9a2277af-6430-492b-9adc-dac14b15060b
+    basePortName: d13d8dd5-7fd1-4705-95fa-ad6be5c60be2
+    targetNodeGuid: 555d205f-43a5-484b-af15-ec5c485bc542
+    targetPortName: Input
+  - baseNodeGuid: 9a2277af-6430-492b-9adc-dac14b15060b
+    basePortName: ae8c1862-fba0-40f0-a056-e721165931d2
+    targetNodeGuid: 52f208ba-8923-4048-959a-0e38ab7332cd
+    targetPortName: Input
+  - baseNodeGuid: 9a2277af-6430-492b-9adc-dac14b15060b
+    basePortName: 14311692-3f2f-4bf9-a0af-0653a89a91a8
+    targetNodeGuid: 99879b1a-e57f-46d3-99f8-38d134f4286c
+    targetPortName: Input
+  - baseNodeGuid: 555d205f-43a5-484b-af15-ec5c485bc542
+    basePortName: Output
+    targetNodeGuid: d5014619-bd42-4aef-94ff-701864d05721
+    targetPortName: Input
+  - baseNodeGuid: d5014619-bd42-4aef-94ff-701864d05721
+    basePortName: Continue
+    targetNodeGuid: 6333ec9c-d75d-4f01-a27b-6947c8425f9f
+    targetPortName: Input
+  - baseNodeGuid: 52f208ba-8923-4048-959a-0e38ab7332cd
+    basePortName: Output
+    targetNodeGuid: cde189de-3e9f-403e-96d2-312df0073682
+    targetPortName: Input
+  - baseNodeGuid: cde189de-3e9f-403e-96d2-312df0073682
+    basePortName: Continue
+    targetNodeGuid: 9b23209a-2311-4550-921b-c2013bca0ef6
+    targetPortName: Input
+  - baseNodeGuid: 99879b1a-e57f-46d3-99f8-38d134f4286c
+    basePortName: Output
+    targetNodeGuid: 35182278-0add-4a36-be4d-d3f76420e928
+    targetPortName: Input
+  - baseNodeGuid: 35182278-0add-4a36-be4d-d3f76420e928
+    basePortName: 5c64cdd5-b09e-406f-8e5d-2f6170cd1225
+    targetNodeGuid: 07b5e421-6217-4a91-a38c-49b8be034629
+    targetPortName: Input
+  - baseNodeGuid: 35182278-0add-4a36-be4d-d3f76420e928
+    basePortName: 792d049b-537b-47a0-a441-feedc2679ed9
+    targetNodeGuid: 82b2b28b-7d1d-44a7-8889-fac69d6001da
+    targetPortName: Input
+  - baseNodeGuid: 07b5e421-6217-4a91-a38c-49b8be034629
+    basePortName: Output
+    targetNodeGuid: 73c527ad-c192-43c2-93dc-340162a47fdc
+    targetPortName: Input
+  - baseNodeGuid: 73c527ad-c192-43c2-93dc-340162a47fdc
+    basePortName: Output
+    targetNodeGuid: 83a86071-77d5-4d21-9937-9ee5b84dcd9c
+    targetPortName: Input
+  - baseNodeGuid: 82b2b28b-7d1d-44a7-8889-fac69d6001da
+    basePortName: Output
+    targetNodeGuid: 35182278-0add-4a36-be4d-d3f76420e928
+    targetPortName: Input
+  dialogueDatas:
+  - nodeGuid: 9a2277af-6430-492b-9adc-dac14b15060b
+    position: {x: 310, y: 279}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Bob
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 65bf5f48-780a-4093-8af4-83031211c6a0
+      texts:
+      - languageType: 0
+        languageGenericType: hi
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: 5f3214e5-90bd-49f8-af7a-12515770a8c8
+      texts:
+      - languageType: 0
+        languageGenericType: how are you?
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: bc25b627b552c9643aa91e87ec1af0b1, type: 3}
+    dialogueDataPorts:
+    - portGuid: d13d8dd5-7fd1-4705-95fa-ad6be5c60be2
+      inputGuid: 555d205f-43a5-484b-af15-ec5c485bc542
+      outputGuid: 9a2277af-6430-492b-9adc-dac14b15060b
+    - portGuid: ae8c1862-fba0-40f0-a056-e721165931d2
+      inputGuid: 52f208ba-8923-4048-959a-0e38ab7332cd
+      outputGuid: 9a2277af-6430-492b-9adc-dac14b15060b
+    - portGuid: 14311692-3f2f-4bf9-a0af-0653a89a91a8
+      inputGuid: 99879b1a-e57f-46d3-99f8-38d134f4286c
+      outputGuid: 9a2277af-6430-492b-9adc-dac14b15060b
+    dialogueResponseTexts:
+    - ID:
+        value: 4
+      responseText:
+        value: Good how about you
+  - nodeGuid: d5014619-bd42-4aef-94ff-701864d05721
+    position: {x: 925, y: 380}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Bob
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 60d7229b-ffd0-4ea0-99fa-ead374abfc7e
+      texts:
+      - languageType: 0
+        languageGenericType: Nice day today
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: bc25b627b552c9643aa91e87ec1af0b1, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+  - nodeGuid: cde189de-3e9f-403e-96d2-312df0073682
+    position: {x: 982, y: 928}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Bob
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: b6478f0f-0e00-4937-acb3-97aa9fe5bf98
+      texts:
+      - languageType: 0
+        languageGenericType: That's good to hear
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: bc25b627b552c9643aa91e87ec1af0b1, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+  - nodeGuid: 35182278-0add-4a36-be4d-d3f76420e928
+    position: {x: 1050, y: 1533}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Bob
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: c1ae8be5-0657-4b3a-aea3-5170239d1b66
+      texts:
+      - languageType: 0
+        languageGenericType: Nice meeting you
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: bc25b627b552c9643aa91e87ec1af0b1, type: 3}
+    dialogueDataPorts:
+    - portGuid: 5c64cdd5-b09e-406f-8e5d-2f6170cd1225
+      inputGuid: 07b5e421-6217-4a91-a38c-49b8be034629
+      outputGuid: 35182278-0add-4a36-be4d-d3f76420e928
+    - portGuid: 792d049b-537b-47a0-a441-feedc2679ed9
+      inputGuid: 82b2b28b-7d1d-44a7-8889-fac69d6001da
+      outputGuid: 35182278-0add-4a36-be4d-d3f76420e928
+    dialogueResponseTexts:
+    - ID:
+        value: 3
+      responseText:
+        value: Same here
+  endDatas:
+  - nodeGuid: 6333ec9c-d75d-4f01-a27b-6947c8425f9f
+    position: {x: 1242, y: 620}
+    endDialogueContainers: []
+    endNodeType:
+      value: 1
+  - nodeGuid: 9b23209a-2311-4550-921b-c2013bca0ef6
+    position: {x: 1301, y: 1083}
+    endDialogueContainers: []
+    endNodeType:
+      value: 1
+  - nodeGuid: 83a86071-77d5-4d21-9937-9ee5b84dcd9c
+    position: {x: 1927, y: 1904}
+    endDialogueContainers:
+    - dialogueContainerSO: {fileID: 11400000, guid: 1dae296b3b6206249b5bf6d1f2a61087, type: 2}
+    endNodeType:
+      value: 1
+  startDatas:
+  - nodeGuid: 96829a49-c475-49cc-850e-5bdc764a1057
+    position: {x: 186, y: 223}
+    text:
+    - languageType: 0
+      languageGenericType: hello
+  eventDatas:
+  - nodeGuid: 73c527ad-c192-43c2-93dc-340162a47fdc
+    position: {x: 1646, y: 1791}
+    eventDataStringModifiers: []
+    containerDialogueEventSOs:
+    - dialogueEventSO: {fileID: 0}
+  branchDatas: []
+  choiceDatas: []
+  emotionChoiceDatas:
+  - nodeGuid: 52f208ba-8923-4048-959a-0e38ab7332cd
+    position: {x: 690, y: 491}
+    choiceStateType:
+      value: 5
+  - nodeGuid: 555d205f-43a5-484b-af15-ec5c485bc542
+    position: {x: 718, y: 378}
+    choiceStateType:
+      value: 4
+  - nodeGuid: 99879b1a-e57f-46d3-99f8-38d134f4286c
+    position: {x: 721, y: 663}
+    choiceStateType:
+      value: 6
+  objectChoiceDatas:
+  - nodeGuid: 07b5e421-6217-4a91-a38c-49b8be034629
+    position: {x: 1386, y: 1761}
+    choiceObject:
+      value: {fileID: 4287515190996705344, guid: 52581bfe64515444ba74988e90f594ab, type: 3}
+  - nodeGuid: 82b2b28b-7d1d-44a7-8889-fac69d6001da
+    position: {x: 1406, y: 1916}
+    choiceObject:
+      value: {fileID: 0}
