@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Hierarchy
   m_RootView: {fileID: 7}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 129
+  controlID: 130
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -94,8 +94,8 @@ MonoBehaviour:
     y: 0
     width: 372
     height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -583,22 +583,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Art Assets/Emojis
+    - Assets/Resources/Dialogue Trees/Testing Nodes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Art Assets/Emojis
+  - Assets/Resources/Dialogue Trees/Testing Nodes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\getog\Desktop\EGD\EGDRepository\Unknown
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 12e30000
-    m_LastClickedID: 58130
-    m_ExpandedIDs: 000000003e6e0000406e0000426e0000446e0000466e0000486e00004a6e00004c6e00004e6e0000506e0000526e0000546e0000566e0000766e00007a6e000000ca9a3b
+    m_SelectedIDs: 9e6e0000
+    m_LastClickedID: 28318
+    m_ExpandedIDs: 000000003e6e0000406e0000426e0000446e0000466e0000486e00004a6e00004c6e00004e6e0000506e0000526e0000546e0000566e0000686e00006c6e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -756,18 +756,18 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 2efbffff5a69000094690000a2690000e4690000066a0000266a00006a6a00008e6a0000e66a0000
+      m_ExpandedIDs: 0aeeffff2efbffff5a690000e66a0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Recording
-        m_OriginalName: Recording
+        m_Name: Tutorial Person
+        m_OriginalName: Tutorial Person
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 27154
+        m_UserData: 27366
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
         m_OriginalEventType: 0
@@ -1060,9 +1060,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 614.53125, y: 21.5, z: 0}
+    m_Target: {x: -6.5980015, y: 2.31, z: 15.860001}
     speed: 2
-    m_Value: {x: 614.5312, y: 21.50001, z: 0}
+    m_Value: {x: -6.5980015, y: 2.31, z: 15.860001}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1110,11 +1110,11 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.061243657, y: -0.9387911, z: 0.24351841, w: -0.23597145}
     speed: 2
-    m_Value: {x: -0.061241724, y: -0.9387614, z: 0.24351072, w: -0.235964}
+    m_Value: {x: 0.061243657, y: 0.9387911, z: -0.24351843, w: 0.23597145}
   m_Size:
-    m_Target: 25.41165
+    m_Target: 5.6174507
     speed: 2
-    m_Value: 25.41167
+    m_Value: 5.6174507
   m_Ortho:
     m_Target: 0
     speed: 2

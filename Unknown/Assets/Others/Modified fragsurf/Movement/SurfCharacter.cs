@@ -168,6 +168,7 @@ namespace Fragsurf.Movement {
                 case ColliderType.Box:
 
                 _collider = _colliderObject.AddComponent<BoxCollider> ();
+                _collider.gameObject.tag = "Player";
 
                 var boxc = (BoxCollider)_collider;
                 boxc.size = colliderSize;
