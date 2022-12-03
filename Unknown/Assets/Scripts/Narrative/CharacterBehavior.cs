@@ -8,8 +8,11 @@ using UnityEngine.EventSystems;
 public class CharacterBehavior : MonoBehaviour {
 
     [SerializeField] Transform player;
+    [SerializeField] float close = 5.0f;
 
     DialogueController parser;
+
+    bool interactable = false;
 
     void Start(){
         parser = GetComponent<DialogueController>();
@@ -23,10 +26,9 @@ public class CharacterBehavior : MonoBehaviour {
         }
     }
 
-    
-    private void OnMouseEnter() {
-        // Debug.Log("The cursor entered Mouse.");
-        parser.MakeInteractable(true);
+    void BeginInteraction() {
+        interactable = true;
+        parser.MakeInteractable(interactable);
         if(parser.HasNotBegan()){
             List<string> allTexts = parser.GetAllStartNodeTexts();
             // TODO: make this appear as UI elements in front of the player
@@ -36,12 +38,29 @@ public class CharacterBehavior : MonoBehaviour {
         }
     }
 
-    private void OnMouseExit() {
-        // Debug.Log("The cursor exited Mouse.");
-        parser.MakeInteractable(false);
+    void EndInteraction() {
+        interactable = false;
+        parser.MakeInteractable(interactable);
         if(parser.HasNotBegan()){
             // TODO: fade this away and delete
             MainSystem.Instance.RemoveAllBubbles();
         }
+    }
+
+    
+    private void OnMouseEnter() {
+        
+    }
+
+    private void OnMouseOver(){
+        if(Vector3.Distance(this.transform.position, player.transform.position) >= close)
+            return;
+        if(!interactable){
+            BeginInteraction();
+        }
+    }
+
+    private void OnMouseExit() {
+        EndInteraction();
     }
 }

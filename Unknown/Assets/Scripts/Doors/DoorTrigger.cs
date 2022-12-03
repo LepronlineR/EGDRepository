@@ -5,6 +5,7 @@ using UnityEngine;
 public class DoorTrigger : MonoBehaviour
 {
     [SerializeField] List<Door> doors;
+    [SerializeField] GameObject player;
 
     public bool lockState = false;
 
@@ -31,7 +32,7 @@ public class DoorTrigger : MonoBehaviour
     public void ForceOpen() {
         foreach(Door door in doors){
             if(!door.isOpen && !lockState){
-                door.Open(other.transform.position);
+                door.Open(player.transform.position);
             }
         }
     }
