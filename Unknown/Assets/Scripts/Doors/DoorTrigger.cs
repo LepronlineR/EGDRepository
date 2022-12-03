@@ -4,20 +4,24 @@ using UnityEngine;
 
 public class DoorTrigger : MonoBehaviour
 {
-    [SerializeField] Door door;
+    [SerializeField] List<Door> doors;
 
     private void OnTriggerEnter(Collider other) {
         if(other.gameObject.tag == "Player"){
-            if(!door.isOpen){
-                door.Open(other.transform.position);
+            foreach(Door door in doors){
+                if(!door.isOpen){
+                    door.Open(other.transform.position);
+                }
             }
         }
     }
 
     private void OnTriggerExit(Collider other) {
         if(other.gameObject.tag == "Player"){
-            if(door.isOpen){
-                door.Close();
+            foreach(Door door in doors){
+                if(door.isOpen){
+                    door.Close();
+                }
             }
         }
     }
