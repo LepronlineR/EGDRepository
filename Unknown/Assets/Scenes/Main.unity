@@ -15262,7 +15262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueContainers:
-  - {fileID: 11400000, guid: 138bc84921d667745a0385fbba6cb096, type: 2}
+  - {fileID: 11400000, guid: 863faaaa636671d419db1b49a200b40b, type: 2}
   textName: {fileID: 1049472881}
   textBox: {fileID: 1060375281}
   interval: 0.1

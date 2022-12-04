@@ -17,6 +17,10 @@ MonoBehaviour:
     basePortName: Output
     targetNodeGuid: ba56732a-8d94-45ee-a0ab-ad0ef0c3295f
     targetPortName: Input
+  - baseNodeGuid: 39d2d319-2e03-443d-a2e2-00715deedd7c
+    basePortName: Continue
+    targetNodeGuid: 2a23cf3d-0c66-4204-8680-c95ba25c65d7
+    targetPortName: Input
   - baseNodeGuid: ba56732a-8d94-45ee-a0ab-ad0ef0c3295f
     basePortName: Continue
     targetNodeGuid: 37baa7c2-90a8-4399-8f97-c2fa3a0aca57
@@ -41,10 +45,6 @@ MonoBehaviour:
     basePortName: Continue
     targetNodeGuid: db26f16c-b0d6-4200-884f-a39e96fb4809
     targetPortName: Input
-  - baseNodeGuid: 39d2d319-2e03-443d-a2e2-00715deedd7c
-    basePortName: Continue
-    targetNodeGuid: 2a23cf3d-0c66-4204-8680-c95ba25c65d7
-    targetPortName: Input
   - baseNodeGuid: ee647a88-fda0-475f-b2cc-095fb2596287
     basePortName: Output
     targetNodeGuid: 5fb28ac0-2e1f-4ebc-b359-e6f959b8f44b
@@ -54,8 +54,44 @@ MonoBehaviour:
     targetNodeGuid: 39d2d319-2e03-443d-a2e2-00715deedd7c
     targetPortName: Input
   dialogueDatas:
+  - nodeGuid: 39d2d319-2e03-443d-a2e2-00715deedd7c
+    position: {x: 1830, y: 159}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Chihiro
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: f11ea5ac-5931-4409-9553-bb43285adc87
+      texts:
+      - languageType: 0
+        languageGenericType: Great job
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: 6d003ad4-041f-4f6c-8abe-8529cb32fcee
+      texts:
+      - languageType: 0
+        languageGenericType: What would you like to know next?
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 38f36402ff2dfc54b8aed41f2af26f67, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
   - nodeGuid: ba56732a-8d94-45ee-a0ab-ad0ef0c3295f
-    position: {x: 1360, y: 141}
+    position: {x: 30, y: 195}
     dialogueDataNames:
     - ID:
         value: 0
@@ -103,7 +139,7 @@ MonoBehaviour:
     dialogueResponseTexts: []
     dialogueResponseEvidences: []
   - nodeGuid: 37baa7c2-90a8-4399-8f97-c2fa3a0aca57
-    position: {x: 1816, y: 141}
+    position: {x: 486, y: 195}
     dialogueDataNames:
     - ID:
         value: 0
@@ -129,7 +165,7 @@ MonoBehaviour:
     dialogueResponseTexts: []
     dialogueResponseEvidences: []
   - nodeGuid: 5bc9aa66-b38c-4663-95c4-610a6c1b66cd
-    position: {x: 2104, y: 141}
+    position: {x: 774, y: 195}
     dialogueDataNames:
     - ID:
         value: 0
@@ -166,7 +202,7 @@ MonoBehaviour:
     dialogueResponseTexts: []
     dialogueResponseEvidences: []
   - nodeGuid: db26f16c-b0d6-4200-884f-a39e96fb4809
-    position: {x: 2455, y: 141}
+    position: {x: 1125, y: 195}
     dialogueDataNames:
     - ID:
         value: 0
@@ -200,7 +236,7 @@ MonoBehaviour:
     - ID:
         value: 3
   - nodeGuid: 5fb28ac0-2e1f-4ebc-b359-e6f959b8f44b
-    position: {x: 2770, y: 415}
+    position: {x: 1440, y: 469}
     dialogueDataNames:
     - ID:
         value: 0
@@ -236,45 +272,9 @@ MonoBehaviour:
     dialogueDataPorts: []
     dialogueResponseTexts: []
     dialogueResponseEvidences: []
-  - nodeGuid: 39d2d319-2e03-443d-a2e2-00715deedd7c
-    position: {x: 3160, y: 105}
-    dialogueDataNames:
-    - ID:
-        value: 0
-      characterName:
-        value: Chihiro
-    dialogueDataTexts:
-    - ID:
-        value: 2
-      GuidID:
-        value: f11ea5ac-5931-4409-9553-bb43285adc87
-      texts:
-      - languageType: 0
-        languageGenericType: Great job
-      audioClips:
-      - languageType: 0
-        languageGenericType: {fileID: 0}
-    - ID:
-        value: 3
-      GuidID:
-        value: 6d003ad4-041f-4f6c-8abe-8529cb32fcee
-      texts:
-      - languageType: 0
-        languageGenericType: What would you like to know next?
-      audioClips:
-      - languageType: 0
-        languageGenericType: {fileID: 0}
-    dialogueDataImagess:
-    - ID:
-        value: 1
-      sprite:
-        value: {fileID: 21300000, guid: 38f36402ff2dfc54b8aed41f2af26f67, type: 3}
-    dialogueDataPorts: []
-    dialogueResponseTexts: []
-    dialogueResponseEvidences: []
   endDatas:
   - nodeGuid: 2a23cf3d-0c66-4204-8680-c95ba25c65d7
-    position: {x: 3487, y: 105}
+    position: {x: 2157, y: 159}
     endDialogueContainers:
     - dialogueContainerSO: {fileID: 11400000, guid: f317115b4b56ecf4185ac32797962e19, type: 2}
     - dialogueContainerSO: {fileID: 11400000}
@@ -282,20 +282,20 @@ MonoBehaviour:
       value: 1
   startDatas:
   - nodeGuid: 160c57c9-e4fc-42f3-bd96-8ded826854c4
-    position: {x: 1194, y: 141}
+    position: {x: -136, y: 195}
     text:
     - languageType: 0
-      languageGenericType: 
+      languageGenericType: What is an evidence
   eventDatas: []
   branchDatas: []
   choiceDatas: []
   emotionChoiceDatas: []
   objectChoiceDatas:
   - nodeGuid: ee647a88-fda0-475f-b2cc-095fb2596287
-    position: {x: 2770, y: 216}
+    position: {x: 1440, y: 270}
     choiceObject:
       value: {fileID: 0}
   - nodeGuid: 0f8da2c0-e13b-46bd-b4af-7af166da90fd
-    position: {x: 2782, y: 105}
+    position: {x: 1452, y: 159}
     choiceObject:
       value: {fileID: 6290978325195283786, guid: 8d74d9a99702c4747868c2d49684e576, type: 3}
