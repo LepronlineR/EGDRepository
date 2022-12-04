@@ -1,0 +1,187 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aac82a7c0dc8dd4e8e46749de3dddb3, type: 3}
+  m_Name: Picasso Prelude
+  m_EditorClassIdentifier: 
+  nodeLinkDatas:
+  - baseNodeGuid: 5901d39d-4f6c-4846-a5ef-71a4473d35a8
+    basePortName: Output
+    targetNodeGuid: 2e9a38bb-c912-4a60-a808-f22d729be6e2
+    targetPortName: Input
+  - baseNodeGuid: 2e9a38bb-c912-4a60-a808-f22d729be6e2
+    basePortName: Continue
+    targetNodeGuid: acb81a14-7a61-45f2-8b13-559259ab80a5
+    targetPortName: Input
+  - baseNodeGuid: fdc3ac43-5d2c-401e-9d61-f6403a1999cd
+    basePortName: Output
+    targetNodeGuid: f289bb9d-5dd3-46eb-bdd7-cc6b65eec9e1
+    targetPortName: Input
+  - baseNodeGuid: fdc3ac43-5d2c-401e-9d61-f6403a1999cd
+    basePortName: Output
+    targetNodeGuid: f289bb9d-5dd3-46eb-bdd7-cc6b65eec9e1
+    targetPortName: Input
+  - baseNodeGuid: 07c06bd1-5bfa-40a6-ac9d-d87748b5320e
+    basePortName: Continue
+    targetNodeGuid: 98775ae6-92de-4264-b5c9-2901cb5e976c
+    targetPortName: Input
+  - baseNodeGuid: f289bb9d-5dd3-46eb-bdd7-cc6b65eec9e1
+    basePortName: Continue
+    targetNodeGuid: e30befbf-c84a-4e3e-8f83-0fd2d9f29d6d
+    targetPortName: Input
+  - baseNodeGuid: e30befbf-c84a-4e3e-8f83-0fd2d9f29d6d
+    basePortName: Continue
+    targetNodeGuid: 07c06bd1-5bfa-40a6-ac9d-d87748b5320e
+    targetPortName: Input
+  - baseNodeGuid: 98775ae6-92de-4264-b5c9-2901cb5e976c
+    basePortName: Continue
+    targetNodeGuid: de5739ed-5dd9-41ec-bea6-e95392f8c3e4
+    targetPortName: Input
+  dialogueDatas:
+  - nodeGuid: 07c06bd1-5bfa-40a6-ac9d-d87748b5320e
+    position: {x: 543, y: 233}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Benedict
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: cad30154-e2b2-4d32-a377-d3267062fc3d
+      texts:
+      - languageType: 0
+        languageGenericType: I should paint something to remember this moment
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 8843aee21e2677e47af0d5e938e1c349, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+  - nodeGuid: e30befbf-c84a-4e3e-8f83-0fd2d9f29d6d
+    position: {x: 248, y: 233}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Benedict
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 5ba7537c-7ec2-4375-8c03-c944fae8af1d
+      texts:
+      - languageType: 0
+        languageGenericType: I have to say
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: e1efe018-e6f0-4823-8dfd-6dd8851e77a2
+      texts:
+      - languageType: 0
+        languageGenericType: This school is perfect for my artistic ambitions
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 87a1a56c93e089c429442ca246b2b995, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+  - nodeGuid: f289bb9d-5dd3-46eb-bdd7-cc6b65eec9e1
+    position: {x: -52, y: 233}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: 
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 07d4f349-8a07-4a2a-9cf1-41c2767d1fcf
+      texts:
+      - languageType: 0
+        languageGenericType: Greetings. I am named Benedict
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 87a1a56c93e089c429442ca246b2b995, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+  - nodeGuid: 98775ae6-92de-4264-b5c9-2901cb5e976c
+    position: {x: 855, y: 233}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Benedict
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 675dd12a-dbf2-4b21-a0db-3fb9c344b725
+      texts:
+      - languageType: 0
+        languageGenericType: Perhaps the auditorium will do
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: b6f331a5-3ddf-425d-a075-7ab62962b993
+      texts:
+      - languageType: 0
+        languageGenericType: If you happen to come across a canvas, I would gladly
+          want one
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 87a1a56c93e089c429442ca246b2b995, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+  endDatas:
+  - nodeGuid: de5739ed-5dd9-41ec-bea6-e95392f8c3e4
+    position: {x: 1229, y: 233}
+    endDialogueContainers:
+    - dialogueContainerSO: {fileID: 11400000, guid: 7c47fdb09dd9c7c43a50ab19f35bd0c6, type: 2}
+    endNodeType:
+      value: 1
+  startDatas:
+  - nodeGuid: fdc3ac43-5d2c-401e-9d61-f6403a1999cd
+    position: {x: -159, y: 233}
+    text:
+    - languageType: 0
+      languageGenericType: 
+  eventDatas: []
+  branchDatas: []
+  choiceDatas: []
+  emotionChoiceDatas: []
+  objectChoiceDatas: []

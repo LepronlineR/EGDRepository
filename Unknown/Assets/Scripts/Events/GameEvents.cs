@@ -13,6 +13,16 @@ public class GameEvents : MonoBehaviour
     protected UseStringEventCondition useStringEventCondition = new UseStringEventCondition();
     protected UseStringEventModifier useStringEventModifier = new UseStringEventModifier();
 
+    // EVENTS
+    private event Action<int> teleportAction;
+    public Action<int> TeleportAction { get => teleportAction; set => teleportAction = value; }
+
+    private event Action<int, bool> doorAction;
+    public Action<int, bool> DoorAction { get => doorAction; set => doorAction = value; }
+
+    private event Action<int, bool> doorLockAction;
+    public Action<int, bool> DoorLockAction { get => doorLockAction; set => doorLockAction = value; }
+
     public static GameEvents Instance { get; private set; }
 
     public Action<int> DefaultAction { get => defaultAction; set => defaultAction = value; }
@@ -36,6 +46,18 @@ public class GameEvents : MonoBehaviour
 
     public virtual bool DialogueConditionEvents(string stringEvent, StringEventConditionType stringEventConditionType, float value = 0){
         return false;
+    }
+
+    public void Teleport(int id){
+        teleportAction?.Invoke(id);
+    }
+
+    public void Door(int id, bool open){
+        doorAction?.Invoke(id, open);
+    }
+
+    public void DoorLock(int id, bool lockDoor){
+        doorLockAction?.Invoke(id, lockDoor);
     }
 
 }

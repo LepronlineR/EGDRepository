@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aac82a7c0dc8dd4e8e46749de3dddb3, type: 3}
+  m_Name: Picasso Prelude After
+  m_EditorClassIdentifier: 
+  nodeLinkDatas:
+  - baseNodeGuid: 5901d39d-4f6c-4846-a5ef-71a4473d35a8
+    basePortName: Output
+    targetNodeGuid: 2e9a38bb-c912-4a60-a808-f22d729be6e2
+    targetPortName: Input
+  - baseNodeGuid: 2e9a38bb-c912-4a60-a808-f22d729be6e2
+    basePortName: Continue
+    targetNodeGuid: acb81a14-7a61-45f2-8b13-559259ab80a5
+    targetPortName: Input
+  dialogueDatas:
+  - nodeGuid: 2e9a38bb-c912-4a60-a808-f22d729be6e2
+    position: {x: 440, y: 184}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Benedict
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 9874b635-7ae4-42a2-9303-34d7ef6abc54
+      texts:
+      - languageType: 0
+        languageGenericType: Im off to find a canvas for this moment
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: 16ad75a8-5ce4-4335-acf2-940273a13598
+      texts:
+      - languageType: 0
+        languageGenericType: You should ask the esteemed tour guide
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 4
+      GuidID:
+        value: 4d0604ac-3294-49bd-b19b-8cce637630e2
+      texts:
+      - languageType: 0
+        languageGenericType: Oh, where is he you ask?
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 5
+      GuidID:
+        value: 30815df9-a6e6-4046-b036-4fc2d6dd843c
+      texts:
+      - languageType: 0
+        languageGenericType: Right next to the auditorium door
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 87a1a56c93e089c429442ca246b2b995, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+  endDatas:
+  - nodeGuid: acb81a14-7a61-45f2-8b13-559259ab80a5
+    position: {x: 788, y: 184}
+    endDialogueContainers:
+    - dialogueContainerSO: {fileID: 11400000}
+    endNodeType:
+      value: 1
+  startDatas:
+  - nodeGuid: 5901d39d-4f6c-4846-a5ef-71a4473d35a8
+    position: {x: 319, y: 184}
+    text:
+    - languageType: 0
+      languageGenericType: 
+  eventDatas: []
+  branchDatas: []
+  choiceDatas: []
+  emotionChoiceDatas: []
+  objectChoiceDatas: []

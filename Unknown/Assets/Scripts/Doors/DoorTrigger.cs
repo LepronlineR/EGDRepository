@@ -31,7 +31,7 @@ public class DoorTrigger : MonoBehaviour
 
     public void ForceOpen() {
         foreach(Door door in doors){
-            if(!door.isOpen && !lockState){
+            if(!door.isOpen){
                 door.Open(player.transform.position);
             }
         }
@@ -39,7 +39,7 @@ public class DoorTrigger : MonoBehaviour
 
     public void ForceClose() {
         foreach(Door door in doors){
-            if(door.isOpen && !lockState){
+            if(door.isOpen){
                 door.Close();
             }
         }

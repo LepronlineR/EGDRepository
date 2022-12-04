@@ -35,7 +35,7 @@ public class EventNode : BaseNode
     private void TopButton(){
         ToolbarMenu menu = new ToolbarMenu();
         menu.text = "Add Event";
-        menu.menu.AppendAction("String Event Modifier", new Action<DropdownMenuAction>(x => AddStringEvent()));
+        // menu.menu.AppendAction("String Event Modifier", new Action<DropdownMenuAction>(x => AddStringEvent()));
         menu.menu.AppendAction("Scriptable Object", new Action<DropdownMenuAction>(x => AddScriptableEvent()));
         titleContainer.Add(menu);
     }

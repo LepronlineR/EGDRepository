@@ -1,0 +1,122 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aac82a7c0dc8dd4e8e46749de3dddb3, type: 3}
+  m_Name: Tutorial Start
+  m_EditorClassIdentifier: 
+  nodeLinkDatas:
+  - baseNodeGuid: 5855abb5-3bbf-400a-a581-e71d002a9ef8
+    basePortName: Output
+    targetNodeGuid: 82c0c317-d3b4-47fb-be5b-8f7b7b5703e0
+    targetPortName: Input
+  - baseNodeGuid: 5855abb5-3bbf-400a-a581-e71d002a9ef8
+    basePortName: Output
+    targetNodeGuid: 82c0c317-d3b4-47fb-be5b-8f7b7b5703e0
+    targetPortName: Input
+  - baseNodeGuid: bcac8c15-e63e-4efe-90f8-245a5ab451aa
+    basePortName: Output
+    targetNodeGuid: 11691e47-1e24-455e-ad73-48774ede2013
+    targetPortName: Input
+  - baseNodeGuid: bcac8c15-e63e-4efe-90f8-245a5ab451aa
+    basePortName: Output
+    targetNodeGuid: 11691e47-1e24-455e-ad73-48774ede2013
+    targetPortName: Input
+  - baseNodeGuid: 82c0c317-d3b4-47fb-be5b-8f7b7b5703e0
+    basePortName: Continue
+    targetNodeGuid: bcac8c15-e63e-4efe-90f8-245a5ab451aa
+    targetPortName: Input
+  - baseNodeGuid: 82c0c317-d3b4-47fb-be5b-8f7b7b5703e0
+    basePortName: Continue
+    targetNodeGuid: bcac8c15-e63e-4efe-90f8-245a5ab451aa
+    targetPortName: Input
+  dialogueDatas:
+  - nodeGuid: 82c0c317-d3b4-47fb-be5b-8f7b7b5703e0
+    position: {x: 179, y: 209}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: 
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 62c4be4c-a6db-468e-8e67-0ea59d016f97
+      texts:
+      - languageType: 0
+        languageGenericType: Welcome to our school
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: 8999d415-53f2-4be5-9834-6e3c4dbe714b
+      texts:
+      - languageType: 0
+        languageGenericType: This our first building, a rather small one at that
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 4
+      GuidID:
+        value: 8aeeb365-48d2-41f0-9cdb-f7835af40287
+      texts:
+      - languageType: 0
+        languageGenericType: This is where some of our humanities and liberal art
+          courses take place
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 5
+      GuidID:
+        value: 11262548-98b6-493d-beea-3de34e5e60cf
+      texts:
+      - languageType: 0
+        languageGenericType: I will continue off at our auditorium, follow me through
+          this door
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 38f36402ff2dfc54b8aed41f2af26f67, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+  endDatas:
+  - nodeGuid: 11691e47-1e24-455e-ad73-48774ede2013
+    position: {x: 987, y: 209}
+    endDialogueContainers:
+    - dialogueContainerSO: {fileID: 11400000, guid: 103cd24c3b2d2144facbd7a2e682d0a0, type: 2}
+    endNodeType:
+      value: 1
+  startDatas:
+  - nodeGuid: 5855abb5-3bbf-400a-a581-e71d002a9ef8
+    position: {x: 76, y: 209}
+    text:
+    - languageType: 0
+      languageGenericType: 
+  eventDatas:
+  - nodeGuid: bcac8c15-e63e-4efe-90f8-245a5ab451aa
+    position: {x: 616, y: 209}
+    eventDataStringModifiers: []
+    containerDialogueEventSOs:
+    - dialogueEventSO: {fileID: 11400000, guid: a3846bf0c6815d04bbc8fd5167e6bf26, type: 2}
+    - dialogueEventSO: {fileID: 11400000, guid: ab4c7db904fbbf54ba7c471ac36074e7, type: 2}
+    - dialogueEventSO: {fileID: 11400000, guid: 1d2b8d036c3f7a84da7f9b6ecf1b3f71, type: 2}
+  branchDatas: []
+  choiceDatas: []
+  emotionChoiceDatas: []
+  objectChoiceDatas: []

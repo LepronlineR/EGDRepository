@@ -37,6 +37,7 @@ public class PredictionRequester {
                     if (gotMessage) break;
                 }
                 catch (Exception e){
+                    Debug.LogWarning(e);
                     break;
                 }
             }
