@@ -43,6 +43,7 @@ public class InventoryImage : MonoBehaviour
 
     public void AddAllEvidences(List<GameObject> e){
         evidences = e;
+        MainSystem.Instance.PlayerEvidence = evidences;
     }
 
     public bool ContainsEvidence(GameObject evidence){
@@ -52,6 +53,7 @@ public class InventoryImage : MonoBehaviour
     public void DelectThisImage(){
         input.onValueChanged.RemoveListener(valueChangeAction);
         selectedImage.SetActive(false);
+        evidences = null;
     }
 
     public void SetAsCurrentImage(){

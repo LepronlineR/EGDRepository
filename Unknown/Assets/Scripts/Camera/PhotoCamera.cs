@@ -48,7 +48,7 @@ public class PhotoCamera : MonoBehaviour {
 
 
     private bool IsInView(GameObject origin, GameObject toCheck){
-        Vector3 pointOnScreen = Camera.main.WorldToScreenPoint(toCheck.GetComponentInChildren<Renderer>().bounds.center);
+        Vector3 pointOnScreen = Camera.main.WorldToScreenPoint(toCheck.transform.position);
  
         //Is in front
         if (pointOnScreen.z < 0){
@@ -67,12 +67,15 @@ public class PhotoCamera : MonoBehaviour {
         Vector3 heading = toCheck.transform.position - origin.transform.position;
         Vector3 direction = heading.normalized;// / heading.magnitude;
         
-        if (Physics.Linecast(Camera.main.transform.position, toCheck.GetComponentInChildren<Renderer>().bounds.center, out hit, ~PlayerLayerMask)){
+        if (Physics.Linecast(Camera.main.transform.position, toCheck.transform.position, out hit, ~PlayerLayerMask)){
             if (hit.transform.name != toCheck.name){
                 Debug.Log(toCheck.name + " occluded by " + hit.transform.name);
                 return false;
             }
         }
+
+        Debug.Log("Captured " + toCheck.name);
+
         return true;
     }
 

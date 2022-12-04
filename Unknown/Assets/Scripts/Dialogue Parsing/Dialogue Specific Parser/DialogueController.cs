@@ -34,6 +34,7 @@ public class DialogueController : DialogueGetData {
     private string response = string.Empty;
     private bool speaking = false;
     private bool skip = true; 
+    private bool examineEvidence = false;
 
     void Start() {
         HideDialogueText();
@@ -43,7 +44,7 @@ public class DialogueController : DialogueGetData {
         if(interactable && Input.GetMouseButtonDown(0)){ // process data
             if(!speaking){
                 // process current node
-                if(!response.Equals(string.Empty)){
+                if(!response.Equals(string.Empty) || examineEvidence){
                     ProcessResponse();
                 } else if(currentIndex > 0){
                     ParseDialogue();
@@ -134,6 +135,7 @@ public class DialogueController : DialogueGetData {
         baseContainers.AddRange(nodeData.dialogueDataNames);
         baseContainers.AddRange(nodeData.dialogueDataTexts);
         baseContainers.AddRange(nodeData.dialogueResponseTexts);
+        baseContainers.AddRange(nodeData.dialogueResponseEvidences);
 
         currentIndex = 0;
 
@@ -170,6 +172,12 @@ public class DialogueController : DialogueGetData {
                 SetResponse(tmp.responseText.value);
                 return;
             }
+
+            if(baseContainers[x] is DialogueDataResponseEvidence){
+                DialogueDataResponseEvidence tmp = baseContainers[x] as DialogueDataResponseEvidence;
+                SetResponse();
+                return;
+            }
         }
 
         currentIndex = 0;
@@ -182,6 +190,7 @@ public class DialogueController : DialogueGetData {
             if(ChoiceCheck(port.inputGuid)){
                 ProcessCurrentNode(currentData);
                 response = string.Empty;
+                examineEvidence = false;
                 break;
             }
         }
@@ -215,11 +224,14 @@ public class DialogueController : DialogueGetData {
     private bool RunChoice(ObjectChoiceData data){
         // compare the object choice to the player current object at hand
         foreach(GameObject obj in MainSystem.Instance.PlayerEvidence){
-            if(GameObject.ReferenceEquals(obj, data.choiceObject.value) ||
-            data.choiceObject.value == null){
+            if(obj.name == data.choiceObject.value.name){
                 currentData = GetNextNode(data);
                 return true;
             }
+        }
+        if(data.choiceObject.value == null){
+            currentData = GetNextNode(data);
+            return true;
         }
         return false;
     }
@@ -257,6 +269,12 @@ public class DialogueController : DialogueGetData {
         // TODO: make this appear as UI elements in front of the player
 
         MainSystem.Instance.GenerateBubbleText(text);
+    }
+
+    // for evidences
+    public void SetResponse(){
+        audioSource.Stop();
+        examineEvidence = true;
     }
 
     public IEnumerator Type(string word){
