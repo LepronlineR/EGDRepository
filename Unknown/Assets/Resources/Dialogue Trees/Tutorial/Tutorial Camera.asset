@@ -151,6 +151,7 @@ MonoBehaviour:
     endDialogueContainers:
     - dialogueContainerSO: {fileID: 11400000, guid: 138bc84921d667745a0385fbba6cb096, type: 2}
     - dialogueContainerSO: {fileID: 11400000}
+    - dialogueContainerSO: {fileID: 11400000, guid: 107cab7b95da4664eb07efc7d8ef22fe, type: 2}
     endNodeType:
       value: 1
   startDatas:
