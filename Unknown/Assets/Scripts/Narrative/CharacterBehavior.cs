@@ -9,6 +9,9 @@ public class CharacterBehavior : MonoBehaviour {
 
     [SerializeField] Transform player;
     [SerializeField] float close = 5.0f;
+    [SerializeField] PersonName personName;
+
+    public PersonName Person { get => personName; private set => personName = value; }
 
     DialogueController parser;
 

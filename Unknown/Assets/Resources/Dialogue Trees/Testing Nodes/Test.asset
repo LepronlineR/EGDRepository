@@ -17,18 +17,6 @@ MonoBehaviour:
     basePortName: Output
     targetNodeGuid: 1960cc7f-14fd-4d14-bd99-7de2409ce314
     targetPortName: Input
-  - baseNodeGuid: 3d34fefc-577a-4c8a-87b7-4c0751af2db3
-    basePortName: cfa3973f-ea83-456d-84bb-796fe6f5f6ae
-    targetNodeGuid: c8eff5b5-3af6-40f9-9644-d24460aae469
-    targetPortName: Input
-  - baseNodeGuid: 3d34fefc-577a-4c8a-87b7-4c0751af2db3
-    basePortName: c05d7ba5-a293-4654-a6c9-c123a3248de1
-    targetNodeGuid: eb06153d-8aea-463e-8325-0d5975b9132d
-    targetPortName: Input
-  - baseNodeGuid: e4c60dfe-9d42-4427-bcba-77e88f23c1ba
-    basePortName: Continue
-    targetNodeGuid: d361565f-1c5b-4ec7-b2af-23dbf1088012
-    targetPortName: Input
   - baseNodeGuid: 1960cc7f-14fd-4d14-bd99-7de2409ce314
     basePortName: 3f325396-f07e-4f63-8681-5abb91a2da29
     targetNodeGuid: ce171897-028a-4d72-884b-1734bf5ae37e
@@ -36,6 +24,18 @@ MonoBehaviour:
   - baseNodeGuid: 1960cc7f-14fd-4d14-bd99-7de2409ce314
     basePortName: 5391871c-eb18-44ea-9edb-0b96e9b31cd5
     targetNodeGuid: f6cac2f7-454c-4f94-87b6-ef977ee9fcf0
+    targetPortName: Input
+  - baseNodeGuid: e4c60dfe-9d42-4427-bcba-77e88f23c1ba
+    basePortName: Continue
+    targetNodeGuid: d361565f-1c5b-4ec7-b2af-23dbf1088012
+    targetPortName: Input
+  - baseNodeGuid: 3d34fefc-577a-4c8a-87b7-4c0751af2db3
+    basePortName: cfa3973f-ea83-456d-84bb-796fe6f5f6ae
+    targetNodeGuid: c8eff5b5-3af6-40f9-9644-d24460aae469
+    targetPortName: Input
+  - baseNodeGuid: 3d34fefc-577a-4c8a-87b7-4c0751af2db3
+    basePortName: c05d7ba5-a293-4654-a6c9-c123a3248de1
+    targetNodeGuid: eb06153d-8aea-463e-8325-0d5975b9132d
     targetPortName: Input
   - baseNodeGuid: ce171897-028a-4d72-884b-1734bf5ae37e
     basePortName: Output
@@ -54,41 +54,6 @@ MonoBehaviour:
     targetNodeGuid: ab6eea29-0429-496c-8960-9778d49aae81
     targetPortName: Input
   dialogueDatas:
-  - nodeGuid: 3d34fefc-577a-4c8a-87b7-4c0751af2db3
-    position: {x: 478, y: 142}
-    dialogueDataNames:
-    - ID:
-        value: 0
-      characterName:
-        value: Tutorial Guy
-    dialogueDataTexts:
-    - ID:
-        value: 2
-      GuidID:
-        value: 905bf503-8dd7-4327-8753-3879a1ad4ebf
-      texts:
-      - languageType: 0
-        languageGenericType: Hmmmm
-      audioClips:
-      - languageType: 0
-        languageGenericType: {fileID: 0}
-    dialogueDataImagess:
-    - ID:
-        value: 1
-      sprite:
-        value: {fileID: 21300000, guid: f8506563bf3827446a0484275ce289ce, type: 3}
-    dialogueDataPorts:
-    - portGuid: cfa3973f-ea83-456d-84bb-796fe6f5f6ae
-      inputGuid: c8eff5b5-3af6-40f9-9644-d24460aae469
-      outputGuid: 3d34fefc-577a-4c8a-87b7-4c0751af2db3
-    - portGuid: c05d7ba5-a293-4654-a6c9-c123a3248de1
-      inputGuid: eb06153d-8aea-463e-8325-0d5975b9132d
-      outputGuid: 3d34fefc-577a-4c8a-87b7-4c0751af2db3
-    dialogueResponseTexts:
-    - ID:
-        value: 3
-      responseText:
-        value: What do you want me to look at
   - nodeGuid: 1960cc7f-14fd-4d14-bd99-7de2409ce314
     position: {x: -96, y: 328}
     dialogueDataNames:
@@ -137,6 +102,7 @@ MonoBehaviour:
         value: 4
       responseText:
         value: What is going on
+    dialogueResponseEvidences: []
   - nodeGuid: e4c60dfe-9d42-4427-bcba-77e88f23c1ba
     position: {x: 478, y: 791}
     dialogueDataNames:
@@ -162,6 +128,45 @@ MonoBehaviour:
         value: {fileID: 21300000, guid: f8506563bf3827446a0484275ce289ce, type: 3}
     dialogueDataPorts: []
     dialogueResponseTexts: []
+    dialogueResponseEvidences:
+    - ID:
+        value: 3
+  - nodeGuid: 3d34fefc-577a-4c8a-87b7-4c0751af2db3
+    position: {x: 478, y: 142}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Tutorial Guy
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 905bf503-8dd7-4327-8753-3879a1ad4ebf
+      texts:
+      - languageType: 0
+        languageGenericType: Hmmmm
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: f8506563bf3827446a0484275ce289ce, type: 3}
+    dialogueDataPorts:
+    - portGuid: cfa3973f-ea83-456d-84bb-796fe6f5f6ae
+      inputGuid: c8eff5b5-3af6-40f9-9644-d24460aae469
+      outputGuid: 3d34fefc-577a-4c8a-87b7-4c0751af2db3
+    - portGuid: c05d7ba5-a293-4654-a6c9-c123a3248de1
+      inputGuid: eb06153d-8aea-463e-8325-0d5975b9132d
+      outputGuid: 3d34fefc-577a-4c8a-87b7-4c0751af2db3
+    dialogueResponseTexts:
+    - ID:
+        value: 3
+      responseText:
+        value: What do you want me to look at
+    dialogueResponseEvidences: []
   endDatas:
   - nodeGuid: f8ba0de0-b30b-4d7f-88ae-02a75de61542
     position: {x: 1038, y: 90}

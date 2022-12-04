@@ -17,11 +17,476 @@ MonoBehaviour:
     basePortName: Output
     targetNodeGuid: 5e45a7c9-6196-46e7-82ea-630f368a0467
     targetPortName: Input
+  - baseNodeGuid: ff0d6ac8-64b9-42b7-9b03-e0a792c769bd
+    basePortName: Output
+    targetNodeGuid: 5e45a7c9-6196-46e7-82ea-630f368a0467
+    targetPortName: Input
+  - baseNodeGuid: d982f17c-f3d5-4dbb-9c97-67ccefd95c21
+    basePortName: Continue
+    targetNodeGuid: bbc972fd-8ae2-4504-ae07-f5757607fa29
+    targetPortName: Input
+  - baseNodeGuid: bbc972fd-8ae2-4504-ae07-f5757607fa29
+    basePortName: Continue
+    targetNodeGuid: feafed2d-934b-487c-afcd-6f5735192556
+    targetPortName: Input
+  - baseNodeGuid: feafed2d-934b-487c-afcd-6f5735192556
+    basePortName: Continue
+    targetNodeGuid: 3a20505e-a096-47fb-9897-d47c4cb2feb2
+    targetPortName: Input
+  - baseNodeGuid: 3a20505e-a096-47fb-9897-d47c4cb2feb2
+    basePortName: 306ab39d-1aaf-4ddb-8afe-23b7069fec2b
+    targetNodeGuid: bb249f07-83b6-471f-8715-6b96080c996a
+    targetPortName: Input
+  - baseNodeGuid: 3a20505e-a096-47fb-9897-d47c4cb2feb2
+    basePortName: 771691db-9995-4cce-a03d-12b0faeb1c08
+    targetNodeGuid: e275c0bd-543a-4c8f-bbe1-c9bdc07102d8
+    targetPortName: Input
+  - baseNodeGuid: 3a20505e-a096-47fb-9897-d47c4cb2feb2
+    basePortName: 8ee9697a-dcff-400a-b3e0-17d3436af679
+    targetNodeGuid: c7402be4-0995-499a-915c-af04ceccfc24
+    targetPortName: Input
+  - baseNodeGuid: 3a20505e-a096-47fb-9897-d47c4cb2feb2
+    basePortName: 8e1caee3-ec1a-4011-b4ff-47a895068dbc
+    targetNodeGuid: add0431c-5b0c-4149-a396-deee03f1542e
+    targetPortName: Input
+  - baseNodeGuid: 3a20505e-a096-47fb-9897-d47c4cb2feb2
+    basePortName: 4f8021f9-a57e-46f4-ba8e-fa3653d5969a
+    targetNodeGuid: 650068f6-75a7-4871-bb9a-d92e8ead5b82
+    targetPortName: Input
+  - baseNodeGuid: c34515b6-d34f-48a6-a7be-4fc90ae29a0a
+    basePortName: Continue
+    targetNodeGuid: cf7f1172-cffe-44a4-957d-487a62557962
+    targetPortName: Input
+  - baseNodeGuid: b161eb21-bb31-4fea-a566-99b1d7cabb05
+    basePortName: Continue
+    targetNodeGuid: cf7f1172-cffe-44a4-957d-487a62557962
+    targetPortName: Input
+  - baseNodeGuid: 671a1f86-e38e-40d3-b450-41d49f5242ed
+    basePortName: Continue
+    targetNodeGuid: cf7f1172-cffe-44a4-957d-487a62557962
+    targetPortName: Input
+  - baseNodeGuid: edb1e3b2-b159-4042-a8d3-41097cc63dda
+    basePortName: Continue
+    targetNodeGuid: cf7f1172-cffe-44a4-957d-487a62557962
+    targetPortName: Input
+  - baseNodeGuid: cf7f1172-cffe-44a4-957d-487a62557962
+    basePortName: Continue
+    targetNodeGuid: a7b7a824-d1cc-478e-9d91-cafaa09e08bc
+    targetPortName: Input
   - baseNodeGuid: 5e45a7c9-6196-46e7-82ea-630f368a0467
     basePortName: Continue
-    targetNodeGuid: 50c814a1-9443-4025-9638-81744d41d794
+    targetNodeGuid: d982f17c-f3d5-4dbb-9c97-67ccefd95c21
+    targetPortName: Input
+  - baseNodeGuid: fc545688-3502-4656-8bad-45d7a3601ec3
+    basePortName: Continue
+    targetNodeGuid: cf7f1172-cffe-44a4-957d-487a62557962
+    targetPortName: Input
+  - baseNodeGuid: e275c0bd-543a-4c8f-bbe1-c9bdc07102d8
+    basePortName: Output
+    targetNodeGuid: edb1e3b2-b159-4042-a8d3-41097cc63dda
+    targetPortName: Input
+  - baseNodeGuid: c7402be4-0995-499a-915c-af04ceccfc24
+    basePortName: Output
+    targetNodeGuid: fc545688-3502-4656-8bad-45d7a3601ec3
+    targetPortName: Input
+  - baseNodeGuid: add0431c-5b0c-4149-a396-deee03f1542e
+    basePortName: Output
+    targetNodeGuid: b161eb21-bb31-4fea-a566-99b1d7cabb05
+    targetPortName: Input
+  - baseNodeGuid: 650068f6-75a7-4871-bb9a-d92e8ead5b82
+    basePortName: Output
+    targetNodeGuid: 671a1f86-e38e-40d3-b450-41d49f5242ed
+    targetPortName: Input
+  - baseNodeGuid: bb249f07-83b6-471f-8715-6b96080c996a
+    basePortName: Output
+    targetNodeGuid: c34515b6-d34f-48a6-a7be-4fc90ae29a0a
     targetPortName: Input
   dialogueDatas:
+  - nodeGuid: d982f17c-f3d5-4dbb-9c97-67ccefd95c21
+    position: {x: 444, y: 190}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Chihiro
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: d5fa670f-0936-4807-b9aa-63b8b9bf4507
+      texts:
+      - languageType: 0
+        languageGenericType: Call me Chihiro
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: b022ddd8-4c42-410e-8adc-8c8454137a53
+      texts:
+      - languageType: 0
+        languageGenericType: I'll be guiding you through here, this room is the auditorium
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 4
+      GuidID:
+        value: 5f6ab82a-9c61-4972-8f17-def8952a9b13
+      texts:
+      - languageType: 0
+        languageGenericType: As you can see, we have a central stage in the middle
+          with a small setup
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 38f36402ff2dfc54b8aed41f2af26f67, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+  - nodeGuid: bbc972fd-8ae2-4504-ae07-f5757607fa29
+    position: {x: 875, y: 190}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Chihiro
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 08479e9f-a5c7-406b-bc50-df039025505a
+      texts:
+      - languageType: 0
+        languageGenericType: Oh, I nearly forgot
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: 7f194b0a-d019-4492-b370-6be0962ddacd
+      texts:
+      - languageType: 0
+        languageGenericType: If you would like to talk back first you have to record
+          your voice
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: c20caab95d5db0442809a83a6548f321, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+  - nodeGuid: feafed2d-934b-487c-afcd-6f5735192556
+    position: {x: 1247, y: 190}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Chihiro
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 8cd122b2-6b31-473d-8764-31234c212d10
+      texts:
+      - languageType: 0
+        languageGenericType: To record your voice press "R"
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: 43cfba96-7df4-4602-b52a-8fc3b1ba1d1b
+      texts:
+      - languageType: 0
+        languageGenericType: Then to stop recording, press "R" again
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 4
+      GuidID:
+        value: 16aab12a-d224-4cfc-ab5f-396ba16c33fe
+      texts:
+      - languageType: 0
+        languageGenericType: Once you have the right response recorded send it to
+          the other person
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 5
+      GuidID:
+        value: 3a20885a-7a37-4a98-9a57-bface3e0b0a4
+      texts:
+      - languageType: 0
+        languageGenericType: Try to say "Hello" to me
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 6
+      GuidID:
+        value: 3284dbdc-df03-40f0-ab93-e8f4a64c7caa
+      texts:
+      - languageType: 0
+        languageGenericType: The response will be represented as your thoughts
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 38f36402ff2dfc54b8aed41f2af26f67, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts:
+    - ID:
+        value: 7
+      responseText:
+        value: Hello
+  - nodeGuid: 3a20505e-a096-47fb-9897-d47c4cb2feb2
+    position: {x: 1681, y: 190}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Chihiro
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 5a6c8f21-1322-4b0b-a430-cb2681bb8e31
+      texts:
+      - languageType: 0
+        languageGenericType: Good.
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: 38df246e-d1a6-4503-bdae-c16139e91850
+      texts:
+      - languageType: 0
+        languageGenericType: As you can see, whatever you say will have an emotional
+          bearing to it
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 4
+      GuidID:
+        value: 49ec6589-5a5e-4f28-abb7-048a129e44d4
+      texts:
+      - languageType: 0
+        languageGenericType: That means, you could be angry, sad, neutral, fearful,
+          or happy when you respond to me
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 5
+      GuidID:
+        value: 8be6b284-d9ec-4ade-8e54-694dd9b70a27
+      texts:
+      - languageType: 0
+        languageGenericType: Try saying "Hello" Again
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 38f36402ff2dfc54b8aed41f2af26f67, type: 3}
+    dialogueDataPorts:
+    - portGuid: 306ab39d-1aaf-4ddb-8afe-23b7069fec2b
+      inputGuid: bb249f07-83b6-471f-8715-6b96080c996a
+      outputGuid: 3a20505e-a096-47fb-9897-d47c4cb2feb2
+    - portGuid: 771691db-9995-4cce-a03d-12b0faeb1c08
+      inputGuid: e275c0bd-543a-4c8f-bbe1-c9bdc07102d8
+      outputGuid: 3a20505e-a096-47fb-9897-d47c4cb2feb2
+    - portGuid: 8ee9697a-dcff-400a-b3e0-17d3436af679
+      inputGuid: c7402be4-0995-499a-915c-af04ceccfc24
+      outputGuid: 3a20505e-a096-47fb-9897-d47c4cb2feb2
+    - portGuid: 8e1caee3-ec1a-4011-b4ff-47a895068dbc
+      inputGuid: add0431c-5b0c-4149-a396-deee03f1542e
+      outputGuid: 3a20505e-a096-47fb-9897-d47c4cb2feb2
+    - portGuid: 4f8021f9-a57e-46f4-ba8e-fa3653d5969a
+      inputGuid: 650068f6-75a7-4871-bb9a-d92e8ead5b82
+      outputGuid: 3a20505e-a096-47fb-9897-d47c4cb2feb2
+    dialogueResponseTexts:
+    - ID:
+        value: 6
+      responseText:
+        value: Hello
+  - nodeGuid: c34515b6-d34f-48a6-a7be-4fc90ae29a0a
+    position: {x: 2464, y: -727}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Chihiro
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: ea4b8774-f3ee-4e7d-b3d0-47702a47c52e
+      texts:
+      - languageType: 0
+        languageGenericType: Quite a mellow person huh
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 38f36402ff2dfc54b8aed41f2af26f67, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+  - nodeGuid: b161eb21-bb31-4fea-a566-99b1d7cabb05
+    position: {x: 2464, y: 615}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Chihiro
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 2ba11897-abd2-414f-b798-e16b4232a3cf
+      texts:
+      - languageType: 0
+        languageGenericType: Are you scared of me?
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 38f36402ff2dfc54b8aed41f2af26f67, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+  - nodeGuid: 671a1f86-e38e-40d3-b450-41d49f5242ed
+    position: {x: 2464, y: 1073}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Chihiro
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: aef58c85-d7ac-4e79-a81a-5f3edee04f20
+      texts:
+      - languageType: 0
+        languageGenericType: Great work!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: c20caab95d5db0442809a83a6548f321, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+  - nodeGuid: edb1e3b2-b159-4042-a8d3-41097cc63dda
+    position: {x: 2464, y: -253}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Chihiro
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 213e2f01-f21c-4505-87ec-4d1e1e92d7e0
+      texts:
+      - languageType: 0
+        languageGenericType: Woah, no need to be so angry about this
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 7cd87d288f7ff3241a71f7ef920c3266, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+  - nodeGuid: cf7f1172-cffe-44a4-957d-487a62557962
+    position: {x: 2940, y: 287}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Chihiro
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 46116533-d860-4606-9ecb-f1726c6c1d64
+      texts:
+      - languageType: 0
+        languageGenericType: You should get the gist of it
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: d1374602-4ae5-42c5-8c1b-c8bdd1ccb50c
+      texts:
+      - languageType: 0
+        languageGenericType: Depending on who you talk to, some people may react
+          differently to your emotion
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 4
+      GuidID:
+        value: f0b83e22-25bc-4c7a-bdbc-00b37202ea77
+      texts:
+      - languageType: 0
+        languageGenericType: The same is done when you want to initiate a conversation
+          with someone or ask them any questions
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 5
+      GuidID:
+        value: 5c8c29fd-51e5-48d4-b434-ea28335ef087
+      texts:
+      - languageType: 0
+        languageGenericType: Ask me about what should you want to know next
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 38f36402ff2dfc54b8aed41f2af26f67, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
   - nodeGuid: 5e45a7c9-6196-46e7-82ea-630f368a0467
     position: {x: 137, y: 190}
     dialogueDataNames:
@@ -47,10 +512,36 @@ MonoBehaviour:
         value: {fileID: 21300000, guid: 38f36402ff2dfc54b8aed41f2af26f67, type: 3}
     dialogueDataPorts: []
     dialogueResponseTexts: []
+  - nodeGuid: fc545688-3502-4656-8bad-45d7a3601ec3
+    position: {x: 2461, y: 190}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Chihiro
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 6e5bf863-05b4-4d2a-b2bc-585febf034d4
+      texts:
+      - languageType: 0
+        languageGenericType: Don't be too sad, your semester is about to start!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: c20caab95d5db0442809a83a6548f321, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
   endDatas:
-  - nodeGuid: 50c814a1-9443-4025-9638-81744d41d794
-    position: {x: 473, y: 190}
-    endDialogueContainers: []
+  - nodeGuid: a7b7a824-d1cc-478e-9d91-cafaa09e08bc
+    position: {x: 3514, y: 287}
+    endDialogueContainers:
+    - dialogueContainerSO: {fileID: 11400000, guid: f317115b4b56ecf4185ac32797962e19, type: 2}
     endNodeType:
       value: 1
   startDatas:
@@ -62,5 +553,25 @@ MonoBehaviour:
   eventDatas: []
   branchDatas: []
   choiceDatas: []
-  emotionChoiceDatas: []
+  emotionChoiceDatas:
+  - nodeGuid: e275c0bd-543a-4c8f-bbe1-c9bdc07102d8
+    position: {x: 2215, y: 287}
+    choiceStateType:
+      value: 1
+  - nodeGuid: c7402be4-0995-499a-915c-af04ceccfc24
+    position: {x: 2215, y: 384}
+    choiceStateType:
+      value: 2
+  - nodeGuid: add0431c-5b0c-4149-a396-deee03f1542e
+    position: {x: 2215, y: 481}
+    choiceStateType:
+      value: 3
+  - nodeGuid: 650068f6-75a7-4871-bb9a-d92e8ead5b82
+    position: {x: 2215, y: 595}
+    choiceStateType:
+      value: 5
+  - nodeGuid: bb249f07-83b6-471f-8715-6b96080c996a
+    position: {x: 2215, y: 190}
+    choiceStateType:
+      value: 4
   objectChoiceDatas: []

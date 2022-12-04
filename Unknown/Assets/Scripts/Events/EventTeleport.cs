@@ -23,8 +23,8 @@ public class EventTeleport : MonoBehaviour
     //    GameEvents.Instance.Teleport -= Teleport; 
     //}
 
-    public void Teleport(int ID){
-        if(this.ID == ID){
+    public void Teleport(int ID, PersonName person){
+        if(this.ID == ID && this.GetComponent<CharacterBehavior>().Person == person){
             this.transform.position = where.position;
         }
     }

@@ -29,8 +29,19 @@ public class DialogueGraphView : GraphView
         Insert(0, grid);
         grid.StretchToParentSize();
 
+        // canPasteSerializedData += AllowPaste;
+        // unserializeAndPaste += OnPaste;
+
         AddSearchWindow();
     }
+
+    // private bool AllowPaste(string data){
+    //     return true;
+    // }
+
+    // private void OnPaste(string a, string b) {
+        //
+    // }
 
     private void AddSearchWindow() {
         searchWindow = ScriptableObject.CreateInstance<NodeSearchWindow>();

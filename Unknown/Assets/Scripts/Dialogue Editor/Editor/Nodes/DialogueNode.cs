@@ -32,6 +32,8 @@ public class DialogueNode : BaseNode
         AddOutputPort("Continue");
 
         TopContainer();
+
+        // Auto Add Name and Image
     }
 
     private void TopContainer(){
@@ -59,7 +61,8 @@ public class DialogueNode : BaseNode
         menu.menu.AppendAction("Text", new Action<DropdownMenuAction>(x => TextLine()));
         menu.menu.AppendAction("Image", new Action<DropdownMenuAction>(x => ImagePic()));
         menu.menu.AppendAction("Name", new Action<DropdownMenuAction>(x => CharacterName()));
-        menu.menu.AppendAction("Response", new Action<DropdownMenuAction>(x => ResponseText()));
+        menu.menu.AppendAction("Response Text", new Action<DropdownMenuAction>(x => ResponseText()));
+        menu.menu.AppendAction("Response Evidence", new Action<DropdownMenuAction>(x => ResponseEvidence()));
 
         titleButtonContainer.Add(menu);
     }
@@ -223,6 +226,18 @@ public class DialogueNode : BaseNode
 
         AddLabelAndButton(resText, boxContainer, "Response Text", "NameColor");
         AddTextFieldResponseText(resText, boxContainer);
+
+        mainContainer.Add(boxContainer);
+    }
+
+    public void ResponseEvidence(DialogueDataResponseEvidence data = null){
+        DialogueDataResponseEvidence resEvidence = new DialogueDataResponseEvidence();
+        dialogueData.dialogueBaseContainers.Add(resEvidence);
+
+        Box boxContainer = new Box();
+        boxContainer.AddToClassList("CharacterNameBox");
+
+        AddLabelAndButton(resEvidence, boxContainer, "Response Evidence", "ImageColor");
 
         mainContainer.Add(boxContainer);
     }

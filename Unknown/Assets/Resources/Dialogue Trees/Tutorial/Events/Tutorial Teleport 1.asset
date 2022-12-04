@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Tutorial Teleport 1
   m_EditorClassIdentifier: 
   ID: 0
+  person: 1

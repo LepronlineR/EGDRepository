@@ -13,6 +13,7 @@ public class DialogueData : BaseData
     public List<DialogueDataImages> dialogueDataImagess = new List<DialogueDataImages>();
     public List<DialogueDataPort> dialogueDataPorts = new List<DialogueDataPort>();
     public List<DialogueDataResponseText> dialogueResponseTexts = new List<DialogueDataResponseText>();
+    public List<DialogueDataResponseEvidence> dialogueResponseEvidences = new List<DialogueDataResponseEvidence>();
 }
 
 [System.Serializable]
@@ -28,6 +29,11 @@ public class DialogueDataName : DialogueDataBaseContainer {
 [System.Serializable]
 public class DialogueDataResponseText : DialogueDataBaseContainer {
     public ContainerString responseText = new ContainerString();
+}
+
+[System.Serializable]
+public class DialogueDataResponseEvidence : DialogueDataBaseContainer {
+
 }
 
 [System.Serializable]

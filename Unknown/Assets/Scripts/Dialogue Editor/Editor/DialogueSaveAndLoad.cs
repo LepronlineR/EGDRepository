@@ -140,6 +140,16 @@ public class DialogueSaveAndLoad {
                 dialogueData.dialogueResponseTexts.Add(tmpData);
             }
 
+            // Response Evidence
+            if (baseContainer is DialogueDataResponseEvidence) {
+                DialogueDataResponseEvidence tmp = (baseContainer as DialogueDataResponseEvidence);
+                DialogueDataResponseEvidence tmpData = new DialogueDataResponseEvidence();
+
+                tmpData.ID.value = tmp.ID.value;
+
+                dialogueData.dialogueResponseEvidences.Add(tmpData);
+            }
+
             // Images
             if (baseContainer is DialogueDataImages){
                 DialogueDataImages tmp = (baseContainer as DialogueDataImages);
@@ -418,6 +428,7 @@ public class DialogueSaveAndLoad {
             dataBaseContainer.AddRange(node.dialogueDataTexts);
             dataBaseContainer.AddRange(node.dialogueDataNames);
             dataBaseContainer.AddRange(node.dialogueResponseTexts);
+            dataBaseContainer.AddRange(node.dialogueResponseEvidences);
 
             dataBaseContainer.Sort(delegate (DialogueDataBaseContainer x, DialogueDataBaseContainer y){
                 return x.ID.value.CompareTo(y.ID.value);
@@ -436,6 +447,9 @@ public class DialogueSaveAndLoad {
                         break;
                     case DialogueDataResponseText response:
                         tempNode.ResponseText(response);
+                        break;
+                    case DialogueDataResponseEvidence response:
+                        tempNode.ResponseEvidence(response);
                         break;
                     default:
                         break;

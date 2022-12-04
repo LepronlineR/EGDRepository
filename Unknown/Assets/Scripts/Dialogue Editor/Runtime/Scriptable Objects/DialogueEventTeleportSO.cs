@@ -6,9 +6,10 @@ using UnityEngine;
 public class DialogueEventTeleportSO : DialogueEventSO {
 
     [SerializeField] int ID;
+    [SerializeField] PersonName person;
 
     public override void RunEvent() {
-        GameEvents.Instance.Teleport(ID);
+        GameEvents.Instance.Teleport(ID, person);
     }
 
 }

@@ -14,8 +14,8 @@ public class GameEvents : MonoBehaviour
     protected UseStringEventModifier useStringEventModifier = new UseStringEventModifier();
 
     // EVENTS
-    private event Action<int> teleportAction;
-    public Action<int> TeleportAction { get => teleportAction; set => teleportAction = value; }
+    private event Action<int, PersonName> teleportAction;
+    public Action<int, PersonName> TeleportAction { get => teleportAction; set => teleportAction = value; }
 
     private event Action<int, bool> doorAction;
     public Action<int, bool> DoorAction { get => doorAction; set => doorAction = value; }
@@ -48,8 +48,8 @@ public class GameEvents : MonoBehaviour
         return false;
     }
 
-    public void Teleport(int id){
-        teleportAction?.Invoke(id);
+    public void Teleport(int id, PersonName person){
+        teleportAction?.Invoke(id, person);
     }
 
     public void Door(int id, bool open){
