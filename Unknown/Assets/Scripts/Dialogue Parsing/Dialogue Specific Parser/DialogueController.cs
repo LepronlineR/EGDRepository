@@ -99,13 +99,14 @@ public class DialogueController : DialogueGetData {
         // currently only supports one end result
         switch (nodeData.endNodeType.value) {
             case EndNodeType.End:
-                // add all the other containers from the end to the list (make sure that they are not the same)
-                foreach(ContainerDialogueContainerSO container in nodeData.endDialogueContainers){
-                    dialogueContainers.AddItem(container.dialogueContainerSO);
-                }
                 // remove it from the current container
                 dialogueContainers.Remove(currentDialogueContainer);
                 currentDialogueContainer = null;
+
+                // add all the other containers from the end to the list
+                foreach(ContainerDialogueContainerSO container in nodeData.endDialogueContainers){
+                    dialogueContainers.AddItem(container.dialogueContainerSO);
+                }
                 break;
             default:
                 break;

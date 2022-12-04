@@ -65,6 +65,10 @@ public class MainSystem : MonoBehaviour
     public List<GameObject> PlayerEvidence { get => playerEvidence; set => playerEvidence = value; }
     public DialogueEmotionType PlayerEmotion { get => playerEmotion; set => playerEmotion = value; }
 
+    [Header("Tutorial")]
+    public bool beginThoughtBubbles = false;
+
+
     void Start(){
         inventoryOn = false;
         speechMode = true;
@@ -261,6 +265,8 @@ public class MainSystem : MonoBehaviour
     }
 
     public void GenerateBubbleText(string text){
+        if(!beginThoughtBubbles)
+            return;
         int whereBubble = FindEmptyBubble();
         if(whereBubble < 0)
             return;
@@ -284,6 +290,8 @@ public class MainSystem : MonoBehaviour
     }
 
     public void RemoveAllBubbles(){
+        if(!beginThoughtBubbles)
+            return;
         foreach(GameObject go in generatedBubbles){
             Destroy(go);
         }

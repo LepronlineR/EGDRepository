@@ -12,6 +12,14 @@ public class DialogueGetData : MonoBehaviour
     protected bool DetermineDialogueContainer(){
         foreach(DialogueContainerSO container in dialogueContainers){
             StartData nodeData = container.startDatas[0];
+            // if the begin node text is blank then we can just proceed
+            if(nodeData.text.Find(language => language.languageType == LanguageController.Instance.Language).languageGenericType == ""){
+                MainSystem.Instance.RemoveAllBubbles();
+                    
+                currentDialogueContainer = container;
+                currentData = GetNextNode(currentDialogueContainer.startDatas[0]);
+                return true;
+            }
             if(MainSystem.Instance.PlayerWord.ToLower().Equals(
                 nodeData.text.Find(language => language.languageType == LanguageController.Instance.Language).languageGenericType.ToLower())){
                     // Remove the thought bubbles
