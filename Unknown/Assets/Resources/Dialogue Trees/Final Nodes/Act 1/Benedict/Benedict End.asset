@@ -1,0 +1,177 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aac82a7c0dc8dd4e8e46749de3dddb3, type: 3}
+  m_Name: Benedict End
+  m_EditorClassIdentifier: 
+  nodeLinkDatas:
+  - baseNodeGuid: f5d5eebf-27a2-4c5a-873a-654cdef6cacb
+    basePortName: Output
+    targetNodeGuid: f4e0ce69-ae9a-4cea-9bb1-ee814a154226
+    targetPortName: Input
+  - baseNodeGuid: f4e0ce69-ae9a-4cea-9bb1-ee814a154226
+    basePortName: Continue
+    targetNodeGuid: fe5c60e4-5517-474b-ac80-5d3d8714193a
+    targetPortName: Input
+  - baseNodeGuid: fe5c60e4-5517-474b-ac80-5d3d8714193a
+    basePortName: Continue
+    targetNodeGuid: a8b6dda0-4194-4fa2-9945-8ebaac28f5df
+    targetPortName: Input
+  - baseNodeGuid: a8b6dda0-4194-4fa2-9945-8ebaac28f5df
+    basePortName: Continue
+    targetNodeGuid: 9b5d66ec-555c-4649-8cea-7aaa9c99390a
+    targetPortName: Input
+  - baseNodeGuid: 9b5d66ec-555c-4649-8cea-7aaa9c99390a
+    basePortName: Continue
+    targetNodeGuid: c1623f5d-7544-41c1-992c-0181831f06bf
+    targetPortName: Input
+  dialogueDatas:
+  - nodeGuid: f4e0ce69-ae9a-4cea-9bb1-ee814a154226
+    position: {x: 408, y: 352}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Benedict
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: c82facb1-8620-41e3-ab7a-49ad9129dac2
+      texts:
+      - languageType: 0
+        languageGenericType: Well you ought to!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 87a1a56c93e089c429442ca246b2b995, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: fe5c60e4-5517-474b-ac80-5d3d8714193a
+    position: {x: 758, y: 351}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Benedict
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 6a2ad690-5b0c-4deb-8629-90e068410723
+      texts:
+      - languageType: 0
+        languageGenericType: An unfortunate situation you were caught in
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: 566c647e-5a2f-4c85-ba3a-1b76364aa6ba
+      texts:
+      - languageType: 0
+        languageGenericType: If there wasn't that Crow person
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 4
+      GuidID:
+        value: 4d06948c-3056-41fc-80bd-317e76310bf0
+      texts:
+      - languageType: 0
+        languageGenericType: I would have suspected you!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: f3cda730283b91f40bd88ca115197c51, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: a8b6dda0-4194-4fa2-9945-8ebaac28f5df
+    position: {x: 1070, y: 354}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Benedict
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: e644ad95-8077-4022-8bee-94e93715c888
+      texts:
+      - languageType: 0
+        languageGenericType: A good fortune to you nonetheless!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 8843aee21e2677e47af0d5e938e1c349, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: 9b5d66ec-555c-4649-8cea-7aaa9c99390a
+    position: {x: 1377, y: 353}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Benedict
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: afc756f1-7353-4b3a-b22d-7df5c055eb2a
+      texts:
+      - languageType: 0
+        languageGenericType: Bring that murderous fiend out from the dark!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 25dcf3b2e80a0b14295724a20ccab811, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  endDatas:
+  - nodeGuid: c1623f5d-7544-41c1-992c-0181831f06bf
+    position: {x: 1705, y: 355}
+    endDialogueContainers: []
+    endNodeType:
+      value: 1
+  startDatas:
+  - nodeGuid: f5d5eebf-27a2-4c5a-873a-654cdef6cacb
+    position: {x: 268, y: 352}
+    text:
+    - languageType: 0
+      languageGenericType: Thank you
+  eventDatas: []
+  branchDatas: []
+  choiceDatas: []
+  emotionChoiceDatas: []
+  objectChoiceDatas: []

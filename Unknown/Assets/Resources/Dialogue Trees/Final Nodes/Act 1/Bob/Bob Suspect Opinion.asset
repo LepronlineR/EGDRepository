@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aac82a7c0dc8dd4e8e46749de3dddb3, type: 3}
+  m_Name: Bob Suspect Opinion
+  m_EditorClassIdentifier: 
+  nodeLinkDatas:
+  - baseNodeGuid: 45671ac8-1a0a-40f5-84e8-2853723aecf0
+    basePortName: Output
+    targetNodeGuid: a424a74c-7fa6-4adc-80e7-d87934149436
+    targetPortName: Input
+  dialogueDatas:
+  - nodeGuid: a424a74c-7fa6-4adc-80e7-d87934149436
+    position: {x: 459, y: 393}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: 
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 1f6ed591-abd8-41a9-afdc-145f79d798fb
+      texts:
+      - languageType: 0
+        languageGenericType: I hate to say this...
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: cec4286a-9ffc-42db-9175-06bf112cb4a7
+      texts:
+      - languageType: 0
+        languageGenericType: But between you and me
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 813029c5fc5e52540be73584988153b7, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  endDatas:
+  - nodeGuid: f18a528f-17e4-4e24-aa40-b3a3acea258f
+    position: {x: 1181, y: 392}
+    endDialogueContainers:
+    - dialogueContainerSO: {fileID: 11400000}
+    - dialogueContainerSO: {fileID: 11400000, guid: 48126c72ed5b7d8498586458537f53bb, type: 2}
+    - dialogueContainerSO: {fileID: 11400000, guid: 889af35c3b45ecc49816abdb514b5919, type: 2}
+    endNodeType:
+      value: 1
+  startDatas:
+  - nodeGuid: 45671ac8-1a0a-40f5-84e8-2853723aecf0
+    position: {x: 193, y: 392}
+    text:
+    - languageType: 0
+      languageGenericType: Do you have anyone you suspect?
+  eventDatas: []
+  branchDatas: []
+  choiceDatas: []
+  emotionChoiceDatas: []
+  objectChoiceDatas: []
