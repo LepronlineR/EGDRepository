@@ -15115,7 +15115,7 @@ MonoBehaviour:
   doors:
   - {fileID: 908627257}
   player: {fileID: 1282868612}
-  lockState: 0
+  lockState: 1
 --- !u!114 &2022084344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16768,7 +16768,7 @@ MonoBehaviour:
   doors:
   - {fileID: 3407892162473631113}
   player: {fileID: 1282868612}
-  lockState: 0
+  lockState: 1
 --- !u!65 &3407892163254114203
 BoxCollider:
   m_ObjectHideFlags: 0
