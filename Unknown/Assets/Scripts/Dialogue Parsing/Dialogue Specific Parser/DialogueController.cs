@@ -195,6 +195,8 @@ public class DialogueController : DialogueGetData {
                 ProcessCurrentNode(currentData);
                 response = string.Empty;
                 examineEvidence = false;
+                // remove thought bubbles
+                MainSystem.Instance.RemoveAllBubbles();
                 break;
             }
         }
