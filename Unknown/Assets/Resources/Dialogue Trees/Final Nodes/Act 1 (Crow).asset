@@ -1,0 +1,236 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aac82a7c0dc8dd4e8e46749de3dddb3, type: 3}
+  m_Name: Act 1 (Crow)
+  m_EditorClassIdentifier: 
+  nodeLinkDatas:
+  - baseNodeGuid: 5c2f9d44-831e-4fe5-bc8e-68449c35dffe
+    basePortName: Output
+    targetNodeGuid: b8d4279a-6ef4-455f-b535-8aa327747e93
+    targetPortName: Input
+  - baseNodeGuid: b8d4279a-6ef4-455f-b535-8aa327747e93
+    basePortName: Continue
+    targetNodeGuid: 93295584-0472-44a5-b242-402ff79a5c04
+    targetPortName: Input
+  - baseNodeGuid: e56abb30-e69e-43e5-9e4b-effad62f2739
+    basePortName: Continue
+    targetNodeGuid: 2973ed28-7e29-4889-ad2c-c43ad54d9151
+    targetPortName: Input
+  - baseNodeGuid: 7ff2a829-fa9d-4ad0-be6d-857103478ddc
+    basePortName: Continue
+    targetNodeGuid: db73f7e1-b3b4-4a1c-9e85-a86fb59edcf1
+    targetPortName: Input
+  - baseNodeGuid: 93295584-0472-44a5-b242-402ff79a5c04
+    basePortName: Output
+    targetNodeGuid: e56abb30-e69e-43e5-9e4b-effad62f2739
+    targetPortName: Input
+  - baseNodeGuid: 2973ed28-7e29-4889-ad2c-c43ad54d9151
+    basePortName: Output
+    targetNodeGuid: 7ff2a829-fa9d-4ad0-be6d-857103478ddc
+    targetPortName: Input
+  - baseNodeGuid: db73f7e1-b3b4-4a1c-9e85-a86fb59edcf1
+    basePortName: Output
+    targetNodeGuid: 8eb8c561-310a-462b-a985-ec0b9985b946
+    targetPortName: Input
+  dialogueDatas:
+  - nodeGuid: b8d4279a-6ef4-455f-b535-8aa327747e93
+    position: {x: -459, y: 483}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Crow
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 7aeb3f1c-2b70-4260-9713-c03404e7e5ad
+      texts:
+      - languageType: 0
+        languageGenericType: With our tour guide
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: fb663fa1-10f5-4dc8-bab3-d31a16cca142
+      texts:
+      - languageType: 0
+        languageGenericType: Bob and Benedict were there too
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: f8506563bf3827446a0484275ce289ce, type: 3}
+    dialogueDataPorts:
+    - portGuid: 1a707f25-b60f-4a6b-9992-ea107b95c34b
+      inputGuid: 
+      outputGuid: 
+    - portGuid: 23175e6e-76fa-483c-8589-a9f7fc58dc4b
+      inputGuid: 
+      outputGuid: 
+    - portGuid: 5c66ffb6-d992-427a-934b-4756f741b736
+      inputGuid: 
+      outputGuid: 
+    - portGuid: 89a26f5a-7149-4632-9aa9-e634dacb1047
+      inputGuid: 
+      outputGuid: 
+    dialogueResponseTexts:
+    - ID:
+        value: 4
+      responseText:
+        value: Can you go into more detail?
+    dialogueResponseEvidences: []
+  - nodeGuid: e56abb30-e69e-43e5-9e4b-effad62f2739
+    position: {x: 96, y: 561}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Crow
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 9d8c5add-6100-4a44-8dd4-b9a71be2db09
+      texts:
+      - languageType: 0
+        languageGenericType: Mind being more specific?
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: f8506563bf3827446a0484275ce289ce, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts:
+    - ID:
+        value: 3
+      responseText:
+        value: What were Bob and Benedict doing?
+    dialogueResponseEvidences: []
+  - nodeGuid: 7ff2a829-fa9d-4ad0-be6d-857103478ddc
+    position: {x: 566, y: 567}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Crow
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 77f861b0-6e38-4f2c-b30b-3cab4662fbb3
+      texts:
+      - languageType: 0
+        languageGenericType: "Don\u2019t know\r"
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: 0ab2f4a6-7163-4a56-ba23-34ed2126961e
+      texts:
+      - languageType: 0
+        languageGenericType: All I know is that the two went into the auditorium
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 4
+      GuidID:
+        value: f7bf6fe7-b92b-49a7-a666-4bce1a30486b
+      texts:
+      - languageType: 0
+        languageGenericType: "For what exactly I don\u2019t know"
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: f8506563bf3827446a0484275ce289ce, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts:
+    - ID:
+        value: 5
+      responseText:
+        value: What were you doing with Chihiro?
+    dialogueResponseEvidences: []
+  - nodeGuid: 8eb8c561-310a-462b-a985-ec0b9985b946
+    position: {x: 1056, y: 582}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Crow
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: b0a67b14-0872-4fd7-9e2e-26aed8a7c9e5
+      texts:
+      - languageType: 0
+        languageGenericType: Asking questions?
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: 6b6bc908-f339-4818-a9f7-9f73e415a13a
+      texts:
+      - languageType: 0
+        languageGenericType: He is the tour guide after all
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: f8506563bf3827446a0484275ce289ce, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  endDatas: []
+  startDatas:
+  - nodeGuid: 5c2f9d44-831e-4fe5-bc8e-68449c35dffe
+    position: {x: -717, y: 481}
+    text:
+    - languageType: 0
+      languageGenericType: Where were you before 12 PM?
+  eventDatas: []
+  branchDatas: []
+  choiceDatas: []
+  emotionChoiceDatas:
+  - nodeGuid: 93295584-0472-44a5-b242-402ff79a5c04
+    position: {x: -83, y: 526}
+    choiceStateType:
+      value: 4
+  - nodeGuid: 2973ed28-7e29-4889-ad2c-c43ad54d9151
+    position: {x: 405, y: 562}
+    choiceStateType:
+      value: 4
+  - nodeGuid: db73f7e1-b3b4-4a1c-9e85-a86fb59edcf1
+    position: {x: 886, y: 572}
+    choiceStateType:
+      value: 4
+  objectChoiceDatas: []
