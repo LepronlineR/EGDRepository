@@ -90,7 +90,7 @@ MonoBehaviour:
     position: {x: 1170, y: 384}
     eventDataStringModifiers: []
     containerDialogueEventSOs:
-    - dialogueEventSO: {fileID: 0}
+    - dialogueEventSO: {fileID: 11400000, guid: 10bacbd9ebf148b4d998c302ba745dd9, type: 2}
     - dialogueEventSO: {fileID: 11400000, guid: d010c5c893f246142a8c67166be1bf96, type: 2}
     - dialogueEventSO: {fileID: 11400000, guid: bea1613a1cd8ed746a0b720b3e1d0303, type: 2}
     - dialogueEventSO: {fileID: 11400000, guid: 74d326a8694c54642b8eb678fdd8235b, type: 2}

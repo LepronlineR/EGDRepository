@@ -95,9 +95,10 @@ MonoBehaviour:
         value: {fileID: 21300000, guid: 38f36402ff2dfc54b8aed41f2af26f67, type: 3}
     dialogueDataPorts: []
     dialogueResponseTexts: []
+    dialogueResponseEvidences: []
   endDatas:
   - nodeGuid: 11691e47-1e24-455e-ad73-48774ede2013
-    position: {x: 987, y: 209}
+    position: {x: 1043, y: 209}
     endDialogueContainers:
     - dialogueContainerSO: {fileID: 11400000, guid: 103cd24c3b2d2144facbd7a2e682d0a0, type: 2}
     endNodeType:
@@ -110,12 +111,13 @@ MonoBehaviour:
       languageGenericType: 
   eventDatas:
   - nodeGuid: bcac8c15-e63e-4efe-90f8-245a5ab451aa
-    position: {x: 616, y: 209}
+    position: {x: 617, y: 209}
     eventDataStringModifiers: []
     containerDialogueEventSOs:
     - dialogueEventSO: {fileID: 11400000, guid: a3846bf0c6815d04bbc8fd5167e6bf26, type: 2}
     - dialogueEventSO: {fileID: 11400000, guid: ab4c7db904fbbf54ba7c471ac36074e7, type: 2}
     - dialogueEventSO: {fileID: 11400000, guid: 1d2b8d036c3f7a84da7f9b6ecf1b3f71, type: 2}
+    - dialogueEventSO: {fileID: 11400000, guid: 47bb6877da6e5fb45a4d53975b01442c, type: 2}
   branchDatas: []
   choiceDatas: []
   emotionChoiceDatas: []

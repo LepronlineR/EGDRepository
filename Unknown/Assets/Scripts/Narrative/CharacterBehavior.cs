@@ -36,7 +36,8 @@ public class CharacterBehavior : MonoBehaviour {
             List<string> allTexts = parser.GetAllStartNodeTexts();
             // TODO: make this appear as UI elements in front of the player
             foreach(string texts in allTexts){
-                MainSystem.Instance.GenerateBubbleText(texts);
+                if(!texts.Equals(string.Empty))
+                    MainSystem.Instance.GenerateBubbleText(texts);
             }
         }
     }
@@ -64,6 +65,7 @@ public class CharacterBehavior : MonoBehaviour {
     }
 
     private void OnMouseExit() {
-        EndInteraction();
+        if(interactable)
+            EndInteraction();
     }
 }
