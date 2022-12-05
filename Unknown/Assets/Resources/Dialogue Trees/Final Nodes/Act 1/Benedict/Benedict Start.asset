@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aac82a7c0dc8dd4e8e46749de3dddb3, type: 3}
+  m_Name: Benedict Start
+  m_EditorClassIdentifier: 
+  nodeLinkDatas:
+  - baseNodeGuid: d2bb43ca-a28e-4f3e-a3da-c8de1d9c7a2f
+    basePortName: Output
+    targetNodeGuid: 9022428c-9551-4de9-bf52-6d168eaba051
+    targetPortName: Input
+  dialogueDatas: []
+  endDatas:
+  - nodeGuid: 9022428c-9551-4de9-bf52-6d168eaba051
+    position: {x: 233, y: 265}
+    endDialogueContainers:
+    - dialogueContainerSO: {fileID: 11400000, guid: 7715e8d919f644a4b9e4f0681d31a14a, type: 2}
+    - dialogueContainerSO: {fileID: 11400000, guid: a07e1eb59b77a6d40bc87803b60e8e1b, type: 2}
+    endNodeType:
+      value: 1
+  startDatas:
+  - nodeGuid: d2bb43ca-a28e-4f3e-a3da-c8de1d9c7a2f
+    position: {x: 100, y: 263}
+    text:
+    - languageType: 0
+      languageGenericType: 
+  eventDatas: []
+  branchDatas: []
+  choiceDatas: []
+  emotionChoiceDatas: []
+  objectChoiceDatas: []

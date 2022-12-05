@@ -1,0 +1,135 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aac82a7c0dc8dd4e8e46749de3dddb3, type: 3}
+  m_Name: Benedict Alibi
+  m_EditorClassIdentifier: 
+  nodeLinkDatas:
+  - baseNodeGuid: 24ae1d01-7042-4301-a228-3d68bef6f98b
+    basePortName: Output
+    targetNodeGuid: 13f27d12-bb8d-4f54-911c-08e2fe9d8743
+    targetPortName: Input
+  - baseNodeGuid: b23b3ed5-2d94-45b4-892a-6a8d71dcc6dd
+    basePortName: Continue
+    targetNodeGuid: 3ef4baa2-cfef-41cd-8e27-f14408dbe148
+    targetPortName: Input
+  - baseNodeGuid: 13f27d12-bb8d-4f54-911c-08e2fe9d8743
+    basePortName: Continue
+    targetNodeGuid: b23b3ed5-2d94-45b4-892a-6a8d71dcc6dd
+    targetPortName: Input
+  dialogueDatas:
+  - nodeGuid: 13f27d12-bb8d-4f54-911c-08e2fe9d8743
+    position: {x: 279, y: 270}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Benedict
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: dce3bdc4-f146-4760-aaec-41ce44856c8b
+      texts:
+      - languageType: 0
+        languageGenericType: A-are you accusing me?!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 029449c1ef1a5ff408fcfc3381f31979, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts:
+    - ID:
+        value: 3
+      responseText:
+        value: "No, I\u2019m only verifying"
+    dialogueResponseEvidences: []
+  - nodeGuid: b23b3ed5-2d94-45b4-892a-6a8d71dcc6dd
+    position: {x: 904, y: 188}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Benedict
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 5032511e-6207-43bb-a7c8-0dd794300a71
+      texts:
+      - languageType: 0
+        languageGenericType: You could have said that before scaring me out of my
+          wits!!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: ecea8a08-a9f9-4483-a397-7c9fc371c838
+      texts:
+      - languageType: 0
+        languageGenericType: It would save us both precious time!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 25dcf3b2e80a0b14295724a20ccab811, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: d8acf4d2-f95a-492a-8f2b-3a25b6140af2
+    position: {x: 923, y: 780}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: 
+    dialogueDataTexts: []
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 0}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  endDatas:
+  - nodeGuid: 3ef4baa2-cfef-41cd-8e27-f14408dbe148
+    position: {x: 1340, y: 187}
+    endDialogueContainers:
+    - dialogueContainerSO: {fileID: 11400000, guid: a07e1eb59b77a6d40bc87803b60e8e1b, type: 2}
+    - dialogueContainerSO: {fileID: 11400000}
+    - dialogueContainerSO: {fileID: 11400000, guid: 9f5ec95bec41e3249b47729e9bad0d03, type: 2}
+    endNodeType:
+      value: 1
+  startDatas:
+  - nodeGuid: 24ae1d01-7042-4301-a228-3d68bef6f98b
+    position: {x: 56, y: 269}
+    text:
+    - languageType: 0
+      languageGenericType: Where were you before 12 PM?
+  eventDatas: []
+  branchDatas: []
+  choiceDatas: []
+  emotionChoiceDatas:
+  - nodeGuid: 97a3f184-b7d3-477b-a9a2-678e16ac9dad
+    position: {x: 625, y: 269}
+    choiceStateType:
+      value: 5
+  objectChoiceDatas: []
