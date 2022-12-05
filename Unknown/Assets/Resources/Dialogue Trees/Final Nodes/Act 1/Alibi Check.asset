@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8aac82a7c0dc8dd4e8e46749de3dddb3, type: 3}
-  m_Name: Act 1 (Crow)
+  m_Name: Alibi Check
   m_EditorClassIdentifier: 
   nodeLinkDatas:
   - baseNodeGuid: 5c2f9d44-831e-4fe5-bc8e-68449c35dffe
@@ -23,23 +23,15 @@ MonoBehaviour:
     targetPortName: Input
   - baseNodeGuid: e56abb30-e69e-43e5-9e4b-effad62f2739
     basePortName: Continue
-    targetNodeGuid: 2973ed28-7e29-4889-ad2c-c43ad54d9151
-    targetPortName: Input
-  - baseNodeGuid: 7ff2a829-fa9d-4ad0-be6d-857103478ddc
-    basePortName: Continue
-    targetNodeGuid: db73f7e1-b3b4-4a1c-9e85-a86fb59edcf1
+    targetNodeGuid: fa7d1aae-6be5-4ca9-88c6-3cad5a1799a1
     targetPortName: Input
   - baseNodeGuid: 93295584-0472-44a5-b242-402ff79a5c04
     basePortName: Output
     targetNodeGuid: e56abb30-e69e-43e5-9e4b-effad62f2739
     targetPortName: Input
-  - baseNodeGuid: 2973ed28-7e29-4889-ad2c-c43ad54d9151
+  - baseNodeGuid: fa7d1aae-6be5-4ca9-88c6-3cad5a1799a1
     basePortName: Output
-    targetNodeGuid: 7ff2a829-fa9d-4ad0-be6d-857103478ddc
-    targetPortName: Input
-  - baseNodeGuid: db73f7e1-b3b4-4a1c-9e85-a86fb59edcf1
-    basePortName: Output
-    targetNodeGuid: 8eb8c561-310a-462b-a985-ec0b9985b946
+    targetNodeGuid: 76a36996-199c-4a0f-8ecc-dcedaf75dd72
     targetPortName: Input
   dialogueDatas:
   - nodeGuid: b8d4279a-6ef4-455f-b535-8aa327747e93
@@ -95,7 +87,7 @@ MonoBehaviour:
         value: Can you go into more detail?
     dialogueResponseEvidences: []
   - nodeGuid: e56abb30-e69e-43e5-9e4b-effad62f2739
-    position: {x: 96, y: 561}
+    position: {x: 73, y: 486}
     dialogueDataNames:
     - ID:
         value: 0
@@ -116,101 +108,18 @@ MonoBehaviour:
     - ID:
         value: 1
       sprite:
-        value: {fileID: 21300000, guid: f8506563bf3827446a0484275ce289ce, type: 3}
-    dialogueDataPorts: []
-    dialogueResponseTexts:
-    - ID:
-        value: 3
-      responseText:
-        value: What were Bob and Benedict doing?
-    dialogueResponseEvidences: []
-  - nodeGuid: 7ff2a829-fa9d-4ad0-be6d-857103478ddc
-    position: {x: 566, y: 567}
-    dialogueDataNames:
-    - ID:
-        value: 0
-      characterName:
-        value: Crow
-    dialogueDataTexts:
-    - ID:
-        value: 2
-      GuidID:
-        value: 77f861b0-6e38-4f2c-b30b-3cab4662fbb3
-      texts:
-      - languageType: 0
-        languageGenericType: "Don\u2019t know\r"
-      audioClips:
-      - languageType: 0
-        languageGenericType: {fileID: 0}
-    - ID:
-        value: 3
-      GuidID:
-        value: 0ab2f4a6-7163-4a56-ba23-34ed2126961e
-      texts:
-      - languageType: 0
-        languageGenericType: All I know is that the two went into the auditorium
-      audioClips:
-      - languageType: 0
-        languageGenericType: {fileID: 0}
-    - ID:
-        value: 4
-      GuidID:
-        value: f7bf6fe7-b92b-49a7-a666-4bce1a30486b
-      texts:
-      - languageType: 0
-        languageGenericType: "For what exactly I don\u2019t know"
-      audioClips:
-      - languageType: 0
-        languageGenericType: {fileID: 0}
-    dialogueDataImagess:
-    - ID:
-        value: 1
-      sprite:
-        value: {fileID: 21300000, guid: f8506563bf3827446a0484275ce289ce, type: 3}
-    dialogueDataPorts: []
-    dialogueResponseTexts:
-    - ID:
-        value: 5
-      responseText:
-        value: What were you doing with Chihiro?
-    dialogueResponseEvidences: []
-  - nodeGuid: 8eb8c561-310a-462b-a985-ec0b9985b946
-    position: {x: 1056, y: 582}
-    dialogueDataNames:
-    - ID:
-        value: 0
-      characterName:
-        value: Crow
-    dialogueDataTexts:
-    - ID:
-        value: 2
-      GuidID:
-        value: b0a67b14-0872-4fd7-9e2e-26aed8a7c9e5
-      texts:
-      - languageType: 0
-        languageGenericType: Asking questions?
-      audioClips:
-      - languageType: 0
-        languageGenericType: {fileID: 0}
-    - ID:
-        value: 3
-      GuidID:
-        value: 6b6bc908-f339-4818-a9f7-9f73e415a13a
-      texts:
-      - languageType: 0
-        languageGenericType: He is the tour guide after all
-      audioClips:
-      - languageType: 0
-        languageGenericType: {fileID: 0}
-    dialogueDataImagess:
-    - ID:
-        value: 1
-      sprite:
-        value: {fileID: 21300000, guid: f8506563bf3827446a0484275ce289ce, type: 3}
+        value: {fileID: 21300000, guid: 7ea199d8cc2ecb04da82d36ad33772f9, type: 3}
     dialogueDataPorts: []
     dialogueResponseTexts: []
     dialogueResponseEvidences: []
-  endDatas: []
+  endDatas:
+  - nodeGuid: 76a36996-199c-4a0f-8ecc-dcedaf75dd72
+    position: {x: 574, y: 495}
+    endDialogueContainers:
+    - dialogueContainerSO: {fileID: 11400000, guid: 6a4ea2baa68c35741a0ddfda4bc97034, type: 2}
+    - dialogueContainerSO: {fileID: 11400000, guid: 36aa97cb02460eb4e9eac4a71813e38d, type: 2}
+    endNodeType:
+      value: 1
   startDatas:
   - nodeGuid: 5c2f9d44-831e-4fe5-bc8e-68449c35dffe
     position: {x: -717, y: 481}
@@ -222,15 +131,11 @@ MonoBehaviour:
   choiceDatas: []
   emotionChoiceDatas:
   - nodeGuid: 93295584-0472-44a5-b242-402ff79a5c04
-    position: {x: -83, y: 526}
+    position: {x: -133, y: 486}
     choiceStateType:
       value: 4
-  - nodeGuid: 2973ed28-7e29-4889-ad2c-c43ad54d9151
-    position: {x: 405, y: 562}
-    choiceStateType:
-      value: 4
-  - nodeGuid: db73f7e1-b3b4-4a1c-9e85-a86fb59edcf1
-    position: {x: 886, y: 572}
+  - nodeGuid: fa7d1aae-6be5-4ca9-88c6-3cad5a1799a1
+    position: {x: 392, y: 487}
     choiceStateType:
       value: 4
   objectChoiceDatas: []

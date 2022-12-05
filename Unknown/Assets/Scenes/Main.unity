@@ -7113,7 +7113,14 @@ MonoBehaviour:
   playerWord: 
   playerEvidence: []
   playerEmotion: 6
-  beginThoughtBubbles: 0
+  beginThoughtBubbles: 1
+  horrorDialogue: []
+  stickDialogue: []
+  picassoDialogue: []
+  peoples:
+  - {fileID: 2129264167}
+  - {fileID: 951859861}
+  - {fileID: 1536232420}
 --- !u!114 &983984762
 MonoBehaviour:
   m_ObjectHideFlags: 0

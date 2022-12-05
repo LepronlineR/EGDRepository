@@ -1,0 +1,190 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aac82a7c0dc8dd4e8e46749de3dddb3, type: 3}
+  m_Name: Suspect Opinions
+  m_EditorClassIdentifier: 
+  nodeLinkDatas:
+  - baseNodeGuid: 168b2c13-9c22-49b5-9f9f-9f6a0d131103
+    basePortName: Output
+    targetNodeGuid: 0e1fdf75-d281-40eb-b2c5-1f5226eec17f
+    targetPortName: Input
+  - baseNodeGuid: fe5bd430-0842-41df-919a-d856c205376c
+    basePortName: Continue
+    targetNodeGuid: 63a79e3c-78f7-46d0-b5e7-0b14bb8d24cf
+    targetPortName: Input
+  - baseNodeGuid: 0e1fdf75-d281-40eb-b2c5-1f5226eec17f
+    basePortName: Continue
+    targetNodeGuid: fe5bd430-0842-41df-919a-d856c205376c
+    targetPortName: Input
+  - baseNodeGuid: 63a79e3c-78f7-46d0-b5e7-0b14bb8d24cf
+    basePortName: Continue
+    targetNodeGuid: a48b9558-fc0e-44cf-9dbb-7a57466223bd
+    targetPortName: Input
+  - baseNodeGuid: a48b9558-fc0e-44cf-9dbb-7a57466223bd
+    basePortName: Continue
+    targetNodeGuid: ad460a73-c24d-4e89-b22a-4436f0a31b18
+    targetPortName: Input
+  dialogueDatas:
+  - nodeGuid: fe5bd430-0842-41df-919a-d856c205376c
+    position: {x: -127, y: 734}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Crow
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 84894216-19f1-4c77-b531-0186cfeebc74
+      texts:
+      - languageType: 0
+        languageGenericType: You
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 19f0c8883811f824d9442062a991e91d, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: 0e1fdf75-d281-40eb-b2c5-1f5226eec17f
+    position: {x: -459, y: 731}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Crow
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: fcd543e6-8ab0-4abc-9e5d-5cbc00d70fd0
+      texts:
+      - languageType: 0
+        languageGenericType: If I can be blunt...
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: f8506563bf3827446a0484275ce289ce, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: 63a79e3c-78f7-46d0-b5e7-0b14bb8d24cf
+    position: {x: 185, y: 735}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Crow
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 1d76b9e7-7974-4d56-8b44-c6489ace467e
+      texts:
+      - languageType: 0
+        languageGenericType: No hard feelings
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: ed7d83e2-bad6-43ca-a3ab-ef059abc63a2
+      texts:
+      - languageType: 0
+        languageGenericType: But you were the last person to see him alive
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 4
+      GuidID:
+        value: 3ef23cbf-a4ac-4114-92e9-9ae4bb5ec7f6
+      texts:
+      - languageType: 0
+        languageGenericType: "Though I\u2019m flexible"
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 5
+      GuidID:
+        value: 9c9fcaee-2101-47fc-85ef-25f0f66cedf4
+      texts:
+      - languageType: 0
+        languageGenericType: "If there\u2019s proof otherwise"
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: f8506563bf3827446a0484275ce289ce, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: a48b9558-fc0e-44cf-9dbb-7a57466223bd
+    position: {x: 485, y: 738}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Crow
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 96e61d8e-38db-4191-ac7b-51cd6bc6e22b
+      texts:
+      - languageType: 0
+        languageGenericType: "I\u2019ll change my mind"
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 6ed60066acfbef843ad6b0521187dc73, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  endDatas:
+  - nodeGuid: ad460a73-c24d-4e89-b22a-4436f0a31b18
+    position: {x: 816, y: 742}
+    endDialogueContainers:
+    - dialogueContainerSO: {fileID: 11400000, guid: d1185841a6409a54a9f275014cf69fbd, type: 2}
+    - dialogueContainerSO: {fileID: 11400000}
+    - dialogueContainerSO: {fileID: 11400000, guid: 34c462457b96a0e4c86dc1bece1fbefe, type: 2}
+    endNodeType:
+      value: 1
+  startDatas:
+  - nodeGuid: 168b2c13-9c22-49b5-9f9f-9f6a0d131103
+    position: {x: -696, y: 730}
+    text:
+    - languageType: 0
+      languageGenericType: Do you have anyone you suspect?
+  eventDatas: []
+  branchDatas: []
+  choiceDatas: []
+  emotionChoiceDatas: []
+  objectChoiceDatas: []

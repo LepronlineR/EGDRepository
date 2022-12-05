@@ -195,6 +195,8 @@ public class DialogueController : DialogueGetData {
                 ProcessCurrentNode(currentData);
                 response = string.Empty;
                 examineEvidence = false;
+                // remove thought bubbles
+                MainSystem.Instance.RemoveAllBubbles();
                 break;
             }
         }
@@ -208,7 +210,16 @@ public class DialogueController : DialogueGetData {
             case ObjectChoiceData ocd:
                 return RunChoice(ocd);
             default:
-                break;
+                // regular continue
+                return RunChoice(data);
+        }
+    }
+
+    private bool RunChoice(BaseData data){
+        // compare the emotion choice to the player emotion and text
+        if((MainSystem.Instance.PlayerWord.ToLower().Equals(response.ToLower()))){
+            currentData = GetNextNode(data);
+            return true;
         }
         return false;
     }

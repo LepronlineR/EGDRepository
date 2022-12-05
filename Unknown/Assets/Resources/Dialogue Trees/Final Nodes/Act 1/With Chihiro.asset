@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aac82a7c0dc8dd4e8e46749de3dddb3, type: 3}
+  m_Name: With Chihiro
+  m_EditorClassIdentifier: 
+  nodeLinkDatas:
+  - baseNodeGuid: 411374ea-0e5b-4250-b2db-b6d1c8b76f25
+    basePortName: Output
+    targetNodeGuid: d4ef6b9a-899c-4c3f-9e1d-f56117dbbc48
+    targetPortName: Input
+  - baseNodeGuid: d4ef6b9a-899c-4c3f-9e1d-f56117dbbc48
+    basePortName: Continue
+    targetNodeGuid: 889c8841-5759-4820-a4b8-1134684b3c4b
+    targetPortName: Input
+  - baseNodeGuid: 889c8841-5759-4820-a4b8-1134684b3c4b
+    basePortName: Continue
+    targetNodeGuid: e436004c-c62d-47a1-bc95-d171afc13509
+    targetPortName: Input
+  dialogueDatas:
+  - nodeGuid: d4ef6b9a-899c-4c3f-9e1d-f56117dbbc48
+    position: {x: -332, y: 675}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Crow
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: ea0b34ba-003e-4836-a170-bd745f1cea38
+      texts:
+      - languageType: 0
+        languageGenericType: Asking questions?
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: f8506563bf3827446a0484275ce289ce, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: 889c8841-5759-4820-a4b8-1134684b3c4b
+    position: {x: -1, y: 674}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Crow
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: cd3ddf66-37bb-463c-b51d-0be7034d1c46
+      texts:
+      - languageType: 0
+        languageGenericType: He is the tour guide after all
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 7ea199d8cc2ecb04da82d36ad33772f9, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  endDatas:
+  - nodeGuid: e436004c-c62d-47a1-bc95-d171afc13509
+    position: {x: 320, y: 680}
+    endDialogueContainers:
+    - dialogueContainerSO: {fileID: 11400000, guid: 36aa97cb02460eb4e9eac4a71813e38d, type: 2}
+    - dialogueContainerSO: {fileID: 11400000}
+    - dialogueContainerSO: {fileID: 11400000, guid: dc209fbe4cdc0d0448dfeb273b067823, type: 2}
+    - dialogueContainerSO: {fileID: 11400000, guid: 34c462457b96a0e4c86dc1bece1fbefe, type: 2}
+    endNodeType:
+      value: 1
+  startDatas:
+  - nodeGuid: 411374ea-0e5b-4250-b2db-b6d1c8b76f25
+    position: {x: -590, y: 674}
+    text:
+    - languageType: 0
+      languageGenericType: What were you doing with Chihiro?
+  eventDatas: []
+  branchDatas: []
+  choiceDatas: []
+  emotionChoiceDatas: []
+  objectChoiceDatas: []

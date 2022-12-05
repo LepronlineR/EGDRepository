@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aac82a7c0dc8dd4e8e46749de3dddb3, type: 3}
+  m_Name: Crow Start
+  m_EditorClassIdentifier: 
+  nodeLinkDatas:
+  - baseNodeGuid: 52fe7fcb-0d22-44d9-9bae-0863bffac17f
+    basePortName: Output
+    targetNodeGuid: 8f0dcee9-a305-42dc-ad5f-95af8bcd6d60
+    targetPortName: Input
+  - baseNodeGuid: 8f0dcee9-a305-42dc-ad5f-95af8bcd6d60
+    basePortName: Continue
+    targetNodeGuid: bde43fcb-a379-4975-9c6c-3b10eb51f509
+    targetPortName: Input
+  dialogueDatas:
+  - nodeGuid: 8f0dcee9-a305-42dc-ad5f-95af8bcd6d60
+    position: {x: -680, y: 630}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Crow
+    dialogueDataTexts: []
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: f8506563bf3827446a0484275ce289ce, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  endDatas:
+  - nodeGuid: bde43fcb-a379-4975-9c6c-3b10eb51f509
+    position: {x: -379, y: 632}
+    endDialogueContainers:
+    - dialogueContainerSO: {fileID: 11400000, guid: d1185841a6409a54a9f275014cf69fbd, type: 2}
+    - dialogueContainerSO: {fileID: 11400000, guid: dc209fbe4cdc0d0448dfeb273b067823, type: 2}
+    endNodeType:
+      value: 1
+  startDatas:
+  - nodeGuid: 52fe7fcb-0d22-44d9-9bae-0863bffac17f
+    position: {x: -780, y: 628}
+    text:
+    - languageType: 0
+      languageGenericType: 
+  eventDatas: []
+  branchDatas: []
+  choiceDatas: []
+  emotionChoiceDatas: []
+  objectChoiceDatas: []

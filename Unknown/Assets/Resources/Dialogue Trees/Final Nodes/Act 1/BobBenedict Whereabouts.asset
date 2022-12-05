@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aac82a7c0dc8dd4e8e46749de3dddb3, type: 3}
+  m_Name: BobBenedict Whereabouts
+  m_EditorClassIdentifier: 
+  nodeLinkDatas:
+  - baseNodeGuid: e76fc599-a793-4893-8b65-a2c7b198ef43
+    basePortName: Output
+    targetNodeGuid: fb7aabdd-bec7-47d9-b630-bf55ac78b42e
+    targetPortName: Input
+  - baseNodeGuid: fb7aabdd-bec7-47d9-b630-bf55ac78b42e
+    basePortName: Continue
+    targetNodeGuid: a3c14154-6050-465d-ab42-311637dfadab
+    targetPortName: Input
+  dialogueDatas:
+  - nodeGuid: fb7aabdd-bec7-47d9-b630-bf55ac78b42e
+    position: {x: -422, y: 561}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Crow
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 6d695ad4-241b-46ba-9f9b-fad633d85f1d
+      texts:
+      - languageType: 0
+        languageGenericType: "Don\u2019t know"
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: 5f6ccc1c-7578-444c-aff8-e1c812800897
+      texts:
+      - languageType: 0
+        languageGenericType: All I know is that the two went into the auditorium
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 4
+      GuidID:
+        value: 06369dd1-2587-46fa-8399-9dec2f62f6be
+      texts:
+      - languageType: 0
+        languageGenericType: "For what exactly I don\u2019t know"
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: f8506563bf3827446a0484275ce289ce, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  endDatas:
+  - nodeGuid: a3c14154-6050-465d-ab42-311637dfadab
+    position: {x: -115, y: 565}
+    endDialogueContainers:
+    - dialogueContainerSO: {fileID: 11400000}
+    - dialogueContainerSO: {fileID: 11400000, guid: 6a4ea2baa68c35741a0ddfda4bc97034, type: 2}
+    - dialogueContainerSO: {fileID: 11400000, guid: dc209fbe4cdc0d0448dfeb273b067823, type: 2}
+    - dialogueContainerSO: {fileID: 11400000, guid: 34c462457b96a0e4c86dc1bece1fbefe, type: 2}
+    endNodeType:
+      value: 1
+  startDatas:
+  - nodeGuid: e76fc599-a793-4893-8b65-a2c7b198ef43
+    position: {x: -660, y: 561}
+    text:
+    - languageType: 0
+      languageGenericType: What were Bob and Benedict doing?
+  eventDatas: []
+  branchDatas: []
+  choiceDatas: []
+  emotionChoiceDatas: []
+  objectChoiceDatas: []
