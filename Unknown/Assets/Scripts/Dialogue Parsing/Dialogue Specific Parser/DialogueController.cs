@@ -36,6 +36,10 @@ public class DialogueController : DialogueGetData {
     private bool skip = true; 
     private bool examineEvidence = false;
 
+    public void AddDialogue(List<DialogueContainerSO> containers){
+        dialogueContainers.AddRange(containers);
+    }
+
     void Start() {
         HideDialogueText();
     }

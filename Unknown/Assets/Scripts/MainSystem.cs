@@ -67,6 +67,12 @@ public class MainSystem : MonoBehaviour
 
     [Header("Tutorial")]
     public bool beginThoughtBubbles = false;
+    public List<DialogueContainerSO> horrorDialogue;
+    public List<DialogueContainerSO> stickDialogue;
+    public List<DialogueContainerSO> picassoDialogue;
+
+    [Header("People")]
+    public List<GameObject> peoples;
 
 
     void Start(){
@@ -82,6 +88,36 @@ public class MainSystem : MonoBehaviour
             bubbleTakenPositions[x] = false;
         }
     }
+
+    #region Tutorial
+
+    public void StartTutorial() {
+        foreach(GameObject people in peoples){
+            // remove their dialogue trees and add new ones
+            switch(people.GetComponent<CharacterBehavior>().Person){
+                case PersonName.Horror:
+                    people.GetComponent<DialogueController>().AddDialogue(horrorDialogue);
+                    break;
+                case PersonName.Stick:
+                    people.GetComponent<DialogueController>().AddDialogue(stickDialogue);
+                    break;
+                case PersonName.Picasso:
+                    people.GetComponent<DialogueController>().AddDialogue(picassoDialogue);
+                    break;
+            }
+            // hide people away
+            people.SetActive(false);
+        }
+    }
+
+    public void EndTutorial() {
+        foreach(GameObject people in peoples){
+            // show people
+            people.SetActive(true);
+        }
+    }
+
+    #endregion
 
     #region Inventory Images    
 
@@ -184,7 +220,7 @@ public class MainSystem : MonoBehaviour
         byte[] bytes = SavWav.GetByteFromClip(clip);
 
         // Perform prediction
-        PredictionClient.Instance.Predict(bytes);
+        // PredictionClient.Instance.Predict(bytes);
 
         timePassed = 0.0f;
     }
