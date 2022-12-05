@@ -17,13 +17,13 @@ MonoBehaviour:
     basePortName: Output
     targetNodeGuid: 13f27d12-bb8d-4f54-911c-08e2fe9d8743
     targetPortName: Input
-  - baseNodeGuid: b23b3ed5-2d94-45b4-892a-6a8d71dcc6dd
-    basePortName: Continue
-    targetNodeGuid: 3ef4baa2-cfef-41cd-8e27-f14408dbe148
-    targetPortName: Input
   - baseNodeGuid: 13f27d12-bb8d-4f54-911c-08e2fe9d8743
     basePortName: Continue
     targetNodeGuid: b23b3ed5-2d94-45b4-892a-6a8d71dcc6dd
+    targetPortName: Input
+  - baseNodeGuid: b23b3ed5-2d94-45b4-892a-6a8d71dcc6dd
+    basePortName: Continue
+    targetNodeGuid: 3ef4baa2-cfef-41cd-8e27-f14408dbe148
     targetPortName: Input
   dialogueDatas:
   - nodeGuid: 13f27d12-bb8d-4f54-911c-08e2fe9d8743

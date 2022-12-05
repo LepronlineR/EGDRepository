@@ -12,10 +12,129 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8aac82a7c0dc8dd4e8e46749de3dddb3, type: 3}
   m_Name: Benedict Suspect Opinion
   m_EditorClassIdentifier: 
-  nodeLinkDatas: []
-  dialogueDatas: []
-  endDatas: []
-  startDatas: []
+  nodeLinkDatas:
+  - baseNodeGuid: cab75270-c2c6-4aea-bba7-2a8050e6d04f
+    basePortName: Output
+    targetNodeGuid: e633a4cf-c09c-4b7a-89c1-74f384eeb9a8
+    targetPortName: Input
+  - baseNodeGuid: e633a4cf-c09c-4b7a-89c1-74f384eeb9a8
+    basePortName: Continue
+    targetNodeGuid: 650cce46-29f0-4826-ab5c-d1b6080067ea
+    targetPortName: Input
+  - baseNodeGuid: 650cce46-29f0-4826-ab5c-d1b6080067ea
+    basePortName: Continue
+    targetNodeGuid: 1035f860-b115-4cc8-9a32-0232de66eb3b
+    targetPortName: Input
+  dialogueDatas:
+  - nodeGuid: e633a4cf-c09c-4b7a-89c1-74f384eeb9a8
+    position: {x: 5, y: 341}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Benedict
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 5b2afddc-738b-4418-b3c0-31838f493746
+      texts:
+      - languageType: 0
+        languageGenericType: I have to say
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: 9bcf108d-908d-4803-a136-b338d6af575f
+      texts:
+      - languageType: 0
+        languageGenericType: That guy in all black gives me bad vibes
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 4
+      GuidID:
+        value: ed69f647-5532-48f1-86b7-884858046bf6
+      texts:
+      - languageType: 0
+        languageGenericType: "He claims he\u2019s a performer"
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 87a1a56c93e089c429442ca246b2b995, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: 650cce46-29f0-4826-ab5c-d1b6080067ea
+    position: {x: 357, y: 342}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Benedict
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 535b29b1-9d69-4fbd-9f1c-b945c478a03d
+      texts:
+      - languageType: 0
+        languageGenericType: "Yet he can\u2019t give the time to look at people in
+          the eye!"
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: 4d535524-3fc2-49a2-842b-ed9d7e32c334
+      texts:
+      - languageType: 0
+        languageGenericType: How rude!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 4
+      GuidID:
+        value: f3c10f1f-de93-44ad-adb8-317d116ff4d4
+      texts:
+      - languageType: 0
+        languageGenericType: "It\u2019s as if that phone of his is more important
+          than his audience!"
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 25dcf3b2e80a0b14295724a20ccab811, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  endDatas:
+  - nodeGuid: 1035f860-b115-4cc8-9a32-0232de66eb3b
+    position: {x: 821, y: 342}
+    endDialogueContainers:
+    - dialogueContainerSO: {fileID: 11400000}
+    - dialogueContainerSO: {fileID: 11400000, guid: 7715e8d919f644a4b9e4f0681d31a14a, type: 2}
+    - dialogueContainerSO: {fileID: 11400000, guid: 9f5ec95bec41e3249b47729e9bad0d03, type: 2}
+    endNodeType:
+      value: 1
+  startDatas:
+  - nodeGuid: cab75270-c2c6-4aea-bba7-2a8050e6d04f
+    position: {x: -271, y: 342}
+    text:
+    - languageType: 0
+      languageGenericType: Do you have anyone you suspect?
   eventDatas: []
   branchDatas: []
   choiceDatas: []
