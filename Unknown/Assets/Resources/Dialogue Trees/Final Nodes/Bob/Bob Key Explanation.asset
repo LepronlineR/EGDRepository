@@ -10,44 +10,48 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8aac82a7c0dc8dd4e8e46749de3dddb3, type: 3}
-  m_Name: Bob End
+  m_Name: Bob Key Explanation
   m_EditorClassIdentifier: 
   nodeLinkDatas:
-  - baseNodeGuid: 25a31d44-d65a-4944-9b91-0b561364d63e
+  - baseNodeGuid: 91080116-7332-4edc-a20e-bea4e4d1e56b
     basePortName: Output
-    targetNodeGuid: cd3b0dd5-d97b-4f60-beba-b73c1d2ceef6
+    targetNodeGuid: b3726aae-7d42-41ab-ae41-307cae4747a1
     targetPortName: Input
-  - baseNodeGuid: cd3b0dd5-d97b-4f60-beba-b73c1d2ceef6
+  - baseNodeGuid: b3726aae-7d42-41ab-ae41-307cae4747a1
     basePortName: Continue
-    targetNodeGuid: fdbe9166-f365-469b-960e-2c5876580e9e
+    targetNodeGuid: c6e140eb-3a79-4fea-8e08-78ecd9c86968
     targetPortName: Input
-  - baseNodeGuid: fdbe9166-f365-469b-960e-2c5876580e9e
+  - baseNodeGuid: c6e140eb-3a79-4fea-8e08-78ecd9c86968
     basePortName: Continue
-    targetNodeGuid: 80e96d3f-d924-4c72-98a7-f36fb1713fe6
+    targetNodeGuid: c55adee4-e0d2-4d7b-bf46-8bd2e5725019
     targetPortName: Input
-  - baseNodeGuid: 80e96d3f-d924-4c72-98a7-f36fb1713fe6
+  - baseNodeGuid: c55adee4-e0d2-4d7b-bf46-8bd2e5725019
     basePortName: Continue
-    targetNodeGuid: 26f932e8-1f88-4995-82ee-629830d7e9bf
+    targetNodeGuid: 1d230187-cf0c-45e3-8883-cf92f7ec5f66
     targetPortName: Input
-  - baseNodeGuid: 26f932e8-1f88-4995-82ee-629830d7e9bf
+  - baseNodeGuid: 1d230187-cf0c-45e3-8883-cf92f7ec5f66
     basePortName: Continue
-    targetNodeGuid: d869fa62-63cf-4013-986e-c99eb38d4dcf
+    targetNodeGuid: 6b3ca1c2-57ba-4d32-992f-8defeb1fb994
     targetPortName: Input
-  - baseNodeGuid: d869fa62-63cf-4013-986e-c99eb38d4dcf
+  - baseNodeGuid: 6b3ca1c2-57ba-4d32-992f-8defeb1fb994
     basePortName: Continue
-    targetNodeGuid: 46efbcdc-e66f-4851-8356-89dc6c35b819
+    targetNodeGuid: a42367a5-b70d-43e4-94dd-bdd8900a9520
     targetPortName: Input
-  - baseNodeGuid: 46efbcdc-e66f-4851-8356-89dc6c35b819
+  - baseNodeGuid: a42367a5-b70d-43e4-94dd-bdd8900a9520
     basePortName: Continue
-    targetNodeGuid: 228d499a-0129-4d76-9da8-76f43bf0d8bd
+    targetNodeGuid: 5ccbe941-b84a-47c9-9c91-b0ff29c17b7f
     targetPortName: Input
-  - baseNodeGuid: 228d499a-0129-4d76-9da8-76f43bf0d8bd
+  - baseNodeGuid: 5ccbe941-b84a-47c9-9c91-b0ff29c17b7f
     basePortName: Continue
-    targetNodeGuid: deb5ff61-66d5-46ca-a5fc-34306d8e7d91
+    targetNodeGuid: 3987ec7b-0b9b-4716-8e33-4d81895b99c1
+    targetPortName: Input
+  - baseNodeGuid: 3987ec7b-0b9b-4716-8e33-4d81895b99c1
+    basePortName: Continue
+    targetNodeGuid: 7526a318-b1f0-43c3-973a-382d30193405
     targetPortName: Input
   dialogueDatas:
-  - nodeGuid: cd3b0dd5-d97b-4f60-beba-b73c1d2ceef6
-    position: {x: 292, y: 383}
+  - nodeGuid: b3726aae-7d42-41ab-ae41-307cae4747a1
+    position: {x: 380, y: 390}
     dialogueDataNames:
     - ID:
         value: 0
@@ -57,93 +61,20 @@ MonoBehaviour:
     - ID:
         value: 2
       GuidID:
-        value: 22b05b1c-c77d-44ad-a793-a0ef814096ca
+        value: adbe8c0e-016e-4d89-a3be-67634303a3cf
       texts:
       - languageType: 0
-        languageGenericType: You're welcome
-      audioClips:
-      - languageType: 0
-        languageGenericType: {fileID: 0}
-    dialogueDataImagess:
-    - ID:
-        value: 1
-      sprite:
-        value: {fileID: 21300000, guid: ab3c7c7d5ed3ff74599280118da565b9, type: 3}
-    dialogueDataPorts: []
-    dialogueResponseTexts: []
-    dialogueResponseEvidences: []
-  - nodeGuid: fdbe9166-f365-469b-960e-2c5876580e9e
-    position: {x: 636, y: 383}
-    dialogueDataNames:
-    - ID:
-        value: 0
-      characterName:
-        value: Bob
-    dialogueDataTexts:
-    - ID:
-        value: 2
-      GuidID:
-        value: 462fc5ae-3d6d-409e-9df1-1753a264cb9f
-      texts:
-      - languageType: 0
-        languageGenericType: And one more thing
+        languageGenericType: I found a ball in the auditorium
       audioClips:
       - languageType: 0
         languageGenericType: {fileID: 0}
     - ID:
         value: 3
       GuidID:
-        value: bd6d609d-8d94-4108-9fbc-65309f96a9b1
+        value: 8299d1a0-51c2-427c-8efe-535896d1762c
       texts:
       - languageType: 0
-        languageGenericType: I know the others think you did it
-      audioClips:
-      - languageType: 0
-        languageGenericType: {fileID: 0}
-    - ID:
-        value: 4
-      GuidID:
-        value: 026758fa-34ea-4fc1-8e25-b63ed1765cc2
-      texts:
-      - languageType: 0
-        languageGenericType: "But I don\u2019t believe that"
-      audioClips:
-      - languageType: 0
-        languageGenericType: {fileID: 0}
-    dialogueDataImagess:
-    - ID:
-        value: 1
-      sprite:
-        value: {fileID: 21300000, guid: 813029c5fc5e52540be73584988153b7, type: 3}
-    dialogueDataPorts: []
-    dialogueResponseTexts: []
-    dialogueResponseEvidences: []
-  - nodeGuid: 80e96d3f-d924-4c72-98a7-f36fb1713fe6
-    position: {x: 971, y: 386}
-    dialogueDataNames:
-    - ID:
-        value: 0
-      characterName:
-        value: Bob
-    dialogueDataTexts:
-    - ID:
-        value: 2
-      GuidID:
-        value: c8792464-3a16-40e6-82ac-a27fc414c449
-      texts:
-      - languageType: 0
-        languageGenericType: Why would you try to figure out what happened if you
-          were the killer?
-      audioClips:
-      - languageType: 0
-        languageGenericType: {fileID: 0}
-    - ID:
-        value: 3
-      GuidID:
-        value: 74deaaf3-4985-49d6-b505-939a905407f1
-      texts:
-      - languageType: 0
-        languageGenericType: Plus...
+        languageGenericType: Normally, I'd put it in the lost and found
       audioClips:
       - languageType: 0
         languageGenericType: {fileID: 0}
@@ -155,8 +86,8 @@ MonoBehaviour:
     dialogueDataPorts: []
     dialogueResponseTexts: []
     dialogueResponseEvidences: []
-  - nodeGuid: 26f932e8-1f88-4995-82ee-629830d7e9bf
-    position: {x: 1419, y: 388}
+  - nodeGuid: c6e140eb-3a79-4fea-8e08-78ecd9c86968
+    position: {x: 695, y: 390}
     dialogueDataNames:
     - ID:
         value: 0
@@ -166,20 +97,20 @@ MonoBehaviour:
     - ID:
         value: 2
       GuidID:
-        value: f478fa51-8127-4e9e-8c0c-8b04d0965f7b
+        value: e2653380-756c-4c9c-9e91-589e46504cd7
       texts:
       - languageType: 0
-        languageGenericType: You only met Chihiro today
+        languageGenericType: But it was worn and dirty
       audioClips:
       - languageType: 0
         languageGenericType: {fileID: 0}
     - ID:
         value: 3
       GuidID:
-        value: ef00f1c7-3f5c-4de0-8301-b8ed740b4b2e
+        value: 96a3d6f9-3a14-4338-9087-4dc385e3545c
       texts:
       - languageType: 0
-        languageGenericType: "Yet you\u2019re helping him find his killer"
+        languageGenericType: I figured someone threw it away
       audioClips:
       - languageType: 0
         languageGenericType: {fileID: 0}
@@ -191,8 +122,8 @@ MonoBehaviour:
     dialogueDataPorts: []
     dialogueResponseTexts: []
     dialogueResponseEvidences: []
-  - nodeGuid: d869fa62-63cf-4013-986e-c99eb38d4dcf
-    position: {x: 1780, y: 384}
+  - nodeGuid: c55adee4-e0d2-4d7b-bf46-8bd2e5725019
+    position: {x: 1022, y: 390}
     dialogueDataNames:
     - ID:
         value: 0
@@ -202,92 +133,10 @@ MonoBehaviour:
     - ID:
         value: 2
       GuidID:
-        value: 6016fc59-c1dd-4aaa-b762-cd733d340f68
+        value: f2f568c0-181d-4a69-83e8-bec54d5eaccb
       texts:
       - languageType: 0
-        languageGenericType: "I think you\u2019re a nice person"
-      audioClips:
-      - languageType: 0
-        languageGenericType: {fileID: 0}
-    - ID:
-        value: 3
-      GuidID:
-        value: 27ae5782-9863-4963-ade1-6753a3f059b4
-      texts:
-      - languageType: 0
-        languageGenericType: "So I\u2019ll believe you"
-      audioClips:
-      - languageType: 0
-        languageGenericType: {fileID: 0}
-    - ID:
-        value: 4
-      GuidID:
-        value: bae0bdab-ff32-4a6e-9105-418d17e700bf
-      texts:
-      - languageType: 0
-        languageGenericType: "If there\u2019s anything I can do to help"
-      audioClips:
-      - languageType: 0
-        languageGenericType: {fileID: 0}
-    dialogueDataImagess:
-    - ID:
-        value: 1
-      sprite:
-        value: {fileID: 21300000, guid: bc25b627b552c9643aa91e87ec1af0b1, type: 3}
-    dialogueDataPorts: []
-    dialogueResponseTexts: []
-    dialogueResponseEvidences: []
-  - nodeGuid: 46efbcdc-e66f-4851-8356-89dc6c35b819
-    position: {x: 2144, y: 385}
-    dialogueDataNames:
-    - ID:
-        value: 0
-      characterName:
-        value: Bob
-    dialogueDataTexts:
-    - ID:
-        value: 2
-      GuidID:
-        value: b97f1138-9a23-4953-abb6-508692285e8a
-      texts:
-      - languageType: 0
-        languageGenericType: Let me know!
-      audioClips:
-      - languageType: 0
-        languageGenericType: {fileID: 0}
-    - ID:
-        value: 3
-      GuidID:
-        value: e078c08f-8406-47f3-9406-87f46c4f6891
-      texts:
-      - languageType: 0
-        languageGenericType: "I\u2019m happy to help you prove your innocence!"
-      audioClips:
-      - languageType: 0
-        languageGenericType: {fileID: 0}
-    dialogueDataImagess:
-    - ID:
-        value: 1
-      sprite:
-        value: {fileID: 21300000, guid: ab3c7c7d5ed3ff74599280118da565b9, type: 3}
-    dialogueDataPorts: []
-    dialogueResponseTexts: []
-    dialogueResponseEvidences: []
-  - nodeGuid: 228d499a-0129-4d76-9da8-76f43bf0d8bd
-    position: {x: 2499, y: 386}
-    dialogueDataNames:
-    - ID:
-        value: 0
-      characterName:
-        value: Bob
-    dialogueDataTexts:
-    - ID:
-        value: 2
-      GuidID:
-        value: c7f812e1-8610-4749-a274-da142f7792b1
-      texts:
-      - languageType: 0
-        languageGenericType: Let's find Chihiro's killer and bring them to justice!
+        languageGenericType: They could have done so properly though!
       audioClips:
       - languageType: 0
         languageGenericType: {fileID: 0}
@@ -299,18 +148,204 @@ MonoBehaviour:
     dialogueDataPorts: []
     dialogueResponseTexts: []
     dialogueResponseEvidences: []
+  - nodeGuid: 1d230187-cf0c-45e3-8883-cf92f7ec5f66
+    position: {x: 1359, y: 391}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Bob
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 28f548df-0383-4192-b58a-42cced5c1d77
+      texts:
+      - languageType: 0
+        languageGenericType: Anyway
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: 6d27f151-306e-4488-bf41-0768c1b9b3dd
+      texts:
+      - languageType: 0
+        languageGenericType: When I went to throw it in the nearby trash can
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: bc25b627b552c9643aa91e87ec1af0b1, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: 6b3ca1c2-57ba-4d32-992f-8defeb1fb994
+    position: {x: 1723, y: 392}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Bob
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 41875083-7241-4110-8ceb-2969947ae330
+      texts:
+      - languageType: 0
+        languageGenericType: The holes in the trash can were too small!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: 72767f84-fb84-48bd-b3d8-eb3b8fc15532
+      texts:
+      - languageType: 0
+        languageGenericType: Not to mention the lid being locked!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 4
+      GuidID:
+        value: 687f0c87-b031-416a-b4c5-e40b2afd0c0b
+      texts:
+      - languageType: 0
+        languageGenericType: It was really frustrating you know!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 58558ed2b54d57e4c8f27d3ef73c0bad, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: a42367a5-b70d-43e4-94dd-bdd8900a9520
+    position: {x: 2069, y: 391}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Bob
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 727f8c96-8585-45ac-8c58-9a51e1792fcc
+      texts:
+      - languageType: 0
+        languageGenericType: Fortunately Chihiro told me that there is a key to that
+          lock
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: f2e4aa52-e69f-4009-83c5-c65667ff3d60
+      texts:
+      - languageType: 0
+        languageGenericType: And if I were to find it
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 4
+      GuidID:
+        value: a5bdd1e5-fa6c-4547-8fc5-3098b7f564a5
+      texts:
+      - languageType: 0
+        languageGenericType: I'd have full permission to use it
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: bc25b627b552c9643aa91e87ec1af0b1, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: 5ccbe941-b84a-47c9-9c91-b0ff29c17b7f
+    position: {x: 2457, y: 392}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Bob
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 70f58d62-64d5-440d-85aa-c39656d24889
+      texts:
+      - languageType: 0
+        languageGenericType: All I had to do was return it once I was done with throwing
+          away the ball
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: ab3c7c7d5ed3ff74599280118da565b9, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: 3987ec7b-0b9b-4716-8e33-4d81895b99c1
+    position: {x: 2927, y: 392}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Bob
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: f62f94be-f3cd-4ed4-9a26-49f0f2a7da21
+      texts:
+      - languageType: 0
+        languageGenericType: So I placed the ball on top of the trash can lid and
+          went about to find the key
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: bc25b627b552c9643aa91e87ec1af0b1, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
   endDatas:
-  - nodeGuid: deb5ff61-66d5-46ca-a5fc-34306d8e7d91
-    position: {x: 2864, y: 384}
-    endDialogueContainers: []
+  - nodeGuid: 7526a318-b1f0-43c3-973a-382d30193405
+    position: {x: 3493, y: 391}
+    endDialogueContainers:
+    - dialogueContainerSO: {fileID: 11400000, guid: 48126c72ed5b7d8498586458537f53bb, type: 2}
+    - dialogueContainerSO: {fileID: 11400000, guid: 889af35c3b45ecc49816abdb514b5919, type: 2}
+    - dialogueContainerSO: {fileID: 11400000, guid: 7ff2793c54effa043836c7a612a78180, type: 2}
     endNodeType:
       value: 1
   startDatas:
-  - nodeGuid: 25a31d44-d65a-4944-9b91-0b561364d63e
-    position: {x: 167, y: 384}
+  - nodeGuid: 91080116-7332-4edc-a20e-bea4e4d1e56b
+    position: {x: 207, y: 433}
     text:
     - languageType: 0
-      languageGenericType: Thank you
+      languageGenericType: 
   eventDatas: []
   branchDatas: []
   choiceDatas: []

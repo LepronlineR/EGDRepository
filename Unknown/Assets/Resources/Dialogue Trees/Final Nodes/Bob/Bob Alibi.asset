@@ -17,6 +17,78 @@ MonoBehaviour:
     basePortName: Output
     targetNodeGuid: 94cb5d54-2603-4621-9633-c49381d13e73
     targetPortName: Input
+  - baseNodeGuid: 94cb5d54-2603-4621-9633-c49381d13e73
+    basePortName: Continue
+    targetNodeGuid: 5eac8810-a1ed-4b82-b1c8-5e61ad7de993
+    targetPortName: Input
+  - baseNodeGuid: 5eac8810-a1ed-4b82-b1c8-5e61ad7de993
+    basePortName: 93f7a156-c806-4a12-a331-a0056922872f
+    targetNodeGuid: 4daee154-ece3-4bbe-b0da-928ec91d68e6
+    targetPortName: Input
+  - baseNodeGuid: 5eac8810-a1ed-4b82-b1c8-5e61ad7de993
+    basePortName: 319edba1-8c73-4064-8348-94a27913bbf0
+    targetNodeGuid: 868f809b-2cb2-433b-bbb2-8e51355e833a
+    targetPortName: Input
+  - baseNodeGuid: 5eac8810-a1ed-4b82-b1c8-5e61ad7de993
+    basePortName: 1ac26646-a232-48fb-9192-c57f6e949d74
+    targetNodeGuid: 35506e69-ffe9-48c4-9f84-b007c3fe4527
+    targetPortName: Input
+  - baseNodeGuid: 5eac8810-a1ed-4b82-b1c8-5e61ad7de993
+    basePortName: a966d53c-0786-48ec-880d-63b720e06dd7
+    targetNodeGuid: c7de44b0-347f-4b95-8a20-7dcdb75a825c
+    targetPortName: Input
+  - baseNodeGuid: 5eac8810-a1ed-4b82-b1c8-5e61ad7de993
+    basePortName: c209a945-85cc-493a-8869-11d0d120826e
+    targetNodeGuid: c7ae96cd-e5e5-4bea-a58d-4b2fa42e5da1
+    targetPortName: Input
+  - baseNodeGuid: 4daee154-ece3-4bbe-b0da-928ec91d68e6
+    basePortName: Output
+    targetNodeGuid: 71de11b3-a06d-4b2a-90d6-febdc1a9ae50
+    targetPortName: Input
+  - baseNodeGuid: 71de11b3-a06d-4b2a-90d6-febdc1a9ae50
+    basePortName: Continue
+    targetNodeGuid: 97863530-01fc-40d1-bd4d-008590322bd7
+    targetPortName: Input
+  - baseNodeGuid: 868f809b-2cb2-433b-bbb2-8e51355e833a
+    basePortName: Output
+    targetNodeGuid: 97436a0f-e045-4489-87d0-b4598fc6a3f6
+    targetPortName: Input
+  - baseNodeGuid: 35506e69-ffe9-48c4-9f84-b007c3fe4527
+    basePortName: Output
+    targetNodeGuid: 4c4c58f0-3086-438d-8979-92953c26be18
+    targetPortName: Input
+  - baseNodeGuid: c7de44b0-347f-4b95-8a20-7dcdb75a825c
+    basePortName: Output
+    targetNodeGuid: 8eecd8bb-6651-4ed3-8527-43dd66329d9d
+    targetPortName: Input
+  - baseNodeGuid: 4c4c58f0-3086-438d-8979-92953c26be18
+    basePortName: Continue
+    targetNodeGuid: 81c96fb6-4aef-441b-8250-75cce64cf0d6
+    targetPortName: Input
+  - baseNodeGuid: c7ae96cd-e5e5-4bea-a58d-4b2fa42e5da1
+    basePortName: Output
+    targetNodeGuid: 9913ae39-13c0-496c-99c4-4fdbe555666a
+    targetPortName: Input
+  - baseNodeGuid: 97863530-01fc-40d1-bd4d-008590322bd7
+    basePortName: Continue
+    targetNodeGuid: 81fdda86-3dad-46be-b92c-3856b31cca25
+    targetPortName: Input
+  - baseNodeGuid: 97436a0f-e045-4489-87d0-b4598fc6a3f6
+    basePortName: Continue
+    targetNodeGuid: 81fdda86-3dad-46be-b92c-3856b31cca25
+    targetPortName: Input
+  - baseNodeGuid: 81c96fb6-4aef-441b-8250-75cce64cf0d6
+    basePortName: Continue
+    targetNodeGuid: 81fdda86-3dad-46be-b92c-3856b31cca25
+    targetPortName: Input
+  - baseNodeGuid: 8eecd8bb-6651-4ed3-8527-43dd66329d9d
+    basePortName: Continue
+    targetNodeGuid: 81fdda86-3dad-46be-b92c-3856b31cca25
+    targetPortName: Input
+  - baseNodeGuid: 9913ae39-13c0-496c-99c4-4fdbe555666a
+    basePortName: Continue
+    targetNodeGuid: 81fdda86-3dad-46be-b92c-3856b31cca25
+    targetPortName: Input
   dialogueDatas:
   - nodeGuid: 94cb5d54-2603-4621-9633-c49381d13e73
     position: {x: 422, y: 355}
@@ -32,7 +104,7 @@ MonoBehaviour:
         value: 8db418fb-4909-48d9-bfea-d38f1132609a
       texts:
       - languageType: 0
-        languageGenericType: 
+        languageGenericType: I was searching for a key
       audioClips:
       - languageType: 0
         languageGenericType: {fileID: 0}
@@ -44,13 +116,319 @@ MonoBehaviour:
     dialogueDataPorts: []
     dialogueResponseTexts: []
     dialogueResponseEvidences: []
+  - nodeGuid: 5eac8810-a1ed-4b82-b1c8-5e61ad7de993
+    position: {x: 747, y: 359}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Bob
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: dae7719b-6091-4baf-baa9-a7d35753b136
+      texts:
+      - languageType: 0
+        languageGenericType: A janitor's key, mind you
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: d3128ae3-5c43-4da8-af38-652afd75e379
+      texts:
+      - languageType: 0
+        languageGenericType: I mean
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 4
+      GuidID:
+        value: 3b69ada8-0080-421f-98fe-d52f4f35ffa6
+      texts:
+      - languageType: 0
+        languageGenericType: What trash cans have locks on them?!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 58558ed2b54d57e4c8f27d3ef73c0bad, type: 3}
+    dialogueDataPorts:
+    - portGuid: 93f7a156-c806-4a12-a331-a0056922872f
+      inputGuid: 4daee154-ece3-4bbe-b0da-928ec91d68e6
+      outputGuid: 5eac8810-a1ed-4b82-b1c8-5e61ad7de993
+    - portGuid: 319edba1-8c73-4064-8348-94a27913bbf0
+      inputGuid: 868f809b-2cb2-433b-bbb2-8e51355e833a
+      outputGuid: 5eac8810-a1ed-4b82-b1c8-5e61ad7de993
+    - portGuid: 1ac26646-a232-48fb-9192-c57f6e949d74
+      inputGuid: 35506e69-ffe9-48c4-9f84-b007c3fe4527
+      outputGuid: 5eac8810-a1ed-4b82-b1c8-5e61ad7de993
+    - portGuid: a966d53c-0786-48ec-880d-63b720e06dd7
+      inputGuid: c7de44b0-347f-4b95-8a20-7dcdb75a825c
+      outputGuid: 5eac8810-a1ed-4b82-b1c8-5e61ad7de993
+    - portGuid: c209a945-85cc-493a-8869-11d0d120826e
+      inputGuid: c7ae96cd-e5e5-4bea-a58d-4b2fa42e5da1
+      outputGuid: 5eac8810-a1ed-4b82-b1c8-5e61ad7de993
+    dialogueResponseTexts:
+    - ID:
+        value: 5
+      responseText:
+        value: Why were you searching for a key?
+    dialogueResponseEvidences: []
+  - nodeGuid: 71de11b3-a06d-4b2a-90d6-febdc1a9ae50
+    position: {x: 1466, y: -977}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Bob
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 6f26fd62-0a51-49ee-b4ac-92c85c8b678f
+      texts:
+      - languageType: 0
+        languageGenericType: H-hey, no need for that tone
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 4aaf189543eb21b4e8de16f5392209c7, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: 4c4c58f0-3086-438d-8979-92953c26be18
+    position: {x: 1511, y: 124}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Bob
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: d1bb75d0-5214-414c-a626-10667d291fe9
+      texts:
+      - languageType: 0
+        languageGenericType: I-I'm sorry!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: a1ccbcfb-ac42-412a-a234-367b20c9e461
+      texts:
+      - languageType: 0
+        languageGenericType: I didn't mean to scare you like that!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 4aaf189543eb21b4e8de16f5392209c7, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: 8eecd8bb-6651-4ed3-8527-43dd66329d9d
+    position: {x: 1527, y: 685}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Bob
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 978dc252-bafa-46d3-92d9-40b7cf409656
+      texts:
+      - languageType: 0
+        languageGenericType: Well...
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 813029c5fc5e52540be73584988153b7, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: 97863530-01fc-40d1-bd4d-008590322bd7
+    position: {x: 1832, y: -980}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Bob
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 31567e2b-d149-47cf-9d08-6e404315ca05
+      texts:
+      - languageType: 0
+        languageGenericType: Sorry
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: ad2e1cbb-d6ae-481d-b500-0b821d34aa72
+      texts:
+      - languageType: 0
+        languageGenericType: I guess my anger is rubbing off on you
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 4
+      GuidID:
+        value: 21120f15-e0e1-40e4-9ffd-9cfea59691ff
+      texts:
+      - languageType: 0
+        languageGenericType: Back on topic...
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 813029c5fc5e52540be73584988153b7, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: 97436a0f-e045-4489-87d0-b4598fc6a3f6
+    position: {x: 1510, y: -460}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Bob
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: e4a66076-4551-4120-a686-08292d8df669
+      texts:
+      - languageType: 0
+        languageGenericType: Sorry
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: 48849a00-95a2-4cca-aa0a-057c42409976
+      texts:
+      - languageType: 0
+        languageGenericType: I should have watched my tone
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 4
+      GuidID:
+        value: becb494e-5915-4333-8f43-499e83d994d2
+      texts:
+      - languageType: 0
+        languageGenericType: Back on topic...
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 813029c5fc5e52540be73584988153b7, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: 9913ae39-13c0-496c-99c4-4fdbe555666a
+    position: {x: 1525, y: 1168}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Bob
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: e775ed26-70fb-4af2-bd90-d666f8c16aca
+      texts:
+      - languageType: 0
+        languageGenericType: Pardon me
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: b2cd0422-a54e-436a-afc7-3c5eb3613171
+      texts:
+      - languageType: 0
+        languageGenericType: I shouldn't be angry like this when you're trying to
+          stay positive
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 813029c5fc5e52540be73584988153b7, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: 81c96fb6-4aef-441b-8250-75cce64cf0d6
+    position: {x: 1847, y: 127}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Bob
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 8987d4ec-e91b-4cf8-9bc7-b8ac38eef0b9
+      texts:
+      - languageType: 0
+        languageGenericType: Regarding why I was searching for the key...
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 813029c5fc5e52540be73584988153b7, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
   endDatas:
   - nodeGuid: 81fdda86-3dad-46be-b92c-3856b31cca25
-    position: {x: 856, y: 361}
+    position: {x: 2488, y: 109}
     endDialogueContainers:
-    - dialogueContainerSO: {fileID: 11400000}
-    - dialogueContainerSO: {fileID: 11400000, guid: 7ff2793c54effa043836c7a612a78180, type: 2}
-    - dialogueContainerSO: {fileID: 11400000, guid: 889af35c3b45ecc49816abdb514b5919, type: 2}
+    - dialogueContainerSO: {fileID: 11400000, guid: c56b1f10c88c4944dba2f350d853b5a1, type: 2}
     endNodeType:
       value: 1
   startDatas:
@@ -62,5 +440,25 @@ MonoBehaviour:
   eventDatas: []
   branchDatas: []
   choiceDatas: []
-  emotionChoiceDatas: []
+  emotionChoiceDatas:
+  - nodeGuid: 4daee154-ece3-4bbe-b0da-928ec91d68e6
+    position: {x: 1157, y: 156}
+    choiceStateType:
+      value: 1
+  - nodeGuid: 868f809b-2cb2-433b-bbb2-8e51355e833a
+    position: {x: 1154, y: 294}
+    choiceStateType:
+      value: 2
+  - nodeGuid: c7ae96cd-e5e5-4bea-a58d-4b2fa42e5da1
+    position: {x: 1158, y: 816}
+    choiceStateType:
+      value: 5
+  - nodeGuid: c7de44b0-347f-4b95-8a20-7dcdb75a825c
+    position: {x: 1164, y: 644}
+    choiceStateType:
+      value: 4
+  - nodeGuid: 35506e69-ffe9-48c4-9f84-b007c3fe4527
+    position: {x: 1163, y: 480}
+    choiceStateType:
+      value: 3
   objectChoiceDatas: []

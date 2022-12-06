@@ -46,7 +46,8 @@ MonoBehaviour:
         value: b2744571-4d62-400d-a5de-68af0cf4fd26
       texts:
       - languageType: 0
-        languageGenericType: Do bring me anything that perhaps may require my expertise!
+        languageGenericType: Do ask or bring me anything that perhaps may require
+          my expertise!
       audioClips:
       - languageType: 0
         languageGenericType: {fileID: 0}

@@ -21,6 +21,22 @@ MonoBehaviour:
     basePortName: Continue
     targetNodeGuid: cbce280b-ec8e-4714-8b94-f08002926054
     targetPortName: Input
+  - baseNodeGuid: cbce280b-ec8e-4714-8b94-f08002926054
+    basePortName: 09765c50-4a54-4bc6-8232-a290a5d1d93c
+    targetNodeGuid: 3c10b5e9-c93d-41d6-8fca-7b8a626acc3b
+    targetPortName: Input
+  - baseNodeGuid: cbce280b-ec8e-4714-8b94-f08002926054
+    basePortName: 5cfd6467-999f-49fa-8e2d-5ac025fdc64b
+    targetNodeGuid: 0f8779f4-eee0-46d7-91b4-6850d5fcbb58
+    targetPortName: Input
+  - baseNodeGuid: cbce280b-ec8e-4714-8b94-f08002926054
+    basePortName: b33ae35e-b1ba-40a7-9b77-21f421892cab
+    targetNodeGuid: 19d0a922-3785-4762-aa8d-0aae445d3f92
+    targetPortName: Input
+  - baseNodeGuid: cbce280b-ec8e-4714-8b94-f08002926054
+    basePortName: 9efefc61-03ba-47c7-ba06-4246e39c3603
+    targetNodeGuid: 676206ee-b3b3-40c6-822a-cb18a1660a78
+    targetPortName: Input
   - baseNodeGuid: a11b67ac-e3a6-4d8f-b74b-74dfb7374149
     basePortName: Continue
     targetNodeGuid: 131bc616-83bb-4ceb-a416-cdd8cd95d0db
@@ -33,25 +49,137 @@ MonoBehaviour:
     basePortName: Continue
     targetNodeGuid: 0d05a63a-9241-4b17-9665-9408220f3375
     targetPortName: Input
+  - baseNodeGuid: 3c8e361c-862e-4cbb-81c9-5caff4255c8c
+    basePortName: Continue
+    targetNodeGuid: 428490c6-79d0-4dbb-a028-49514ad10a94
+    targetPortName: Input
   - baseNodeGuid: 3c10b5e9-c93d-41d6-8fca-7b8a626acc3b
     basePortName: Output
     targetNodeGuid: a11b67ac-e3a6-4d8f-b74b-74dfb7374149
-    targetPortName: Input
-  - baseNodeGuid: cbce280b-ec8e-4714-8b94-f08002926054
-    basePortName: 09765c50-4a54-4bc6-8232-a290a5d1d93c
-    targetNodeGuid: 3c10b5e9-c93d-41d6-8fca-7b8a626acc3b
-    targetPortName: Input
-  - baseNodeGuid: cbce280b-ec8e-4714-8b94-f08002926054
-    basePortName: 5cfd6467-999f-49fa-8e2d-5ac025fdc64b
-    targetNodeGuid: 0f8779f4-eee0-46d7-91b4-6850d5fcbb58
     targetPortName: Input
   - baseNodeGuid: 0f8779f4-eee0-46d7-91b4-6850d5fcbb58
     basePortName: Output
     targetNodeGuid: 3c8e361c-862e-4cbb-81c9-5caff4255c8c
     targetPortName: Input
-  - baseNodeGuid: 3c8e361c-862e-4cbb-81c9-5caff4255c8c
+  - baseNodeGuid: 428490c6-79d0-4dbb-a028-49514ad10a94
     basePortName: Continue
-    targetNodeGuid: 428490c6-79d0-4dbb-a028-49514ad10a94
+    targetNodeGuid: 0d05a63a-9241-4b17-9665-9408220f3375
+    targetPortName: Input
+  - baseNodeGuid: cbce280b-ec8e-4714-8b94-f08002926054
+    basePortName: a2ca3e44-d9ff-498d-98be-f178a5e6a4ca
+    targetNodeGuid: 6a97b504-dc4b-4212-b6b0-d8bf923ce717
+    targetPortName: Input
+  - baseNodeGuid: cbce280b-ec8e-4714-8b94-f08002926054
+    basePortName: 266619f6-6809-4052-96a7-e498439fdda4
+    targetNodeGuid: 140a8b14-aab8-4cd4-8b12-30e8ffeecdad
+    targetPortName: Input
+  - baseNodeGuid: cbce280b-ec8e-4714-8b94-f08002926054
+    basePortName: d5e2c75c-5b3e-43d9-a71f-85f47abc5aad
+    targetNodeGuid: e059bdb9-c4de-4810-8958-8d9ef6c47041
+    targetPortName: Input
+  - baseNodeGuid: 140a8b14-aab8-4cd4-8b12-30e8ffeecdad
+    basePortName: Output
+    targetNodeGuid: 13a8bef1-fb25-4c91-9728-3fc6128e4e78
+    targetPortName: Input
+  - baseNodeGuid: e059bdb9-c4de-4810-8958-8d9ef6c47041
+    basePortName: Output
+    targetNodeGuid: 13a8bef1-fb25-4c91-9728-3fc6128e4e78
+    targetPortName: Input
+  - baseNodeGuid: 13a8bef1-fb25-4c91-9728-3fc6128e4e78
+    basePortName: Continue
+    targetNodeGuid: 0d05a63a-9241-4b17-9665-9408220f3375
+    targetPortName: Input
+  - baseNodeGuid: 676206ee-b3b3-40c6-822a-cb18a1660a78
+    basePortName: Output
+    targetNodeGuid: f65abf9a-cadc-487c-a7d2-7425176bbf45
+    targetPortName: Input
+  - baseNodeGuid: 6a97b504-dc4b-4212-b6b0-d8bf923ce717
+    basePortName: Output
+    targetNodeGuid: a80f14ab-000a-4ff0-a138-4cc42bc57c8c
+    targetPortName: Input
+  - baseNodeGuid: a80f14ab-000a-4ff0-a138-4cc42bc57c8c
+    basePortName: Continue
+    targetNodeGuid: e05b787e-1232-4978-856d-ca5f80e040fb
+    targetPortName: Input
+  - baseNodeGuid: e05b787e-1232-4978-856d-ca5f80e040fb
+    basePortName: 1badb527-d852-4452-8c05-8998ff4c3d44
+    targetNodeGuid: aeaaee0f-013b-42d0-a93e-7ae3d03f6f5d
+    targetPortName: Input
+  - baseNodeGuid: e05b787e-1232-4978-856d-ca5f80e040fb
+    basePortName: 8c7ec763-11b5-420f-a0ea-79e607a196dc
+    targetNodeGuid: f20407ba-1a65-4bec-a57b-a30184b77e84
+    targetPortName: Input
+  - baseNodeGuid: e05b787e-1232-4978-856d-ca5f80e040fb
+    basePortName: e105056b-f0ff-4268-be7d-2ae3989d743a
+    targetNodeGuid: c9cf941f-7a98-423a-b139-05dd178752f9
+    targetPortName: Input
+  - baseNodeGuid: e05b787e-1232-4978-856d-ca5f80e040fb
+    basePortName: 5d78836e-87ee-4308-b510-547a8d9ff97f
+    targetNodeGuid: dbbebf3d-8f3f-4999-a37b-f37e8b833499
+    targetPortName: Input
+  - baseNodeGuid: e05b787e-1232-4978-856d-ca5f80e040fb
+    basePortName: edec4436-a744-43c2-9929-4ab2dc0787b1
+    targetNodeGuid: 637105e7-0166-4084-80bd-eb148312cc0b
+    targetPortName: Input
+  - baseNodeGuid: 82d951cf-6961-4eb0-b510-2671ef2924d2
+    basePortName: Continue
+    targetNodeGuid: ba50dd5f-bf68-4866-bfb2-44e3ad7657ec
+    targetPortName: Input
+  - baseNodeGuid: aeaaee0f-013b-42d0-a93e-7ae3d03f6f5d
+    basePortName: Output
+    targetNodeGuid: 82d951cf-6961-4eb0-b510-2671ef2924d2
+    targetPortName: Input
+  - baseNodeGuid: ba50dd5f-bf68-4866-bfb2-44e3ad7657ec
+    basePortName: Continue
+    targetNodeGuid: 0d05a63a-9241-4b17-9665-9408220f3375
+    targetPortName: Input
+  - baseNodeGuid: f20407ba-1a65-4bec-a57b-a30184b77e84
+    basePortName: Output
+    targetNodeGuid: 81d7f2fb-5f43-4a19-b7b7-ddd94e6921a0
+    targetPortName: Input
+  - baseNodeGuid: c9cf941f-7a98-423a-b139-05dd178752f9
+    basePortName: Output
+    targetNodeGuid: cd28ad92-1204-4ae5-816d-58561d9b6ab6
+    targetPortName: Input
+  - baseNodeGuid: cd28ad92-1204-4ae5-816d-58561d9b6ab6
+    basePortName: Continue
+    targetNodeGuid: 0d05a63a-9241-4b17-9665-9408220f3375
+    targetPortName: Input
+  - baseNodeGuid: dbbebf3d-8f3f-4999-a37b-f37e8b833499
+    basePortName: Output
+    targetNodeGuid: 7f59f0ef-8e99-4fd3-bea4-5ea1c7c0ecab
+    targetPortName: Input
+  - baseNodeGuid: 7f59f0ef-8e99-4fd3-bea4-5ea1c7c0ecab
+    basePortName: Continue
+    targetNodeGuid: acee77e1-a7c3-413e-b208-6cb071ae997c
+    targetPortName: Input
+  - baseNodeGuid: acee77e1-a7c3-413e-b208-6cb071ae997c
+    basePortName: Continue
+    targetNodeGuid: 0d05a63a-9241-4b17-9665-9408220f3375
+    targetPortName: Input
+  - baseNodeGuid: 637105e7-0166-4084-80bd-eb148312cc0b
+    basePortName: Output
+    targetNodeGuid: b8d8634c-0fd5-4726-b40a-78e19682e54a
+    targetPortName: Input
+  - baseNodeGuid: b8d8634c-0fd5-4726-b40a-78e19682e54a
+    basePortName: Continue
+    targetNodeGuid: 0d05a63a-9241-4b17-9665-9408220f3375
+    targetPortName: Input
+  - baseNodeGuid: 81d7f2fb-5f43-4a19-b7b7-ddd94e6921a0
+    basePortName: Continue
+    targetNodeGuid: a8a75459-c8c9-44b3-a25a-cc8016014f73
+    targetPortName: Input
+  - baseNodeGuid: 19d0a922-3785-4762-aa8d-0aae445d3f92
+    basePortName: Output
+    targetNodeGuid: 0f05aa69-f668-448c-a2a9-0b97ea7da4e8
+    targetPortName: Input
+  - baseNodeGuid: 0f05aa69-f668-448c-a2a9-0b97ea7da4e8
+    basePortName: Continue
+    targetNodeGuid: f9284a99-d609-4113-8135-144e1e3caca0
+    targetPortName: Input
+  - baseNodeGuid: f9284a99-d609-4113-8135-144e1e3caca0
+    basePortName: Continue
+    targetNodeGuid: 4781499d-b007-49dc-91c7-f2c9a6662d6c
     targetPortName: Input
   dialogueDatas:
   - nodeGuid: b1a95f29-f846-4594-beca-dfdd803f628c
@@ -110,12 +238,523 @@ MonoBehaviour:
     - portGuid: 5cfd6467-999f-49fa-8e2d-5ac025fdc64b
       inputGuid: 0f8779f4-eee0-46d7-91b4-6850d5fcbb58
       outputGuid: cbce280b-ec8e-4714-8b94-f08002926054
+    - portGuid: b33ae35e-b1ba-40a7-9b77-21f421892cab
+      inputGuid: 19d0a922-3785-4762-aa8d-0aae445d3f92
+      outputGuid: cbce280b-ec8e-4714-8b94-f08002926054
+    - portGuid: 9efefc61-03ba-47c7-ba06-4246e39c3603
+      inputGuid: 676206ee-b3b3-40c6-822a-cb18a1660a78
+      outputGuid: cbce280b-ec8e-4714-8b94-f08002926054
+    - portGuid: a2ca3e44-d9ff-498d-98be-f178a5e6a4ca
+      inputGuid: 6a97b504-dc4b-4212-b6b0-d8bf923ce717
+      outputGuid: cbce280b-ec8e-4714-8b94-f08002926054
+    - portGuid: 266619f6-6809-4052-96a7-e498439fdda4
+      inputGuid: 140a8b14-aab8-4cd4-8b12-30e8ffeecdad
+      outputGuid: cbce280b-ec8e-4714-8b94-f08002926054
+    - portGuid: d5e2c75c-5b3e-43d9-a71f-85f47abc5aad
+      inputGuid: e059bdb9-c4de-4810-8958-8d9ef6c47041
+      outputGuid: cbce280b-ec8e-4714-8b94-f08002926054
     dialogueResponseTexts: []
     dialogueResponseEvidences:
     - ID:
         value: 3
+  - nodeGuid: 13a8bef1-fb25-4c91-9728-3fc6128e4e78
+    position: {x: 4455, y: 2145}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Benedict
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 14651087-81f8-49af-a93d-e6957fad37b6
+      texts:
+      - languageType: 0
+        languageGenericType: And why are you showing me something as repulsive as
+          this?!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: b78dc584-ac24-4719-8aa4-a0dcf50148af
+      texts:
+      - languageType: 0
+        languageGenericType: Have you lost your mind and mistaken this for red paint?!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 4
+      GuidID:
+        value: 4c4fb1c7-f964-482c-80ab-6bfad1077bb6
+      texts:
+      - languageType: 0
+        languageGenericType: Well I'll let you know this is mostly certainly NOT
+          red paint!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 25dcf3b2e80a0b14295724a20ccab811, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: a80f14ab-000a-4ff0-a138-4cc42bc57c8c
+    position: {x: 4488, y: 1668}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Benedict
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: b378794c-12e1-473a-a9d9-f5722eda55f8
+      texts:
+      - languageType: 0
+        languageGenericType: O-oh...
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 029449c1ef1a5ff408fcfc3381f31979, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: e05b787e-1232-4978-856d-ca5f80e040fb
+    position: {x: 4956, y: 1509}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Benedict
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 7f7231ac-93ab-4307-a55f-2284a60c23f9
+      texts:
+      - languageType: 0
+        languageGenericType: W-well
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: c7b068e5-c926-4bac-957b-9952391d194c
+      texts:
+      - languageType: 0
+        languageGenericType: I did need an easel or canvas and you brought just that
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 4
+      GuidID:
+        value: 650097f4-ee9d-46f6-89c7-c96f63e22d90
+      texts:
+      - languageType: 0
+        languageGenericType: I should have specified what type of easel...
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: f3cda730283b91f40bd88ca115197c51, type: 3}
+    dialogueDataPorts:
+    - portGuid: 1badb527-d852-4452-8c05-8998ff4c3d44
+      inputGuid: aeaaee0f-013b-42d0-a93e-7ae3d03f6f5d
+      outputGuid: e05b787e-1232-4978-856d-ca5f80e040fb
+    - portGuid: 8c7ec763-11b5-420f-a0ea-79e607a196dc
+      inputGuid: f20407ba-1a65-4bec-a57b-a30184b77e84
+      outputGuid: e05b787e-1232-4978-856d-ca5f80e040fb
+    - portGuid: e105056b-f0ff-4268-be7d-2ae3989d743a
+      inputGuid: c9cf941f-7a98-423a-b139-05dd178752f9
+      outputGuid: e05b787e-1232-4978-856d-ca5f80e040fb
+    - portGuid: 5d78836e-87ee-4308-b510-547a8d9ff97f
+      inputGuid: dbbebf3d-8f3f-4999-a37b-f37e8b833499
+      outputGuid: e05b787e-1232-4978-856d-ca5f80e040fb
+    - portGuid: edec4436-a744-43c2-9929-4ab2dc0787b1
+      inputGuid: 637105e7-0166-4084-80bd-eb148312cc0b
+      outputGuid: e05b787e-1232-4978-856d-ca5f80e040fb
+    dialogueResponseTexts:
+    - ID:
+        value: 5
+      responseText:
+        value: Do you know anything about this?
+    dialogueResponseEvidences: []
+  - nodeGuid: cd28ad92-1204-4ae5-816d-58561d9b6ab6
+    position: {x: 5670, y: 2243}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Benedict
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: b99b454e-36d2-4e50-982b-fb7217a52e85
+      texts:
+      - languageType: 0
+        languageGenericType: Unfortunately so!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: 48b4be88-f603-496d-afe6-630d869c6da7
+      texts:
+      - languageType: 0
+        languageGenericType: But you bringing that broken easel has given me unwanted
+          flashbacks
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 4
+      GuidID:
+        value: 4cc1ddd8-1a39-44ab-b3bc-db645d0de2e8
+      texts:
+      - languageType: 0
+        languageGenericType: Perhaps a proper easel or a canvas will make this nightmare
+          of mine go away
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: f3cda730283b91f40bd88ca115197c51, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: 7f59f0ef-8e99-4fd3-bea4-5ea1c7c0ecab
+    position: {x: 5688, y: 2891}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Benedict
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 57912eae-b5c1-493a-8fe8-dc5c588f9009
+      texts:
+      - languageType: 0
+        languageGenericType: Do you...fear me?
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: 4dca8d5f-7ea6-42fa-9809-0a64618f448b
+      texts:
+      - languageType: 0
+        languageGenericType: Do you think I did all this?
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 029449c1ef1a5ff408fcfc3381f31979, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: acee77e1-a7c3-413e-b208-6cb071ae997c
+    position: {x: 6056, y: 2891}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Benedict
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 15b94a8b-2bdb-4ff1-9dcb-8e60099a89f6
+      texts:
+      - languageType: 0
+        languageGenericType: Well I'll tell I absolutely had nothing to do with this!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: 65a47bef-5e22-411d-8cf4-2768e160016e
+      texts:
+      - languageType: 0
+        languageGenericType: You need evidence?
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 4
+      GuidID:
+        value: 1680eb07-5754-4c8b-a882-3a8e399f055b
+      texts:
+      - languageType: 0
+        languageGenericType: Bring me a canvas and an easel
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 5
+      GuidID:
+        value: 5de840eb-1dbf-402a-9421-3740d0063aa8
+      texts:
+      - languageType: 0
+        languageGenericType: A PROPER easel this time
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 6
+      GuidID:
+        value: b505cd5c-b0c7-4841-9df5-2138fe725841
+      texts:
+      - languageType: 0
+        languageGenericType: Then I can prove my innocence!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 25dcf3b2e80a0b14295724a20ccab811, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: b8d8634c-0fd5-4726-b40a-78e19682e54a
+    position: {x: 5677, y: 3626}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Benedict
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 8747d837-75ff-4382-b139-74895774f479
+      texts:
+      - languageType: 0
+        languageGenericType: Well aren't you chipper about it!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: 5d476173-86c5-429a-8ad4-cf281e3468ca
+      texts:
+      - languageType: 0
+        languageGenericType: Do you take joy in me reliving the nightmare this easel
+          brings me?!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 4
+      GuidID:
+        value: d75ee410-c973-4154-9759-ca35d5dec620
+      texts:
+      - languageType: 0
+        languageGenericType: In that case
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 5
+      GuidID:
+        value: fc312459-fdc6-45cb-93fe-512054780116
+      texts:
+      - languageType: 0
+        languageGenericType: Bring me a PROPER easel or canvas!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 6
+      GuidID:
+        value: 0ef4101e-46c7-452a-a720-58f6aa6cbeaa
+      texts:
+      - languageType: 0
+        languageGenericType: The least you can do is take responsibility and relieve
+          me of the nightmare that easel has brought me!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 25dcf3b2e80a0b14295724a20ccab811, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: 82d951cf-6961-4eb0-b510-2671ef2924d2
+    position: {x: 5684, y: 943}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Benedict
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 153e50b5-b60e-4674-a0ee-193985788cf5
+      texts:
+      - languageType: 0
+        languageGenericType: Whatever do you mean?
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: debfbceb-1c65-4da4-bce9-80380179d313
+      texts:
+      - languageType: 0
+        languageGenericType: I know nothing of the sort!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 029449c1ef1a5ff408fcfc3381f31979, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: ba50dd5f-bf68-4866-bfb2-44e3ad7657ec
+    position: {x: 6040, y: 945}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Benedict
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: bb968a3d-223d-4ed5-be64-10e294ae759b
+      texts:
+      - languageType: 0
+        languageGenericType: Just because I paint doesn't mean every easel on this
+          planet is mine!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: 30c149b4-22fc-4f90-96fa-2e423f48f47b
+      texts:
+      - languageType: 0
+        languageGenericType: What an absurd assumption to make!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 25dcf3b2e80a0b14295724a20ccab811, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: 81d7f2fb-5f43-4a19-b7b7-ddd94e6921a0
+    position: {x: 5678, y: 1512}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Benedict
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 2104259b-ebf7-4fa0-919c-9dd15b041636
+      texts:
+      - languageType: 0
+        languageGenericType: Alright, alright, I'll talk!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: 027920b9-daca-4688-8a56-9591e3296bab
+      texts:
+      - languageType: 0
+        languageGenericType: I'll tell you everything!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 4
+      GuidID:
+        value: 5540fb61-c4a6-4643-b497-ad86e4c1f281
+      texts:
+      - languageType: 0
+        languageGenericType: Just don't use that tone again!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 5
+      GuidID:
+        value: 66e95516-fe1d-4447-9795-ba5ed4477138
+      texts:
+      - languageType: 0
+        languageGenericType: 
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 6
+      GuidID:
+        value: 08181a5d-c293-4cec-9b2f-6483b62a879e
+      texts:
+      - languageType: 0
+        languageGenericType: What would you like to know?
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: f3cda730283b91f40bd88ca115197c51, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
   - nodeGuid: a11b67ac-e3a6-4d8f-b74b-74dfb7374149
-    position: {x: 4467, y: 320}
+    position: {x: 4729, y: -860}
     dialogueDataNames:
     - ID:
         value: 0
@@ -151,7 +790,7 @@ MonoBehaviour:
     dialogueResponseTexts: []
     dialogueResponseEvidences: []
   - nodeGuid: 131bc616-83bb-4ceb-a416-cdd8cd95d0db
-    position: {x: 4815, y: 324}
+    position: {x: 5077, y: -856}
     dialogueDataNames:
     - ID:
         value: 0
@@ -177,7 +816,7 @@ MonoBehaviour:
     dialogueResponseTexts: []
     dialogueResponseEvidences: []
   - nodeGuid: 641c453d-be30-45a0-9781-6ceff30b9d9f
-    position: {x: 5140, y: 323}
+    position: {x: 5402, y: -857}
     dialogueDataNames:
     - ID:
         value: 0
@@ -213,7 +852,7 @@ MonoBehaviour:
     dialogueResponseTexts: []
     dialogueResponseEvidences: []
   - nodeGuid: 3c8e361c-862e-4cbb-81c9-5caff4255c8c
-    position: {x: 4463, y: 878}
+    position: {x: 4725, y: -302}
     dialogueDataNames:
     - ID:
         value: 0
@@ -239,7 +878,7 @@ MonoBehaviour:
     dialogueResponseTexts: []
     dialogueResponseEvidences: []
   - nodeGuid: 428490c6-79d0-4dbb-a028-49514ad10a94
-    position: {x: 4819, y: 880}
+    position: {x: 5081, y: -300}
     dialogueDataNames:
     - ID:
         value: 0
@@ -284,12 +923,100 @@ MonoBehaviour:
     dialogueDataPorts: []
     dialogueResponseTexts: []
     dialogueResponseEvidences: []
+  - nodeGuid: 0f05aa69-f668-448c-a2a9-0b97ea7da4e8
+    position: {x: 4533, y: 354}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Benedict
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: eede2029-e7bd-4821-a8e2-fe093abc362e
+      texts:
+      - languageType: 0
+        languageGenericType: You've brought me a canvas!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: 32021d29-c1ae-419e-9114-7bad9fa8f904
+      texts:
+      - languageType: 0
+        languageGenericType: And the right size too!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 029449c1ef1a5ff408fcfc3381f31979, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: f9284a99-d609-4113-8135-144e1e3caca0
+    position: {x: 4862, y: 354}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Benedict
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 9c38b980-2ef6-4e77-91ca-57b7d6f235b7
+      texts:
+      - languageType: 0
+        languageGenericType: Very well!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: 806ef81e-24a2-4d17-8261-eb259a28e104
+      texts:
+      - languageType: 0
+        languageGenericType: As promised I will tell you all about my journey involving
+          this canvas!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 8843aee21e2677e47af0d5e938e1c349, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
   endDatas:
   - nodeGuid: 0d05a63a-9241-4b17-9665-9408220f3375
-    position: {x: 5531, y: 325}
+    position: {x: 6472, y: 361}
     endDialogueContainers:
     - dialogueContainerSO: {fileID: 11400000}
     - dialogueContainerSO: {fileID: 11400000, guid: 9f5ec95bec41e3249b47729e9bad0d03, type: 2}
+    endNodeType:
+      value: 1
+  - nodeGuid: a8a75459-c8c9-44b3-a25a-cc8016014f73
+    position: {x: 6298, y: 1669}
+    endDialogueContainers: []
+    endNodeType:
+      value: 1
+  - nodeGuid: f65abf9a-cadc-487c-a7d2-7425176bbf45
+    position: {x: 5005, y: 1112}
+    endDialogueContainers: []
+    endNodeType:
+      value: 1
+  - nodeGuid: 4781499d-b007-49dc-91c7-f2c9a6662d6c
+    position: {x: 5389, y: 355}
+    endDialogueContainers: []
     endNodeType:
       value: 1
   startDatas:
@@ -301,13 +1028,85 @@ MonoBehaviour:
   eventDatas: []
   branchDatas: []
   choiceDatas: []
-  emotionChoiceDatas: []
+  emotionChoiceDatas:
+  - nodeGuid: aeaaee0f-013b-42d0-a93e-7ae3d03f6f5d
+    position: {x: 5439, y: 1584}
+    choiceStateType:
+      value: 4
+  - nodeGuid: f20407ba-1a65-4bec-a57b-a30184b77e84
+    position: {x: 5446, y: 1715}
+    choiceStateType:
+      value: 1
+  - nodeGuid: c9cf941f-7a98-423a-b139-05dd178752f9
+    position: {x: 5441, y: 1839}
+    choiceStateType:
+      value: 2
+  - nodeGuid: dbbebf3d-8f3f-4999-a37b-f37e8b833499
+    position: {x: 5444, y: 1958}
+    choiceStateType:
+      value: 3
+  - nodeGuid: 637105e7-0166-4084-80bd-eb148312cc0b
+    position: {x: 5443, y: 2082}
+    choiceStateType:
+      value: 5
   objectChoiceDatas:
   - nodeGuid: 3c10b5e9-c93d-41d6-8fca-7b8a626acc3b
     position: {x: 4164, y: 656}
     choiceObject:
       value: {fileID: 0}
   - nodeGuid: 0f8779f4-eee0-46d7-91b4-6850d5fcbb58
-    position: {x: 4164, y: 796}
+    position: {x: 4173, y: 771}
     choiceObject:
       value: {fileID: 4621682417116307932, guid: ffaddab49f400de4d85b5bd91f28c611, type: 3}
+  - nodeGuid: 19d0a922-3785-4762-aa8d-0aae445d3f92
+    position: {x: 4181, y: 890}
+    choiceObject:
+      value: {fileID: 3583399261543176455, guid: 06b02d760655a104db2030a60d7d072d, type: 3}
+  - nodeGuid: 4b28391b-c10a-4f1b-aab0-019367663c45
+    position: {x: 4201, y: 1668}
+    choiceObject:
+      value: {fileID: 4351810312545795533, guid: ba3ef491d01e5fd44a465e18a8df1e99, type: 3}
+  - nodeGuid: 676206ee-b3b3-40c6-822a-cb18a1660a78
+    position: {x: 4183, y: 1110}
+    choiceObject:
+      value: {fileID: 4180480741799440068, guid: ec8495066d8aac547b39aae229bfaf04, type: 3}
+  - nodeGuid: 6a97b504-dc4b-4212-b6b0-d8bf923ce717
+    position: {x: 4187, y: 1225}
+    choiceObject:
+      value: {fileID: 2993745276128767700, guid: 178efc7c2bdcb5e4fa5bad6f81d95040, type: 3}
+  - nodeGuid: 001214c2-8298-431e-a9d6-acf83cb2494f
+    position: {x: 4176, y: 1338}
+    choiceObject:
+      value: {fileID: 103680188225560832, guid: 5aaa798b1a8d3314dbd959acce93fdbd, type: 3}
+  - nodeGuid: 2994c2f5-9d1e-42d0-826a-c33130e478cc
+    position: {x: 4202, y: 1453}
+    choiceObject:
+      value: {fileID: 8342326990467455251, guid: 8a54170269ca46c4184dd122d1fe0cba, type: 3}
+  - nodeGuid: 31d83139-d0e6-4660-a4a8-ee21fb565da0
+    position: {x: 4194, y: 1556}
+    choiceObject:
+      value: {fileID: 6877452026572495439, guid: afeea1470bca26e4ea0bb44f0ec4fe20, type: 3}
+  - nodeGuid: 61d85011-ae23-42bc-9237-7126b6ec7fd0
+    position: {x: 4185, y: 998}
+    choiceObject:
+      value: {fileID: 8307617522580937875, guid: 429fee0f616ae1c40b99a81f1343e8ff, type: 3}
+  - nodeGuid: 42b3a9cc-2e06-420e-a7a7-e3e15ab30422
+    position: {x: 4200, y: 1791}
+    choiceObject:
+      value: {fileID: 7659105187300268561, guid: a9c37e9e3a1d43e429d03fb3e6344a2f, type: 3}
+  - nodeGuid: 38a3fa86-db1e-47e6-a8a3-60f74385c33d
+    position: {x: 4196, y: 1905}
+    choiceObject:
+      value: {fileID: 4371549519223052103, guid: d279e2d7b55709049b7b8accf25114b3, type: 3}
+  - nodeGuid: 6e293a45-01f7-49d7-a02c-7ddfea5fef4d
+    position: {x: 4186, y: 2025}
+    choiceObject:
+      value: {fileID: 2640600064816064532, guid: e987976bf88d5824ba8a64f474f300b0, type: 3}
+  - nodeGuid: 140a8b14-aab8-4cd4-8b12-30e8ffeecdad
+    position: {x: 4181, y: 2147}
+    choiceObject:
+      value: {fileID: 6535174792275793909, guid: f078997b4702b0045aec07d3ba04e01a, type: 3}
+  - nodeGuid: e059bdb9-c4de-4810-8958-8d9ef6c47041
+    position: {x: 4174, y: 2267}
+    choiceObject:
+      value: {fileID: 9142289811282828814, guid: 00eb3307242cae94e9fb41aa82491b98, type: 3}

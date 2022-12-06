@@ -22,8 +22,24 @@ MonoBehaviour:
     targetNodeGuid: 650cce46-29f0-4826-ab5c-d1b6080067ea
     targetPortName: Input
   - baseNodeGuid: 650cce46-29f0-4826-ab5c-d1b6080067ea
-    basePortName: Continue
-    targetNodeGuid: 1035f860-b115-4cc8-9a32-0232de66eb3b
+    basePortName: f54598ea-bb73-4447-8b91-86ab2ef6fecf
+    targetNodeGuid: 751faabc-28a0-4230-90a7-aa55af90f066
+    targetPortName: Input
+  - baseNodeGuid: 650cce46-29f0-4826-ab5c-d1b6080067ea
+    basePortName: 70cfaedf-7d4a-4ccf-985b-e1127187d08b
+    targetNodeGuid: 340171e4-2840-4356-aa64-313ed3eb51af
+    targetPortName: Input
+  - baseNodeGuid: 650cce46-29f0-4826-ab5c-d1b6080067ea
+    basePortName: a6b9183e-a1d5-45e9-93e1-bcefd0393c65
+    targetNodeGuid: 8f64013e-f72e-46f2-8a59-b8696f71e4f2
+    targetPortName: Input
+  - baseNodeGuid: 650cce46-29f0-4826-ab5c-d1b6080067ea
+    basePortName: 4820c7b3-dc5c-4261-a576-9739235d7047
+    targetNodeGuid: 0eb42bc5-91fd-49ac-b170-bd7eba92b872
+    targetPortName: Input
+  - baseNodeGuid: 650cce46-29f0-4826-ab5c-d1b6080067ea
+    basePortName: f08a448f-3d81-4912-8505-4afafd36f9d6
+    targetNodeGuid: 3280d9d6-59c3-4295-82a2-525565f2094f
     targetPortName: Input
   dialogueDatas:
   - nodeGuid: e633a4cf-c09c-4b7a-89c1-74f384eeb9a8
@@ -117,12 +133,31 @@ MonoBehaviour:
         value: 1
       sprite:
         value: {fileID: 21300000, guid: 25dcf3b2e80a0b14295724a20ccab811, type: 3}
-    dialogueDataPorts: []
-    dialogueResponseTexts: []
+    dialogueDataPorts:
+    - portGuid: f54598ea-bb73-4447-8b91-86ab2ef6fecf
+      inputGuid: 751faabc-28a0-4230-90a7-aa55af90f066
+      outputGuid: 650cce46-29f0-4826-ab5c-d1b6080067ea
+    - portGuid: 70cfaedf-7d4a-4ccf-985b-e1127187d08b
+      inputGuid: 340171e4-2840-4356-aa64-313ed3eb51af
+      outputGuid: 650cce46-29f0-4826-ab5c-d1b6080067ea
+    - portGuid: a6b9183e-a1d5-45e9-93e1-bcefd0393c65
+      inputGuid: 8f64013e-f72e-46f2-8a59-b8696f71e4f2
+      outputGuid: 650cce46-29f0-4826-ab5c-d1b6080067ea
+    - portGuid: 4820c7b3-dc5c-4261-a576-9739235d7047
+      inputGuid: 0eb42bc5-91fd-49ac-b170-bd7eba92b872
+      outputGuid: 650cce46-29f0-4826-ab5c-d1b6080067ea
+    - portGuid: f08a448f-3d81-4912-8505-4afafd36f9d6
+      inputGuid: 3280d9d6-59c3-4295-82a2-525565f2094f
+      outputGuid: 650cce46-29f0-4826-ab5c-d1b6080067ea
+    dialogueResponseTexts:
+    - ID:
+        value: 5
+      responseText:
+        value: I'll say
     dialogueResponseEvidences: []
   endDatas:
   - nodeGuid: 1035f860-b115-4cc8-9a32-0232de66eb3b
-    position: {x: 821, y: 342}
+    position: {x: 1574, y: 313}
     endDialogueContainers:
     - dialogueContainerSO: {fileID: 11400000}
     - dialogueContainerSO: {fileID: 11400000, guid: 7715e8d919f644a4b9e4f0681d31a14a, type: 2}
@@ -138,5 +173,25 @@ MonoBehaviour:
   eventDatas: []
   branchDatas: []
   choiceDatas: []
-  emotionChoiceDatas: []
+  emotionChoiceDatas:
+  - nodeGuid: 751faabc-28a0-4230-90a7-aa55af90f066
+    position: {x: 897, y: 181}
+    choiceStateType:
+      value: 1
+  - nodeGuid: 340171e4-2840-4356-aa64-313ed3eb51af
+    position: {x: 897, y: 303}
+    choiceStateType:
+      value: 2
+  - nodeGuid: 8f64013e-f72e-46f2-8a59-b8696f71e4f2
+    position: {x: 895, y: 422}
+    choiceStateType:
+      value: 3
+  - nodeGuid: 0eb42bc5-91fd-49ac-b170-bd7eba92b872
+    position: {x: 897, y: 543}
+    choiceStateType:
+      value: 4
+  - nodeGuid: 3280d9d6-59c3-4295-82a2-525565f2094f
+    position: {x: 898, y: 664}
+    choiceStateType:
+      value: 5
   objectChoiceDatas: []

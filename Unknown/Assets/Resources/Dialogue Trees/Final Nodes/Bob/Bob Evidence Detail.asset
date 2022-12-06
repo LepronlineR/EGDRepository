@@ -17,6 +17,14 @@ MonoBehaviour:
     basePortName: Output
     targetNodeGuid: add68525-8ad7-4e4e-b7c9-f9bc2be812a8
     targetPortName: Input
+  - baseNodeGuid: add68525-8ad7-4e4e-b7c9-f9bc2be812a8
+    basePortName: 5356d37a-82c1-4d84-944f-71fa2911be16
+    targetNodeGuid: cfc7ce9f-4af7-41c1-b0b2-acf80750f04b
+    targetPortName: Input
+  - baseNodeGuid: add68525-8ad7-4e4e-b7c9-f9bc2be812a8
+    basePortName: 0bfe5b12-dcdc-4ea3-80eb-444cb2b61ad3
+    targetNodeGuid: 001d4805-d744-49b2-a17d-e4fcecd9a88e
+    targetPortName: Input
   dialogueDatas:
   - nodeGuid: add68525-8ad7-4e4e-b7c9-f9bc2be812a8
     position: {x: 2633, y: 1103}
@@ -41,7 +49,16 @@ MonoBehaviour:
         value: 1
       sprite:
         value: {fileID: 21300000, guid: 813029c5fc5e52540be73584988153b7, type: 3}
-    dialogueDataPorts: []
+    dialogueDataPorts:
+    - portGuid: 5356d37a-82c1-4d84-944f-71fa2911be16
+      inputGuid: cfc7ce9f-4af7-41c1-b0b2-acf80750f04b
+      outputGuid: add68525-8ad7-4e4e-b7c9-f9bc2be812a8
+    - portGuid: 0bfe5b12-dcdc-4ea3-80eb-444cb2b61ad3
+      inputGuid: 001d4805-d744-49b2-a17d-e4fcecd9a88e
+      outputGuid: add68525-8ad7-4e4e-b7c9-f9bc2be812a8
+    - portGuid: dfc32274-c876-4e9c-8113-30804531a653
+      inputGuid: 
+      outputGuid: 
     dialogueResponseTexts: []
     dialogueResponseEvidences:
     - ID:
@@ -57,4 +74,12 @@ MonoBehaviour:
   branchDatas: []
   choiceDatas: []
   emotionChoiceDatas: []
-  objectChoiceDatas: []
+  objectChoiceDatas:
+  - nodeGuid: cfc7ce9f-4af7-41c1-b0b2-acf80750f04b
+    position: {x: 2997, y: 1047}
+    choiceObject:
+      value: {fileID: 0}
+  - nodeGuid: 001d4805-d744-49b2-a17d-e4fcecd9a88e
+    position: {x: 2999, y: 1169}
+    choiceObject:
+      value: {fileID: 677632080520498084, guid: 9e53fa99e81897b46a91b73bae1ed397, type: 3}
