@@ -27,7 +27,7 @@ MonoBehaviour:
     targetPortName: Input
   dialogueDatas:
   - nodeGuid: 880e3067-f138-42a1-bc96-8786c02ff7bb
-    position: {x: 3356, y: 593}
+    position: {x: 422, y: 589}
     dialogueDataNames:
     - ID:
         value: 0
@@ -63,7 +63,7 @@ MonoBehaviour:
     dialogueResponseTexts: []
     dialogueResponseEvidences: []
   - nodeGuid: b38e8371-057b-4815-9aaf-cda0fca8fc7d
-    position: {x: 3659, y: 593}
+    position: {x: 725, y: 589}
     dialogueDataNames:
     - ID:
         value: 0
@@ -90,13 +90,13 @@ MonoBehaviour:
     dialogueResponseEvidences: []
   endDatas:
   - nodeGuid: 558dde9a-8b7d-454a-bfe2-26ee2df53fbe
-    position: {x: 3971, y: 592}
+    position: {x: 1037, y: 588}
     endDialogueContainers: []
     endNodeType:
       value: 1
   startDatas:
   - nodeGuid: 894aaada-ec4d-467c-b76c-a92f3938346f
-    position: {x: 3221, y: 593}
+    position: {x: 265, y: 589}
     text:
     - languageType: 0
       languageGenericType: That's all

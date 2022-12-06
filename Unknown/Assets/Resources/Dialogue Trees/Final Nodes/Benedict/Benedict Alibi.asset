@@ -21,13 +21,21 @@ MonoBehaviour:
     basePortName: Continue
     targetNodeGuid: 3ef4baa2-cfef-41cd-8e27-f14408dbe148
     targetPortName: Input
-  - baseNodeGuid: 13f27d12-bb8d-4f54-911c-08e2fe9d8743
-    basePortName: Continue
-    targetNodeGuid: 97a3f184-b7d3-477b-a9a2-678e16ac9dad
-    targetPortName: Input
   - baseNodeGuid: 97a3f184-b7d3-477b-a9a2-678e16ac9dad
     basePortName: Output
     targetNodeGuid: b23b3ed5-2d94-45b4-892a-6a8d71dcc6dd
+    targetPortName: Input
+  - baseNodeGuid: 13f27d12-bb8d-4f54-911c-08e2fe9d8743
+    basePortName: 61fce1f8-52b7-4846-9abc-d52969c47681
+    targetNodeGuid: 97a3f184-b7d3-477b-a9a2-678e16ac9dad
+    targetPortName: Input
+  - baseNodeGuid: 13f27d12-bb8d-4f54-911c-08e2fe9d8743
+    basePortName: 763bf820-cf5e-4259-a741-d3db74665c56
+    targetNodeGuid: 5f4ad21d-24bd-40e9-a193-9f76866bfc21
+    targetPortName: Input
+  - baseNodeGuid: 13f27d12-bb8d-4f54-911c-08e2fe9d8743
+    basePortName: b42bd331-7327-43f9-a6f2-f00068bc4fca
+    targetNodeGuid: 640bb9e7-ecbd-4acc-bfc7-7c0693e4b54d
     targetPortName: Input
   dialogueDatas:
   - nodeGuid: 13f27d12-bb8d-4f54-911c-08e2fe9d8743
@@ -53,7 +61,22 @@ MonoBehaviour:
         value: 1
       sprite:
         value: {fileID: 21300000, guid: 029449c1ef1a5ff408fcfc3381f31979, type: 3}
-    dialogueDataPorts: []
+    dialogueDataPorts:
+    - portGuid: 61fce1f8-52b7-4846-9abc-d52969c47681
+      inputGuid: 97a3f184-b7d3-477b-a9a2-678e16ac9dad
+      outputGuid: 13f27d12-bb8d-4f54-911c-08e2fe9d8743
+    - portGuid: 763bf820-cf5e-4259-a741-d3db74665c56
+      inputGuid: 5f4ad21d-24bd-40e9-a193-9f76866bfc21
+      outputGuid: 13f27d12-bb8d-4f54-911c-08e2fe9d8743
+    - portGuid: b42bd331-7327-43f9-a6f2-f00068bc4fca
+      inputGuid: 640bb9e7-ecbd-4acc-bfc7-7c0693e4b54d
+      outputGuid: 13f27d12-bb8d-4f54-911c-08e2fe9d8743
+    - portGuid: 6c89a9eb-1832-44b7-a11f-1676eef93068
+      inputGuid: 
+      outputGuid: 
+    - portGuid: 71630804-9b7f-4f6f-85ca-f31cf2fc9b5d
+      inputGuid: 
+      outputGuid: 
     dialogueResponseTexts:
     - ID:
         value: 3
@@ -135,5 +158,13 @@ MonoBehaviour:
   - nodeGuid: 97a3f184-b7d3-477b-a9a2-678e16ac9dad
     position: {x: 625, y: 269}
     choiceStateType:
-      value: 6
+      value: 5
+  - nodeGuid: 5f4ad21d-24bd-40e9-a193-9f76866bfc21
+    position: {x: 626, y: 376}
+    choiceStateType:
+      value: 2
+  - nodeGuid: 640bb9e7-ecbd-4acc-bfc7-7c0693e4b54d
+    position: {x: 626, y: 484}
+    choiceStateType:
+      value: 1
   objectChoiceDatas: []

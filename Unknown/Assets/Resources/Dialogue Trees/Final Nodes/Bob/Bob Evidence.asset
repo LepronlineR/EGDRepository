@@ -17,10 +17,6 @@ MonoBehaviour:
     basePortName: Output
     targetNodeGuid: e26d0e43-8cb8-4bdc-89cc-133a1664ea02
     targetPortName: Input
-  - baseNodeGuid: e26d0e43-8cb8-4bdc-89cc-133a1664ea02
-    basePortName: Continue
-    targetNodeGuid: c2217eda-7f4d-47c9-8f1d-d99fcd21ccf8
-    targetPortName: Input
   - baseNodeGuid: 4d6f1558-2733-45fd-bf0b-e4aa24d6380a
     basePortName: Continue
     targetNodeGuid: 59e0396d-0272-43aa-884d-5804e853f0cf
@@ -29,13 +25,17 @@ MonoBehaviour:
     basePortName: Continue
     targetNodeGuid: 3ef35bc3-9453-4e18-aab0-07488d58cf0e
     targetPortName: Input
+  - baseNodeGuid: e26d0e43-8cb8-4bdc-89cc-133a1664ea02
+    basePortName: Continue
+    targetNodeGuid: c2217eda-7f4d-47c9-8f1d-d99fcd21ccf8
+    targetPortName: Input
   - baseNodeGuid: c2217eda-7f4d-47c9-8f1d-d99fcd21ccf8
     basePortName: Output
     targetNodeGuid: 4d6f1558-2733-45fd-bf0b-e4aa24d6380a
     targetPortName: Input
   dialogueDatas:
   - nodeGuid: e26d0e43-8cb8-4bdc-89cc-133a1664ea02
-    position: {x: 2782, y: 484}
+    position: {x: 428, y: 487}
     dialogueDataNames:
     - ID:
         value: 0
@@ -63,7 +63,7 @@ MonoBehaviour:
     - ID:
         value: 3
   - nodeGuid: 4d6f1558-2733-45fd-bf0b-e4aa24d6380a
-    position: {x: 3375, y: 469}
+    position: {x: 991, y: 465}
     dialogueDataNames:
     - ID:
         value: 0
@@ -109,7 +109,7 @@ MonoBehaviour:
     dialogueResponseTexts: []
     dialogueResponseEvidences: []
   - nodeGuid: 59e0396d-0272-43aa-884d-5804e853f0cf
-    position: {x: 3757, y: 471}
+    position: {x: 1373, y: 467}
     dialogueDataNames:
     - ID:
         value: 0
@@ -156,7 +156,7 @@ MonoBehaviour:
     dialogueResponseEvidences: []
   endDatas:
   - nodeGuid: 3ef35bc3-9453-4e18-aab0-07488d58cf0e
-    position: {x: 4152, y: 470}
+    position: {x: 1768, y: 466}
     endDialogueContainers:
     - dialogueContainerSO: {fileID: 11400000}
     - dialogueContainerSO: {fileID: 11400000, guid: 2b39548c19e0da043965a7d297668f02, type: 2}
@@ -164,7 +164,7 @@ MonoBehaviour:
       value: 1
   startDatas:
   - nodeGuid: fe561be8-5eb5-4cea-bc34-c6e46e07958a
-    position: {x: 2554, y: 484}
+    position: {x: 200, y: 487}
     text:
     - languageType: 0
       languageGenericType: Can you look at this
@@ -174,6 +174,6 @@ MonoBehaviour:
   emotionChoiceDatas: []
   objectChoiceDatas:
   - nodeGuid: c2217eda-7f4d-47c9-8f1d-d99fcd21ccf8
-    position: {x: 3166, y: 483}
+    position: {x: 782, y: 479}
     choiceObject:
       value: {fileID: 0}

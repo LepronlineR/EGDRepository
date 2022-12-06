@@ -20,7 +20,7 @@ MonoBehaviour:
   dialogueDatas: []
   endDatas:
   - nodeGuid: 7fe7e436-08d3-4aac-9785-83891d08e22b
-    position: {x: 353, y: 315}
+    position: {x: 532, y: 920}
     endDialogueContainers:
     - dialogueContainerSO: {fileID: 11400000, guid: 48126c72ed5b7d8498586458537f53bb, type: 2}
     - dialogueContainerSO: {fileID: 11400000, guid: 7ff2793c54effa043836c7a612a78180, type: 2}
@@ -28,7 +28,7 @@ MonoBehaviour:
       value: 1
   startDatas:
   - nodeGuid: c501f154-d671-4321-8987-f10158a0713b
-    position: {x: 193, y: 312}
+    position: {x: 372, y: 917}
     text:
     - languageType: 0
       languageGenericType: 
