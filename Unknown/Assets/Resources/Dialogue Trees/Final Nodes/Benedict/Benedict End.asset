@@ -34,32 +34,6 @@ MonoBehaviour:
     targetNodeGuid: c1623f5d-7544-41c1-992c-0181831f06bf
     targetPortName: Input
   dialogueDatas:
-  - nodeGuid: f4e0ce69-ae9a-4cea-9bb1-ee814a154226
-    position: {x: 408, y: 352}
-    dialogueDataNames:
-    - ID:
-        value: 0
-      characterName:
-        value: Benedict
-    dialogueDataTexts:
-    - ID:
-        value: 2
-      GuidID:
-        value: c82facb1-8620-41e3-ab7a-49ad9129dac2
-      texts:
-      - languageType: 0
-        languageGenericType: Well you ought to!
-      audioClips:
-      - languageType: 0
-        languageGenericType: {fileID: 0}
-    dialogueDataImagess:
-    - ID:
-        value: 1
-      sprite:
-        value: {fileID: 21300000, guid: 87a1a56c93e089c429442ca246b2b995, type: 3}
-    dialogueDataPorts: []
-    dialogueResponseTexts: []
-    dialogueResponseEvidences: []
   - nodeGuid: fe5c60e4-5517-474b-ac80-5d3d8714193a
     position: {x: 758, y: 351}
     dialogueDataNames:
@@ -155,6 +129,32 @@ MonoBehaviour:
         value: 1
       sprite:
         value: {fileID: 21300000, guid: 25dcf3b2e80a0b14295724a20ccab811, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: f4e0ce69-ae9a-4cea-9bb1-ee814a154226
+    position: {x: 408, y: 352}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Benedict
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: c82facb1-8620-41e3-ab7a-49ad9129dac2
+      texts:
+      - languageType: 0
+        languageGenericType: Well you ought to!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 87a1a56c93e089c429442ca246b2b995, type: 3}
     dialogueDataPorts: []
     dialogueResponseTexts: []
     dialogueResponseEvidences: []

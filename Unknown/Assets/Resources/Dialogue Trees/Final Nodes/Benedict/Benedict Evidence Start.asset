@@ -1,0 +1,313 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aac82a7c0dc8dd4e8e46749de3dddb3, type: 3}
+  m_Name: Benedict Evidence Start
+  m_EditorClassIdentifier: 
+  nodeLinkDatas:
+  - baseNodeGuid: 3153d100-815e-43db-b08d-5ab3839405a0
+    basePortName: Output
+    targetNodeGuid: b1a95f29-f846-4594-beca-dfdd803f628c
+    targetPortName: Input
+  - baseNodeGuid: b1a95f29-f846-4594-beca-dfdd803f628c
+    basePortName: Continue
+    targetNodeGuid: cbce280b-ec8e-4714-8b94-f08002926054
+    targetPortName: Input
+  - baseNodeGuid: a11b67ac-e3a6-4d8f-b74b-74dfb7374149
+    basePortName: Continue
+    targetNodeGuid: 131bc616-83bb-4ceb-a416-cdd8cd95d0db
+    targetPortName: Input
+  - baseNodeGuid: 131bc616-83bb-4ceb-a416-cdd8cd95d0db
+    basePortName: Continue
+    targetNodeGuid: 641c453d-be30-45a0-9781-6ceff30b9d9f
+    targetPortName: Input
+  - baseNodeGuid: 641c453d-be30-45a0-9781-6ceff30b9d9f
+    basePortName: Continue
+    targetNodeGuid: 0d05a63a-9241-4b17-9665-9408220f3375
+    targetPortName: Input
+  - baseNodeGuid: 3c10b5e9-c93d-41d6-8fca-7b8a626acc3b
+    basePortName: Output
+    targetNodeGuid: a11b67ac-e3a6-4d8f-b74b-74dfb7374149
+    targetPortName: Input
+  - baseNodeGuid: cbce280b-ec8e-4714-8b94-f08002926054
+    basePortName: 09765c50-4a54-4bc6-8232-a290a5d1d93c
+    targetNodeGuid: 3c10b5e9-c93d-41d6-8fca-7b8a626acc3b
+    targetPortName: Input
+  - baseNodeGuid: cbce280b-ec8e-4714-8b94-f08002926054
+    basePortName: 5cfd6467-999f-49fa-8e2d-5ac025fdc64b
+    targetNodeGuid: 0f8779f4-eee0-46d7-91b4-6850d5fcbb58
+    targetPortName: Input
+  - baseNodeGuid: 0f8779f4-eee0-46d7-91b4-6850d5fcbb58
+    basePortName: Output
+    targetNodeGuid: 3c8e361c-862e-4cbb-81c9-5caff4255c8c
+    targetPortName: Input
+  - baseNodeGuid: 3c8e361c-862e-4cbb-81c9-5caff4255c8c
+    basePortName: Continue
+    targetNodeGuid: 428490c6-79d0-4dbb-a028-49514ad10a94
+    targetPortName: Input
+  dialogueDatas:
+  - nodeGuid: b1a95f29-f846-4594-beca-dfdd803f628c
+    position: {x: 3438, y: 665}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Benedict
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 58f2bb95-7b78-46da-9a13-dd9f75aa623b
+      texts:
+      - languageType: 0
+        languageGenericType: You require my assistance?
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 87a1a56c93e089c429442ca246b2b995, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: cbce280b-ec8e-4714-8b94-f08002926054
+    position: {x: 3775, y: 666}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Benedict
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: ebf9614d-99fb-474e-8a02-92cf4a29efd1
+      texts:
+      - languageType: 0
+        languageGenericType: Do tell!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 8843aee21e2677e47af0d5e938e1c349, type: 3}
+    dialogueDataPorts:
+    - portGuid: 09765c50-4a54-4bc6-8232-a290a5d1d93c
+      inputGuid: 3c10b5e9-c93d-41d6-8fca-7b8a626acc3b
+      outputGuid: cbce280b-ec8e-4714-8b94-f08002926054
+    - portGuid: 5cfd6467-999f-49fa-8e2d-5ac025fdc64b
+      inputGuid: 0f8779f4-eee0-46d7-91b4-6850d5fcbb58
+      outputGuid: cbce280b-ec8e-4714-8b94-f08002926054
+    dialogueResponseTexts: []
+    dialogueResponseEvidences:
+    - ID:
+        value: 3
+  - nodeGuid: a11b67ac-e3a6-4d8f-b74b-74dfb7374149
+    position: {x: 4467, y: 320}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Benedict
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: fd7e8b81-7ccf-48a4-82fa-b9e381a3e593
+      texts:
+      - languageType: 0
+        languageGenericType: Hmm
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: c3f40b7b-d967-456b-9be5-7f7cd42db7c5
+      texts:
+      - languageType: 0
+        languageGenericType: While I would love to give you my vast knowledge
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 87a1a56c93e089c429442ca246b2b995, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: 131bc616-83bb-4ceb-a416-cdd8cd95d0db
+    position: {x: 4815, y: 324}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Benedict
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 7ada83d4-e95d-4416-ab88-d543bb6cde5c
+      texts:
+      - languageType: 0
+        languageGenericType: "I\u2019m afraid this is out of my range"
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: f3cda730283b91f40bd88ca115197c51, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: 641c453d-be30-45a0-9781-6ceff30b9d9f
+    position: {x: 5140, y: 323}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Benedict
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: d4d970f5-3027-494c-914b-c870ae4f111c
+      texts:
+      - languageType: 0
+        languageGenericType: Now run along
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: 8b73e176-2378-4ede-9a0f-f8a8404da825
+      texts:
+      - languageType: 0
+        languageGenericType: Show me something I actually know next time
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 87a1a56c93e089c429442ca246b2b995, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: 3c8e361c-862e-4cbb-81c9-5caff4255c8c
+    position: {x: 4463, y: 878}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Benedict
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: f1a09737-fd5a-471e-be4e-19adeb264811
+      texts:
+      - languageType: 0
+        languageGenericType: AAAAHHH!!!!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 029449c1ef1a5ff408fcfc3381f31979, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: 428490c6-79d0-4dbb-a028-49514ad10a94
+    position: {x: 4819, y: 880}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Benedict
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 06b8b74c-f85c-40a7-b41c-aa9795fd162a
+      texts:
+      - languageType: 0
+        languageGenericType: What are you doing?!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: e50cfaa7-194a-443d-bf80-2aa4b5ee843c
+      texts:
+      - languageType: 0
+        languageGenericType: Is this some kind of sick joke to you?!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 4
+      GuidID:
+        value: 83f21c4a-4f63-4938-9b63-319add47d10f
+      texts:
+      - languageType: 0
+        languageGenericType: The nerve of you to use the dead on me!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 25dcf3b2e80a0b14295724a20ccab811, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  endDatas:
+  - nodeGuid: 0d05a63a-9241-4b17-9665-9408220f3375
+    position: {x: 5531, y: 325}
+    endDialogueContainers:
+    - dialogueContainerSO: {fileID: 11400000}
+    - dialogueContainerSO: {fileID: 11400000, guid: 9f5ec95bec41e3249b47729e9bad0d03, type: 2}
+    endNodeType:
+      value: 1
+  startDatas:
+  - nodeGuid: 3153d100-815e-43db-b08d-5ab3839405a0
+    position: {x: 3218, y: 667}
+    text:
+    - languageType: 0
+      languageGenericType: Can you please look at this
+  eventDatas: []
+  branchDatas: []
+  choiceDatas: []
+  emotionChoiceDatas: []
+  objectChoiceDatas:
+  - nodeGuid: 3c10b5e9-c93d-41d6-8fca-7b8a626acc3b
+    position: {x: 4164, y: 656}
+    choiceObject:
+      value: {fileID: 0}
+  - nodeGuid: 0f8779f4-eee0-46d7-91b4-6850d5fcbb58
+    position: {x: 4164, y: 796}
+    choiceObject:
+      value: {fileID: 4621682417116307932, guid: ffaddab49f400de4d85b5bd91f28c611, type: 3}

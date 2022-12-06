@@ -17,13 +17,17 @@ MonoBehaviour:
     basePortName: Output
     targetNodeGuid: 13f27d12-bb8d-4f54-911c-08e2fe9d8743
     targetPortName: Input
-  - baseNodeGuid: 13f27d12-bb8d-4f54-911c-08e2fe9d8743
-    basePortName: Continue
-    targetNodeGuid: b23b3ed5-2d94-45b4-892a-6a8d71dcc6dd
-    targetPortName: Input
   - baseNodeGuid: b23b3ed5-2d94-45b4-892a-6a8d71dcc6dd
     basePortName: Continue
     targetNodeGuid: 3ef4baa2-cfef-41cd-8e27-f14408dbe148
+    targetPortName: Input
+  - baseNodeGuid: 13f27d12-bb8d-4f54-911c-08e2fe9d8743
+    basePortName: Continue
+    targetNodeGuid: 97a3f184-b7d3-477b-a9a2-678e16ac9dad
+    targetPortName: Input
+  - baseNodeGuid: 97a3f184-b7d3-477b-a9a2-678e16ac9dad
+    basePortName: Output
+    targetNodeGuid: b23b3ed5-2d94-45b4-892a-6a8d71dcc6dd
     targetPortName: Input
   dialogueDatas:
   - nodeGuid: 13f27d12-bb8d-4f54-911c-08e2fe9d8743
@@ -123,7 +127,7 @@ MonoBehaviour:
     position: {x: 56, y: 269}
     text:
     - languageType: 0
-      languageGenericType: Where were you before 12 PM?
+      languageGenericType: Where were you before 12 PM
   eventDatas: []
   branchDatas: []
   choiceDatas: []
@@ -131,5 +135,5 @@ MonoBehaviour:
   - nodeGuid: 97a3f184-b7d3-477b-a9a2-678e16ac9dad
     position: {x: 625, y: 269}
     choiceStateType:
-      value: 5
+      value: 6
   objectChoiceDatas: []

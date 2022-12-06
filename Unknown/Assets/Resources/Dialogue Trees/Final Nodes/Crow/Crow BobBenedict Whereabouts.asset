@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8aac82a7c0dc8dd4e8e46749de3dddb3, type: 3}
-  m_Name: BobBenedict Whereabouts
+  m_Name: Crow BobBenedict Whereabouts
   m_EditorClassIdentifier: 
   nodeLinkDatas:
   - baseNodeGuid: e76fc599-a793-4893-8b65-a2c7b198ef43
@@ -83,7 +83,7 @@ MonoBehaviour:
     position: {x: -660, y: 561}
     text:
     - languageType: 0
-      languageGenericType: What were Bob and Benedict doing?
+      languageGenericType: What were Bob and Benedict doing
   eventDatas: []
   branchDatas: []
   choiceDatas: []

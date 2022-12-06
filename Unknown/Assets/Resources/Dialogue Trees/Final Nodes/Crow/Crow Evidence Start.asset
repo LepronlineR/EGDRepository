@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8aac82a7c0dc8dd4e8e46749de3dddb3, type: 3}
-  m_Name: Crow Evidence
+  m_Name: Crow Evidence Start
   m_EditorClassIdentifier: 
   nodeLinkDatas:
   - baseNodeGuid: fe561be8-5eb5-4cea-bc34-c6e46e07958a
@@ -137,7 +137,7 @@ MonoBehaviour:
     position: {x: 2554, y: 484}
     text:
     - languageType: 0
-      languageGenericType: Can I show you something?
+      languageGenericType: Can I show you something
   eventDatas: []
   branchDatas: []
   choiceDatas: []

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8aac82a7c0dc8dd4e8e46749de3dddb3, type: 3}
-  m_Name: With Chihiro
+  m_Name: Crow With Chihiro
   m_EditorClassIdentifier: 
   nodeLinkDatas:
   - baseNodeGuid: 411374ea-0e5b-4250-b2db-b6d1c8b76f25
@@ -93,7 +93,7 @@ MonoBehaviour:
     position: {x: -590, y: 674}
     text:
     - languageType: 0
-      languageGenericType: What were you doing with Chihiro?
+      languageGenericType: What were you doing with Chihiro
   eventDatas: []
   branchDatas: []
   choiceDatas: []

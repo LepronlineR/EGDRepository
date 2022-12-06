@@ -58,7 +58,7 @@ MonoBehaviour:
     position: {x: 171, y: 354}
     text:
     - languageType: 0
-      languageGenericType: Where were you before 12 PM?
+      languageGenericType: Where were you before 12 PM
   eventDatas: []
   branchDatas: []
   choiceDatas: []

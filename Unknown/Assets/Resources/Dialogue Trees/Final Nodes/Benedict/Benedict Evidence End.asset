@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aac82a7c0dc8dd4e8e46749de3dddb3, type: 3}
+  m_Name: Benedict Evidence End
+  m_EditorClassIdentifier: 
+  nodeLinkDatas:
+  - baseNodeGuid: b2ad78b8-fccb-4225-931a-cacf79f6add4
+    basePortName: Output
+    targetNodeGuid: e3b02ff5-e105-4c32-bb55-1f9f58dd2285
+    targetPortName: Input
+  - baseNodeGuid: e3b02ff5-e105-4c32-bb55-1f9f58dd2285
+    basePortName: Continue
+    targetNodeGuid: 8bc6b58f-88ad-4a00-af9f-0814e5a8ecd1
+    targetPortName: Input
+  dialogueDatas:
+  - nodeGuid: e3b02ff5-e105-4c32-bb55-1f9f58dd2285
+    position: {x: 395, y: 461}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Benedict
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: a86cccd5-903d-420f-9db1-fab59dba7121
+      texts:
+      - languageType: 0
+        languageGenericType: Farewell then!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: b2744571-4d62-400d-a5de-68af0cf4fd26
+      texts:
+      - languageType: 0
+        languageGenericType: Do bring me anything that perhaps may require my expertise!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 8843aee21e2677e47af0d5e938e1c349, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  endDatas:
+  - nodeGuid: 8bc6b58f-88ad-4a00-af9f-0814e5a8ecd1
+    position: {x: 818, y: 460}
+    endDialogueContainers: []
+    endNodeType:
+      value: 1
+  startDatas:
+  - nodeGuid: b2ad78b8-fccb-4225-931a-cacf79f6add4
+    position: {x: 251, y: 462}
+    text:
+    - languageType: 0
+      languageGenericType: That is all
+  eventDatas: []
+  branchDatas: []
+  choiceDatas: []
+  emotionChoiceDatas: []
+  objectChoiceDatas: []
