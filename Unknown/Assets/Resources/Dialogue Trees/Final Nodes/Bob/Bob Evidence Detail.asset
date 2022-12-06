@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aac82a7c0dc8dd4e8e46749de3dddb3, type: 3}
+  m_Name: Bob Evidence Detail
+  m_EditorClassIdentifier: 
+  nodeLinkDatas:
+  - baseNodeGuid: efd52ab3-102e-4a5c-8c29-b8cbd4c450e3
+    basePortName: Output
+    targetNodeGuid: add68525-8ad7-4e4e-b7c9-f9bc2be812a8
+    targetPortName: Input
+  dialogueDatas:
+  - nodeGuid: add68525-8ad7-4e4e-b7c9-f9bc2be812a8
+    position: {x: 2633, y: 1103}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Bob
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: a40ebacd-419b-4759-a8b5-4c750c4de112
+      texts:
+      - languageType: 0
+        languageGenericType: With what?
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 813029c5fc5e52540be73584988153b7, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences:
+    - ID:
+        value: 3
+  endDatas: []
+  startDatas:
+  - nodeGuid: efd52ab3-102e-4a5c-8c29-b8cbd4c450e3
+    position: {x: 2502, y: 1103}
+    text:
+    - languageType: 0
+      languageGenericType: 
+  eventDatas: []
+  branchDatas: []
+  choiceDatas: []
+  emotionChoiceDatas: []
+  objectChoiceDatas: []
