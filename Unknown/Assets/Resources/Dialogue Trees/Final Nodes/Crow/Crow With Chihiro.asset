@@ -80,12 +80,12 @@ MonoBehaviour:
     dialogueResponseEvidences: []
   endDatas:
   - nodeGuid: e436004c-c62d-47a1-bc95-d171afc13509
-    position: {x: 320, y: 680}
+    position: {x: 347, y: 675}
     endDialogueContainers:
     - dialogueContainerSO: {fileID: 11400000, guid: 36aa97cb02460eb4e9eac4a71813e38d, type: 2}
-    - dialogueContainerSO: {fileID: 11400000}
     - dialogueContainerSO: {fileID: 11400000, guid: dc209fbe4cdc0d0448dfeb273b067823, type: 2}
     - dialogueContainerSO: {fileID: 11400000, guid: 34c462457b96a0e4c86dc1bece1fbefe, type: 2}
+    - dialogueContainerSO: {fileID: 11400000, guid: 2c9229e1c02bd1b478db438ad54e0cc5, type: 2}
     endNodeType:
       value: 1
   startDatas:

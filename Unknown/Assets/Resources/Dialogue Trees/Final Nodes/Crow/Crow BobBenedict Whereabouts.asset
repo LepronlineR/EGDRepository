@@ -70,12 +70,13 @@ MonoBehaviour:
     dialogueResponseEvidences: []
   endDatas:
   - nodeGuid: a3c14154-6050-465d-ab42-311637dfadab
-    position: {x: -115, y: 565}
+    position: {x: -80, y: 561}
     endDialogueContainers:
     - dialogueContainerSO: {fileID: 11400000}
     - dialogueContainerSO: {fileID: 11400000, guid: 6a4ea2baa68c35741a0ddfda4bc97034, type: 2}
     - dialogueContainerSO: {fileID: 11400000, guid: dc209fbe4cdc0d0448dfeb273b067823, type: 2}
     - dialogueContainerSO: {fileID: 11400000, guid: 34c462457b96a0e4c86dc1bece1fbefe, type: 2}
+    - dialogueContainerSO: {fileID: 11400000, guid: 2c9229e1c02bd1b478db438ad54e0cc5, type: 2}
     endNodeType:
       value: 1
   startDatas:

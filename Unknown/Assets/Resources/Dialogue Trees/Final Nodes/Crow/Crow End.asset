@@ -33,16 +33,6 @@ MonoBehaviour:
     - ID:
         value: 2
       GuidID:
-        value: a357051d-4e5a-4ca9-a9f9-ed3412486c2a
-      texts:
-      - languageType: 0
-        languageGenericType: No prob
-      audioClips:
-      - languageType: 0
-        languageGenericType: {fileID: 0}
-    - ID:
-        value: 3
-      GuidID:
         value: a2189599-b04b-4086-b4f4-93855df5147f
       texts:
       - languageType: 0

@@ -97,6 +97,18 @@ MonoBehaviour:
     basePortName: Continue
     targetNodeGuid: 40442873-b069-4545-8ead-8bd04577f737
     targetPortName: Input
+  - baseNodeGuid: 40442873-b069-4545-8ead-8bd04577f737
+    basePortName: Continue
+    targetNodeGuid: dcd5289d-f0ad-46c2-8d05-bc907065789e
+    targetPortName: Input
+  - baseNodeGuid: dcd5289d-f0ad-46c2-8d05-bc907065789e
+    basePortName: Continue
+    targetNodeGuid: 16932a98-8ef2-4b84-980b-dee67717caea
+    targetPortName: Input
+  - baseNodeGuid: 16932a98-8ef2-4b84-980b-dee67717caea
+    basePortName: Continue
+    targetNodeGuid: 3ef35bc3-9453-4e18-aab0-07488d58cf0e
+    targetPortName: Input
   - baseNodeGuid: 1bd8568f-1807-4a0d-be05-7e9542d4c45f
     basePortName: Output
     targetNodeGuid: 91d9e7eb-e3fc-41b8-8619-2b2949b687f0
@@ -121,10 +133,6 @@ MonoBehaviour:
     basePortName: Output
     targetNodeGuid: 4d6f1558-2733-45fd-bf0b-e4aa24d6380a
     targetPortName: Input
-  - baseNodeGuid: f166ba12-2735-4f18-8191-6c223d51534a
-    basePortName: Output
-    targetNodeGuid: ff4abf93-f21b-4250-99c6-1d574b3f713a
-    targetPortName: Input
   - baseNodeGuid: bf072b62-7d50-45a9-8d0c-28f59ef3b8e8
     basePortName: Output
     targetNodeGuid: 9e70c133-b930-41bb-8ff5-6c393e9d2c2b
@@ -133,17 +141,9 @@ MonoBehaviour:
     basePortName: Output
     targetNodeGuid: 179f52c7-008f-4530-b454-771d247f0953
     targetPortName: Input
-  - baseNodeGuid: 40442873-b069-4545-8ead-8bd04577f737
-    basePortName: Continue
-    targetNodeGuid: dcd5289d-f0ad-46c2-8d05-bc907065789e
-    targetPortName: Input
-  - baseNodeGuid: dcd5289d-f0ad-46c2-8d05-bc907065789e
-    basePortName: Continue
-    targetNodeGuid: 16932a98-8ef2-4b84-980b-dee67717caea
-    targetPortName: Input
-  - baseNodeGuid: 16932a98-8ef2-4b84-980b-dee67717caea
-    basePortName: Continue
-    targetNodeGuid: 3ef35bc3-9453-4e18-aab0-07488d58cf0e
+  - baseNodeGuid: f166ba12-2735-4f18-8191-6c223d51534a
+    basePortName: Output
+    targetNodeGuid: ff4abf93-f21b-4250-99c6-1d574b3f713a
     targetPortName: Input
   dialogueDatas:
   - nodeGuid: e26d0e43-8cb8-4bdc-89cc-133a1664ea02
@@ -673,10 +673,13 @@ MonoBehaviour:
     endNodeType:
       value: 1
   - nodeGuid: 3ef35bc3-9453-4e18-aab0-07488d58cf0e
-    position: {x: -35943, y: 908}
+    position: {x: -35849, y: 900}
     endDialogueContainers:
     - dialogueContainerSO: {fileID: 11400000}
     - dialogueContainerSO: {fileID: 11400000, guid: 2b39548c19e0da043965a7d297668f02, type: 2}
+    - dialogueContainerSO: {fileID: 11400000, guid: d1185841a6409a54a9f275014cf69fbd, type: 2}
+    - dialogueContainerSO: {fileID: 11400000, guid: dc209fbe4cdc0d0448dfeb273b067823, type: 2}
+    - dialogueContainerSO: {fileID: 11400000, guid: 34c462457b96a0e4c86dc1bece1fbefe, type: 2}
     endNodeType:
       value: 1
   startDatas:
