@@ -59,7 +59,14 @@ public class CharacterBehavior : MonoBehaviour {
     private void OnMouseOver(){
         if(Vector3.Distance(this.transform.position, player.transform.position) >= close)
             return;
-        if(!interactable){
+        // conviction
+        if ((personName != PersonName.Tutorial || personName != PersonName.Player) 
+            && MainSystem.Instance.startedGame
+            && Input.GetKey(KeyCode.C))
+        {
+            MainSystem.Instance.EndGame();
+        }
+        if (!interactable){
             BeginInteraction();
         }
     }
