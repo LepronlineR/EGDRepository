@@ -41,6 +41,26 @@ MonoBehaviour:
     basePortName: f08a448f-3d81-4912-8505-4afafd36f9d6
     targetNodeGuid: 3280d9d6-59c3-4295-82a2-525565f2094f
     targetPortName: Input
+  - baseNodeGuid: 751faabc-28a0-4230-90a7-aa55af90f066
+    basePortName: Output
+    targetNodeGuid: 04b0e605-f202-43ea-9736-79eece2926fa
+    targetPortName: Input
+  - baseNodeGuid: 04b0e605-f202-43ea-9736-79eece2926fa
+    basePortName: Continue
+    targetNodeGuid: 1035f860-b115-4cc8-9a32-0232de66eb3b
+    targetPortName: Input
+  - baseNodeGuid: 340171e4-2840-4356-aa64-313ed3eb51af
+    basePortName: Output
+    targetNodeGuid: 781d570b-47ea-423d-9921-4eed1557d268
+    targetPortName: Input
+  - baseNodeGuid: 781d570b-47ea-423d-9921-4eed1557d268
+    basePortName: Continue
+    targetNodeGuid: bc7b3b65-8469-4268-92c2-e1be8cd64bf9
+    targetPortName: Input
+  - baseNodeGuid: bc7b3b65-8469-4268-92c2-e1be8cd64bf9
+    basePortName: Continue
+    targetNodeGuid: 1035f860-b115-4cc8-9a32-0232de66eb3b
+    targetPortName: Input
   dialogueDatas:
   - nodeGuid: e633a4cf-c09c-4b7a-89c1-74f384eeb9a8
     position: {x: 5, y: 341}
@@ -155,9 +175,109 @@ MonoBehaviour:
       responseText:
         value: I'll say
     dialogueResponseEvidences: []
+  - nodeGuid: 04b0e605-f202-43ea-9736-79eece2926fa
+    position: {x: 1172, y: -546}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Benedict
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 5b58a29d-c9a4-481f-800e-63021b4199b2
+      texts:
+      - languageType: 0
+        languageGenericType: Right?!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: b8994d0c-ad1f-4b4a-8cdb-6a2cf81374ee
+      texts:
+      - languageType: 0
+        languageGenericType: I'm glad someone for once recognizes my concerns about
+          him!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 25dcf3b2e80a0b14295724a20ccab811, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: 781d570b-47ea-423d-9921-4eed1557d268
+    position: {x: 1199, y: -17}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Benedict
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 2b08d266-1a2d-41d7-8bd9-3c8420fd2c92
+      texts:
+      - languageType: 0
+        languageGenericType: You were bothered by him too?
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: dd7572d0-a284-424f-b93e-1d22845f23d0
+      texts:
+      - languageType: 0
+        languageGenericType: Perhaps we should stick together should he come near
+          us
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: f3cda730283b91f40bd88ca115197c51, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: bc7b3b65-8469-4268-92c2-e1be8cd64bf9
+    position: {x: 1569, y: -15}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Benedict
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 5c648646-06d5-49cc-a479-2a879532024b
+      texts:
+      - languageType: 0
+        languageGenericType: That is if he can ever get his gaze off that phone
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 8843aee21e2677e47af0d5e938e1c349, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
   endDatas:
   - nodeGuid: 1035f860-b115-4cc8-9a32-0232de66eb3b
-    position: {x: 1574, y: 313}
+    position: {x: 2053, y: 285}
     endDialogueContainers:
     - dialogueContainerSO: {fileID: 11400000}
     - dialogueContainerSO: {fileID: 11400000, guid: 7715e8d919f644a4b9e4f0681d31a14a, type: 2}

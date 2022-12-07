@@ -12,10 +12,337 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8aac82a7c0dc8dd4e8e46749de3dddb3, type: 3}
   m_Name: Benedict Canvas Option
   m_EditorClassIdentifier: 
-  nodeLinkDatas: []
-  dialogueDatas: []
-  endDatas: []
-  startDatas: []
+  nodeLinkDatas:
+  - baseNodeGuid: 5392f318-feed-4e52-b1c7-900b3c6258be
+    basePortName: Output
+    targetNodeGuid: fc10c4f7-3e5e-41da-bd9f-5dae830793ab
+    targetPortName: Input
+  - baseNodeGuid: fc10c4f7-3e5e-41da-bd9f-5dae830793ab
+    basePortName: Continue
+    targetNodeGuid: f1edfa1e-3936-40b0-9f70-69ccdafcfb01
+    targetPortName: Input
+  - baseNodeGuid: f1edfa1e-3936-40b0-9f70-69ccdafcfb01
+    basePortName: Continue
+    targetNodeGuid: f461ad2d-ad03-45b5-af36-eeb62dc43cb6
+    targetPortName: Input
+  - baseNodeGuid: f461ad2d-ad03-45b5-af36-eeb62dc43cb6
+    basePortName: Continue
+    targetNodeGuid: 88c205c0-061e-4233-bb0d-847eb1041a8d
+    targetPortName: Input
+  - baseNodeGuid: 88c205c0-061e-4233-bb0d-847eb1041a8d
+    basePortName: Continue
+    targetNodeGuid: 1047aa42-fe4e-4788-af6e-54bb4332d0f2
+    targetPortName: Input
+  - baseNodeGuid: 1047aa42-fe4e-4788-af6e-54bb4332d0f2
+    basePortName: Continue
+    targetNodeGuid: df11beca-7a3e-4175-bc7f-6b1ecbaa92ca
+    targetPortName: Input
+  - baseNodeGuid: df11beca-7a3e-4175-bc7f-6b1ecbaa92ca
+    basePortName: Continue
+    targetNodeGuid: 0da286c5-5bd8-4ef3-8a8f-38aa235aebe1
+    targetPortName: Input
+  - baseNodeGuid: 0da286c5-5bd8-4ef3-8a8f-38aa235aebe1
+    basePortName: Continue
+    targetNodeGuid: a087a486-6d46-4813-926f-cb641aa6b615
+    targetPortName: Input
+  - baseNodeGuid: a087a486-6d46-4813-926f-cb641aa6b615
+    basePortName: Continue
+    targetNodeGuid: 689206f7-0690-420e-addb-93532593273a
+    targetPortName: Input
+  dialogueDatas:
+  - nodeGuid: fc10c4f7-3e5e-41da-bd9f-5dae830793ab
+    position: {x: 5881, y: 1746}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Benedict
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: d5df7f23-b473-4f89-ba00-58da8889b9ec
+      texts:
+      - languageType: 0
+        languageGenericType: '''Tis a simple one really'
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 87a1a56c93e089c429442ca246b2b995, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: f1edfa1e-3936-40b0-9f70-69ccdafcfb01
+    position: {x: 6246, y: 1747}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Benedict
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: e48ce61a-4e4d-45ec-81bf-c5cf3d9408ad
+      texts:
+      - languageType: 0
+        languageGenericType: Whenever I am in such an emotional moment
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: 57a6b743-1bea-4327-b3b8-1d4d88d54618
+      texts:
+      - languageType: 0
+        languageGenericType: Or in a place that speaks deeply to me
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: f3cda730283b91f40bd88ca115197c51, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: f461ad2d-ad03-45b5-af36-eeb62dc43cb6
+    position: {x: 6606, y: 1743}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Benedict
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: dfb1e2e1-62e9-4e5f-8c9d-9b40936c1123
+      texts:
+      - languageType: 0
+        languageGenericType: I like to paint to remember the moment!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 8843aee21e2677e47af0d5e938e1c349, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: 88c205c0-061e-4233-bb0d-847eb1041a8d
+    position: {x: 6969, y: 1745}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Benedict
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: d85595da-8f8c-4308-a638-20d97cc9b95d
+      texts:
+      - languageType: 0
+        languageGenericType: After years of trying different ways to paint...
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 87a1a56c93e089c429442ca246b2b995, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: 1047aa42-fe4e-4788-af6e-54bb4332d0f2
+    position: {x: 7348, y: 1750}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Benedict
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 7be005ef-f447-4578-9b7e-782723caac7b
+      texts:
+      - languageType: 0
+        languageGenericType: I've discovered it does wonders to a painting when I
+          paint in the moment
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 8843aee21e2677e47af0d5e938e1c349, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: df11beca-7a3e-4175-bc7f-6b1ecbaa92ca
+    position: {x: 7836, y: 1749}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Benedict
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: c61e1f2e-2790-4b61-9b2d-031940b5a0d0
+      texts:
+      - languageType: 0
+        languageGenericType: Of course
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: 7cfa6931-34ed-4e78-9c76-b8840e12645b
+      texts:
+      - languageType: 0
+        languageGenericType: Not a method befitting everyone
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: f3cda730283b91f40bd88ca115197c51, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: 0da286c5-5bd8-4ef3-8a8f-38aa235aebe1
+    position: {x: 8223, y: 1752}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Benedict
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 47221359-37d0-4324-a773-a71f6719a87a
+      texts:
+      - languageType: 0
+        languageGenericType: But count the stars did it resonate with me!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 8843aee21e2677e47af0d5e938e1c349, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: a087a486-6d46-4813-926f-cb641aa6b615
+    position: {x: 8608, y: 1748}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Benedict
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 3c9a9963-dede-4826-a2b9-d2d6a0513a2b
+      texts:
+      - languageType: 0
+        languageGenericType: Alas
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: 59c5092d-98d8-4cc2-b725-f964ebd9fa3d
+      texts:
+      - languageType: 0
+        languageGenericType: It was unfortunate that I couldn't find an easel after
+          the one I had broke on me
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 4
+      GuidID:
+        value: 9c422285-8c26-4ace-8e04-8452d07ea4c6
+      texts:
+      - languageType: 0
+        languageGenericType: You have no idea how inconvenient it is to paint on
+          a canvas without an easel
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 5
+      GuidID:
+        value: ee7fde3a-0637-4f99-ae9c-1c6c6436b3b6
+      texts:
+      - languageType: 0
+        languageGenericType: Not to mention the unfortunate fate our tour guide encountered
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 6
+      GuidID:
+        value: 7cbfedc4-eced-4a1b-a9fd-bd374f33b7d9
+      texts:
+      - languageType: 0
+        languageGenericType: Once we get out of this predicament
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 7
+      GuidID:
+        value: 2e6a3c12-4807-4105-a1d3-c434b0ccc2c2
+      texts:
+      - languageType: 0
+        languageGenericType: I shall paint something in dear Chihiro's honor
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: f3cda730283b91f40bd88ca115197c51, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  endDatas:
+  - nodeGuid: 689206f7-0690-420e-addb-93532593273a
+    position: {x: 9177, y: 1751}
+    endDialogueContainers: []
+    endNodeType:
+      value: 1
+  startDatas:
+  - nodeGuid: 5392f318-feed-4e52-b1c7-900b3c6258be
+    position: {x: 5565, y: 1809}
+    text:
+    - languageType: 0
+      languageGenericType: Tell me the story behind this canvas
   eventDatas: []
   branchDatas: []
   choiceDatas: []

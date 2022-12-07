@@ -12,10 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8aac82a7c0dc8dd4e8e46749de3dddb3, type: 3}
   m_Name: Benedict Choices
   m_EditorClassIdentifier: 
-  nodeLinkDatas: []
+  nodeLinkDatas:
+  - baseNodeGuid: 86c50ac9-3e5d-4060-aa85-cbbf9f528794
+    basePortName: Output
+    targetNodeGuid: 51d83b5d-2996-4ace-a292-861c685c9696
+    targetPortName: Input
   dialogueDatas: []
-  endDatas: []
-  startDatas: []
+  endDatas:
+  - nodeGuid: 51d83b5d-2996-4ace-a292-861c685c9696
+    position: {x: 5878, y: 1774}
+    endDialogueContainers:
+    - dialogueContainerSO: {fileID: 11400000, guid: b02e3db7086b89e43aa2f9601ba15662, type: 2}
+    - dialogueContainerSO: {fileID: 11400000, guid: 29b5c94bbe6925c4da3dfc52635aec17, type: 2}
+    endNodeType:
+      value: 1
+  startDatas:
+  - nodeGuid: 86c50ac9-3e5d-4060-aa85-cbbf9f528794
+    position: {x: 5720, y: 1772}
+    text:
+    - languageType: 0
+      languageGenericType: 
   eventDatas: []
   branchDatas: []
   choiceDatas: []

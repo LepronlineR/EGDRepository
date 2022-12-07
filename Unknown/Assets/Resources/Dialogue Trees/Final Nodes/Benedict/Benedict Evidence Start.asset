@@ -732,20 +732,10 @@ MonoBehaviour:
     - ID:
         value: 5
       GuidID:
-        value: 66e95516-fe1d-4447-9795-ba5ed4477138
-      texts:
-      - languageType: 0
-        languageGenericType: 
-      audioClips:
-      - languageType: 0
-        languageGenericType: {fileID: 0}
-    - ID:
-        value: 6
-      GuidID:
         value: 08181a5d-c293-4cec-9b2f-6483b62a879e
       texts:
       - languageType: 0
-        languageGenericType: What would you like to know?
+        languageGenericType: What do you need to know?
       audioClips:
       - languageType: 0
         languageGenericType: {fileID: 0}
