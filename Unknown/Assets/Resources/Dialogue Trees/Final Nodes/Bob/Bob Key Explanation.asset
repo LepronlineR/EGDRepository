@@ -104,7 +104,7 @@ MonoBehaviour:
         value: e2653380-756c-4c9c-9e91-589e46504cd7
       texts:
       - languageType: 0
-        languageGenericType: But it was worn and dirty
+        languageGenericType: But it was old and dirty
       audioClips:
       - languageType: 0
         languageGenericType: {fileID: 0}
@@ -336,7 +336,7 @@ MonoBehaviour:
     dialogueResponseTexts: []
     dialogueResponseEvidences: []
   - nodeGuid: 9eb4e47b-9762-4923-a5bd-ffc0a98ae342
-    position: {x: 3482, y: 391}
+    position: {x: 3460, y: 390}
     dialogueDataNames:
     - ID:
         value: 0
@@ -349,7 +349,7 @@ MonoBehaviour:
         value: 8c68284e-6258-4df6-860e-8b08cdfc0349
       texts:
       - languageType: 0
-        languageGenericType: Also, there was a broken canvas beside the trash can
+        languageGenericType: Also, there was a broken canvas leaning on the door
       audioClips:
       - languageType: 0
         languageGenericType: {fileID: 0}

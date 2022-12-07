@@ -18,20 +18,12 @@ MonoBehaviour:
     targetNodeGuid: e26d0e43-8cb8-4bdc-89cc-133a1664ea02
     targetPortName: Input
   - baseNodeGuid: e26d0e43-8cb8-4bdc-89cc-133a1664ea02
-    basePortName: 849725ce-3d2c-40b5-89df-9ed56673daad
-    targetNodeGuid: c2217eda-7f4d-47c9-8f1d-d99fcd21ccf8
-    targetPortName: Input
-  - baseNodeGuid: e26d0e43-8cb8-4bdc-89cc-133a1664ea02
     basePortName: d22597d7-e3fe-4ba7-a7d3-547c8d241136
     targetNodeGuid: f166ba12-2735-4f18-8191-6c223d51534a
     targetPortName: Input
   - baseNodeGuid: e26d0e43-8cb8-4bdc-89cc-133a1664ea02
     basePortName: f162726d-1251-402d-a8e2-01171959134d
     targetNodeGuid: bf072b62-7d50-45a9-8d0c-28f59ef3b8e8
-    targetPortName: Input
-  - baseNodeGuid: e26d0e43-8cb8-4bdc-89cc-133a1664ea02
-    basePortName: 08b713b8-ae05-4beb-bb54-98f85d08c874
-    targetNodeGuid: 27366742-60dc-48dd-83ed-05df06f0a131
     targetPortName: Input
   - baseNodeGuid: 4d6f1558-2733-45fd-bf0b-e4aa24d6380a
     basePortName: Continue
@@ -145,9 +137,153 @@ MonoBehaviour:
     basePortName: Output
     targetNodeGuid: ff4abf93-f21b-4250-99c6-1d574b3f713a
     targetPortName: Input
+  - baseNodeGuid: e26d0e43-8cb8-4bdc-89cc-133a1664ea02
+    basePortName: 08b713b8-ae05-4beb-bb54-98f85d08c874
+    targetNodeGuid: c2217eda-7f4d-47c9-8f1d-d99fcd21ccf8
+    targetPortName: Input
+  - baseNodeGuid: e26d0e43-8cb8-4bdc-89cc-133a1664ea02
+    basePortName: 849725ce-3d2c-40b5-89df-9ed56673daad
+    targetNodeGuid: 27366742-60dc-48dd-83ed-05df06f0a131
+    targetPortName: Input
+  - baseNodeGuid: e26d0e43-8cb8-4bdc-89cc-133a1664ea02
+    basePortName: d7c78333-f990-46b9-bc8d-bd1c5f64be46
+    targetNodeGuid: 3ca97b77-14d5-4a51-831e-8e9625ee221e
+    targetPortName: Input
+  - baseNodeGuid: 3ca97b77-14d5-4a51-831e-8e9625ee221e
+    basePortName: Output
+    targetNodeGuid: c7343b23-5cea-418c-8cb6-580e5d766af9
+    targetPortName: Input
+  - baseNodeGuid: c7343b23-5cea-418c-8cb6-580e5d766af9
+    basePortName: Continue
+    targetNodeGuid: 3ef35bc3-9453-4e18-aab0-07488d58cf0e
+    targetPortName: Input
+  - baseNodeGuid: e26d0e43-8cb8-4bdc-89cc-133a1664ea02
+    basePortName: 873e4c12-a560-4d01-acbc-ab7500459239
+    targetNodeGuid: 7f17088e-f730-440b-aebe-fd5e7f2616d7
+    targetPortName: Input
+  - baseNodeGuid: 7f17088e-f730-440b-aebe-fd5e7f2616d7
+    basePortName: Output
+    targetNodeGuid: 312ad256-1814-47f5-b791-a02ca9d0c4b3
+    targetPortName: Input
+  - baseNodeGuid: 312ad256-1814-47f5-b791-a02ca9d0c4b3
+    basePortName: Continue
+    targetNodeGuid: 8d2ddee2-5fdb-4070-9ee9-0e1a1723e3ab
+    targetPortName: Input
+  - baseNodeGuid: 8d2ddee2-5fdb-4070-9ee9-0e1a1723e3ab
+    basePortName: Continue
+    targetNodeGuid: 3ef35bc3-9453-4e18-aab0-07488d58cf0e
+    targetPortName: Input
+  - baseNodeGuid: e26d0e43-8cb8-4bdc-89cc-133a1664ea02
+    basePortName: b8bf682a-7965-47f4-aad6-119984dfa1ec
+    targetNodeGuid: 081f9e13-2523-4dcd-b2f6-249c89e25007
+    targetPortName: Input
+  - baseNodeGuid: 081f9e13-2523-4dcd-b2f6-249c89e25007
+    basePortName: Output
+    targetNodeGuid: 17bf2ea7-1797-42a2-bd33-c3d21de54db4
+    targetPortName: Input
+  - baseNodeGuid: 17bf2ea7-1797-42a2-bd33-c3d21de54db4
+    basePortName: Continue
+    targetNodeGuid: c4e2a865-a0d0-4954-b21d-f94e800cf4f3
+    targetPortName: Input
+  - baseNodeGuid: fa982ab9-4d55-4211-8522-6030109f4806
+    basePortName: Continue
+    targetNodeGuid: e5ee5762-719c-43e2-90f4-208f565faae9
+    targetPortName: Input
+  - baseNodeGuid: e5ee5762-719c-43e2-90f4-208f565faae9
+    basePortName: Continue
+    targetNodeGuid: 3ba63152-e1c2-4a58-8b24-82f3e880ddc1
+    targetPortName: Input
+  - baseNodeGuid: 3ba63152-e1c2-4a58-8b24-82f3e880ddc1
+    basePortName: Continue
+    targetNodeGuid: 681fa111-4667-47cc-94a1-a59344de1845
+    targetPortName: Input
+  - baseNodeGuid: 681fa111-4667-47cc-94a1-a59344de1845
+    basePortName: Continue
+    targetNodeGuid: 3ef35bc3-9453-4e18-aab0-07488d58cf0e
+    targetPortName: Input
+  - baseNodeGuid: e26d0e43-8cb8-4bdc-89cc-133a1664ea02
+    basePortName: b0b8520f-67c0-492e-a8dd-460e183ac3bb
+    targetNodeGuid: c60b4ebf-8780-44da-81cf-da197144ef55
+    targetPortName: Input
+  - baseNodeGuid: c60b4ebf-8780-44da-81cf-da197144ef55
+    basePortName: Output
+    targetNodeGuid: 2571758e-e946-47d7-a586-fab00abffddf
+    targetPortName: Input
+  - baseNodeGuid: 2571758e-e946-47d7-a586-fab00abffddf
+    basePortName: Continue
+    targetNodeGuid: cecafb0c-b059-41fa-899d-352753430bb2
+    targetPortName: Input
+  - baseNodeGuid: cecafb0c-b059-41fa-899d-352753430bb2
+    basePortName: Continue
+    targetNodeGuid: 2cbc7b14-708b-4551-a0ee-7ec7df25c8a8
+    targetPortName: Input
+  - baseNodeGuid: 2cbc7b14-708b-4551-a0ee-7ec7df25c8a8
+    basePortName: Continue
+    targetNodeGuid: dbb6a3d2-69ee-4599-ae66-a0e361a3842d
+    targetPortName: Input
+  - baseNodeGuid: dbb6a3d2-69ee-4599-ae66-a0e361a3842d
+    basePortName: Continue
+    targetNodeGuid: 3ef35bc3-9453-4e18-aab0-07488d58cf0e
+    targetPortName: Input
+  - baseNodeGuid: c4e2a865-a0d0-4954-b21d-f94e800cf4f3
+    basePortName: a2441e07-f428-4637-911f-5478df3cb7fa
+    targetNodeGuid: ca6a2450-4350-4e7c-91bc-5ae2eb0bfaab
+    targetPortName: Input
+  - baseNodeGuid: c4e2a865-a0d0-4954-b21d-f94e800cf4f3
+    basePortName: a7be0b4b-0b8d-4ed6-993d-d4e803f9905f
+    targetNodeGuid: 9964eda8-da64-43eb-91f7-f27e9c76f205
+    targetPortName: Input
+  - baseNodeGuid: c4e2a865-a0d0-4954-b21d-f94e800cf4f3
+    basePortName: 7c2535c5-feed-48db-89bc-f595de561afc
+    targetNodeGuid: 09380e3e-46c5-437e-8f54-cb093a77a2ba
+    targetPortName: Input
+  - baseNodeGuid: c4e2a865-a0d0-4954-b21d-f94e800cf4f3
+    basePortName: 948b6a2f-1bf7-4775-bc3d-c8753c979626
+    targetNodeGuid: b8a4d661-481c-4b93-989a-4ff2d1cc97e2
+    targetPortName: Input
+  - baseNodeGuid: c4e2a865-a0d0-4954-b21d-f94e800cf4f3
+    basePortName: f7a70d80-ba1d-4730-8ea6-f9d89693e355
+    targetNodeGuid: ec0d0f79-1c10-43e9-bdfa-c9a6ef92d3e4
+    targetPortName: Input
+  - baseNodeGuid: b8a4d661-481c-4b93-989a-4ff2d1cc97e2
+    basePortName: Output
+    targetNodeGuid: aa49db43-0983-4341-9644-9dba980f8b25
+    targetPortName: Input
+  - baseNodeGuid: aa49db43-0983-4341-9644-9dba980f8b25
+    basePortName: Continue
+    targetNodeGuid: fa982ab9-4d55-4211-8522-6030109f4806
+    targetPortName: Input
+  - baseNodeGuid: ec0d0f79-1c10-43e9-bdfa-c9a6ef92d3e4
+    basePortName: Output
+    targetNodeGuid: 6cf84e9e-900f-478b-b665-a1a2f149d91b
+    targetPortName: Input
+  - baseNodeGuid: 6cf84e9e-900f-478b-b665-a1a2f149d91b
+    basePortName: Continue
+    targetNodeGuid: 1d0c6d86-1a86-4c2b-a613-159031c94524
+    targetPortName: Input
+  - baseNodeGuid: 09380e3e-46c5-437e-8f54-cb093a77a2ba
+    basePortName: Output
+    targetNodeGuid: 6ee0d321-df75-4e0c-93f8-e6d589d8d92b
+    targetPortName: Input
+  - baseNodeGuid: 9964eda8-da64-43eb-91f7-f27e9c76f205
+    basePortName: Output
+    targetNodeGuid: aa49db43-0983-4341-9644-9dba980f8b25
+    targetPortName: Input
+  - baseNodeGuid: ca6a2450-4350-4e7c-91bc-5ae2eb0bfaab
+    basePortName: Output
+    targetNodeGuid: 551a2792-8344-4eac-a978-c0b2fef0f61e
+    targetPortName: Input
+  - baseNodeGuid: 551a2792-8344-4eac-a978-c0b2fef0f61e
+    basePortName: Continue
+    targetNodeGuid: 1d0c6d86-1a86-4c2b-a613-159031c94524
+    targetPortName: Input
+  - baseNodeGuid: 6ee0d321-df75-4e0c-93f8-e6d589d8d92b
+    basePortName: Continue
+    targetNodeGuid: 1d0c6d86-1a86-4c2b-a613-159031c94524
+    targetPortName: Input
   dialogueDatas:
   - nodeGuid: e26d0e43-8cb8-4bdc-89cc-133a1664ea02
-    position: {x: -37839, y: 840}
+    position: {x: -27060, y: 12200}
     dialogueDataNames:
     - ID:
         value: 0
@@ -171,7 +307,7 @@ MonoBehaviour:
         value: {fileID: 21300000, guid: f8506563bf3827446a0484275ce289ce, type: 3}
     dialogueDataPorts:
     - portGuid: 849725ce-3d2c-40b5-89df-9ed56673daad
-      inputGuid: c2217eda-7f4d-47c9-8f1d-d99fcd21ccf8
+      inputGuid: 27366742-60dc-48dd-83ed-05df06f0a131
       outputGuid: e26d0e43-8cb8-4bdc-89cc-133a1664ea02
     - portGuid: d22597d7-e3fe-4ba7-a7d3-547c8d241136
       inputGuid: f166ba12-2735-4f18-8191-6c223d51534a
@@ -180,14 +316,26 @@ MonoBehaviour:
       inputGuid: bf072b62-7d50-45a9-8d0c-28f59ef3b8e8
       outputGuid: e26d0e43-8cb8-4bdc-89cc-133a1664ea02
     - portGuid: 08b713b8-ae05-4beb-bb54-98f85d08c874
-      inputGuid: 27366742-60dc-48dd-83ed-05df06f0a131
+      inputGuid: c2217eda-7f4d-47c9-8f1d-d99fcd21ccf8
+      outputGuid: e26d0e43-8cb8-4bdc-89cc-133a1664ea02
+    - portGuid: d7c78333-f990-46b9-bc8d-bd1c5f64be46
+      inputGuid: 3ca97b77-14d5-4a51-831e-8e9625ee221e
+      outputGuid: e26d0e43-8cb8-4bdc-89cc-133a1664ea02
+    - portGuid: 873e4c12-a560-4d01-acbc-ab7500459239
+      inputGuid: 7f17088e-f730-440b-aebe-fd5e7f2616d7
+      outputGuid: e26d0e43-8cb8-4bdc-89cc-133a1664ea02
+    - portGuid: b8bf682a-7965-47f4-aad6-119984dfa1ec
+      inputGuid: 081f9e13-2523-4dcd-b2f6-249c89e25007
+      outputGuid: e26d0e43-8cb8-4bdc-89cc-133a1664ea02
+    - portGuid: b0b8520f-67c0-492e-a8dd-460e183ac3bb
+      inputGuid: c60b4ebf-8780-44da-81cf-da197144ef55
       outputGuid: e26d0e43-8cb8-4bdc-89cc-133a1664ea02
     dialogueResponseTexts: []
     dialogueResponseEvidences:
     - ID:
         value: 3
   - nodeGuid: 4d6f1558-2733-45fd-bf0b-e4aa24d6380a
-    position: {x: -37194, y: 72}
+    position: {x: -26303, y: 10640}
     dialogueDataNames:
     - ID:
         value: 0
@@ -223,7 +371,7 @@ MonoBehaviour:
     dialogueResponseTexts: []
     dialogueResponseEvidences: []
   - nodeGuid: 59e0396d-0272-43aa-884d-5804e853f0cf
-    position: {x: -36870, y: 71}
+    position: {x: -25979, y: 10639}
     dialogueDataNames:
     - ID:
         value: 0
@@ -249,7 +397,7 @@ MonoBehaviour:
     dialogueResponseTexts: []
     dialogueResponseEvidences: []
   - nodeGuid: ff4abf93-f21b-4250-99c6-1d574b3f713a
-    position: {x: -37190, y: 611}
+    position: {x: -26299, y: 11179}
     dialogueDataNames:
     - ID:
         value: 0
@@ -275,7 +423,7 @@ MonoBehaviour:
     dialogueResponseTexts: []
     dialogueResponseEvidences: []
   - nodeGuid: 9a9f905a-6d42-4dbb-9508-1c2a89aef937
-    position: {x: -36876, y: 610}
+    position: {x: -25985, y: 11178}
     dialogueDataNames:
     - ID:
         value: 0
@@ -311,7 +459,7 @@ MonoBehaviour:
     dialogueResponseTexts: []
     dialogueResponseEvidences: []
   - nodeGuid: 9e70c133-b930-41bb-8ff5-6c393e9d2c2b
-    position: {x: -37176, y: 1150}
+    position: {x: -26285, y: 11718}
     dialogueDataNames:
     - ID:
         value: 0
@@ -337,7 +485,7 @@ MonoBehaviour:
     dialogueResponseTexts: []
     dialogueResponseEvidences: []
   - nodeGuid: c5d7cc76-57c9-4e71-a710-2855f66ff912
-    position: {x: -36863, y: 1152}
+    position: {x: -25972, y: 11720}
     dialogueDataNames:
     - ID:
         value: 0
@@ -363,7 +511,7 @@ MonoBehaviour:
     dialogueResponseTexts: []
     dialogueResponseEvidences: []
   - nodeGuid: 179f52c7-008f-4530-b454-771d247f0953
-    position: {x: -37186, y: 1774}
+    position: {x: -26295, y: 12342}
     dialogueDataNames:
     - ID:
         value: 0
@@ -405,10 +553,10 @@ MonoBehaviour:
     - ID:
         value: 3
       responseText:
-        value: Do you know anything?
+        value: Do you know anything
     dialogueResponseEvidences: []
   - nodeGuid: 91d9e7eb-e3fc-41b8-8619-2b2949b687f0
-    position: {x: -36529, y: 1708}
+    position: {x: -25638, y: 12276}
     dialogueDataNames:
     - ID:
         value: 0
@@ -444,7 +592,7 @@ MonoBehaviour:
     dialogueResponseTexts: []
     dialogueResponseEvidences: []
   - nodeGuid: e76084ba-166d-4566-b9f0-fb2a7ffa054c
-    position: {x: -36171, y: 1707}
+    position: {x: -25280, y: 12275}
     dialogueDataNames:
     - ID:
         value: 0
@@ -470,7 +618,7 @@ MonoBehaviour:
     dialogueResponseTexts: []
     dialogueResponseEvidences: []
   - nodeGuid: abb683bf-b7a0-435a-a36d-04cf6ceaecb5
-    position: {x: -36530, y: 2248}
+    position: {x: -25639, y: 12816}
     dialogueDataNames:
     - ID:
         value: 0
@@ -506,7 +654,7 @@ MonoBehaviour:
     dialogueResponseTexts: []
     dialogueResponseEvidences: []
   - nodeGuid: 6954d813-bc08-469d-b571-5992a3debce7
-    position: {x: -36512, y: 2832}
+    position: {x: -25621, y: 13400}
     dialogueDataNames:
     - ID:
         value: 0
@@ -532,7 +680,7 @@ MonoBehaviour:
     dialogueResponseTexts: []
     dialogueResponseEvidences: []
   - nodeGuid: 04690a3c-8fee-4ea8-bcd7-b10fb01b9c7f
-    position: {x: -36508, y: 3306}
+    position: {x: -25617, y: 13874}
     dialogueDataNames:
     - ID:
         value: 0
@@ -558,7 +706,7 @@ MonoBehaviour:
     dialogueResponseTexts: []
     dialogueResponseEvidences: []
   - nodeGuid: 40442873-b069-4545-8ead-8bd04577f737
-    position: {x: -36178, y: 3306}
+    position: {x: -25287, y: 13874}
     dialogueDataNames:
     - ID:
         value: 0
@@ -615,7 +763,7 @@ MonoBehaviour:
     dialogueResponseTexts: []
     dialogueResponseEvidences: []
   - nodeGuid: dcd5289d-f0ad-46c2-8d05-bc907065789e
-    position: {x: -35748, y: 3307}
+    position: {x: -24857, y: 13875}
     dialogueDataNames:
     - ID:
         value: 0
@@ -641,7 +789,7 @@ MonoBehaviour:
     dialogueResponseTexts: []
     dialogueResponseEvidences: []
   - nodeGuid: 16932a98-8ef2-4b84-980b-dee67717caea
-    position: {x: -35405, y: 3308}
+    position: {x: -24514, y: 13876}
     dialogueDataNames:
     - ID:
         value: 0
@@ -666,25 +814,638 @@ MonoBehaviour:
     dialogueDataPorts: []
     dialogueResponseTexts: []
     dialogueResponseEvidences: []
+  - nodeGuid: c7343b23-5cea-418c-8cb6-580e5d766af9
+    position: {x: -26106, y: 14424}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Crow
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 4d237ac9-d6f2-4aa6-a21b-113d1647b6d3
+      texts:
+      - languageType: 0
+        languageGenericType: Oh
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: ebd06a61-232c-4707-a4b1-4ba8e343aa62
+      texts:
+      - languageType: 0
+        languageGenericType: The rope that connects to the stage lights
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 4
+      GuidID:
+        value: 75ec0e72-0692-4fe2-8bc0-4907c2c3eae8
+      texts:
+      - languageType: 0
+        languageGenericType: I'm amazed how strong they are
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: f8506563bf3827446a0484275ce289ce, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: 312ad256-1814-47f5-b791-a02ca9d0c4b3
+    position: {x: -26100, y: 15060}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Crow
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 5e19a17b-216e-4a7d-a448-49c668baab78
+      texts:
+      - languageType: 0
+        languageGenericType: Extra rope?
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: 9ea5e5e7-5ce8-400a-ad6a-af1a2fc424ce
+      texts:
+      - languageType: 0
+        languageGenericType: Not a bad idea to have some on the side
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: f8506563bf3827446a0484275ce289ce, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: 8d2ddee2-5fdb-4070-9ee9-0e1a1723e3ab
+    position: {x: -25744, y: 15064}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Crow
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 76a729e8-d152-4ef3-a73a-90630b3110e3
+      texts:
+      - languageType: 0
+        languageGenericType: You never know what will happen on stage...
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 7ea199d8cc2ecb04da82d36ad33772f9, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: 17bf2ea7-1797-42a2-bd33-c3d21de54db4
+    position: {x: -26099, y: 15610}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Crow
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 7923848d-b73f-4c3e-9dd3-d5f84fdbcedd
+      texts:
+      - languageType: 0
+        languageGenericType: That switch...
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 67db6eeb735e6c04c9e1581dccc62789, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: c4e2a865-a0d0-4954-b21d-f94e800cf4f3
+    position: {x: -25754, y: 15610}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Crow
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: bf62036c-6868-45d6-8d1a-a353358d05c9
+      texts:
+      - languageType: 0
+        languageGenericType: Did our tour guide warn you about it?
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 7ea199d8cc2ecb04da82d36ad33772f9, type: 3}
+    dialogueDataPorts:
+    - portGuid: a2441e07-f428-4637-911f-5478df3cb7fa
+      inputGuid: ca6a2450-4350-4e7c-91bc-5ae2eb0bfaab
+      outputGuid: c4e2a865-a0d0-4954-b21d-f94e800cf4f3
+    - portGuid: a7be0b4b-0b8d-4ed6-993d-d4e803f9905f
+      inputGuid: 9964eda8-da64-43eb-91f7-f27e9c76f205
+      outputGuid: c4e2a865-a0d0-4954-b21d-f94e800cf4f3
+    - portGuid: 7c2535c5-feed-48db-89bc-f595de561afc
+      inputGuid: 09380e3e-46c5-437e-8f54-cb093a77a2ba
+      outputGuid: c4e2a865-a0d0-4954-b21d-f94e800cf4f3
+    - portGuid: 948b6a2f-1bf7-4775-bc3d-c8753c979626
+      inputGuid: b8a4d661-481c-4b93-989a-4ff2d1cc97e2
+      outputGuid: c4e2a865-a0d0-4954-b21d-f94e800cf4f3
+    - portGuid: f7a70d80-ba1d-4730-8ea6-f9d89693e355
+      inputGuid: ec0d0f79-1c10-43e9-bdfa-c9a6ef92d3e4
+      outputGuid: c4e2a865-a0d0-4954-b21d-f94e800cf4f3
+    dialogueResponseTexts:
+    - ID:
+        value: 3
+      responseText:
+        value: Yeah
+    dialogueResponseEvidences: []
+  - nodeGuid: 2571758e-e946-47d7-a586-fab00abffddf
+    position: {x: -26083, y: 17033}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Crow
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: dad21928-78c1-47ca-8695-0379f7a9b4b2
+      texts:
+      - languageType: 0
+        languageGenericType: ...
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 67db6eeb735e6c04c9e1581dccc62789, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: cecafb0c-b059-41fa-899d-352753430bb2
+    position: {x: -25746, y: 17036}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Crow
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 7065abda-b77b-44b3-a967-a19420497bc2
+      texts:
+      - languageType: 0
+        languageGenericType: ...wait
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: 7c9d01b4-2f9c-402b-8be1-996e1cea38d5
+      texts:
+      - languageType: 0
+        languageGenericType: Why is that area dirty?
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 4
+      GuidID:
+        value: 832338a1-b62e-4cf7-8397-ed9dc12b1999
+      texts:
+      - languageType: 0
+        languageGenericType: ...
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 7ea199d8cc2ecb04da82d36ad33772f9, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: 2cbc7b14-708b-4551-a0ee-7ec7df25c8a8
+    position: {x: -25401, y: 17039}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Crow
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: b6a3a705-c7c3-4bf4-9eb9-8ff83443409b
+      texts:
+      - languageType: 0
+        languageGenericType: ...so it was someone else
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: 9e9f7453-d182-4c86-bcd3-9e3c9e66366d
+      texts:
+      - languageType: 0
+        languageGenericType: ...
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 67db6eeb735e6c04c9e1581dccc62789, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: dbb6a3d2-69ee-4599-ae66-a0e361a3842d
+    position: {x: -25047, y: 17045}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Crow
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: d4b4f430-1a35-47f3-8df3-bb22f3fa796b
+      texts:
+      - languageType: 0
+        languageGenericType: ...no
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: 49e0b1ff-b8c1-4df7-834f-c4d538b704b2
+      texts:
+      - languageType: 0
+        languageGenericType: I'm just shifting the blame...
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 7ea199d8cc2ecb04da82d36ad33772f9, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: e5ee5762-719c-43e2-90f4-208f565faae9
+    position: {x: -24280, y: 15844}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Crow
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: d6592ccd-6e3d-4035-95c0-b54a653ba0c0
+      texts:
+      - languageType: 0
+        languageGenericType: There's been a lot of complaints and safety concerns
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: 1386d089-36ac-4268-8936-669bb07dcf47
+      texts:
+      - languageType: 0
+        languageGenericType: But apparently the school's gonna get a better one before
+          the semester starts
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 7ea199d8cc2ecb04da82d36ad33772f9, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: 3ba63152-e1c2-4a58-8b24-82f3e880ddc1
+    position: {x: -23807, y: 15845}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Crow
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: b252ca93-7c9f-410b-99b2-e9329b11d85a
+      texts:
+      - languageType: 0
+        languageGenericType: Our tour guide didn't look too pleased when he was explaining
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: bceb9b23-36fd-4ecb-8c07-80460b2e5ce5
+      texts:
+      - languageType: 0
+        languageGenericType: He's worried accidents will happen if the school doesn't
+          take this as top priority
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: f8506563bf3827446a0484275ce289ce, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: 681fa111-4667-47cc-94a1-a59344de1845
+    position: {x: -23292, y: 15850}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Crow
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: d086e1b7-5f44-48cb-a0c1-b0bf24155d8f
+      texts:
+      - languageType: 0
+        languageGenericType: ...
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: 9e066f6c-e08b-4990-92cd-2387e7c546f5
+      texts:
+      - languageType: 0
+        languageGenericType: ...if only I didn't move them
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 7ea199d8cc2ecb04da82d36ad33772f9, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: aa49db43-0983-4341-9644-9dba980f8b25
+    position: {x: -24979, y: 15848}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Crow
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 83800aba-eefd-411f-ae49-cadf20e6c8e9
+      texts:
+      - languageType: 0
+        languageGenericType: ...me too
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 7ea199d8cc2ecb04da82d36ad33772f9, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: 6cf84e9e-900f-478b-b665-a1a2f149d91b
+    position: {x: -24973, y: 16392}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Crow
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 66952dd4-dead-47c6-b113-451e9165dd2f
+      texts:
+      - languageType: 0
+        languageGenericType: ...
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: 3c8d97e8-e18f-45ec-b396-86c1f18ce88d
+      texts:
+      - languageType: 0
+        languageGenericType: You have no idea how to read the room, huh?
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 19f0c8883811f824d9442062a991e91d, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: fa982ab9-4d55-4211-8522-6030109f4806
+    position: {x: -24642, y: 15838}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Crow
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: a4e52a07-714a-45bf-a30a-92b482fc8f62
+      texts:
+      - languageType: 0
+        languageGenericType: He mentioned it being a temporary system for the stage
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: bb267235-ccec-4145-be44-ef3756b7a18a
+      texts:
+      - languageType: 0
+        languageGenericType: The ropes that hold the stage lights are connected to
+          it
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: f8506563bf3827446a0484275ce289ce, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: 551a2792-8344-4eac-a978-c0b2fef0f61e
+    position: {x: -24986, y: 14625}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Crow
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: fd80c7f3-334b-4d34-9d34-d97d7f86373d
+      texts:
+      - languageType: 0
+        languageGenericType: ...you might want to cool your head
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: 1f027a50-223f-434d-ac00-a635058871f7
+      texts:
+      - languageType: 0
+        languageGenericType: That anger of yours will only cloud your judgement...
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 7ea199d8cc2ecb04da82d36ad33772f9, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: 6ee0d321-df75-4e0c-93f8-e6d589d8d92b
+    position: {x: -24978, y: 15189}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Crow
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: c4076dba-1769-4856-b6d6-d97888f0ddc1
+      texts:
+      - languageType: 0
+        languageGenericType: ...
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: cba60047-53f3-4089-b4b5-40366be591a2
+      texts:
+      - languageType: 0
+        languageGenericType: ...if you need to step out
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 4
+      GuidID:
+        value: 55996713-dbc2-4d4f-8926-8a8c72ea5399
+      texts:
+      - languageType: 0
+        languageGenericType: You can do so
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 7ea199d8cc2ecb04da82d36ad33772f9, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
   endDatas:
-  - nodeGuid: 1d0c6d86-1a86-4c2b-a613-159031c94524
-    position: {x: -35703, y: 1710}
-    endDialogueContainers: []
-    endNodeType:
-      value: 1
   - nodeGuid: 3ef35bc3-9453-4e18-aab0-07488d58cf0e
-    position: {x: -35849, y: 900}
+    position: {x: -24327, y: 11495}
     endDialogueContainers:
-    - dialogueContainerSO: {fileID: 11400000}
     - dialogueContainerSO: {fileID: 11400000, guid: 2b39548c19e0da043965a7d297668f02, type: 2}
     - dialogueContainerSO: {fileID: 11400000, guid: d1185841a6409a54a9f275014cf69fbd, type: 2}
     - dialogueContainerSO: {fileID: 11400000, guid: dc209fbe4cdc0d0448dfeb273b067823, type: 2}
-    - dialogueContainerSO: {fileID: 11400000, guid: 34c462457b96a0e4c86dc1bece1fbefe, type: 2}
+    - dialogueContainerSO: {fileID: 11400000}
+    endNodeType:
+      value: 1
+  - nodeGuid: 1d0c6d86-1a86-4c2b-a613-159031c94524
+    position: {x: -23896, y: 12273}
+    endDialogueContainers: []
     endNodeType:
       value: 1
   startDatas:
   - nodeGuid: fe561be8-5eb5-4cea-bc34-c6e46e07958a
-    position: {x: -38067, y: 840}
+    position: {x: -27288, y: 12200}
     text:
     - languageType: 0
       languageGenericType: Can I show you something
@@ -693,39 +1454,75 @@ MonoBehaviour:
   choiceDatas: []
   emotionChoiceDatas:
   - nodeGuid: 1bd8568f-1807-4a0d-be05-7e9542d4c45f
-    position: {x: -36779, y: 1729}
+    position: {x: -25888, y: 12297}
     choiceStateType:
       value: 1
   - nodeGuid: 914bb5de-b0ec-431a-8c25-1d0296873add
-    position: {x: -36774, y: 1850}
+    position: {x: -25883, y: 12418}
     choiceStateType:
       value: 3
   - nodeGuid: bdc62fc9-bd88-4603-9b7c-248c15a1a8aa
-    position: {x: -36777, y: 1993}
+    position: {x: -25886, y: 12561}
     choiceStateType:
       value: 5
   - nodeGuid: 7b422834-f4ef-4898-9440-b985aa64993b
-    position: {x: -36775, y: 2117}
+    position: {x: -25884, y: 12685}
     choiceStateType:
       value: 2
   - nodeGuid: 3bc3a791-de2c-415f-96ee-bdc6c9e666fb
-    position: {x: -36779, y: 2242}
+    position: {x: -25888, y: 12810}
     choiceStateType:
       value: 4
+  - nodeGuid: ca6a2450-4350-4e7c-91bc-5ae2eb0bfaab
+    position: {x: -25358, y: 15452}
+    choiceStateType:
+      value: 1
+  - nodeGuid: 9964eda8-da64-43eb-91f7-f27e9c76f205
+    position: {x: -25362, y: 15595}
+    choiceStateType:
+      value: 2
+  - nodeGuid: 09380e3e-46c5-437e-8f54-cb093a77a2ba
+    position: {x: -25365, y: 15744}
+    choiceStateType:
+      value: 3
+  - nodeGuid: b8a4d661-481c-4b93-989a-4ff2d1cc97e2
+    position: {x: -25367, y: 15914}
+    choiceStateType:
+      value: 4
+  - nodeGuid: ec0d0f79-1c10-43e9-bdfa-c9a6ef92d3e4
+    position: {x: -25371, y: 16071}
+    choiceStateType:
+      value: 5
   objectChoiceDatas:
   - nodeGuid: c2217eda-7f4d-47c9-8f1d-d99fcd21ccf8
-    position: {x: -37462, y: 638}
+    position: {x: -26683, y: 11998}
     choiceObject:
       value: {fileID: 0}
   - nodeGuid: bf072b62-7d50-45a9-8d0c-28f59ef3b8e8
-    position: {x: -37454, y: 887}
+    position: {x: -26675, y: 12247}
     choiceObject:
       value: {fileID: 6535174792275793909, guid: f078997b4702b0045aec07d3ba04e01a, type: 3}
   - nodeGuid: 27366742-60dc-48dd-83ed-05df06f0a131
-    position: {x: -37462, y: 1020}
+    position: {x: -26683, y: 12380}
     choiceObject:
       value: {fileID: 9142289811282828814, guid: 00eb3307242cae94e9fb41aa82491b98, type: 3}
   - nodeGuid: f166ba12-2735-4f18-8191-6c223d51534a
-    position: {x: -37454, y: 765}
+    position: {x: -26675, y: 12125}
     choiceObject:
       value: {fileID: 4621682417116307932, guid: ffaddab49f400de4d85b5bd91f28c611, type: 3}
+  - nodeGuid: 3ca97b77-14d5-4a51-831e-8e9625ee221e
+    position: {x: -26696, y: 12495}
+    choiceObject:
+      value: {fileID: 8342326990467455251, guid: 8a54170269ca46c4184dd122d1fe0cba, type: 3}
+  - nodeGuid: 7f17088e-f730-440b-aebe-fd5e7f2616d7
+    position: {x: -26693, y: 12634}
+    choiceObject:
+      value: {fileID: 7659105187300268561, guid: a9c37e9e3a1d43e429d03fb3e6344a2f, type: 3}
+  - nodeGuid: 081f9e13-2523-4dcd-b2f6-249c89e25007
+    position: {x: -26705, y: 12756}
+    choiceObject:
+      value: {fileID: 6290978325195283786, guid: 8d74d9a99702c4747868c2d49684e576, type: 3}
+  - nodeGuid: c60b4ebf-8780-44da-81cf-da197144ef55
+    position: {x: -26699, y: 12889}
+    choiceObject:
+      value: {fileID: 612520909796405575, guid: 5e10bc93f7c6629469a15ef1ddd5b5a4, type: 3}

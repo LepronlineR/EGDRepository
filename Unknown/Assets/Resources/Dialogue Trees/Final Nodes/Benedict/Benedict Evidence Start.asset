@@ -45,6 +45,10 @@ MonoBehaviour:
     basePortName: d5e2c75c-5b3e-43d9-a71f-85f47abc5aad
     targetNodeGuid: e059bdb9-c4de-4810-8958-8d9ef6c47041
     targetPortName: Input
+  - baseNodeGuid: cbce280b-ec8e-4714-8b94-f08002926054
+    basePortName: 7d2deacd-223a-4a9e-8acc-c954227391f8
+    targetNodeGuid: 3c10b5e9-c93d-41d6-8fca-7b8a626acc3b
+    targetPortName: Input
   - baseNodeGuid: 13a8bef1-fb25-4c91-9728-3fc6128e4e78
     basePortName: Continue
     targetNodeGuid: 0d05a63a-9241-4b17-9665-9408220f3375
@@ -180,10 +184,6 @@ MonoBehaviour:
   - baseNodeGuid: e059bdb9-c4de-4810-8958-8d9ef6c47041
     basePortName: Output
     targetNodeGuid: 13a8bef1-fb25-4c91-9728-3fc6128e4e78
-    targetPortName: Input
-  - baseNodeGuid: cbce280b-ec8e-4714-8b94-f08002926054
-    basePortName: 7d2deacd-223a-4a9e-8acc-c954227391f8
-    targetNodeGuid: 3c10b5e9-c93d-41d6-8fca-7b8a626acc3b
     targetPortName: Input
   dialogueDatas:
   - nodeGuid: b1a95f29-f846-4594-beca-dfdd803f628c
@@ -1115,51 +1115,19 @@ MonoBehaviour:
     position: {x: 4181, y: 890}
     choiceObject:
       value: {fileID: 3583399261543176455, guid: 06b02d760655a104db2030a60d7d072d, type: 3}
-  - nodeGuid: 4b28391b-c10a-4f1b-aab0-019367663c45
-    position: {x: 4201, y: 1668}
-    choiceObject:
-      value: {fileID: 4351810312545795533, guid: ba3ef491d01e5fd44a465e18a8df1e99, type: 3}
   - nodeGuid: 676206ee-b3b3-40c6-822a-cb18a1660a78
-    position: {x: 4183, y: 1110}
+    position: {x: 4180, y: 1008}
     choiceObject:
       value: {fileID: 4180480741799440068, guid: ec8495066d8aac547b39aae229bfaf04, type: 3}
   - nodeGuid: 6a97b504-dc4b-4212-b6b0-d8bf923ce717
-    position: {x: 4187, y: 1225}
+    position: {x: 4179, y: 1127}
     choiceObject:
       value: {fileID: 2993745276128767700, guid: 178efc7c2bdcb5e4fa5bad6f81d95040, type: 3}
-  - nodeGuid: 001214c2-8298-431e-a9d6-acf83cb2494f
-    position: {x: 4176, y: 1338}
-    choiceObject:
-      value: {fileID: 103680188225560832, guid: 5aaa798b1a8d3314dbd959acce93fdbd, type: 3}
-  - nodeGuid: 2994c2f5-9d1e-42d0-826a-c33130e478cc
-    position: {x: 4202, y: 1453}
-    choiceObject:
-      value: {fileID: 8342326990467455251, guid: 8a54170269ca46c4184dd122d1fe0cba, type: 3}
-  - nodeGuid: 31d83139-d0e6-4660-a4a8-ee21fb565da0
-    position: {x: 4194, y: 1556}
-    choiceObject:
-      value: {fileID: 6877452026572495439, guid: afeea1470bca26e4ea0bb44f0ec4fe20, type: 3}
-  - nodeGuid: 61d85011-ae23-42bc-9237-7126b6ec7fd0
-    position: {x: 4185, y: 998}
-    choiceObject:
-      value: {fileID: 8307617522580937875, guid: 429fee0f616ae1c40b99a81f1343e8ff, type: 3}
-  - nodeGuid: 42b3a9cc-2e06-420e-a7a7-e3e15ab30422
-    position: {x: 4200, y: 1791}
-    choiceObject:
-      value: {fileID: 7659105187300268561, guid: a9c37e9e3a1d43e429d03fb3e6344a2f, type: 3}
-  - nodeGuid: 38a3fa86-db1e-47e6-a8a3-60f74385c33d
-    position: {x: 4196, y: 1905}
-    choiceObject:
-      value: {fileID: 4371549519223052103, guid: d279e2d7b55709049b7b8accf25114b3, type: 3}
-  - nodeGuid: 6e293a45-01f7-49d7-a02c-7ddfea5fef4d
-    position: {x: 4186, y: 2025}
-    choiceObject:
-      value: {fileID: 2640600064816064532, guid: e987976bf88d5824ba8a64f474f300b0, type: 3}
   - nodeGuid: 140a8b14-aab8-4cd4-8b12-30e8ffeecdad
-    position: {x: 4181, y: 2147}
+    position: {x: 4217, y: 1416}
     choiceObject:
       value: {fileID: 6535174792275793909, guid: f078997b4702b0045aec07d3ba04e01a, type: 3}
   - nodeGuid: e059bdb9-c4de-4810-8958-8d9ef6c47041
-    position: {x: 4174, y: 2267}
+    position: {x: 4195, y: 1676}
     choiceObject:
       value: {fileID: 9142289811282828814, guid: 00eb3307242cae94e9fb41aa82491b98, type: 3}
