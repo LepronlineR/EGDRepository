@@ -22,8 +22,6 @@ public class StartGameScriptedEvents : MonoBehaviour
         }
     }
 
-    public void EndTutorial() { }
-
     IEnumerator StartGameEvents()
     {
         yield return new WaitForSeconds(waitTime);
@@ -39,6 +37,5 @@ public class StartGameScriptedEvents : MonoBehaviour
 
 
         MainSystem.Instance.startedGame = true;
-        yield return null;
     }
 }
