@@ -4,3 +4,4 @@ zmq==24.0.1
 np==1.21.2
 scipy==1.9.3 
 sf==0.11.0
+matplotlib

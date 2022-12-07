@@ -12,7 +12,7 @@ public class StartManager : MonoBehaviour
     void Start() {
         startGame = false;
         Cursor.visible = true;
-        if (!trueEnd)
+        if (trueEnd)
         {
             Cursor.lockState = CursorLockMode.Confined;
             Cursor.visible = false;
