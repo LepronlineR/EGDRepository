@@ -30,6 +30,7 @@ public class CharacterBehavior : MonoBehaviour {
     }
 
     void BeginInteraction() {
+
         interactable = true;
         parser.MakeInteractable(interactable);
         if(parser.HasNotBegan()){
@@ -51,10 +52,6 @@ public class CharacterBehavior : MonoBehaviour {
         }
     }
 
-    
-    private void OnMouseEnter() {
-        
-    }
 
     private void OnMouseOver(){
         if(Vector3.Distance(this.transform.position, player.transform.position) >= close)
@@ -66,7 +63,8 @@ public class CharacterBehavior : MonoBehaviour {
         {
             MainSystem.Instance.EndGame();
         }
-        if (!interactable){
+        if (!interactable)
+        {
             BeginInteraction();
         }
     }

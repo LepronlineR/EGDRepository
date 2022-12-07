@@ -73,7 +73,7 @@ namespace Fragsurf.Movement {
         public MoveType moveType { get { return MoveType.Walk; } }
         public MovementConfig moveConfig { get { return movementConfig; } }
         public MoveData moveData { get { return _moveData; } }
-        public new Collider collider { get { return _collider; } }
+        public Collider collider { get { return _collider; } }
 
         public GameObject groundObject {
 
@@ -296,7 +296,7 @@ namespace Fragsurf.Movement {
             _moveData.verticalAxis = Input.GetAxisRaw ("Vertical");
             _moveData.horizontalAxis = Input.GetAxisRaw ("Horizontal");
 
-            _moveData.sprinting = Input.GetButton ("Sprint");
+            // _moveData.sprinting = Input.GetButton ("Sprint");
             
             if (Input.GetButtonDown ("Crouch"))
                 _moveData.crouching = true;

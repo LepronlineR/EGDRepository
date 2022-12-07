@@ -52,14 +52,14 @@ public class PhotoCamera : MonoBehaviour {
  
         //Is in front
         if (pointOnScreen.z < 0){
-            Debug.Log("Behind: " + toCheck.name);
+           // Debug.Log("Behind: " + toCheck.name);
             return false;
         }
  
         //Is in the image FOV?
         if ((pointOnScreen.x < 0) || (pointOnScreen.x > Screen.width) || 
             (pointOnScreen.y < 0) || (pointOnScreen.y > Screen.height)){
-            Debug.Log("OutOfBounds: " + toCheck.name);
+           // Debug.Log("OutOfBounds: " + toCheck.name);
             return false;
         }
  
@@ -69,12 +69,12 @@ public class PhotoCamera : MonoBehaviour {
         
         if (Physics.Linecast(Camera.main.transform.position, toCheck.transform.position, out hit, ~PlayerLayerMask)){
             if (hit.transform.name != toCheck.name){
-                Debug.Log(toCheck.name + " occluded by " + hit.transform.name);
+               // Debug.Log(toCheck.name + " occluded by " + hit.transform.name);
                 return false;
             }
         }
 
-        Debug.Log("Captured " + toCheck.name);
+        //Debug.Log("Captured " + toCheck.name);
 
         return true;
     }

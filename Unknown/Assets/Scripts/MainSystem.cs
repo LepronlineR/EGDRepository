@@ -260,6 +260,8 @@ public class MainSystem : MonoBehaviour
         selectedTextName.text = img.Input.text;
         selectedForImage.sprite = img.Img.sprite;
         selectedImage = img;
+        // clear evidence and set that for the image
+        this.playerEvidence = img.Evidences;
     }
 
     public bool ImageContainsEvidence(GameObject evidence){
@@ -344,8 +346,6 @@ public class MainSystem : MonoBehaviour
     }
 
     public void RemoveAllBubbles(){
-        if(!beginThoughtBubbles)
-            return;
         foreach(GameObject go in generatedBubbles){
             Destroy(go);
         }

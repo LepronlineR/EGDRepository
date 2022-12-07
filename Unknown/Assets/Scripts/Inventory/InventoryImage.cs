@@ -22,6 +22,8 @@ public class InventoryImage : MonoBehaviour
     public TMP_InputField Input { get => input; set => input = value; }
     public Image Img { get => image; set => image = value; }
 
+    public List<GameObject> Evidences { get => evidences; set => evidences = value; }
+
     // Invoked when the value of the text field changes.
     public void ValueChangeCheck(){
         MainSystem.Instance.ChangeTextForSetCurrentImage(input.text);
@@ -43,7 +45,6 @@ public class InventoryImage : MonoBehaviour
 
     public void AddAllEvidences(List<GameObject> e){
         evidences = e;
-        MainSystem.Instance.PlayerEvidence = evidences;
     }
 
     public bool ContainsEvidence(GameObject evidence){
@@ -62,5 +63,6 @@ public class InventoryImage : MonoBehaviour
         // set this
         input.onValueChanged.AddListener(valueChangeAction);
         MainSystem.Instance.SetCurrentImage(this);
+
     }
 }

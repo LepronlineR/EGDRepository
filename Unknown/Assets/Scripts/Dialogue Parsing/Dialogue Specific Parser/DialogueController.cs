@@ -244,16 +244,17 @@ public class DialogueController : DialogueGetData {
     }
 
     private bool RunChoice(ObjectChoiceData data){
+        if (data.choiceObject.value == null)
+        {
+            currentData = GetNextNode(data);
+            return true;
+        }
         // compare the object choice to the player current object at hand
-        foreach(GameObject obj in MainSystem.Instance.PlayerEvidence){
+        foreach (GameObject obj in MainSystem.Instance.PlayerEvidence){
             if(obj.name == data.choiceObject.value.name){
                 currentData = GetNextNode(data);
                 return true;
             }
-        }
-        if(data.choiceObject.value == null){
-            currentData = GetNextNode(data);
-            return true;
         }
         return false;
     }

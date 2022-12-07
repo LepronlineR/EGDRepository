@@ -2263,7 +2263,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 11.9443, y: -138}
+  m_AnchoredPosition: {x: 11.9443, y: -160}
   m_SizeDelta: {x: 1105.7444, y: 454.8591}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &522300284
@@ -2286,12 +2286,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'A series of coincidences and events
+  m_text: 'Are these decisions made in earnest?
 
-    that led down to this bloody
-    path
-
-    at least in the end we have closure'
+    In the end the truth remains
+    with you'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33551903ccf291842b56908debe5f151, type: 2}
   m_sharedMaterial: {fileID: -3362772202662491390, guid: 33551903ccf291842b56908debe5f151, type: 2}
@@ -3910,7 +3908,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: At the end of the rope the true killer is caught
+  m_text: With the killer at large you chose to leave
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33551903ccf291842b56908debe5f151, type: 2}
   m_sharedMaterial: {fileID: -3362772202662491390, guid: 33551903ccf291842b56908debe5f151, type: 2}
