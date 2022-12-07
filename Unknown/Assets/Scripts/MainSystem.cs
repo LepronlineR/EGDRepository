@@ -67,6 +67,7 @@ public class MainSystem : MonoBehaviour
 
     [Header("Tutorial")]
     public bool beginThoughtBubbles = false;
+    public GameObject ATSE;
     public List<DialogueContainerSO> horrorDialogue;
     public List<DialogueContainerSO> stickDialogue;
     public List<DialogueContainerSO> picassoDialogue;
@@ -86,6 +87,8 @@ public class MainSystem : MonoBehaviour
         for(int x = 0; x < bubbleTakenPositions.Length; x++){
             bubbleTakenPositions[x] = false;
         }
+
+        ATSE.SetActive(false);
     }
 
     #region Tutorial
@@ -112,10 +115,7 @@ public class MainSystem : MonoBehaviour
     }
 
     public void EndTutorial() {
-        foreach(GameObject people in peoples){
-            // show people
-            people.SetActive(true);
-        }
+        ATSE.SetActive(true);
     }
 
     #endregion

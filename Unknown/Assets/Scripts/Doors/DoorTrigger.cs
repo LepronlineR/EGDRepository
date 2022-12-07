@@ -44,4 +44,7 @@ public class DoorTrigger : MonoBehaviour
             }
         }
     }
+
+    public void LockDoor() { lockState = true; }
+    public void UnlockDoor() { lockState = false; }
 }
