@@ -61,6 +61,11 @@ public class DialogueController : DialogueGetData {
         }
     }
 
+    public void RemoveAllDialogues()
+    {
+        dialogueContainers.Clear();
+    }
+
     #region Dialogue Parser
     
     private void ProcessCurrentNode(BaseData baseNodeData){

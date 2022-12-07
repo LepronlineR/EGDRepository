@@ -16,4 +16,24 @@ public class EvidenceContainer : MonoBehaviour
     }
 
     public List<GameObject> evidences;
+
+    public List<GameObject> evidencesTurnOn;
+
+    public List<GameObject> evidencesTurnOff;
+
+    public void TurnOnEvidences()
+    {
+        foreach(GameObject go in evidencesTurnOn)
+        {
+            go.SetActive(true);
+        }
+    }
+
+    public void TurnOffEvidences()
+    {
+        foreach (GameObject go in evidencesTurnOff)
+        {
+            go.SetActive(false);
+        }
+    }
 }

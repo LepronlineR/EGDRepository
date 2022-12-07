@@ -74,7 +74,6 @@ public class MainSystem : MonoBehaviour
     [Header("People")]
     public List<GameObject> peoples;
 
-
     void Start(){
         inventoryOn = false;
         speechMode = true;
@@ -93,8 +92,10 @@ public class MainSystem : MonoBehaviour
 
     public void StartTutorial() {
         foreach(GameObject people in peoples){
+            // remove current (before tutorial) dialogue
+            people.GetComponent<DialogueController>().RemoveAllDialogues();
             // remove their dialogue trees and add new ones
-            switch(people.GetComponent<CharacterBehavior>().Person){
+            switch (people.GetComponent<CharacterBehavior>().Person){
                 case PersonName.Horror:
                     people.GetComponent<DialogueController>().AddDialogue(horrorDialogue);
                     break;

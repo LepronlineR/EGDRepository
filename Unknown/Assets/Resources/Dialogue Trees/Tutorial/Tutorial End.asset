@@ -17,9 +17,21 @@ MonoBehaviour:
     basePortName: Output
     targetNodeGuid: 4e48d851-19f3-4179-80e0-3c8d0228fe5e
     targetPortName: Input
+  - baseNodeGuid: c9533c22-2594-4edb-9b13-57b148dbc236
+    basePortName: Output
+    targetNodeGuid: 4e48d851-19f3-4179-80e0-3c8d0228fe5e
+    targetPortName: Input
   - baseNodeGuid: 0ddbc63d-2157-4f4c-83be-31066e5d75e7
     basePortName: Output
     targetNodeGuid: 4c884b5d-d3a3-40a6-8837-9b9fd29c4244
+    targetPortName: Input
+  - baseNodeGuid: 0ddbc63d-2157-4f4c-83be-31066e5d75e7
+    basePortName: Output
+    targetNodeGuid: 4c884b5d-d3a3-40a6-8837-9b9fd29c4244
+    targetPortName: Input
+  - baseNodeGuid: 4e48d851-19f3-4179-80e0-3c8d0228fe5e
+    basePortName: Continue
+    targetNodeGuid: 0ddbc63d-2157-4f4c-83be-31066e5d75e7
     targetPortName: Input
   - baseNodeGuid: 4e48d851-19f3-4179-80e0-3c8d0228fe5e
     basePortName: Continue
@@ -75,7 +87,7 @@ MonoBehaviour:
     dialogueResponseEvidences: []
   endDatas:
   - nodeGuid: 4c884b5d-d3a3-40a6-8837-9b9fd29c4244
-    position: {x: 1419, y: 384}
+    position: {x: 1585, y: 384}
     endDialogueContainers: []
     endNodeType:
       value: 1
@@ -94,6 +106,9 @@ MonoBehaviour:
     - dialogueEventSO: {fileID: 11400000, guid: d010c5c893f246142a8c67166be1bf96, type: 2}
     - dialogueEventSO: {fileID: 11400000, guid: bea1613a1cd8ed746a0b720b3e1d0303, type: 2}
     - dialogueEventSO: {fileID: 11400000, guid: 74d326a8694c54642b8eb678fdd8235b, type: 2}
+    - dialogueEventSO: {fileID: 11400000, guid: eccefb3b40f39704fa59188181023082, type: 2}
+    - dialogueEventSO: {fileID: 11400000, guid: 0aebbfea3a648bb43b77d10d36551c02, type: 2}
+    - dialogueEventSO: {fileID: 11400000, guid: 5c3b48e905e6d8240b5a16a0449d37e2, type: 2}
   branchDatas: []
   choiceDatas: []
   emotionChoiceDatas: []

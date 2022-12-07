@@ -22,10 +22,6 @@ MonoBehaviour:
     targetNodeGuid: cbce280b-ec8e-4714-8b94-f08002926054
     targetPortName: Input
   - baseNodeGuid: cbce280b-ec8e-4714-8b94-f08002926054
-    basePortName: 09765c50-4a54-4bc6-8232-a290a5d1d93c
-    targetNodeGuid: 3c10b5e9-c93d-41d6-8fca-7b8a626acc3b
-    targetPortName: Input
-  - baseNodeGuid: cbce280b-ec8e-4714-8b94-f08002926054
     basePortName: 5cfd6467-999f-49fa-8e2d-5ac025fdc64b
     targetNodeGuid: 0f8779f4-eee0-46d7-91b4-6850d5fcbb58
     targetPortName: Input
@@ -185,6 +181,10 @@ MonoBehaviour:
     basePortName: Output
     targetNodeGuid: 13a8bef1-fb25-4c91-9728-3fc6128e4e78
     targetPortName: Input
+  - baseNodeGuid: cbce280b-ec8e-4714-8b94-f08002926054
+    basePortName: 7d2deacd-223a-4a9e-8acc-c954227391f8
+    targetNodeGuid: 3c10b5e9-c93d-41d6-8fca-7b8a626acc3b
+    targetPortName: Input
   dialogueDatas:
   - nodeGuid: b1a95f29-f846-4594-beca-dfdd803f628c
     position: {x: 3438, y: 665}
@@ -236,9 +236,6 @@ MonoBehaviour:
       sprite:
         value: {fileID: 21300000, guid: 8843aee21e2677e47af0d5e938e1c349, type: 3}
     dialogueDataPorts:
-    - portGuid: 09765c50-4a54-4bc6-8232-a290a5d1d93c
-      inputGuid: 3c10b5e9-c93d-41d6-8fca-7b8a626acc3b
-      outputGuid: cbce280b-ec8e-4714-8b94-f08002926054
     - portGuid: 5cfd6467-999f-49fa-8e2d-5ac025fdc64b
       inputGuid: 0f8779f4-eee0-46d7-91b4-6850d5fcbb58
       outputGuid: cbce280b-ec8e-4714-8b94-f08002926054
@@ -256,6 +253,9 @@ MonoBehaviour:
       outputGuid: cbce280b-ec8e-4714-8b94-f08002926054
     - portGuid: d5e2c75c-5b3e-43d9-a71f-85f47abc5aad
       inputGuid: e059bdb9-c4de-4810-8958-8d9ef6c47041
+      outputGuid: cbce280b-ec8e-4714-8b94-f08002926054
+    - portGuid: 7d2deacd-223a-4a9e-8acc-c954227391f8
+      inputGuid: 3c10b5e9-c93d-41d6-8fca-7b8a626acc3b
       outputGuid: cbce280b-ec8e-4714-8b94-f08002926054
     dialogueResponseTexts: []
     dialogueResponseEvidences:
@@ -1066,7 +1066,8 @@ MonoBehaviour:
       value: 1
   - nodeGuid: 4781499d-b007-49dc-91c7-f2c9a6662d6c
     position: {x: 5389, y: 355}
-    endDialogueContainers: []
+    endDialogueContainers:
+    - dialogueContainerSO: {fileID: 11400000, guid: b02e3db7086b89e43aa2f9601ba15662, type: 2}
     endNodeType:
       value: 1
   - nodeGuid: f65abf9a-cadc-487c-a7d2-7425176bbf45
