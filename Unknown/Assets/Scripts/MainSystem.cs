@@ -4,6 +4,7 @@ using UnityEngine;
 using Fragsurf.Movement;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MainSystem : MonoBehaviour
 {
@@ -25,6 +26,7 @@ public class MainSystem : MonoBehaviour
     [SerializeField] GameObject CameraCanvas;
     [SerializeField] PlayerAiming playerAim;
     [SerializeField] SurfCharacter playerMove;
+    [SerializeField] SceneManagerMult sm;
 
     [Header("Main Canvases")]
     [SerializeField] GameObject cameraModeObject;
@@ -71,6 +73,7 @@ public class MainSystem : MonoBehaviour
     public List<DialogueContainerSO> horrorDialogue;
     public List<DialogueContainerSO> stickDialogue;
     public List<DialogueContainerSO> picassoDialogue;
+    public bool startedGame = false;
 
     [Header("People")]
     public List<GameObject> peoples;
@@ -116,6 +119,16 @@ public class MainSystem : MonoBehaviour
 
     public void EndTutorial() {
         ATSE.SetActive(true);
+    }
+
+    public void EndGame()
+    {
+        sm.LoadEnd();
+    }
+
+    public void TrueEndGame()
+    {
+        sm.LoadTrueEnd();
     }
 
     #endregion
@@ -221,7 +234,7 @@ public class MainSystem : MonoBehaviour
         byte[] bytes = SavWav.GetByteFromClip(clip);
 
         // Perform prediction
-        // PredictionClient.Instance.Predict(bytes);
+        PredictionClient.Instance.Predict(bytes);
 
         timePassed = 0.0f;
     }
@@ -409,6 +422,12 @@ public class MainSystem : MonoBehaviour
                     Cursor.lockState = CursorLockMode.Locked;
                 }
             }
+        }
+
+        // quit game
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            sm.Quit();
         }
     }
 }

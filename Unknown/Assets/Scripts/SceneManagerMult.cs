@@ -24,4 +24,14 @@ public class SceneManagerMult : MonoBehaviour
         Application.Quit();
     }
 
+    public void LoadEnd()
+    {
+        SceneManager.LoadScene("End");
+    }
+
+    public void LoadTrueEnd()
+    {
+        SceneManager.LoadScene("TrueEnd");
+    }
+
 }

@@ -10,6 +10,10 @@ public class AfterTutorialScriptedEvents : MonoBehaviour
     public DoorTrigger door;
     public AudioSource aud;
 
+    public GameObject startGameSE;
+
+    [SerializeField] float waitTime;
+
     bool once = true;
 
     public void StartEvents()
@@ -34,7 +38,7 @@ public class AfterTutorialScriptedEvents : MonoBehaviour
         door.LockDoor();
         door.ForceClose();
 
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(waitTime);
 
         tutorialPerson.SetActive(false);
 
@@ -45,10 +49,8 @@ public class AfterTutorialScriptedEvents : MonoBehaviour
         EvidenceContainer.Instance.TurnOnEvidences();
         EvidenceContainer.Instance.TurnOffEvidences();
 
-        foreach (GameObject people in peoples)
-        {
-            // show people
-            people.SetActive(true);
-        }
+        door.UnlockDoor();
+        startGameSE.SetActive(true);
     }
+
 }
