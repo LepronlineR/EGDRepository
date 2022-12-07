@@ -22,24 +22,20 @@ public class AfterTutorialScriptedEvents : MonoBehaviour
         if (once)
         {
             once = false;
-            StartCoroutine("EndTutorialEvents");
+            StartCoroutine(EndTutorialEvents());
         }
     }
 
     public void EndTutorial() { }
 
-    IEnumerable EndTutorialEvents()
+    IEnumerator EndTutorialEvents()
     {
-        Debug.LogWarning("Start events");
         // lock auditorium door
         door.LockDoor();
-        Debug.LogWarning("locked door");
         door.ForceClose();
-        Debug.LogWarning("forced close");
 
         yield return new WaitForSeconds(1.0f);
 
-        Debug.LogWarning("triggered");
         tutorialPerson.SetActive(false);
 
         // play crash sound
