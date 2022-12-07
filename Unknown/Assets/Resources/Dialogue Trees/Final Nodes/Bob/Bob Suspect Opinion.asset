@@ -121,7 +121,7 @@ MonoBehaviour:
         value: cc2e6aaf-27d7-42ad-ab0c-e429c02892c1
       texts:
       - languageType: 0
-        languageGenericType: He would give his fans all of his attention
+        languageGenericType: He would give his fans all of his attention!
       audioClips:
       - languageType: 0
         languageGenericType: {fileID: 0}
@@ -141,7 +141,7 @@ MonoBehaviour:
         value: 04ced43a-6619-4421-81bd-52fd3cf53aea
       texts:
       - languageType: 0
-        languageGenericType: But it was tiring to listen to
+        languageGenericType: But it was tiring to listen to!
       audioClips:
       - languageType: 0
         languageGenericType: {fileID: 0}
