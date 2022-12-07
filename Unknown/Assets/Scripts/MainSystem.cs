@@ -151,29 +151,33 @@ public class MainSystem : MonoBehaviour
 
     #region Emotion
 
-    private Vector3 SadVector = new Vector3(0.0f, -75.0f, 0.0f);
-    private Vector3 AngryVector = new Vector3(75.0f, 0.0f, 0.0f);
-    private Vector3 FearVector = new Vector3(-75.0f, 0.0f, 0.0f);
-    private Vector3 HappyVector = new Vector3(0.0f, 75.0f, 0.0f);
-    private Vector3 NeutralVector = new Vector3(0.0f, 0.0f, 0.0f);
+    private Vector3 SadVector = new Vector3(0.0f, 0.0f, 0.0f);
+    private Vector3 AngryVector = new Vector3(100.0f, 0.0f, 0.0f);
+    private Vector3 FearVector = new Vector3(200.0f, 0.0f, 0.0f);
+    private Vector3 HappyVector = new Vector3(300.0f, 0.0f, 0.0f);
+    private Vector3 NeutralVector = new Vector3(400.0f, 0.0f, 0.0f);
 
     public void ChangeEmotion(){
-        //playerEmotion
         switch(playerEmotion){
             case DialogueEmotionType.Sad:
                 StartCoroutine(LerpPosition(emotionDot.transform, SadVector, 1));
+                word_text.color = new Color(0.67f, 0.84f, 0.9f);
                 break;
             case DialogueEmotionType.Angry:
                 StartCoroutine(LerpPosition(emotionDot.transform, AngryVector, 1));
+                word_text.color = Color.red;
                 break;
             case DialogueEmotionType.Fear:
                 StartCoroutine(LerpPosition(emotionDot.transform, FearVector, 1));
+                word_text.color = new Color(0.5f, 0.0f, 0.0f);
                 break;
             case DialogueEmotionType.Happy:
                 StartCoroutine(LerpPosition(emotionDot.transform, HappyVector, 1));
+                word_text.color = Color.green;
                 break;
             case DialogueEmotionType.Neutral:
                 StartCoroutine(LerpPosition(emotionDot.transform, NeutralVector, 1));
+                word_text.color = Color.white;
                 break;
             default:
                 break;

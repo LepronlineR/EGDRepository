@@ -64,6 +64,8 @@ public class DialogueController : DialogueGetData {
     public void RemoveAllDialogues()
     {
         dialogueContainers.Clear();
+        // reset the parser
+        currentData = null;
     }
 
     #region Dialogue Parser
