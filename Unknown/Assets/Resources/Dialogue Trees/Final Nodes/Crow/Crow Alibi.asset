@@ -45,9 +45,49 @@ MonoBehaviour:
     basePortName: Output
     targetNodeGuid: e56abb30-e69e-43e5-9e4b-effad62f2739
     targetPortName: Input
+  - baseNodeGuid: 43ed7065-63ac-4758-b958-6874d70e062a
+    basePortName: Output
+    targetNodeGuid: 1f14e913-38dd-4752-b7cd-2d9ca464845b
+    targetPortName: Input
+  - baseNodeGuid: 1f14e913-38dd-4752-b7cd-2d9ca464845b
+    basePortName: Continue
+    targetNodeGuid: 74bb7649-6eee-40ae-9b78-8cb4a9906523
+    targetPortName: Input
+  - baseNodeGuid: 2af53f18-9cbc-4077-93f1-1c0fdcac836d
+    basePortName: Output
+    targetNodeGuid: f86fdc6b-96a7-4409-b9d1-9b60cf502f19
+    targetPortName: Input
+  - baseNodeGuid: 31ff200a-8efc-4d3e-bbaa-24b5321cb775
+    basePortName: Output
+    targetNodeGuid: 343788c8-194f-4279-a6fc-9501796bf1b7
+    targetPortName: Input
+  - baseNodeGuid: f86fdc6b-96a7-4409-b9d1-9b60cf502f19
+    basePortName: Continue
+    targetNodeGuid: 74bb7649-6eee-40ae-9b78-8cb4a9906523
+    targetPortName: Input
+  - baseNodeGuid: 343788c8-194f-4279-a6fc-9501796bf1b7
+    basePortName: Continue
+    targetNodeGuid: 5e45167d-2946-44f3-9a27-03ea16b1f9b3
+    targetPortName: Input
+  - baseNodeGuid: 6a58682b-790c-4661-af57-3448fb0c63c5
+    basePortName: Output
+    targetNodeGuid: 06fd4158-7b03-4b9c-8d95-3830d723918a
+    targetPortName: Input
+  - baseNodeGuid: 5e45167d-2946-44f3-9a27-03ea16b1f9b3
+    basePortName: Continue
+    targetNodeGuid: 74bb7649-6eee-40ae-9b78-8cb4a9906523
+    targetPortName: Input
+  - baseNodeGuid: 06fd4158-7b03-4b9c-8d95-3830d723918a
+    basePortName: Continue
+    targetNodeGuid: ddf353fd-f8e2-46c6-8c08-10a5fba14a7f
+    targetPortName: Input
+  - baseNodeGuid: ddf353fd-f8e2-46c6-8c08-10a5fba14a7f
+    basePortName: Continue
+    targetNodeGuid: 74bb7649-6eee-40ae-9b78-8cb4a9906523
+    targetPortName: Input
   dialogueDatas:
   - nodeGuid: b8d4279a-6ef4-455f-b535-8aa327747e93
-    position: {x: -459, y: 483}
+    position: {x: -483, y: 485}
     dialogueDataNames:
     - ID:
         value: 0
@@ -99,10 +139,10 @@ MonoBehaviour:
     - ID:
         value: 4
       responseText:
-        value: Can you go into more detail?
+        value: Can you go into more detail
     dialogueResponseEvidences: []
   - nodeGuid: e56abb30-e69e-43e5-9e4b-effad62f2739
-    position: {x: 73, y: 486}
+    position: {x: 150, y: -230}
     dialogueDataNames:
     - ID:
         value: 0
@@ -127,26 +167,221 @@ MonoBehaviour:
     dialogueDataPorts: []
     dialogueResponseTexts: []
     dialogueResponseEvidences: []
+  - nodeGuid: 1f14e913-38dd-4752-b7cd-2d9ca464845b
+    position: {x: 148, y: 237}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Crow
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 54826445-c52d-4d78-a999-49bd7b6e57d4
+      texts:
+      - languageType: 0
+        languageGenericType: Watch your tone there
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: 91353468-c340-4e62-ade5-395077f0fea5
+      texts:
+      - languageType: 0
+        languageGenericType: You're not doing yourself any favors
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 19f0c8883811f824d9442062a991e91d, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: f86fdc6b-96a7-4409-b9d1-9b60cf502f19
+    position: {x: 149, y: 764}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Crow
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: cf504218-2e83-449f-8c4c-fd2675f0fed5
+      texts:
+      - languageType: 0
+        languageGenericType: You alright there?
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: 8a9ae9ab-07a6-4471-bb37-19bd97049415
+      texts:
+      - languageType: 0
+        languageGenericType: Take a breather if it's getting to you
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 7ea199d8cc2ecb04da82d36ad33772f9, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: 343788c8-194f-4279-a6fc-9501796bf1b7
+    position: {x: 148, y: 1337}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Crow
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: aa25320b-f8b0-4c1c-8056-dcd189a756a2
+      texts:
+      - languageType: 0
+        languageGenericType: Do I...scare you?
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 67db6eeb735e6c04c9e1581dccc62789, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: 5e45167d-2946-44f3-9a27-03ea16b1f9b3
+    position: {x: 510, y: 1317}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Crow
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 22f014a5-9813-47e6-ad42-b4b0bf035e1b
+      texts:
+      - languageType: 0
+        languageGenericType: Sorry
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: 0b112881-c78c-4838-9663-8ceba3d9ec23
+      texts:
+      - languageType: 0
+        languageGenericType: That was never my intention
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 7ea199d8cc2ecb04da82d36ad33772f9, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: 06fd4158-7b03-4b9c-8d95-3830d723918a
+    position: {x: 143, y: 1840}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Crow
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 833c0e81-d7ef-49e4-9c06-2fd74a42af14
+      texts:
+      - languageType: 0
+        languageGenericType: You're...
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: 461c5255-bf5d-4c55-a16e-49c65e115465
+      texts:
+      - languageType: 0
+        languageGenericType: Awfully positive...
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 67db6eeb735e6c04c9e1581dccc62789, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: ddf353fd-f8e2-46c6-8c08-10a5fba14a7f
+    position: {x: 483, y: 1841}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: 
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: e624cb20-8e29-4bf7-ab61-86d0a61784eb
+      texts:
+      - languageType: 0
+        languageGenericType: Either that or you're already numb to this kind of thing...
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 7ea199d8cc2ecb04da82d36ad33772f9, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
   endDatas:
-  - nodeGuid: 76a36996-199c-4a0f-8ecc-dcedaf75dd72
-    position: {x: 419, y: 489}
-    endDialogueContainers:
-    - dialogueContainerSO: {fileID: 11400000, guid: 6a4ea2baa68c35741a0ddfda4bc97034, type: 2}
-    - dialogueContainerSO: {fileID: 11400000, guid: 36aa97cb02460eb4e9eac4a71813e38d, type: 2}
-    endNodeType:
-      value: 1
   - nodeGuid: 74bb7649-6eee-40ae-9b78-8cb4a9906523
-    position: {x: 454, y: 811}
+    position: {x: 818, y: 617}
     endDialogueContainers:
-    - dialogueContainerSO: {fileID: 11400000}
     - dialogueContainerSO: {fileID: 11400000, guid: 34c462457b96a0e4c86dc1bece1fbefe, type: 2}
     - dialogueContainerSO: {fileID: 11400000, guid: 2c9229e1c02bd1b478db438ad54e0cc5, type: 2}
     - dialogueContainerSO: {fileID: 11400000, guid: dc209fbe4cdc0d0448dfeb273b067823, type: 2}
     endNodeType:
       value: 1
+  - nodeGuid: 76a36996-199c-4a0f-8ecc-dcedaf75dd72
+    position: {x: 776, y: 293}
+    endDialogueContainers:
+    - dialogueContainerSO: {fileID: 11400000, guid: 6a4ea2baa68c35741a0ddfda4bc97034, type: 2}
+    - dialogueContainerSO: {fileID: 11400000, guid: 36aa97cb02460eb4e9eac4a71813e38d, type: 2}
+    endNodeType:
+      value: 1
   startDatas:
   - nodeGuid: 5c2f9d44-831e-4fe5-bc8e-68449c35dffe
-    position: {x: -717, y: 481}
+    position: {x: -734, y: 486}
     text:
     - languageType: 0
       languageGenericType: Where were you before 12 PM
@@ -155,23 +390,23 @@ MonoBehaviour:
   choiceDatas: []
   emotionChoiceDatas:
   - nodeGuid: 93295584-0472-44a5-b242-402ff79a5c04
-    position: {x: -125, y: 254}
+    position: {x: -122, y: 452}
     choiceStateType:
       value: 4
   - nodeGuid: 43ed7065-63ac-4758-b958-6874d70e062a
-    position: {x: -127, y: 371}
+    position: {x: -124, y: 569}
     choiceStateType:
       value: 1
   - nodeGuid: 2af53f18-9cbc-4077-93f1-1c0fdcac836d
-    position: {x: -125, y: 489}
+    position: {x: -122, y: 687}
     choiceStateType:
       value: 2
   - nodeGuid: 31ff200a-8efc-4d3e-bbaa-24b5321cb775
-    position: {x: -124, y: 603}
+    position: {x: -121, y: 801}
     choiceStateType:
       value: 3
   - nodeGuid: 6a58682b-790c-4661-af57-3448fb0c63c5
-    position: {x: -125, y: 719}
+    position: {x: -122, y: 917}
     choiceStateType:
       value: 5
   objectChoiceDatas: []
