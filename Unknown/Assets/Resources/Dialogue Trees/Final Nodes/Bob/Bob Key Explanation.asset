@@ -349,7 +349,7 @@ MonoBehaviour:
         value: 8c68284e-6258-4df6-860e-8b08cdfc0349
       texts:
       - languageType: 0
-        languageGenericType: Also, there was a broken canvas beside the trash can
+        languageGenericType: Also, there was a broken canvas leaning on the door
       audioClips:
       - languageType: 0
         languageGenericType: {fileID: 0}

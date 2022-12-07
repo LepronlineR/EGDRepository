@@ -41,23 +41,59 @@ MonoBehaviour:
     basePortName: f08a448f-3d81-4912-8505-4afafd36f9d6
     targetNodeGuid: 3280d9d6-59c3-4295-82a2-525565f2094f
     targetPortName: Input
-  - baseNodeGuid: 751faabc-28a0-4230-90a7-aa55af90f066
-    basePortName: Output
-    targetNodeGuid: 04b0e605-f202-43ea-9736-79eece2926fa
-    targetPortName: Input
-  - baseNodeGuid: 04b0e605-f202-43ea-9736-79eece2926fa
-    basePortName: Continue
-    targetNodeGuid: 1035f860-b115-4cc8-9a32-0232de66eb3b
-    targetPortName: Input
-  - baseNodeGuid: 340171e4-2840-4356-aa64-313ed3eb51af
-    basePortName: Output
-    targetNodeGuid: 781d570b-47ea-423d-9921-4eed1557d268
-    targetPortName: Input
   - baseNodeGuid: 781d570b-47ea-423d-9921-4eed1557d268
     basePortName: Continue
     targetNodeGuid: bc7b3b65-8469-4268-92c2-e1be8cd64bf9
     targetPortName: Input
   - baseNodeGuid: bc7b3b65-8469-4268-92c2-e1be8cd64bf9
+    basePortName: Continue
+    targetNodeGuid: 1035f860-b115-4cc8-9a32-0232de66eb3b
+    targetPortName: Input
+  - baseNodeGuid: 751faabc-28a0-4230-90a7-aa55af90f066
+    basePortName: Output
+    targetNodeGuid: 04b0e605-f202-43ea-9736-79eece2926fa
+    targetPortName: Input
+  - baseNodeGuid: 340171e4-2840-4356-aa64-313ed3eb51af
+    basePortName: Output
+    targetNodeGuid: 781d570b-47ea-423d-9921-4eed1557d268
+    targetPortName: Input
+  - baseNodeGuid: 04b0e605-f202-43ea-9736-79eece2926fa
+    basePortName: Continue
+    targetNodeGuid: fa1f360f-bd44-4aae-9464-f8b77ba61f15
+    targetPortName: Input
+  - baseNodeGuid: fa1f360f-bd44-4aae-9464-f8b77ba61f15
+    basePortName: Continue
+    targetNodeGuid: 1035f860-b115-4cc8-9a32-0232de66eb3b
+    targetPortName: Input
+  - baseNodeGuid: 8f64013e-f72e-46f2-8a59-b8696f71e4f2
+    basePortName: Output
+    targetNodeGuid: 8ffa6f41-f7de-4ce5-aae1-76b2378fe1bf
+    targetPortName: Input
+  - baseNodeGuid: 8ffa6f41-f7de-4ce5-aae1-76b2378fe1bf
+    basePortName: Continue
+    targetNodeGuid: e228b2fc-7a04-4d00-82d6-3ec8ece796f6
+    targetPortName: Input
+  - baseNodeGuid: e228b2fc-7a04-4d00-82d6-3ec8ece796f6
+    basePortName: Continue
+    targetNodeGuid: 553b4b85-1c2f-41f6-a2fb-91c36a78d2bb
+    targetPortName: Input
+  - baseNodeGuid: 553b4b85-1c2f-41f6-a2fb-91c36a78d2bb
+    basePortName: Continue
+    targetNodeGuid: 1035f860-b115-4cc8-9a32-0232de66eb3b
+    targetPortName: Input
+  - baseNodeGuid: 0eb42bc5-91fd-49ac-b170-bd7eba92b872
+    basePortName: Output
+    targetNodeGuid: 9ca0a4e3-5a56-4bf6-8b39-44df4e7f8248
+    targetPortName: Input
+  - baseNodeGuid: 3280d9d6-59c3-4295-82a2-525565f2094f
+    basePortName: Output
+    targetNodeGuid: c40be174-8d5e-48ad-99ee-f6b0754d38da
+    targetPortName: Input
+  - baseNodeGuid: c40be174-8d5e-48ad-99ee-f6b0754d38da
+    basePortName: Continue
+    targetNodeGuid: 1035f860-b115-4cc8-9a32-0232de66eb3b
+    targetPortName: Input
+  - baseNodeGuid: 9ca0a4e3-5a56-4bf6-8b39-44df4e7f8248
     basePortName: Continue
     targetNodeGuid: 1035f860-b115-4cc8-9a32-0232de66eb3b
     targetPortName: Input
@@ -175,43 +211,6 @@ MonoBehaviour:
       responseText:
         value: I'll say
     dialogueResponseEvidences: []
-  - nodeGuid: 04b0e605-f202-43ea-9736-79eece2926fa
-    position: {x: 1172, y: -546}
-    dialogueDataNames:
-    - ID:
-        value: 0
-      characterName:
-        value: Benedict
-    dialogueDataTexts:
-    - ID:
-        value: 2
-      GuidID:
-        value: 5b58a29d-c9a4-481f-800e-63021b4199b2
-      texts:
-      - languageType: 0
-        languageGenericType: Right?!
-      audioClips:
-      - languageType: 0
-        languageGenericType: {fileID: 0}
-    - ID:
-        value: 3
-      GuidID:
-        value: b8994d0c-ad1f-4b4a-8cdb-6a2cf81374ee
-      texts:
-      - languageType: 0
-        languageGenericType: I'm glad someone for once recognizes my concerns about
-          him!
-      audioClips:
-      - languageType: 0
-        languageGenericType: {fileID: 0}
-    dialogueDataImagess:
-    - ID:
-        value: 1
-      sprite:
-        value: {fileID: 21300000, guid: 25dcf3b2e80a0b14295724a20ccab811, type: 3}
-    dialogueDataPorts: []
-    dialogueResponseTexts: []
-    dialogueResponseEvidences: []
   - nodeGuid: 781d570b-47ea-423d-9921-4eed1557d268
     position: {x: 1199, y: -17}
     dialogueDataNames:
@@ -275,9 +274,275 @@ MonoBehaviour:
     dialogueDataPorts: []
     dialogueResponseTexts: []
     dialogueResponseEvidences: []
+  - nodeGuid: 04b0e605-f202-43ea-9736-79eece2926fa
+    position: {x: 1195, y: -683}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Benedict
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 5b58a29d-c9a4-481f-800e-63021b4199b2
+      texts:
+      - languageType: 0
+        languageGenericType: Right?!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: b8994d0c-ad1f-4b4a-8cdb-6a2cf81374ee
+      texts:
+      - languageType: 0
+        languageGenericType: I'm glad someone for once recognizes my concerns about
+          him!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 4
+      GuidID:
+        value: 7f0bceeb-b49f-4bfc-961b-65fe25cecfb2
+      texts:
+      - languageType: 0
+        languageGenericType: If only he took his eyes off for one moment
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 5
+      GuidID:
+        value: de0a9a46-8f10-40ae-ac81-523e047cd374
+      texts:
+      - languageType: 0
+        languageGenericType: Would he have spotted Bob heading to the janitor's closet!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 25dcf3b2e80a0b14295724a20ccab811, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: fa1f360f-bd44-4aae-9464-f8b77ba61f15
+    position: {x: 1631, y: -679}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Benedict
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: f044bf63-c845-4860-a50a-0608c633b9ea
+      texts:
+      - languageType: 0
+        languageGenericType: Honestly I wouldn't be surprised if he stood there unfazed
+          in front of an apocalypse...
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: f3cda730283b91f40bd88ca115197c51, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: 8ffa6f41-f7de-4ce5-aae1-76b2378fe1bf
+    position: {x: 1207, y: 523}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Benedict
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: cfd86dc1-01e8-4fad-ba53-ce71c22d7f22
+      texts:
+      - languageType: 0
+        languageGenericType: So we're both frightened by him...
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: f3cda730283b91f40bd88ca115197c51, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: e228b2fc-7a04-4d00-82d6-3ec8ece796f6
+    position: {x: 1558, y: 521}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Benedict
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 58a79520-d3ea-4486-9d10-8a2d309d2bbf
+      texts:
+      - languageType: 0
+        languageGenericType: I hate to say this about myself...
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: d6150bd1-83b0-4e49-b945-41bacbe6c9e6
+      texts:
+      - languageType: 0
+        languageGenericType: But despite my complaints about that Crow guy never
+          giving eye contact
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 87a1a56c93e089c429442ca246b2b995, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: 553b4b85-1c2f-41f6-a2fb-91c36a78d2bb
+    position: {x: 2037, y: 517}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Benedict
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 33f9e92c-e70b-41a1-8ff6-ee8148d6ff68
+      texts:
+      - languageType: 0
+        languageGenericType: I would honestly prefer he never does so
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: 621f41df-eee8-45d3-925c-197b93b5b17b
+      texts:
+      - languageType: 0
+        languageGenericType: I have never seen such horror in my life...
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 029449c1ef1a5ff408fcfc3381f31979, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: c40be174-8d5e-48ad-99ee-f6b0754d38da
+    position: {x: 1215, y: 1560}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Benedict
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 1ed389d7-7fba-485a-9089-ab8bf05d27bf
+      texts:
+      - languageType: 0
+        languageGenericType: Was that sarcasm?!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: 2bd79cc8-f1c8-44ce-aa0b-2023365a02a6
+      texts:
+      - languageType: 0
+        languageGenericType: Why are you happy about this?!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 4
+      GuidID:
+        value: 107803a9-de2b-43a3-a98f-e6de8fd98a48
+      texts:
+      - languageType: 0
+        languageGenericType: You should be furious at his lack of manners!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 25dcf3b2e80a0b14295724a20ccab811, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: 9ca0a4e3-5a56-4bf6-8b39-44df4e7f8248
+    position: {x: 1172, y: 1011}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Benedict
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 085e5d9b-7daa-4b33-9f65-5dfe090e3d69
+      texts:
+      - languageType: 0
+        languageGenericType: Does this bore you?!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: 8c86654f-8af8-45cb-b073-d30c7990e6c5
+      texts:
+      - languageType: 0
+        languageGenericType: Well pardon me for offering you my suggestions when
+          you asked!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 25dcf3b2e80a0b14295724a20ccab811, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
   endDatas:
   - nodeGuid: 1035f860-b115-4cc8-9a32-0232de66eb3b
-    position: {x: 2053, y: 285}
+    position: {x: 2433, y: 231}
     endDialogueContainers:
     - dialogueContainerSO: {fileID: 11400000}
     - dialogueContainerSO: {fileID: 11400000, guid: 7715e8d919f644a4b9e4f0681d31a14a, type: 2}

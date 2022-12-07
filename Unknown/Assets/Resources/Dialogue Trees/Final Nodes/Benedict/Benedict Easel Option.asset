@@ -287,7 +287,7 @@ MonoBehaviour:
     dialogueResponseTexts: []
     dialogueResponseEvidences: []
   - nodeGuid: a087a486-6d46-4813-926f-cb641aa6b615
-    position: {x: 8415, y: 1750}
+    position: {x: 8395, y: 1752}
     dialogueDataNames:
     - ID:
         value: 0
@@ -331,7 +331,8 @@ MonoBehaviour:
         value: 854fc101-6f4a-42d0-b01e-52d52245a5bb
       texts:
       - languageType: 0
-        languageGenericType: If only I could paint this moment right now...
+        languageGenericType: As tragic as that broken easel leaning on the door because
+          it can no longer stand on its own...
       audioClips:
       - languageType: 0
         languageGenericType: {fileID: 0}
@@ -339,6 +340,16 @@ MonoBehaviour:
         value: 6
       GuidID:
         value: 0ba90be1-2302-4a29-b3f0-cfad19ac6ca7
+      texts:
+      - languageType: 0
+        languageGenericType: If only I could paint this moment right now...
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 7
+      GuidID:
+        value: 6677204f-88ef-4560-a309-217b623fba44
       texts:
       - languageType: 0
         languageGenericType: A painting honoring our dear tour guide, Chihiro...
