@@ -47,6 +47,10 @@ MonoBehaviour:
     targetPortName: Input
   - baseNodeGuid: 3987ec7b-0b9b-4716-8e33-4d81895b99c1
     basePortName: Continue
+    targetNodeGuid: 9eb4e47b-9762-4923-a5bd-ffc0a98ae342
+    targetPortName: Input
+  - baseNodeGuid: 9eb4e47b-9762-4923-a5bd-ffc0a98ae342
+    basePortName: Continue
     targetNodeGuid: 7526a318-b1f0-43c3-973a-382d30193405
     targetPortName: Input
   dialogueDatas:
@@ -331,9 +335,46 @@ MonoBehaviour:
     dialogueDataPorts: []
     dialogueResponseTexts: []
     dialogueResponseEvidences: []
+  - nodeGuid: 9eb4e47b-9762-4923-a5bd-ffc0a98ae342
+    position: {x: 3482, y: 391}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Bob
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 8c68284e-6258-4df6-860e-8b08cdfc0349
+      texts:
+      - languageType: 0
+        languageGenericType: Also, there was a broken canvas beside the trash can
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: 17e34722-7a5e-4075-9ff6-536be75fe54e
+      texts:
+      - languageType: 0
+        languageGenericType: I guess someone else had the same idea as me and left
+          it there
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 813029c5fc5e52540be73584988153b7, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
   endDatas:
   - nodeGuid: 7526a318-b1f0-43c3-973a-382d30193405
-    position: {x: 3493, y: 391}
+    position: {x: 3969, y: 392}
     endDialogueContainers:
     - dialogueContainerSO: {fileID: 11400000, guid: 48126c72ed5b7d8498586458537f53bb, type: 2}
     - dialogueContainerSO: {fileID: 11400000, guid: 889af35c3b45ecc49816abdb514b5919, type: 2}

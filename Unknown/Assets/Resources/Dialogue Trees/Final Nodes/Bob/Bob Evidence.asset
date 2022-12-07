@@ -603,7 +603,7 @@ MonoBehaviour:
     - ID:
         value: 5
       responseText:
-        value: Why?
+        value: Why
     dialogueResponseEvidences: []
   - nodeGuid: b973b3a7-04fb-4dce-9144-70a627dccf3b
     position: {x: 2355, y: 3136}
@@ -725,7 +725,7 @@ MonoBehaviour:
     - ID:
         value: 3
       responseText:
-        value: Does it have anything to do with this?
+        value: Does it have anything to do with this
     dialogueResponseEvidences: []
   - nodeGuid: f0004419-36ce-47a1-8c0d-4424334dcd54
     position: {x: 2699, y: 1550}
@@ -755,7 +755,7 @@ MonoBehaviour:
     - ID:
         value: 3
       responseText:
-        value: Does it have anything to do with this?
+        value: Does it have anything to do with this
     dialogueResponseEvidences: []
   - nodeGuid: 05c6f13d-0027-48f5-a076-fd4f34ce9290
     position: {x: 2360, y: 2039}
@@ -795,7 +795,7 @@ MonoBehaviour:
     - ID:
         value: 4
       responseText:
-        value: Does it have anything to do with this?
+        value: Does it have anything to do with this
     dialogueResponseEvidences: []
   - nodeGuid: e9eb6fe2-1aba-4548-95a4-7a4dfb3ef5b3
     position: {x: 2699, y: 2611}
@@ -825,7 +825,7 @@ MonoBehaviour:
     - ID:
         value: 3
       responseText:
-        value: Does it have anything to do with this?
+        value: Does it have anything to do with this
     dialogueResponseEvidences: []
   endDatas:
   - nodeGuid: 3ef35bc3-9453-4e18-aab0-07488d58cf0e

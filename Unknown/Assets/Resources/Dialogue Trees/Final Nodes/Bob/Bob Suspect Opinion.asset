@@ -17,6 +17,18 @@ MonoBehaviour:
     basePortName: Output
     targetNodeGuid: a424a74c-7fa6-4adc-80e7-d87934149436
     targetPortName: Input
+  - baseNodeGuid: a424a74c-7fa6-4adc-80e7-d87934149436
+    basePortName: Continue
+    targetNodeGuid: 2d453c3e-1722-4014-8497-a55841c0be82
+    targetPortName: Input
+  - baseNodeGuid: 2d453c3e-1722-4014-8497-a55841c0be82
+    basePortName: Continue
+    targetNodeGuid: b411a27f-2930-4942-97fd-f3c9569b57e2
+    targetPortName: Input
+  - baseNodeGuid: b411a27f-2930-4942-97fd-f3c9569b57e2
+    basePortName: Continue
+    targetNodeGuid: f18a528f-17e4-4e24-aa40-b3a3acea258f
+    targetPortName: Input
   dialogueDatas:
   - nodeGuid: a424a74c-7fa6-4adc-80e7-d87934149436
     position: {x: 459, y: 393}
@@ -24,7 +36,7 @@ MonoBehaviour:
     - ID:
         value: 0
       characterName:
-        value: 
+        value: Bob
     dialogueDataTexts:
     - ID:
         value: 2
@@ -46,6 +58,149 @@ MonoBehaviour:
       audioClips:
       - languageType: 0
         languageGenericType: {fileID: 0}
+    - ID:
+        value: 4
+      GuidID:
+        value: 7f278ec5-c295-4cc6-8842-215cf9ffef11
+      texts:
+      - languageType: 0
+        languageGenericType: "Benedict doesn\u2019t seem to like Crow"
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 5
+      GuidID:
+        value: e878d4a7-01d0-45fe-af24-8c2e8057d3ad
+      texts:
+      - languageType: 0
+        languageGenericType: I chatted with him for a bit before
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 813029c5fc5e52540be73584988153b7, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: 2d453c3e-1722-4014-8497-a55841c0be82
+    position: {x: 825, y: 392}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Bob
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 9cd026f2-bbe4-4b3f-a782-f043d25d8f01
+      texts:
+      - languageType: 0
+        languageGenericType: Somehow it turned to him complaining about Crow not
+          giving him eye contact!
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: d75a2b9e-cee1-4d09-8e19-84b8a8206f4f
+      texts:
+      - languageType: 0
+        languageGenericType: And that unlike Crow
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 4
+      GuidID:
+        value: cc2e6aaf-27d7-42ad-ab0c-e429c02892c1
+      texts:
+      - languageType: 0
+        languageGenericType: He would give his fans all of his attention
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 5
+      GuidID:
+        value: 4e10b075-92f6-496e-84cc-63adaffff7c1
+      texts:
+      - languageType: 0
+        languageGenericType: I don't normally say this
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 6
+      GuidID:
+        value: 04ced43a-6619-4421-81bd-52fd3cf53aea
+      texts:
+      - languageType: 0
+        languageGenericType: But it was tiring to listen to
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 58558ed2b54d57e4c8f27d3ef73c0bad, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: b411a27f-2930-4942-97fd-f3c9569b57e2
+    position: {x: 1355, y: 391}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Bob
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: c3c63a52-8dcb-4819-ad5c-12d6de9e6695
+      texts:
+      - languageType: 0
+        languageGenericType: Do you think he's the type of person to frame someone?
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: 8e4ab2c3-afc3-4a68-8122-65d90d1ac4d2
+      texts:
+      - languageType: 0
+        languageGenericType: I'd hate to think one of us did this
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 4
+      GuidID:
+        value: e9160362-69e4-4250-bac8-ac668f9dbc9f
+      texts:
+      - languageType: 0
+        languageGenericType: But besides Chihiro
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 5
+      GuidID:
+        value: 45177714-4b35-4e2b-a39a-8ed4eb5f1fba
+      texts:
+      - languageType: 0
+        languageGenericType: We three are the only ones here
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
     dialogueDataImagess:
     - ID:
         value: 1
@@ -56,7 +211,7 @@ MonoBehaviour:
     dialogueResponseEvidences: []
   endDatas:
   - nodeGuid: f18a528f-17e4-4e24-aa40-b3a3acea258f
-    position: {x: 1181, y: 392}
+    position: {x: 1776, y: 394}
     endDialogueContainers:
     - dialogueContainerSO: {fileID: 11400000}
     - dialogueContainerSO: {fileID: 11400000, guid: 48126c72ed5b7d8498586458537f53bb, type: 2}

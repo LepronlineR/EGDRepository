@@ -29,14 +29,6 @@ MonoBehaviour:
     basePortName: b42bd331-7327-43f9-a6f2-f00068bc4fca
     targetNodeGuid: 640bb9e7-ecbd-4acc-bfc7-7c0693e4b54d
     targetPortName: Input
-  - baseNodeGuid: b23b3ed5-2d94-45b4-892a-6a8d71dcc6dd
-    basePortName: Continue
-    targetNodeGuid: 3ef4baa2-cfef-41cd-8e27-f14408dbe148
-    targetPortName: Input
-  - baseNodeGuid: 5f4ad21d-24bd-40e9-a193-9f76866bfc21
-    basePortName: Output
-    targetNodeGuid: d8acf4d2-f95a-492a-8f2b-3a25b6140af2
-    targetPortName: Input
   - baseNodeGuid: 13f27d12-bb8d-4f54-911c-08e2fe9d8743
     basePortName: 6c89a9eb-1832-44b7-a11f-1676eef93068
     targetNodeGuid: 02fb8a61-4a67-45df-83a2-9bd88f953332
@@ -44,6 +36,10 @@ MonoBehaviour:
   - baseNodeGuid: 13f27d12-bb8d-4f54-911c-08e2fe9d8743
     basePortName: 71630804-9b7f-4f6f-85ca-f31cf2fc9b5d
     targetNodeGuid: 8ba7a0cd-a009-4fc2-bfd0-d5018688a71d
+    targetPortName: Input
+  - baseNodeGuid: b23b3ed5-2d94-45b4-892a-6a8d71dcc6dd
+    basePortName: Continue
+    targetNodeGuid: 3ef4baa2-cfef-41cd-8e27-f14408dbe148
     targetPortName: Input
   - baseNodeGuid: d8acf4d2-f95a-492a-8f2b-3a25b6140af2
     basePortName: Continue
@@ -61,21 +57,17 @@ MonoBehaviour:
     basePortName: Continue
     targetNodeGuid: 3ef4baa2-cfef-41cd-8e27-f14408dbe148
     targetPortName: Input
-  - baseNodeGuid: 640bb9e7-ecbd-4acc-bfc7-7c0693e4b54d
-    basePortName: Output
-    targetNodeGuid: 403f9385-af82-4d65-8580-c0ee7fae391f
+  - baseNodeGuid: c2e22338-30a4-46d0-95e6-79056f1a7a40
+    basePortName: Continue
+    targetNodeGuid: 0aab2d73-2ccc-44f6-ab95-cc3e34eb88c3
+    targetPortName: Input
+  - baseNodeGuid: 61db2341-10f4-4c15-97b1-6b759e972baf
+    basePortName: Continue
+    targetNodeGuid: 93e69deb-5264-4386-ae4e-416446ef72cd
     targetPortName: Input
   - baseNodeGuid: 403f9385-af82-4d65-8580-c0ee7fae391f
     basePortName: Continue
     targetNodeGuid: 3ef4baa2-cfef-41cd-8e27-f14408dbe148
-    targetPortName: Input
-  - baseNodeGuid: 02fb8a61-4a67-45df-83a2-9bd88f953332
-    basePortName: Output
-    targetNodeGuid: b23b3ed5-2d94-45b4-892a-6a8d71dcc6dd
-    targetPortName: Input
-  - baseNodeGuid: 97a3f184-b7d3-477b-a9a2-678e16ac9dad
-    basePortName: Output
-    targetNodeGuid: c2e22338-30a4-46d0-95e6-79056f1a7a40
     targetPortName: Input
   - baseNodeGuid: 203619e2-dbcb-46ac-86e2-aaab406f21d8
     basePortName: Continue
@@ -89,25 +81,33 @@ MonoBehaviour:
     basePortName: Continue
     targetNodeGuid: 3ef4baa2-cfef-41cd-8e27-f14408dbe148
     targetPortName: Input
-  - baseNodeGuid: 8ba7a0cd-a009-4fc2-bfd0-d5018688a71d
-    basePortName: Output
-    targetNodeGuid: 61db2341-10f4-4c15-97b1-6b759e972baf
-    targetPortName: Input
-  - baseNodeGuid: c2e22338-30a4-46d0-95e6-79056f1a7a40
-    basePortName: Continue
-    targetNodeGuid: 0aab2d73-2ccc-44f6-ab95-cc3e34eb88c3
-    targetPortName: Input
   - baseNodeGuid: 0aab2d73-2ccc-44f6-ab95-cc3e34eb88c3
     basePortName: Continue
     targetNodeGuid: 203619e2-dbcb-46ac-86e2-aaab406f21d8
     targetPortName: Input
-  - baseNodeGuid: 61db2341-10f4-4c15-97b1-6b759e972baf
-    basePortName: Continue
-    targetNodeGuid: 93e69deb-5264-4386-ae4e-416446ef72cd
-    targetPortName: Input
   - baseNodeGuid: 93e69deb-5264-4386-ae4e-416446ef72cd
     basePortName: Continue
     targetNodeGuid: 3ef4baa2-cfef-41cd-8e27-f14408dbe148
+    targetPortName: Input
+  - baseNodeGuid: 97a3f184-b7d3-477b-a9a2-678e16ac9dad
+    basePortName: Output
+    targetNodeGuid: c2e22338-30a4-46d0-95e6-79056f1a7a40
+    targetPortName: Input
+  - baseNodeGuid: 5f4ad21d-24bd-40e9-a193-9f76866bfc21
+    basePortName: Output
+    targetNodeGuid: d8acf4d2-f95a-492a-8f2b-3a25b6140af2
+    targetPortName: Input
+  - baseNodeGuid: 640bb9e7-ecbd-4acc-bfc7-7c0693e4b54d
+    basePortName: Output
+    targetNodeGuid: 403f9385-af82-4d65-8580-c0ee7fae391f
+    targetPortName: Input
+  - baseNodeGuid: 02fb8a61-4a67-45df-83a2-9bd88f953332
+    basePortName: Output
+    targetNodeGuid: b23b3ed5-2d94-45b4-892a-6a8d71dcc6dd
+    targetPortName: Input
+  - baseNodeGuid: 8ba7a0cd-a009-4fc2-bfd0-d5018688a71d
+    basePortName: Output
+    targetNodeGuid: 61db2341-10f4-4c15-97b1-6b759e972baf
     targetPortName: Input
   dialogueDatas:
   - nodeGuid: 13f27d12-bb8d-4f54-911c-08e2fe9d8743
@@ -153,7 +153,7 @@ MonoBehaviour:
     - ID:
         value: 3
       responseText:
-        value: "No, I\u2019m only verifying"
+        value: "No I\u2019m only verifying"
     dialogueResponseEvidences: []
   - nodeGuid: b23b3ed5-2d94-45b4-892a-6a8d71dcc6dd
     position: {x: 898, y: -38}

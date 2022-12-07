@@ -25,6 +25,50 @@ MonoBehaviour:
     basePortName: 0bfe5b12-dcdc-4ea3-80eb-444cb2b61ad3
     targetNodeGuid: 001d4805-d744-49b2-a17d-e4fcecd9a88e
     targetPortName: Input
+  - baseNodeGuid: add68525-8ad7-4e4e-b7c9-f9bc2be812a8
+    basePortName: dfc32274-c876-4e9c-8113-30804531a653
+    targetNodeGuid: dd9a314a-2f9c-4bed-8873-0717de32ed17
+    targetPortName: Input
+  - baseNodeGuid: add68525-8ad7-4e4e-b7c9-f9bc2be812a8
+    basePortName: 915ceddc-2390-4f87-85b7-2cea6496899b
+    targetNodeGuid: fbe170ec-0712-4e1c-ba36-f93ae50501d7
+    targetPortName: Input
+  - baseNodeGuid: 8a484d87-dbc7-4e3c-ba6b-7ea797f9f143
+    basePortName: Continue
+    targetNodeGuid: a7864aa8-b488-4eef-a48b-5bd572dfb3e2
+    targetPortName: Input
+  - baseNodeGuid: cfc7ce9f-4af7-41c1-b0b2-acf80750f04b
+    basePortName: Output
+    targetNodeGuid: d95e36a4-d041-44c3-9b9e-8d6dbeaf5d63
+    targetPortName: Input
+  - baseNodeGuid: 001d4805-d744-49b2-a17d-e4fcecd9a88e
+    basePortName: Output
+    targetNodeGuid: 91313289-60a3-4c2f-8380-608bc9e626aa
+    targetPortName: Input
+  - baseNodeGuid: fbe170ec-0712-4e1c-ba36-f93ae50501d7
+    basePortName: Output
+    targetNodeGuid: 8a484d87-dbc7-4e3c-ba6b-7ea797f9f143
+    targetPortName: Input
+  - baseNodeGuid: d95e36a4-d041-44c3-9b9e-8d6dbeaf5d63
+    basePortName: Continue
+    targetNodeGuid: e1757e48-8897-4b31-b306-2ddc0777ddec
+    targetPortName: Input
+  - baseNodeGuid: 91313289-60a3-4c2f-8380-608bc9e626aa
+    basePortName: Continue
+    targetNodeGuid: e1757e48-8897-4b31-b306-2ddc0777ddec
+    targetPortName: Input
+  - baseNodeGuid: a7864aa8-b488-4eef-a48b-5bd572dfb3e2
+    basePortName: Continue
+    targetNodeGuid: c7b6895d-9797-4488-b752-35e45288a8e2
+    targetPortName: Input
+  - baseNodeGuid: dd9a314a-2f9c-4bed-8873-0717de32ed17
+    basePortName: Output
+    targetNodeGuid: 05bb881a-be0e-4667-893f-3cc5d968b072
+    targetPortName: Input
+  - baseNodeGuid: 05bb881a-be0e-4667-893f-3cc5d968b072
+    basePortName: Continue
+    targetNodeGuid: e1757e48-8897-4b31-b306-2ddc0777ddec
+    targetPortName: Input
   dialogueDatas:
   - nodeGuid: add68525-8ad7-4e4e-b7c9-f9bc2be812a8
     position: {x: 2633, y: 1103}
@@ -57,13 +101,227 @@ MonoBehaviour:
       inputGuid: 001d4805-d744-49b2-a17d-e4fcecd9a88e
       outputGuid: add68525-8ad7-4e4e-b7c9-f9bc2be812a8
     - portGuid: dfc32274-c876-4e9c-8113-30804531a653
-      inputGuid: 
-      outputGuid: 
+      inputGuid: dd9a314a-2f9c-4bed-8873-0717de32ed17
+      outputGuid: add68525-8ad7-4e4e-b7c9-f9bc2be812a8
+    - portGuid: 915ceddc-2390-4f87-85b7-2cea6496899b
+      inputGuid: fbe170ec-0712-4e1c-ba36-f93ae50501d7
+      outputGuid: add68525-8ad7-4e4e-b7c9-f9bc2be812a8
     dialogueResponseTexts: []
     dialogueResponseEvidences:
     - ID:
         value: 3
-  endDatas: []
+  - nodeGuid: d95e36a4-d041-44c3-9b9e-8d6dbeaf5d63
+    position: {x: 3327, y: 563}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Bob
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 6ef0b84a-cab0-4163-96a9-9cb198cc1be2
+      texts:
+      - languageType: 0
+        languageGenericType: Oh
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: d709ace2-7f3e-4249-b397-edbcaf2f8e3b
+      texts:
+      - languageType: 0
+        languageGenericType: I'm afraid that's not it
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 813029c5fc5e52540be73584988153b7, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: 91313289-60a3-4c2f-8380-608bc9e626aa
+    position: {x: 3313, y: 1099}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Bob
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 6c8a5e63-c70c-4549-80a8-6d35e5004bcd
+      texts:
+      - languageType: 0
+        languageGenericType: So you remember me mentioning the locked trash cans
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: 73e66457-66c3-4300-94f0-bd44a704a306
+      texts:
+      - languageType: 0
+        languageGenericType: It's true I needed a key
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 4
+      GuidID:
+        value: e3498684-811a-4a59-b96d-6eb9c2b669a5
+      texts:
+      - languageType: 0
+        languageGenericType: But not for this trash can
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 813029c5fc5e52540be73584988153b7, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: 05bb881a-be0e-4667-893f-3cc5d968b072
+    position: {x: 3326, y: 1684}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Bob
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 0333044f-d4c7-480d-aee9-671e8657fbaa
+      texts:
+      - languageType: 0
+        languageGenericType: The auditorium's trashcan got tipped over?
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: bc6a833c-d106-4d1a-a08c-cfa57e19332b
+      texts:
+      - languageType: 0
+        languageGenericType: How did that happen?
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 4
+      GuidID:
+        value: 51a5d1cd-f595-48e2-8b48-0e6b77dc25b8
+      texts:
+      - languageType: 0
+        languageGenericType: I don't remember it being unstable or anything
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 813029c5fc5e52540be73584988153b7, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: 8a484d87-dbc7-4e3c-ba6b-7ea797f9f143
+    position: {x: 3331, y: 2386}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Bob
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 47633eea-485b-4b05-bcd0-ec36d15a4f39
+      texts:
+      - languageType: 0
+        languageGenericType: How did you...?
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: 8fcdbd38-8703-40f3-be98-538cfc6ca703
+      texts:
+      - languageType: 0
+        languageGenericType: ...
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 4aaf189543eb21b4e8de16f5392209c7, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: a7864aa8-b488-4eef-a48b-5bd572dfb3e2
+    position: {x: 3708, y: 2384}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Bob
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 954dbf0e-cad4-4c27-ad77-5651e1b8c401
+      texts:
+      - languageType: 0
+        languageGenericType: So you knew from the start, huh?
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: a5b21861-3360-4529-8d38-241ddf65eeac
+      texts:
+      - languageType: 0
+        languageGenericType: I guess it's best I tell you then
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 813029c5fc5e52540be73584988153b7, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  endDatas:
+  - nodeGuid: e1757e48-8897-4b31-b306-2ddc0777ddec
+    position: {x: 4078, y: 864}
+    endDialogueContainers: []
+    endNodeType:
+      value: 1
+  - nodeGuid: c7b6895d-9797-4488-b752-35e45288a8e2
+    position: {x: 4146, y: 2386}
+    endDialogueContainers:
+    - dialogueContainerSO: {fileID: 11400000, guid: c56b1f10c88c4944dba2f350d853b5a1, type: 2}
+    endNodeType:
+      value: 1
   startDatas:
   - nodeGuid: efd52ab3-102e-4a5c-8c29-b8cbd4c450e3
     position: {x: 2502, y: 1103}
@@ -83,3 +341,11 @@ MonoBehaviour:
     position: {x: 2999, y: 1169}
     choiceObject:
       value: {fileID: 677632080520498084, guid: 9e53fa99e81897b46a91b73bae1ed397, type: 3}
+  - nodeGuid: dd9a314a-2f9c-4bed-8873-0717de32ed17
+    position: {x: 2998, y: 1277}
+    choiceObject:
+      value: {fileID: 237794839016559328, guid: 2183f2b229fbeca49a1ffc610b284929, type: 3}
+  - nodeGuid: fbe170ec-0712-4e1c-ba36-f93ae50501d7
+    position: {x: 2998, y: 1397}
+    choiceObject:
+      value: {fileID: 8307617522580937875, guid: 429fee0f616ae1c40b99a81f1343e8ff, type: 3}
