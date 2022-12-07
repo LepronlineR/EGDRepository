@@ -5,9 +5,8 @@ using UnityEngine;
 
 public class AfterTutorialScriptedEvents : MonoBehaviour
 {
-
+    public GameObject tutorialPerson;
     public List<GameObject> peoples;
-    public List<DialogueController> dialogueControllers;
 
     public void StartEvents()
     {
@@ -19,8 +18,12 @@ public class AfterTutorialScriptedEvents : MonoBehaviour
     IEnumerable Events()
     {
         // lock auditorium door
+
         yield return new WaitForSeconds(20.0f);
-        foreach(GameObject go in peoples)
+
+        tutorialPerson.SetActive(false);
+
+        foreach (GameObject go in peoples)
         {
             go.SetActive(true);
         }
