@@ -91,6 +91,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thoughtText: {fileID: 2105446330642425503}
+  amplitudeX: 12
+  omegaX: 2
+  amplitudeY: 12
+  omegaY: 2
 --- !u!1 &2105446330642425501
 GameObject:
   m_ObjectHideFlags: 0
@@ -102,6 +106,7 @@ GameObject:
   - component: {fileID: 2105446330642425500}
   - component: {fileID: 2105446330642425502}
   - component: {fileID: 2105446330642425503}
+  - component: {fileID: 1948115484669340480}
   m_Layer: 0
   m_Name: thought cloud text
   m_TagString: Untagged
@@ -226,3 +231,15 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &1948115484669340480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2105446330642425501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca3981ce7fd2e2e4fb5cd9931dcad9f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

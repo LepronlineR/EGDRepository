@@ -366,7 +366,7 @@ public class MainSystem : MonoBehaviour
                 speechModeObject.SetActive(speechMode);
                 if(inventoryOn){ // get out of inventory
                     playerMove.StartMovement();
-                    playerAim.on = false;
+                    playerAim.on = true;
                     Cursor.visible = false; 
                     Cursor.lockState = CursorLockMode.Locked;
                 }
@@ -375,7 +375,7 @@ public class MainSystem : MonoBehaviour
                 speechModeObject.SetActive(speechMode);
                 if(inventoryOn){ // get in of inventory
                     playerMove.StopMovement();
-                    playerAim.on = true;
+                    playerAim.on = false;
                     Cursor.visible = true; 
                     Cursor.lockState = CursorLockMode.None;
                 }
