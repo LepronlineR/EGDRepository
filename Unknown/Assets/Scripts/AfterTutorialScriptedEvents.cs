@@ -7,31 +7,48 @@ public class AfterTutorialScriptedEvents : MonoBehaviour
 {
     public GameObject tutorialPerson;
     public List<GameObject> peoples;
+    public DoorTrigger door;
+    public AudioSource aud;
+
+    bool once = true;
 
     public void StartEvents()
     {
-        StartCoroutine("Events");
+        StartCoroutine("EndTutorialEvents");
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (once)
+        {
+            once = false;
+            StartCoroutine(EndTutorialEvents());
+        }
     }
 
     public void EndTutorial() { }
 
-    IEnumerable Events()
+    IEnumerator EndTutorialEvents()
     {
         // lock auditorium door
+        door.LockDoor();
+        door.ForceClose();
 
-        yield return new WaitForSeconds(20.0f);
+        yield return new WaitForSeconds(1.0f);
 
         tutorialPerson.SetActive(false);
 
-        foreach (GameObject go in peoples)
-        {
-            go.SetActive(true);
-        }
-
         // play crash sound
+        aud.Play();
 
         // turn off/on evidences
         EvidenceContainer.Instance.TurnOnEvidences();
         EvidenceContainer.Instance.TurnOffEvidences();
+
+        foreach (GameObject people in peoples)
+        {
+            // show people
+            people.SetActive(true);
+        }
     }
 }
