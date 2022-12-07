@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneManagerMult : MonoBehaviour
 {
+
     public void LoadMainScene() {
         SceneManager.LoadScene("Main");
     }
@@ -13,8 +14,14 @@ public class SceneManagerMult : MonoBehaviour
         int index = Random.Range(1, 3);
         SceneManager.LoadScene(index);
     }
+
+    public void LoadStart()
+    {
+        SceneManager.LoadScene("Start");
+    }
     
     public void Quit() {
         Application.Quit();
     }
+
 }
