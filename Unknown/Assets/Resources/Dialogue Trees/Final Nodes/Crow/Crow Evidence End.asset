@@ -59,7 +59,7 @@ MonoBehaviour:
     position: {x: -2276, y: 801}
     text:
     - languageType: 0
-      languageGenericType: That's all
+      languageGenericType: That is all
   eventDatas: []
   branchDatas: []
   choiceDatas: []

@@ -25,7 +25,6 @@ MonoBehaviour:
     - dialogueContainerSO: {fileID: 11400000, guid: 48126c72ed5b7d8498586458537f53bb, type: 2}
     - dialogueContainerSO: {fileID: 11400000, guid: 7ff2793c54effa043836c7a612a78180, type: 2}
     - dialogueContainerSO: {fileID: 11400000, guid: 3787d49ff75a18946bedd7ea1caf645d, type: 2}
-    - dialogueContainerSO: {fileID: 11400000, guid: 889af35c3b45ecc49816abdb514b5919, type: 2}
     endNodeType:
       value: 1
   startDatas:

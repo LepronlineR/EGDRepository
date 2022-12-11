@@ -223,7 +223,7 @@ MonoBehaviour:
     position: {x: 193, y: 392}
     text:
     - languageType: 0
-      languageGenericType: Do you have anyone you suspect?
+      languageGenericType: Do you have anyone you suspect
   eventDatas: []
   branchDatas: []
   choiceDatas: []

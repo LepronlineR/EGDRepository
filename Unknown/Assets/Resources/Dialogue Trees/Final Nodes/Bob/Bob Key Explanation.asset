@@ -386,7 +386,7 @@ MonoBehaviour:
     position: {x: 207, y: 433}
     text:
     - languageType: 0
-      languageGenericType: 
+      languageGenericType: what about the key
   eventDatas: []
   branchDatas: []
   choiceDatas: []

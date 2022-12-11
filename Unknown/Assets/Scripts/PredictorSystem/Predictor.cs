@@ -4,8 +4,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using Unity.Jobs;
 using Python.Runtime;
-using Unity.Collections;
 using System.Text;
+using Unity.Collections;
+using System.Threading;
+using System.Threading.Tasks;
+
+public struct PredictorJob : IJobParallelFor
+{
+    public NativeArray<byte> result;
+    public void Execute(int index)
+    {
+        Debug.Log("begin executing");
+        byte[] resArr = result.ToArray();
+        var path = Encoding.ASCII.GetString(resArr);
+        var res = Predictor.Instance.predict_py(path);
+        MainSystem.Instance.SetPlayerEmotion(res);
+        Debug.Log("done executing");
+    }
+
+}
 
 public class Predictor : MonoBehaviour
 {
@@ -25,87 +42,25 @@ public class Predictor : MonoBehaviour
 
     #region Jobs (Multithreading)
 
-    PredictorJob job;
-    JobHandle jobHandle;
-
-    public struct PredictorJob : IJobParallelFor
-    {
-        public NativeArray<byte> result;
-        /*
-        #region Predictor (Python)
-
-        void init()
-        {
-            Runtime.PythonDLL = Application.dataPath + "/StreamingAssets/embedded-python/python310.dll";
-            PythonEngine.Initialize();
-        }
-        public dynamic extract_features(dynamic data, dynamic sample_rate)
-        {
-            // ZCR
-            dynamic result = Predictor.Instance.np.array(new List<float>());
-            dynamic zcr = Predictor.Instance.np.mean(Predictor.Instance.np.transpose(Predictor.Instance.librosa.feature.zero_crossing_rate(data)), axis: 0);
-            dynamic result1 = Predictor.Instance.np.hstack(Predictor.Instance.np.array(new List<dynamic> { result, zcr }));
-
-            // STFT
-            dynamic stft = Predictor.Instance.np.abs(Predictor.Instance.librosa.stft(data));
-            dynamic chroma_stft = Predictor.Instance.np.mean(Predictor.Instance.np.transpose(Predictor.Instance.librosa.feature.chroma_stft(stft, sample_rate)[0]), axis: 0);
-            dynamic result2 = Predictor.Instance.np.hstack(Predictor.Instance.np.array(new List<dynamic> { result1, chroma_stft }));
-
-            // MFCC
-            dynamic mfcc = Predictor.Instance.np.mean(Predictor.Instance.np.transpose(Predictor.Instance.librosa.feature.mfcc(data, sample_rate)), axis: 0);
-            dynamic result3 = Predictor.Instance.np.hstack(Predictor.Instance.np.array(new List<dynamic> { result2, mfcc }));
-
-            // Root Mean Square Value
-            dynamic rmsv = Predictor.Instance.np.mean(Predictor.Instance.np.transpose(Predictor.Instance.librosa.feature.rms(data)), axis: 0);
-            dynamic result4 = Predictor.Instance.np.hstack(Predictor.Instance.np.array(new List<dynamic> { result3, rmsv }));
-
-            // MelSpectogram
-            dynamic mel = Predictor.Instance.np.mean(Predictor.Instance.np.transpose(Predictor.Instance.librosa.feature.melspectrogram(data, sample_rate)), axis: 0);
-            dynamic result5 = Predictor.Instance.np.hstack(Predictor.Instance.np.array(new List<dynamic> { result4, mel }));
-
-            return result5;
-        }
-        public string predict_py(dynamic path)
-        {
-            // obtain the data
-            dynamic data = Predictor.Instance.librosa.load(path);
-            // data[0] = data, data[1] = sample_rate
-            dynamic X = extract_features(data[0], data[1]);
-            // predict
-            dynamic X_ = Predictor.Instance.tf.expand_dims(X, axis: 0);
-            dynamic pred = Predictor.Instance.model.predict(X_);
-            dynamic pred_class = Predictor.Instance.list_labels[Predictor.Instance.tf.argmax(pred[0])];
-
-            return pred_class.ToString();
-        }
-
-        #endregion
-        */
-        public void Execute(int index)
-        {
-            // init();
-            byte[] resArr = result.ToArray();
-            var path = Encoding.ASCII.GetString(resArr);
-            var res = Predictor.Instance.predict_py(path);
-            MainSystem.Instance.SetPlayerEmotion(res);
-            Debug.Log("done executing");
-            //if (PythonEngine.IsInitialized)
-            //{
-            //    PythonEngine.Shutdown();
-            //}
-        }
-
-    }
+    //PredictorJob job;
+    //JobHandle jobHandle;
+    Task predictTask;
 
     public void predict(string path)
     {
+        /*
         byte[] bytes = Encoding.ASCII.GetBytes(path);
+        NativeArray<byte> result_ = new NativeArray<byte>(bytes, Allocator.Persistent);
         job = new PredictorJob
         {
-            result = new NativeArray<byte>(bytes, Allocator.Persistent),
+            result = result_,
         };
-        job.Schedule(bytes.Length, 1, jobHandle);
+        job.Schedule(1, 1, jobHandle);
         jobHandle.Complete();
+        result_.Dispose();
+        */
+        string result = predict_py(path);
+        MainSystem.Instance.SetPlayerEmotion(result);
     }
 
     #endregion
@@ -152,7 +107,6 @@ public class Predictor : MonoBehaviour
         // initialize private vars
         list_labels = np.array(new List<string> { "angry", "fear", "happy", "neutral", "sad" });
         model = tf.keras.models.load_model(Application.dataPath + modelPath + "/results.h5");
-
     }
     public dynamic extract_features(dynamic data, dynamic sample_rate)
     {

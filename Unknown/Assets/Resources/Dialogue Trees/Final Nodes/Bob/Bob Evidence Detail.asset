@@ -25,6 +25,14 @@ MonoBehaviour:
     basePortName: dfc32274-c876-4e9c-8113-30804531a653
     targetNodeGuid: dd9a314a-2f9c-4bed-8873-0717de32ed17
     targetPortName: Input
+  - baseNodeGuid: add68525-8ad7-4e4e-b7c9-f9bc2be812a8
+    basePortName: 915ceddc-2390-4f87-85b7-2cea6496899b
+    targetNodeGuid: cfc7ce9f-4af7-41c1-b0b2-acf80750f04b
+    targetPortName: Input
+  - baseNodeGuid: add68525-8ad7-4e4e-b7c9-f9bc2be812a8
+    basePortName: 5356d37a-82c1-4d84-944f-71fa2911be16
+    targetNodeGuid: fbe170ec-0712-4e1c-ba36-f93ae50501d7
+    targetPortName: Input
   - baseNodeGuid: d95e36a4-d041-44c3-9b9e-8d6dbeaf5d63
     basePortName: Continue
     targetNodeGuid: e1757e48-8897-4b31-b306-2ddc0777ddec
@@ -61,17 +69,9 @@ MonoBehaviour:
     basePortName: Output
     targetNodeGuid: 8a484d87-dbc7-4e3c-ba6b-7ea797f9f143
     targetPortName: Input
-  - baseNodeGuid: add68525-8ad7-4e4e-b7c9-f9bc2be812a8
-    basePortName: 915ceddc-2390-4f87-85b7-2cea6496899b
-    targetNodeGuid: cfc7ce9f-4af7-41c1-b0b2-acf80750f04b
-    targetPortName: Input
-  - baseNodeGuid: add68525-8ad7-4e4e-b7c9-f9bc2be812a8
-    basePortName: 5356d37a-82c1-4d84-944f-71fa2911be16
-    targetNodeGuid: fbe170ec-0712-4e1c-ba36-f93ae50501d7
-    targetPortName: Input
   dialogueDatas:
   - nodeGuid: add68525-8ad7-4e4e-b7c9-f9bc2be812a8
-    position: {x: 2633, y: 1103}
+    position: {x: 1505, y: 291}
     dialogueDataNames:
     - ID:
         value: 0
@@ -111,7 +111,7 @@ MonoBehaviour:
     - ID:
         value: 3
   - nodeGuid: d95e36a4-d041-44c3-9b9e-8d6dbeaf5d63
-    position: {x: 3327, y: 563}
+    position: {x: 2199, y: -249}
     dialogueDataNames:
     - ID:
         value: 0
@@ -147,7 +147,7 @@ MonoBehaviour:
     dialogueResponseTexts: []
     dialogueResponseEvidences: []
   - nodeGuid: 91313289-60a3-4c2f-8380-608bc9e626aa
-    position: {x: 3313, y: 1099}
+    position: {x: 2185, y: 287}
     dialogueDataNames:
     - ID:
         value: 0
@@ -193,7 +193,7 @@ MonoBehaviour:
     dialogueResponseTexts: []
     dialogueResponseEvidences: []
   - nodeGuid: 05bb881a-be0e-4667-893f-3cc5d968b072
-    position: {x: 3326, y: 1684}
+    position: {x: 2198, y: 872}
     dialogueDataNames:
     - ID:
         value: 0
@@ -239,7 +239,7 @@ MonoBehaviour:
     dialogueResponseTexts: []
     dialogueResponseEvidences: []
   - nodeGuid: 8a484d87-dbc7-4e3c-ba6b-7ea797f9f143
-    position: {x: 3331, y: 2386}
+    position: {x: 2203, y: 1574}
     dialogueDataNames:
     - ID:
         value: 0
@@ -275,7 +275,7 @@ MonoBehaviour:
     dialogueResponseTexts: []
     dialogueResponseEvidences: []
   - nodeGuid: a7864aa8-b488-4eef-a48b-5bd572dfb3e2
-    position: {x: 3708, y: 2384}
+    position: {x: 2580, y: 1572}
     dialogueDataNames:
     - ID:
         value: 0
@@ -312,40 +312,40 @@ MonoBehaviour:
     dialogueResponseEvidences: []
   endDatas:
   - nodeGuid: e1757e48-8897-4b31-b306-2ddc0777ddec
-    position: {x: 4078, y: 864}
+    position: {x: 2950, y: 52}
     endDialogueContainers: []
     endNodeType:
       value: 1
   - nodeGuid: c7b6895d-9797-4488-b752-35e45288a8e2
-    position: {x: 4146, y: 2386}
+    position: {x: 3018, y: 1574}
     endDialogueContainers:
     - dialogueContainerSO: {fileID: 11400000, guid: c56b1f10c88c4944dba2f350d853b5a1, type: 2}
     endNodeType:
       value: 1
   startDatas:
   - nodeGuid: efd52ab3-102e-4a5c-8c29-b8cbd4c450e3
-    position: {x: 2502, y: 1103}
+    position: {x: 1323, y: 291}
     text:
     - languageType: 0
-      languageGenericType: 
+      languageGenericType: Please explain yourself
   eventDatas: []
   branchDatas: []
   choiceDatas: []
   emotionChoiceDatas: []
   objectChoiceDatas:
   - nodeGuid: cfc7ce9f-4af7-41c1-b0b2-acf80750f04b
-    position: {x: 2997, y: 1047}
+    position: {x: 1869, y: 235}
     choiceObject:
       value: {fileID: 0}
   - nodeGuid: 001d4805-d744-49b2-a17d-e4fcecd9a88e
-    position: {x: 2999, y: 1169}
+    position: {x: 1871, y: 357}
     choiceObject:
       value: {fileID: 677632080520498084, guid: 9e53fa99e81897b46a91b73bae1ed397, type: 3}
   - nodeGuid: dd9a314a-2f9c-4bed-8873-0717de32ed17
-    position: {x: 2998, y: 1277}
+    position: {x: 1870, y: 465}
     choiceObject:
       value: {fileID: 237794839016559328, guid: 2183f2b229fbeca49a1ffc610b284929, type: 3}
   - nodeGuid: fbe170ec-0712-4e1c-ba36-f93ae50501d7
-    position: {x: 2998, y: 1397}
+    position: {x: 1870, y: 585}
     choiceObject:
       value: {fileID: 8307617522580937875, guid: 429fee0f616ae1c40b99a81f1343e8ff, type: 3}

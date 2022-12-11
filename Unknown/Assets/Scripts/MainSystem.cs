@@ -239,8 +239,6 @@ public class MainSystem : MonoBehaviour
         string path = Application.dataPath + "/StreamingAssets/model" + "/output.wav";
         if(SavWav.Save(path, clip))
         {
-            //string emotion = predictor.predict(path);
-            //SetPlayerEmotion(emotion);
             predictor.predict(path);
         } else
         {
@@ -248,8 +246,6 @@ public class MainSystem : MonoBehaviour
         }
 
         //byte[] bytes = SavWav.GetByteFromClip(clip);
-
-        // Perform prediction
 
         timePassed = 0.0f;
     }
@@ -299,6 +295,7 @@ public class MainSystem : MonoBehaviour
         } else {
             playerEmotion = DialogueEmotionType.Otherwise;
         }
+        ChangeEmotion();
     }
 
     public string GetPlayerEmotion() {

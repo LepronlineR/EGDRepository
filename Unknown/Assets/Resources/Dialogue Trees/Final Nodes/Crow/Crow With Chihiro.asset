@@ -22,12 +22,64 @@ MonoBehaviour:
     targetNodeGuid: 889c8841-5759-4820-a4b8-1134684b3c4b
     targetPortName: Input
   - baseNodeGuid: 889c8841-5759-4820-a4b8-1134684b3c4b
+    basePortName: 28add123-b7cd-466c-937a-1ae51b50c743
+    targetNodeGuid: 6d4ca04a-890b-4019-9df6-d288ad5d2fb7
+    targetPortName: Input
+  - baseNodeGuid: 6d4ca04a-890b-4019-9df6-d288ad5d2fb7
+    basePortName: Output
+    targetNodeGuid: 248150a6-0d43-45ec-b450-1d5b1826273a
+    targetPortName: Input
+  - baseNodeGuid: 248150a6-0d43-45ec-b450-1d5b1826273a
+    basePortName: 22b3e9cf-7413-433c-a918-6a010f7bc895
+    targetNodeGuid: 78a413ed-882f-4fd3-8f3a-356186df78dd
+    targetPortName: Input
+  - baseNodeGuid: 248150a6-0d43-45ec-b450-1d5b1826273a
+    basePortName: 31a503f3-b3f4-4d6d-992b-260f767c0a5d
+    targetNodeGuid: 0d91ad96-321f-4343-bd33-598cbd375f10
+    targetPortName: Input
+  - baseNodeGuid: 248150a6-0d43-45ec-b450-1d5b1826273a
+    basePortName: cd63e7e5-993f-40f0-b320-7d79ba7f6346
+    targetNodeGuid: bbc11e22-b842-4175-a9cd-ecabfaf90d16
+    targetPortName: Input
+  - baseNodeGuid: 248150a6-0d43-45ec-b450-1d5b1826273a
+    basePortName: d598f658-d235-439e-a9e7-2f3f462b8c45
+    targetNodeGuid: e807c4d9-aa4b-4708-8697-c255c459d1ab
+    targetPortName: Input
+  - baseNodeGuid: 78a413ed-882f-4fd3-8f3a-356186df78dd
+    basePortName: Output
+    targetNodeGuid: ec1f698c-8704-4ce6-991b-8310c180ce5c
+    targetPortName: Input
+  - baseNodeGuid: 0d91ad96-321f-4343-bd33-598cbd375f10
+    basePortName: Output
+    targetNodeGuid: ec1f698c-8704-4ce6-991b-8310c180ce5c
+    targetPortName: Input
+  - baseNodeGuid: bbc11e22-b842-4175-a9cd-ecabfaf90d16
+    basePortName: Output
+    targetNodeGuid: ec1f698c-8704-4ce6-991b-8310c180ce5c
+    targetPortName: Input
+  - baseNodeGuid: e807c4d9-aa4b-4708-8697-c255c459d1ab
+    basePortName: Output
+    targetNodeGuid: ec1f698c-8704-4ce6-991b-8310c180ce5c
+    targetPortName: Input
+  - baseNodeGuid: ec1f698c-8704-4ce6-991b-8310c180ce5c
     basePortName: Continue
+    targetNodeGuid: f45a2e2a-ea1b-4669-a3ea-d1143a32299c
+    targetPortName: Input
+  - baseNodeGuid: f45a2e2a-ea1b-4669-a3ea-d1143a32299c
+    basePortName: Continue
+    targetNodeGuid: ae27c1c7-2896-4796-bb92-be14fbe262d5
+    targetPortName: Input
+  - baseNodeGuid: 248150a6-0d43-45ec-b450-1d5b1826273a
+    basePortName: 5a993c0e-2bef-4a63-9ad0-8f840a19c1c8
+    targetNodeGuid: aeeee35f-59e2-4f74-8a49-cd1a93621796
+    targetPortName: Input
+  - baseNodeGuid: aeeee35f-59e2-4f74-8a49-cd1a93621796
+    basePortName: Output
     targetNodeGuid: e436004c-c62d-47a1-bc95-d171afc13509
     targetPortName: Input
   dialogueDatas:
   - nodeGuid: d4ef6b9a-899c-4c3f-9e1d-f56117dbbc48
-    position: {x: -332, y: 675}
+    position: {x: -1096, y: 674}
     dialogueDataNames:
     - ID:
         value: 0
@@ -53,7 +105,7 @@ MonoBehaviour:
     dialogueResponseTexts: []
     dialogueResponseEvidences: []
   - nodeGuid: 889c8841-5759-4820-a4b8-1134684b3c4b
-    position: {x: -1, y: 674}
+    position: {x: -765, y: 673}
     dialogueDataNames:
     - ID:
         value: 0
@@ -75,27 +127,211 @@ MonoBehaviour:
         value: 1
       sprite:
         value: {fileID: 21300000, guid: 7ea199d8cc2ecb04da82d36ad33772f9, type: 3}
+    dialogueDataPorts:
+    - portGuid: 28add123-b7cd-466c-937a-1ae51b50c743
+      inputGuid: 6d4ca04a-890b-4019-9df6-d288ad5d2fb7
+      outputGuid: 889c8841-5759-4820-a4b8-1134684b3c4b
+    dialogueResponseTexts:
+    - ID:
+        value: 3
+      responseText:
+        value: I think there is more in common
+    dialogueResponseEvidences: []
+  - nodeGuid: 248150a6-0d43-45ec-b450-1d5b1826273a
+    position: {x: -458, y: 103}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Crow
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 03ad17b2-91f4-4984-a27e-50047264acac
+      texts:
+      - languageType: 0
+        languageGenericType: Well then what do you have in your mind vile field
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 19f0c8883811f824d9442062a991e91d, type: 3}
+    dialogueDataPorts:
+    - portGuid: 22b3e9cf-7413-433c-a918-6a010f7bc895
+      inputGuid: 78a413ed-882f-4fd3-8f3a-356186df78dd
+      outputGuid: 248150a6-0d43-45ec-b450-1d5b1826273a
+    - portGuid: 31a503f3-b3f4-4d6d-992b-260f767c0a5d
+      inputGuid: 0d91ad96-321f-4343-bd33-598cbd375f10
+      outputGuid: 248150a6-0d43-45ec-b450-1d5b1826273a
+    - portGuid: cd63e7e5-993f-40f0-b320-7d79ba7f6346
+      inputGuid: bbc11e22-b842-4175-a9cd-ecabfaf90d16
+      outputGuid: 248150a6-0d43-45ec-b450-1d5b1826273a
+    - portGuid: d598f658-d235-439e-a9e7-2f3f462b8c45
+      inputGuid: e807c4d9-aa4b-4708-8697-c255c459d1ab
+      outputGuid: 248150a6-0d43-45ec-b450-1d5b1826273a
+    - portGuid: 5a993c0e-2bef-4a63-9ad0-8f840a19c1c8
+      inputGuid: aeeee35f-59e2-4f74-8a49-cd1a93621796
+      outputGuid: 248150a6-0d43-45ec-b450-1d5b1826273a
+    dialogueResponseTexts: []
+    dialogueResponseEvidences:
+    - ID:
+        value: 3
+  - nodeGuid: ec1f698c-8704-4ce6-991b-8310c180ce5c
+    position: {x: 318, y: -441}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Crow
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 6e6b5dbc-c3f9-4c1c-b2b6-bc73d786cbfb
+      texts:
+      - languageType: 0
+        languageGenericType: Fine, this is not serious anyways, might as well tell
+          you the truth
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: 6ed60066acfbef843ad6b0521187dc73, type: 3}
+    dialogueDataPorts: []
+    dialogueResponseTexts: []
+    dialogueResponseEvidences: []
+  - nodeGuid: f45a2e2a-ea1b-4669-a3ea-d1143a32299c
+    position: {x: 694, y: -441}
+    dialogueDataNames:
+    - ID:
+        value: 0
+      characterName:
+        value: Crow
+    dialogueDataTexts:
+    - ID:
+        value: 2
+      GuidID:
+        value: 6517b2d7-6840-445d-84e0-071fed3216cb
+      texts:
+      - languageType: 0
+        languageGenericType: Before we even started this tour, I visited this building
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 3
+      GuidID:
+        value: b7a233a4-ec33-4ebb-a873-4b412988075f
+      texts:
+      - languageType: 0
+        languageGenericType: I knew that we had an auditorium and I wanted to setup
+          for a small play
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 4
+      GuidID:
+        value: a427dd83-34b8-4ec1-a25d-276d9389e215
+      texts:
+      - languageType: 0
+        languageGenericType: Little did I know, our tour guide was there as well
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 5
+      GuidID:
+        value: f60c2d49-0ebb-48b5-bead-0da6a7c0ef64
+      texts:
+      - languageType: 0
+        languageGenericType: As a fellow in acting, he appreciated my presence
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 6
+      GuidID:
+        value: 7e136678-4fe3-46c1-95f0-f70f2b5122fb
+      texts:
+      - languageType: 0
+        languageGenericType: Thus, we gave me an opportunity to perform
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    - ID:
+        value: 7
+      GuidID:
+        value: 891e37e0-72fe-43c1-b987-efbcd01762dd
+      texts:
+      - languageType: 0
+        languageGenericType: You see, nothing out of the ordinary, just two enjoyers
+          of dramatics
+      audioClips:
+      - languageType: 0
+        languageGenericType: {fileID: 0}
+    dialogueDataImagess:
+    - ID:
+        value: 1
+      sprite:
+        value: {fileID: 21300000, guid: f8506563bf3827446a0484275ce289ce, type: 3}
     dialogueDataPorts: []
     dialogueResponseTexts: []
     dialogueResponseEvidences: []
   endDatas:
+  - nodeGuid: ae27c1c7-2896-4796-bb92-be14fbe262d5
+    position: {x: 1143, y: -423}
+    endDialogueContainers:
+    - dialogueContainerSO: {fileID: 11400000, guid: 36aa97cb02460eb4e9eac4a71813e38d, type: 2}
+    - dialogueContainerSO: {fileID: 11400000, guid: 34c462457b96a0e4c86dc1bece1fbefe, type: 2}
+    endNodeType:
+      value: 1
   - nodeGuid: e436004c-c62d-47a1-bc95-d171afc13509
     position: {x: 347, y: 675}
     endDialogueContainers:
-    - dialogueContainerSO: {fileID: 11400000, guid: 36aa97cb02460eb4e9eac4a71813e38d, type: 2}
-    - dialogueContainerSO: {fileID: 11400000, guid: dc209fbe4cdc0d0448dfeb273b067823, type: 2}
     - dialogueContainerSO: {fileID: 11400000, guid: 34c462457b96a0e4c86dc1bece1fbefe, type: 2}
-    - dialogueContainerSO: {fileID: 11400000, guid: 2c9229e1c02bd1b478db438ad54e0cc5, type: 2}
+    - dialogueContainerSO: {fileID: 11400000}
     endNodeType:
       value: 1
   startDatas:
   - nodeGuid: 411374ea-0e5b-4250-b2db-b6d1c8b76f25
-    position: {x: -590, y: 674}
+    position: {x: -1354, y: 673}
     text:
     - languageType: 0
       languageGenericType: What were you doing with Chihiro
   eventDatas: []
   branchDatas: []
   choiceDatas: []
-  emotionChoiceDatas: []
-  objectChoiceDatas: []
+  emotionChoiceDatas:
+  - nodeGuid: 6d4ca04a-890b-4019-9df6-d288ad5d2fb7
+    position: {x: -453, y: 674}
+    choiceStateType:
+      value: 6
+  objectChoiceDatas:
+  - nodeGuid: 78a413ed-882f-4fd3-8f3a-356186df78dd
+    position: {x: 19, y: -50}
+    choiceObject:
+      value: {fileID: 8342326990467455251, guid: 8a54170269ca46c4184dd122d1fe0cba, type: 3}
+  - nodeGuid: 0d91ad96-321f-4343-bd33-598cbd375f10
+    position: {x: 19, y: 47}
+    choiceObject:
+      value: {fileID: 612520909796405575, guid: 5e10bc93f7c6629469a15ef1ddd5b5a4, type: 3}
+  - nodeGuid: bbc11e22-b842-4175-a9cd-ecabfaf90d16
+    position: {x: 19, y: 144}
+    choiceObject:
+      value: {fileID: 6290978325195283786, guid: 8d74d9a99702c4747868c2d49684e576, type: 3}
+  - nodeGuid: e807c4d9-aa4b-4708-8697-c255c459d1ab
+    position: {x: 19, y: 241}
+    choiceObject:
+      value: {fileID: 4621682417116307932, guid: ffaddab49f400de4d85b5bd91f28c611, type: 3}
+  - nodeGuid: aeeee35f-59e2-4f74-8a49-cd1a93621796
+    position: {x: 5, y: 347}
+    choiceObject:
+      value: {fileID: 0}

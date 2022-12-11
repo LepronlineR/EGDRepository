@@ -628,10 +628,10 @@ MonoBehaviour:
       value: 1
   startDatas:
   - nodeGuid: 24ae1d01-7042-4301-a228-3d68bef6f98b
-    position: {x: 56, y: 269}
+    position: {x: -82, y: 289}
     text:
     - languageType: 0
-      languageGenericType: Where were you before 12 PM
+      languageGenericType: Where precisely were you before the recent events
   eventDatas: []
   branchDatas: []
   choiceDatas: []

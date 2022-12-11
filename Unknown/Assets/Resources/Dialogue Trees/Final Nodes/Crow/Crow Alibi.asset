@@ -41,25 +41,9 @@ MonoBehaviour:
     basePortName: Continue
     targetNodeGuid: 76a36996-199c-4a0f-8ecc-dcedaf75dd72
     targetPortName: Input
-  - baseNodeGuid: 93295584-0472-44a5-b242-402ff79a5c04
-    basePortName: Output
-    targetNodeGuid: e56abb30-e69e-43e5-9e4b-effad62f2739
-    targetPortName: Input
-  - baseNodeGuid: 43ed7065-63ac-4758-b958-6874d70e062a
-    basePortName: Output
-    targetNodeGuid: 1f14e913-38dd-4752-b7cd-2d9ca464845b
-    targetPortName: Input
   - baseNodeGuid: 1f14e913-38dd-4752-b7cd-2d9ca464845b
     basePortName: Continue
     targetNodeGuid: 74bb7649-6eee-40ae-9b78-8cb4a9906523
-    targetPortName: Input
-  - baseNodeGuid: 2af53f18-9cbc-4077-93f1-1c0fdcac836d
-    basePortName: Output
-    targetNodeGuid: f86fdc6b-96a7-4409-b9d1-9b60cf502f19
-    targetPortName: Input
-  - baseNodeGuid: 31ff200a-8efc-4d3e-bbaa-24b5321cb775
-    basePortName: Output
-    targetNodeGuid: 343788c8-194f-4279-a6fc-9501796bf1b7
     targetPortName: Input
   - baseNodeGuid: f86fdc6b-96a7-4409-b9d1-9b60cf502f19
     basePortName: Continue
@@ -68,10 +52,6 @@ MonoBehaviour:
   - baseNodeGuid: 343788c8-194f-4279-a6fc-9501796bf1b7
     basePortName: Continue
     targetNodeGuid: 5e45167d-2946-44f3-9a27-03ea16b1f9b3
-    targetPortName: Input
-  - baseNodeGuid: 6a58682b-790c-4661-af57-3448fb0c63c5
-    basePortName: Output
-    targetNodeGuid: 06fd4158-7b03-4b9c-8d95-3830d723918a
     targetPortName: Input
   - baseNodeGuid: 5e45167d-2946-44f3-9a27-03ea16b1f9b3
     basePortName: Continue
@@ -84,6 +64,26 @@ MonoBehaviour:
   - baseNodeGuid: ddf353fd-f8e2-46c6-8c08-10a5fba14a7f
     basePortName: Continue
     targetNodeGuid: 74bb7649-6eee-40ae-9b78-8cb4a9906523
+    targetPortName: Input
+  - baseNodeGuid: 93295584-0472-44a5-b242-402ff79a5c04
+    basePortName: Output
+    targetNodeGuid: e56abb30-e69e-43e5-9e4b-effad62f2739
+    targetPortName: Input
+  - baseNodeGuid: 43ed7065-63ac-4758-b958-6874d70e062a
+    basePortName: Output
+    targetNodeGuid: 1f14e913-38dd-4752-b7cd-2d9ca464845b
+    targetPortName: Input
+  - baseNodeGuid: 2af53f18-9cbc-4077-93f1-1c0fdcac836d
+    basePortName: Output
+    targetNodeGuid: f86fdc6b-96a7-4409-b9d1-9b60cf502f19
+    targetPortName: Input
+  - baseNodeGuid: 31ff200a-8efc-4d3e-bbaa-24b5321cb775
+    basePortName: Output
+    targetNodeGuid: 343788c8-194f-4279-a6fc-9501796bf1b7
+    targetPortName: Input
+  - baseNodeGuid: 6a58682b-790c-4661-af57-3448fb0c63c5
+    basePortName: Output
+    targetNodeGuid: 06fd4158-7b03-4b9c-8d95-3830d723918a
     targetPortName: Input
   dialogueDatas:
   - nodeGuid: b8d4279a-6ef4-455f-b535-8aa327747e93
@@ -384,7 +384,7 @@ MonoBehaviour:
     position: {x: -734, y: 486}
     text:
     - languageType: 0
-      languageGenericType: Where were you before 12 PM
+      languageGenericType: Where were you before our tour
   eventDatas: []
   branchDatas: []
   choiceDatas: []
