@@ -16,7 +16,6 @@ public class Predictor : MonoBehaviour
     dynamic tf;
     dynamic librosa;
     dynamic io;
-    // dynamic scipy;
 
     // private vars
     dynamic list_labels;
@@ -28,8 +27,6 @@ public class Predictor : MonoBehaviour
     {
         Runtime.PythonDLL = Application.streamingAssetsPath + pythonDLLPath;
 
-        Debug.Log(Application.streamingAssetsPath + pythonDLLPath);
-
         PythonEngine.Initialize();
         try
         {
@@ -39,18 +36,18 @@ public class Predictor : MonoBehaviour
             os = PyModule.Import("os");
             librosa = PyModule.Import("librosa");
             io = PyModule.Import("io");
-            // scipy = PyModule.Import("scipy");
 
             // initialize private vars
             list_labels = np.array(new List<string> { "angry", "fear", "happy", "neutral", "sad" });
             model = tf.keras.models.load_model(Application.streamingAssetsPath + modelPath + "/results.h5");
-        } catch(Exception E)
+        }
+        catch (Exception E)
         {
             print(E);
             print(E.StackTrace);
         }
     }
-    
+
     public void predict(string path)
     {
         string result = predict_py(path);
@@ -87,10 +84,9 @@ public class Predictor : MonoBehaviour
             dynamic X = extract_features(data[0], data[1]);
             // predict
             dynamic X_ = tf.expand_dims(X, axis: 0);
-            print(X_.shape);
 
             dynamic pred = model.predict(X_);
-            print(pred);
+
             dynamic pred_class = list_labels[tf.argmax(pred[0])];
             return pred_class.ToString();
         }

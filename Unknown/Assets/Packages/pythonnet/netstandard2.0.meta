@@ -1,7 +1,18 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+<<<<<<<< HEAD:Unknown/Assets/Packages/pythonnet/netstandard2.0.meta
 guid: 03ee71c4cecbc314bb0f45c9c6de552c
 folderAsset: yes
 DefaultImporter:
+========
+guid: 02438aaf3535f984b94bc593174199ec
+TextScriptImporter:
+>>>>>>>> parent of 1fa74a1 (weird bugs):Unknown/Assets/Packages/pythonnet/system-security/System.Security.Permissions.xml.meta
+=======
+guid: 479780821c92f134a9be86ffe2c4cfe1
+folderAsset: yes
+DefaultImporter:
+>>>>>>> parent of 1fa74a1 (weird bugs)
   externalObjects: {}
   userData: 
   assetBundleName: 

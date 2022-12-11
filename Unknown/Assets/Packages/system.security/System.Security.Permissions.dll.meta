@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Unknown/Assets/Packages/system.security/System.Security.Permissions.dll.meta
 guid: 2cc24596088749b468e3836dbe69903f
+========
+guid: f54857d73a85e534ca5b5066d472af6f
+>>>>>>>> parent of 1fa74a1 (weird bugs):Unknown/Assets/Packages/pythonnet/system-security/System.Security.Permissions.dll.meta
 PluginImporter:
   externalObjects: {}
   serializedVersion: 2
