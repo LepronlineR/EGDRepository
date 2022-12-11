@@ -23,6 +23,7 @@ public class DialogueController : DialogueGetData {
     [Header("Audio")]
     [SerializeField] private AudioSource audioSource;
 
+
     [Header("Dialogue Talker")]
     private DialogueData currentDialogueNodeData;
     private DialogueData lastDialogueNodeData;
@@ -280,11 +281,11 @@ public class DialogueController : DialogueGetData {
     }
 
     private void PlayAudio(AudioClip audioClip){
-        audioSource.Stop();
-        if(audioClip != null){
-            audioSource.clip = audioClip;
-            audioSource.Play();
-        }
+        //audioSource.Stop();
+        //if(audioClip != null){
+        //    audioSource.clip = audioClip;
+        //    audioSource.Play();
+        //}
     }
 
     public void SetResponse(string text){
@@ -304,8 +305,8 @@ public class DialogueController : DialogueGetData {
         textBox.text = word;
         textBox.ForceMeshUpdate();
         speaking = true;
-        //audios.Play();
-        //audios.loop = true;
+        audioSource.Play();
+        audioSource.loop = true;
         int totalCharacters = textBox.textInfo.characterCount;
         int count = 0;
         skip = false;
@@ -319,8 +320,9 @@ public class DialogueController : DialogueGetData {
                 break;
             }
         }
-        //if(audios == null) yield break; 
-        //audios.loop = false;
+        if(audioSource == null) 
+            yield break;
+        audioSource.loop = false;
         speaking = false;
         yield return new WaitForSeconds(0.6f);
     }

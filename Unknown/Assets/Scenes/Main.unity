@@ -6202,6 +6202,50 @@ Transform:
   m_Father: {fileID: 1093912838}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &722238877
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 722238878}
+  - component: {fileID: 722238879}
+  m_Layer: 0
+  m_Name: DEBUGGER
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &722238878
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722238877}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &722238879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722238877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 113a83f47a60f9b499c87d7d9f08b56f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &723434421 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5467285085316221432, guid: a840589249729984398df665ca6e2508, type: 3}
@@ -7820,9 +7864,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
+  m_audioClip: {fileID: 8300000, guid: 7fdb03978c3a4504c8b4b996c42a1ea0, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.669
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -8349,8 +8393,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21e43e28aaab7f846b8e1e4c996fb596, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pythonDLLPath: /StreamingAssets/embedded-python/python310.dll
-  modelPath: /StreamingAssets/model
+  pythonDLLPath: /embedded-python/python310.dll
+  modelPath: /model
 --- !u!1 &985771931
 GameObject:
   m_ObjectHideFlags: 0
@@ -13753,9 +13797,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
+  m_audioClip: {fileID: 8300000, guid: db96c32b44dee00458bd9391f3cebe29, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.662
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -18640,9 +18684,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
+  m_audioClip: {fileID: 8300000, guid: 352261a29dceda84ab1b2c65e5c6eda4, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.761
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -19314,8 +19358,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 3bb0d1c79483e35499466d9d287ea966, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
