@@ -39,14 +39,6 @@ def extract_features(data, sample_rate):
     
     return result
 
-def convert_bytearray_to_wav_ndarray(input_bytearr: bytes, sampling_rate=44100):
-    bytes_wav = bytes()
-    byte_io = io.BytesIO(bytes_wav)
-    write(byte_io, sampling_rate, np.frombuffer(input_bytearr, dtype=np.int32))
-    output_wav = byte_io.read()
-    output, sample_r = sf.read(io.BytesIO(output_wav))
-    return output
-
 def predict(model, bytes_wav, labels, sampling_rate = 44100, filename = "output.wav"):
 
     if os.path.exists(filename):

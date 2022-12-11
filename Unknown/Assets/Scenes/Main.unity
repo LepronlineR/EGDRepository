@@ -8135,10 +8135,10 @@ GameObject:
   m_Component:
   - component: {fileID: 983984760}
   - component: {fileID: 983984761}
-  - component: {fileID: 983984762}
   - component: {fileID: 983984764}
   - component: {fileID: 983984765}
   - component: {fileID: 983984763}
+  - component: {fileID: 983984766}
   m_Layer: 0
   m_Name: Main System
   m_TagString: Untagged
@@ -8199,6 +8199,7 @@ MonoBehaviour:
   - {fileID: 1505198137}
   - {fileID: 407789769}
   emotionDot: {fileID: 261580312}
+  predictor: {fileID: 983984766}
   playerWord: 
   playerEvidence: []
   playerEmotion: 6
@@ -8215,18 +8216,6 @@ MonoBehaviour:
   - {fileID: 2129264167}
   - {fileID: 951859861}
   - {fileID: 1536232420}
---- !u!114 &983984762
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 983984759}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f74a1fbe6262d00458bba414e7288635, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &983984763
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8239,7 +8228,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -8348,6 +8337,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54c1fa831fb4f814e85d7405f5c9a6b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &983984766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983984759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21e43e28aaab7f846b8e1e4c996fb596, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pythonDLLPath: /StreamingAssets/embedded-python/python310.dll
+  modelPath: /StreamingAssets/model
 --- !u!1 &985771931
 GameObject:
   m_ObjectHideFlags: 0

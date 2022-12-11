@@ -57,6 +57,7 @@ public class MainSystem : MonoBehaviour
 
     [Header("Emotion")]
     [SerializeField] GameObject emotionDot;
+    [SerializeField] Predictor predictor;
 
     [Header("Gameplay")]
     public string playerWord;
@@ -235,10 +236,20 @@ public class MainSystem : MonoBehaviour
         DictationEngine.Instance.EndDictation();
 
         AudioClip clip = DictationEngine.Instance.StopRecording(audioSource, null);
-        byte[] bytes = SavWav.GetByteFromClip(clip);
+        string path = Application.dataPath + "/StreamingAssets/model" + "/output.wav";
+        if(SavWav.Save(path, clip))
+        {
+            //string emotion = predictor.predict(path);
+            //SetPlayerEmotion(emotion);
+            predictor.predict(path);
+        } else
+        {
+            Debug.LogWarning("Error with saving audio file");
+        }
+
+        //byte[] bytes = SavWav.GetByteFromClip(clip);
 
         // Perform prediction
-        PredictionClient.Instance.Predict(bytes);
 
         timePassed = 0.0f;
     }

@@ -16,9 +16,9 @@ public class PredictionClient : MonoBehaviour
         } 
     }
 
-    private void Start() => InitializeServer();
+    private void Start() => Initialize();
 
-    public void InitializeServer()
+    public void Initialize()
     {
         predictionRequester = new PredictionRequester(HandleMessage);
         // predictionRequester.Start();

@@ -17,6 +17,10 @@ public class StartManager : MonoBehaviour
             Cursor.lockState = CursorLockMode.Confined;
             Cursor.visible = false;
         }
+        if(startingScene)
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
     }
 
     // Update is called once per frame
