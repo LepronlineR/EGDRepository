@@ -7,7 +7,7 @@ using Python.Runtime;
 public class Predictor : MonoBehaviour
 {
     #region Predictor (Python)
-    string pythonDLLPath = "/python/python310.dll";
+    string pythonDLLPath = "/python/python37.dll";
     string modelPath = "/model";
 
     // libraries
