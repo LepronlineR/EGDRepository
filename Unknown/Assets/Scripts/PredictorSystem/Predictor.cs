@@ -7,9 +7,8 @@ using Python.Runtime;
 public class Predictor : MonoBehaviour
 {
     #region Predictor (Python)
-    [SerializeField] [HideInInspector] string pythonDLLPath = "/embedded-python/python310.dll";
-
-    [SerializeField] [HideInInspector] string modelPath = "/model";
+    string pythonDLLPath = "/python/python310.dll";
+    string modelPath = "/model";
 
     // libraries
     dynamic np;
@@ -24,23 +23,34 @@ public class Predictor : MonoBehaviour
     dynamic model;
 
     // Start is called before the first frame update
+    // I was able to import the modules by adding Lib/site-packages to the PYTHONPATH variable (rather than the PATH)
     void Start()
     {
         Runtime.PythonDLL = Application.streamingAssetsPath + pythonDLLPath;
+
+        Debug.Log(Application.streamingAssetsPath + pythonDLLPath);
+
         PythonEngine.Initialize();
+        try
+        {
+            // initialize libraries
+            np = PyModule.Import("numpy");
+            tf = PyModule.Import("tensorflow");
+            os = PyModule.Import("os");
+            librosa = PyModule.Import("librosa");
+            io = PyModule.Import("io");
+            // scipy = PyModule.Import("scipy");
 
-        // initialize libraries
-        np = PyModule.Import("numpy");
-        tf = PyModule.Import("tensorflow");
-        os = PyModule.Import("os");
-        librosa = PyModule.Import("librosa");
-        io = PyModule.Import("io");
-        // scipy = PyModule.Import("scipy");
-
-        // initialize private vars
-        list_labels = np.array(new List<string> { "angry", "fear", "happy", "neutral", "sad" });
-        model = tf.keras.models.load_model(Application.streamingAssetsPath + modelPath + "/results.h5");
+            // initialize private vars
+            list_labels = np.array(new List<string> { "angry", "fear", "happy", "neutral", "sad" });
+            model = tf.keras.models.load_model(Application.streamingAssetsPath + modelPath + "/results.h5");
+        } catch(Exception E)
+        {
+            print(E);
+            print(E.StackTrace);
+        }
     }
+    
     public void predict(string path)
     {
         string result = predict_py(path);
@@ -69,18 +79,28 @@ public class Predictor : MonoBehaviour
     }
     public string predict_py(dynamic path)
     {
-        // obtain the data
-        dynamic data = librosa.load(path);
-        // data[0] = data, data[1] = sample_rate
-        dynamic X = extract_features(data[0], data[1]);
-        // predict
-        dynamic X_ = tf.expand_dims(X, axis: 0);
+        try
+        {
+            // obtain the data
+            dynamic data = librosa.load(path);
+            // data[0] = data, data[1] = sample_rate
+            dynamic X = extract_features(data[0], data[1]);
+            // predict
+            dynamic X_ = tf.expand_dims(X, axis: 0);
+            print(X_.shape);
 
-        dynamic pred = model.predict(X_);
-        print(pred);
-        dynamic pred_class = list_labels[tf.argmax(pred[0])];
+            dynamic pred = model.predict(X_);
+            print(pred);
+            dynamic pred_class = list_labels[tf.argmax(pred[0])];
+            return pred_class.ToString();
+        }
+        catch (Exception e)
+        {
+            print(e);
+            print(e.StackTrace);
+        }
 
-        return pred_class.ToString();
+        return "";
     }
     public void OnApplicationQuit()
     {
